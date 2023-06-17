@@ -1,2 +1,2 @@
 # Lucsas
- A hub for all my projects :D
+My (noob) portfolio.
