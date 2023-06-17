@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    --bg: #000014;
+    --white: #ffffff;
+    --color0: #0000ff;
+    --color1: #7052db;
+    --color2: #dd519a;
+    --footer: rgb(20, 22, 32);
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--white);
+
+    margin: 0 !important;
+    font-family: 'Plus jakarta sans', Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-image: linear-gradient(to right, var(--color0), var(--color2));
+}
+
+header > img {
+    margin-left: 10px;
+}
+
+article > h1 {
+    font-size: 2.5em;
+}
+
+div.blocks {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+div.jobs > h1{
+    text-align: center;
+
+    font-size: 2.5em;
+}
+
+div#programming {
+    width: 500px;
+    margin: 20px;
+}
+
+div#design {
+    width: 500px;
+    margin: 20px;
+}
+
+div#trafficking-management {
+    width: 500px;
+    margin: 20px;
+}
+
+div.abilities {
+    width: 350px;
+    height: 400px;
+    display: inline-block;
+    margin: 50px;
+    padding: 10px;
+
+    text-align: center;
+
+    border: solid 5px;
+    border-image: url('Images/Border.png') 39 repeat;
+}
+
+section#social-medias {
+    background-image: linear-gradient(to bottom, var(--color0), var(--color2));
+
+    height: 300px;
+    padding: 30px;
+}
+
+section#social-medias > h1 {
+    text-align: center;
+    font-size: 2.5em;
+
+    color: var(--black);
+}
+
+section#social-medias img {
+    text-align: center;
+    margin: 50px;
+
+    border: 5px solid black;
+}
+
+footer {
+    background-color: var(--footer);
+
+    padding: 5px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
