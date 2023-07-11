@@ -4,10 +4,14 @@
 
 :root {
     --bg: #000014;
+
     --white: #ffffff;
+    --black: #000000;
+    
     --color0: #0000ff;
     --color1: #7052db;
     --color2: #dd519a;
+
     --footer: rgb(20, 22, 32);
 }
 
@@ -21,11 +25,26 @@ body {
 
 header {
     background-image: linear-gradient(to right, var(--color0), var(--color2));
+
+    height: 80px;
+    width: 100%;
+}
+
+div.header-gradient {
+    background-image: linear-gradient(to right, var(--color0), var(--color2));
+    background-image: linear-gradient(to bottom, var(--color0), transparent);
 }
 
 header a {
     width: 40px;
     height: 40px;
+
+    margin: 5px;
+}
+
+header a:hover {
+    width: 45px;
+    transition-duration: 0.45s;
 }
 
 div#header-items {
@@ -34,6 +53,9 @@ div#header-items {
 }
 
 header img.logo {
+    display: flex;
+    align-items: center;
+
     width: 30px;
     height: 30px;
 
@@ -43,10 +65,18 @@ header img.logo {
 div.social-links {
     display: flex;
     justify-content: space-around;
+
+    margin-right: 20px;
 }
 
 div.social-links img {
     margin: 10px;
+}
+
+div#gradient {
+    background-image: linear-gradient(to top, var(--bg), transparent);
+
+    height: 150px;
 }
 
 article > h1 {
@@ -107,10 +137,17 @@ section#social-medias > h1 {
 }
 
 section#social-medias img {
-    text-align: center;
-    margin: 50px;
+    margin: 30px;
+}
 
-    border: 5px solid black;
+
+section#social-medias > div {
+    width: 600px;
+    margin: auto;
+}
+
+section#social-medias a {
+    margin: auto;
 }
 
 footer {
