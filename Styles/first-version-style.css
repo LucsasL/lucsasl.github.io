@@ -23,8 +23,30 @@ header {
     background-image: linear-gradient(to right, var(--color0), var(--color2));
 }
 
-header > img {
-    margin-left: 10px;
+header a {
+    width: 40px;
+    height: 40px;
+}
+
+div#header-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img.logo {
+    width: 30px;
+    height: 30px;
+
+    margin-left: 20px;
+}
+
+div.social-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+div.social-links img {
+    margin: 10px;
 }
 
 article > h1 {
