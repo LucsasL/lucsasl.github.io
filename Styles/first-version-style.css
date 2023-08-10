@@ -15,12 +15,24 @@
     --footer: rgb(20, 22, 32);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body {
     background-color: var(--bg);
     color: var(--white);
 
-    margin: 0 !important;
-    font-family: 'Plus jakarta sans', Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 
 header {
@@ -68,85 +80,42 @@ div.social-links img {
     margin: 10px;
 }
 
-img#img {
-    width: 99vw;
+div > img#img {
+    width: 100vw;
+}
+
+article {
+    width: 80vw;
+    margin: 30px auto 50px auto;
 }
 
 article > h1 {
     font-size: 2.5em;
 }
 
-div.blocks {
-    display: inline-block;
-    margin: 10px 20px;
-}
-
-div.jobs > h1{
-    text-align: center;
-
-    font-size: 2.5em;
-}
-
-div#programming {
-    width: 500px;
-    margin: 20px;
-}
-
-div#design {
-    width: 500px;
-    margin: 20px;
-}
-
-div#trafficking-management {
-    width: 500px;
-    margin: 20px;
+article p {
+    text-align: justify;
+    
+    margin-top: 10px;
+    margin-bottom: 16px;
 }
 
 div.abilities {
-    width: 350px;
-    height: 400px;
-    display: inline-block;
-    margin: 50px;
-    padding: 10px;
 
-    text-align: center;
+    display: block;
+    width: 80vw;
+    height: 420px;
+    padding: 20px;
+    margin:  10px 0px;
 
-    border: solid 5px;
-    border-image: url('Images/Border.png') 39 repeat;
-}
-
-section#social-medias {
-    background-image: linear-gradient(to bottom, var(--color0), var(--color2));
-
-    height: 300px;
-    padding: 30px;
-}
-
-section#social-medias > h1 {
-    text-align: center;
-    font-size: 2.5em;
-
-    color: var(--black);
-}
-
-section#social-medias img {
-    margin: 30px;
-}
-
-
-section#social-medias > div {
-    width: 600px;
-    margin: auto;
-}
-
-section#social-medias a {
-    margin: auto;
+    border: 3px solid white;
+    border-radius: 10px;
 }
 
 footer {
     background-color: var(--footer);
 
-    padding: 5px;
+    padding: 15px;
     text-align: center;
 }
 
