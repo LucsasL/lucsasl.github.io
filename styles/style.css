@@ -43,6 +43,7 @@ body {
     font-size: 1em;
 }
 
+/* Header Page Settings */
 header {
     background-color: var(--color1);
     height: 80px;
@@ -60,18 +61,17 @@ div#bg-img {
     background-size: cover;
 
     height: 620px;
-    z-index: -1;
 }
 
-header a {
+div.social-links a {
     width: 40px;
     height: 40px;
 
     margin: 5px;
 }
 
-header a:hover {
-    width: 45px;
+div.social-links a:hover {
+    opacity: .6;
     transition-duration: 0.45s;
 }
 
@@ -84,8 +84,7 @@ header img.logo {
     display: flex;
     align-items: center;
 
-    width: 30px;
-    height: 30px;
+    width: 20px;
 
     margin-left: 20px;
 }
@@ -136,6 +135,7 @@ div#header-menu a {
     font-weight: bold;
 }
 
+/* Main Content */
 article {
     width: 80vw;
     margin: 30px auto 50px auto;
@@ -175,8 +175,7 @@ div#traficking-managment {
     height: 300px;
 }
 
-
-/* Settings for forms area */
+/* Settings for Forms Section */
 section#forms-area {
     background-image: linear-gradient(115deg, var(--color1), var(--color2));
     width: 100vw;
@@ -198,7 +197,7 @@ section#forms-area div#forms {
 
     padding: 20px;
 
-    border: 5px solid white;
+    box-shadow: 0px 0px 10px black;
     border-radius: 20px;
 
     display: flex;
