@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
+
+/* General Settings */
 :root {
     --bg: #000014;
 
@@ -28,6 +30,12 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Text Settings */
+h1 {
+    font-size: 2em;
+}
+
+/* Main Boxes Settings */
 body {
     background-color: var(--bg);
     color: var(--white);
@@ -36,10 +44,23 @@ body {
 }
 
 header {
-    background-image: linear-gradient(to right, var(--color0), var(--color2));
-
+    background-color: var(--color1);
     height: 80px;
+}
+
+div#img-container {
+    background-image: linear-gradient(to bottom, var(--color1), transparent);
+
     width: 100%;
+    height: 620px;
+}
+
+div#bg-img {
+    background: url('../Images/Lucsas\ GitHub\ Banner.png') center ;
+    background-size: cover;
+
+    height: 620px;
+    z-index: -1;
 }
 
 header a {
@@ -132,7 +153,6 @@ article p {
 }
 
 div.abilities {
-
     display: block;
     width: 80vw;
     height: 420px;
@@ -143,6 +163,74 @@ div.abilities {
     border-radius: 10px;
 }
 
+div#programming {
+    height: 300px;
+}
+
+div#design {
+    height: 300px;
+}
+
+div#traficking-managment {
+    height: 300px;
+}
+
+
+/* Settings for forms area */
+section#forms-area {
+    background-image: linear-gradient(115deg, var(--color1), var(--color2));
+    width: 100vw;
+    height: 900px;    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#forms-area > div {
+    width: 80vw;
+}
+
+section#forms-area div#forms {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 700px;
+
+    padding: 20px;
+
+    border: 5px solid white;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+div#making-deal {
+    width: 50%;
+}
+
+form, fieldset {
+    height: 100%;
+
+    padding: 20px;
+}
+
+div.input-box {
+    margin: 10px 0px;
+}
+
+input {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    outline: none;
+    border: #0000ff;
+    border-radius: 15px;
+}
+
+/* Settings for footer */
 footer {
     background-color: var(--footer);
 
