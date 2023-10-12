@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+/* Page Header Settings */
+div.social-links {
+    display: flex;
+    justify-content: space-around;
+
+    margin-right: 20px;
+}
+
 div#programming {
     display: flex;
     justify-content: space-evenly;
@@ -36,4 +44,25 @@ div.abilities {
     width: 50vw;
 
     margin: 20px;
+}
+
+div#programming {
+    height: 300px;
+}
+
+div#design {
+    height: 300px;
+}
+
+div#traficking-managment {
+    height: 300px;
+}
+
+/* Settings for Forms Section */
+section#forms-area div#forms-img {
+    display: flex;
+}
+
+div#making-deal {
+    width: 45%;
 }

@@ -63,10 +63,13 @@ div#bg-img {
     height: 620px;
 }
 
+div.social-links {
+    display: none;
+}
+
 div.social-links a {
     width: 40px;
     height: 40px;
-
     margin: 5px;
 }
 
@@ -87,13 +90,6 @@ header img.logo {
     width: 20px;
 
     margin-left: 20px;
-}
-
-div.social-links {
-    display: flex;
-    justify-content: space-around;
-
-    margin-right: 20px;
 }
 
 div.social-links img {
@@ -164,15 +160,15 @@ div.abilities {
 }
 
 div#programming {
-    height: 300px;
+    height: 380px;
 }
 
 div#design {
-    height: 300px;
+    height: 380px;
 }
 
 div#traficking-managment {
-    height: 300px;
+    height: 380px;
 }
 
 /* Settings for Forms Section */
@@ -186,16 +182,19 @@ section#forms-area {
     align-items: center;
 }
 
-section#forms-area > div {
-    width: 80vw;
+section#forms-area div#forms-img {
+    width: 45%;
+    display: none;
+    align-items: center;
 }
 
 section#forms-area div#forms {
     background-color: rgba(0, 0, 0, .7);
-    width: 100%;
+    width: 80vw;
     height: 700px;
 
     padding: 20px;
+    margin: 30px;
 
     box-shadow: 0px 0px 10px black;
     border-radius: 20px;
@@ -205,12 +204,12 @@ section#forms-area div#forms {
 }
 
 div#making-deal {
-    width: 50%;
+    width: 100%;
 }
 
 form, fieldset {
     height: 100%;
-    padding: 20px;
+    padding: 8px;
     border: none;
 }
 
