@@ -250,3 +250,9 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Settings for Media */
+div.div-iimg {
+    display: flex;
+    justify-content: right;
+}

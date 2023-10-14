@@ -8,13 +8,23 @@ div.social-links {
     margin-right: 20px;
 }
 
+/* Main Content Settings */
 div#programming {
     display: flex;
     justify-content: space-evenly;
 }
 
 div#programming > div {
-    width: 50vw;
+    width: 45vw;
+}
+
+div#programming p {
+    text-align: right;
+}
+
+div#programming img {
+    width: 60%;
+    padding: 20px;
 }
 
 div#design {
@@ -23,7 +33,16 @@ div#design {
 }
 
 div#design > div {
-    width: 50vw;
+    width: 45vw;
+}
+
+div#design p {
+    text-align: left;
+}
+
+div#design img {
+    width: 60%;
+    padding: 20px;
 }
 
 div#trafficking-management {
@@ -32,7 +51,16 @@ div#trafficking-management {
 }
 
 div#trafficking-management > div {
-    width: 50vw;
+    width: 45vw;
+}
+
+div#trafficking-management p {
+    text-align: right;
+}
+
+div#trafficking-management img {
+    width: 60%;
+    padding: 20px;
 }
 
 section#skills {
@@ -41,7 +69,7 @@ section#skills {
 }
 
 div.abilities {
-    width: 50vw;
+    width: 45vw;
 
     margin: 20px;
 }
