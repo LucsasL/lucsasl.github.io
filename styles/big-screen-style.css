@@ -9,6 +9,10 @@ div.social-links {
 }
 
 /* Main Content Settings */
+article {
+    width: 80vw;
+}
+
 div#programming {
     height: 350px;
 
@@ -78,12 +82,20 @@ section#skills {
 
 div.abilities {
     width: 45vw;
-
     margin: 20px;
 }
 
 
 /* Settings for Skill Section */
+section#skills-section {
+    width: 80vw;
+    margin: auto;
+}
+
+section#skills-section img {
+    width: 10%;
+    margin: 10px
+}
 
 /* Settings for Forms Section */
 section#forms-area div#forms-img {
