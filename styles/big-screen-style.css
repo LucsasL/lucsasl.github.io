@@ -10,6 +10,8 @@ div.social-links {
 
 /* Main Content Settings */
 div#programming {
+    height: 350px;
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -27,7 +29,10 @@ div#programming img {
     padding: 20px;
 }
 
+/* Design Block */
 div#design {
+    height: 350px;
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -45,7 +50,10 @@ div#design img {
     padding: 20px;
 }
 
+/* Traffick Managment Block */
 div#trafficking-management {
+    height: 350px;
+
     display: flex;
     justify-content: space-evenly;
 }
@@ -74,17 +82,8 @@ div.abilities {
     margin: 20px;
 }
 
-div#programming {
-    height: 300px;
-}
 
-div#design {
-    height: 300px;
-}
-
-div#traficking-managment {
-    height: 300px;
-}
+/* Settings for Skill Section */
 
 /* Settings for Forms Section */
 section#forms-area div#forms-img {

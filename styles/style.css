@@ -35,6 +35,11 @@ h1 {
     font-size: 2em;
 }
 
+article p {
+    font-size: 1.05em;
+    line-height: 1.6em;
+}
+
 /* Main Boxes Settings */
 body {
     background-color: var(--bg);
