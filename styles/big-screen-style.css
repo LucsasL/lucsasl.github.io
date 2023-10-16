@@ -97,6 +97,11 @@ section#skills-section img {
     margin: 10px
 }
 
+div.prog-skills {
+    background-color: rgb(131, 69, 186);
+    border-radius: 50%;
+}
+
 /* Settings for Forms Section */
 section#forms-area div#forms-img {
     display: flex;
