@@ -93,12 +93,20 @@ section#skills-section {
 }
 
 section#skills-section img {
-    width: 10%;
+    width: 65%;
     margin: 10px
 }
 
 div.prog-skills {
     background-color: rgb(131, 69, 186);
+
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 50%;
 }
 
