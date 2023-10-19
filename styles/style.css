@@ -137,6 +137,10 @@ div#header-menu a {
 }
 
 /* Main Content */
+main {
+    width: 100vw;
+}
+
 article {
     width: 95vw;
     margin: 30px auto 50px auto;

@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+/* General Settings */
+:root {
+    --bg: #000014;
+
+    --white: #ffffff;
+    --black: #000000;
+    
+    --color0: #0000ff;
+    --color1: #7052db;
+    --color2: #dd519a;
+
+    --footer: rgb(20, 22, 32);
+}
+
 /* Page Header Settings */
 div.social-links {
     display: flex;
@@ -88,7 +102,12 @@ div.abilities {
 
 /* Settings for Skill Section */
 section#skills-section {
-    width: 80vw;
+    width: 85vw;
+    margin: auto;
+}
+
+div#skill-container {
+    width: 90vw;
     margin: auto;
 }
 
@@ -102,7 +121,11 @@ section#skills-section > div {
 }
 
 div.prog-skills {
-    background-color: rgb(131, 69, 186);
+    background: radial-gradient(
+        circle at center,
+        var(--color2),
+        var(--color1)
+        );
 
     width: 300px;
     height: 300px;

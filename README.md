@@ -5,7 +5,7 @@ My (noob) portfolio. The purpose of the existence of this repository is to show 
     Updates
 </h2>
 
-- [First version of the "portfolio"](documents/first%20version.html)
+- [First version of the "portfolio"](documents/first-version.html)
 
 <h3>
     Starting a new Repository - June 17th 2023
