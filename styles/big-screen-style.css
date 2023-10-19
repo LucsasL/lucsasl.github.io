@@ -27,6 +27,26 @@ article {
     width: 80vw;
 }
 
+div#lucsas-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px;
+}
+
+div#msg-div {
+    width: 50%;
+}
+
+div#lucsas {
+    background: radial-gradient(var(--color2), var(--color1));
+
+    width: 50%;
+    margin: 10px;
+
+    border-radius: 50%;
+}
+
 div#programming {
     height: 350px;
 
@@ -112,8 +132,8 @@ div#skill-container {
 }
 
 section#skills-section img {
-    width: 65%;
-    margin: 10px
+    width: 60%;
+    margin: 10px;
 }
 
 section#skills-section > div {
