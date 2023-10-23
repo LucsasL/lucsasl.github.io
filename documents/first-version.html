@@ -15,7 +15,6 @@
 
     <link rel="stylesheet" href="../styles/big-screen-style.css" media="screen and (min-width: 992px)">
 
-    <script src="../scripts/form.js"></script>
 </head>
 <body>
 
@@ -251,7 +250,7 @@
                         </div>
 
                         <div id="making-deal">
-                            <form action="../scripts/form.js" method="POST">
+                            <form method="POST">
                                 <fieldset>
                                     <legend style="display: none;">
                                         Let's make a deal
@@ -281,7 +280,6 @@
                                                     WebApp Bugs
                                                 </option>
                                             </optgroup>
-                                            
 
                                             <optgroup>
                                                 <option value="Artificial Inteligence">
@@ -320,7 +318,7 @@
                                     </div>
 
                                     <div class="input-box">
-                                        <input type="submit" value="Send">
+                                        <input type="submit" value="Send" onclick="forms()">
                                     </div>
                                 </fieldset>
                             </form>
@@ -336,6 +334,8 @@
             </p>
         </footer>
     </div>
+
+    <script src="../scripts/form.js"></script>
 
 </body>
 </html>
