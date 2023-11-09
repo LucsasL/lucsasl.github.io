@@ -161,12 +161,14 @@ article p {
 span#guy-text {
     color: transparent;
     background-image: linear-gradient(to right, var(--color1), var(--color3));
+    background-clip: text;
     -webkit-background-clip: text;
 }
 
 h1#hire-me-text {
     background-image: linear-gradient(to right, var(--color0), var(--color3));
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
 
     text-align: center;
