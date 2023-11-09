@@ -13,6 +13,7 @@
     --color0: #0000ff;
     --color1: #7052db;
     --color2: #dd519a;
+    --color3: #d91c7d;
 
     --footer: rgb(20, 22, 32);
 }
@@ -155,6 +156,22 @@ article p {
     
     margin-top: 10px;
     margin-bottom: 16px;
+}
+
+span#guy-text {
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color1), var(--color3));
+    -webkit-background-clip: text;
+}
+
+h1#hire-me-text {
+    background-image: linear-gradient(to right, var(--color0), var(--color3));
+    color: transparent;
+    -webkit-background-clip: text;
+
+    text-align: center;
+    width: 200px;
+    margin: 15px auto;
 }
 
 div.abilities {
