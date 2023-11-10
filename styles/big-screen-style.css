@@ -15,6 +15,10 @@
 }
 
 /* Page Header Settings */
+div.header-menu {
+    display: none;
+}
+
 div.social-links {
     display: flex;
     justify-content: space-around;

@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+/* Main Header Settings */
+div.header-menu {
+    display: none;
+}
+
+div.social-links {
+    display: block;
+}
+
+/* Main Content Settings */
 div#programming {
     display: flex;
     justify-content: space-evenly;

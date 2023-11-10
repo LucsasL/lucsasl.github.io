@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
-<body>
+<body onresize="ChangeSize()">
 
     <!-- This version stills in development, so don't think this is the best demonstration of my codes skills, 'cause I'm still studying and evolving constantly -->
     
@@ -28,7 +28,7 @@
                     </div>
 
                     <menu>
-                        <div class="header-menu">
+                        <div class="header-menu" onclick="clickMenu()">
                             <span class="material-icons">menu</span>
                         </div>
 
@@ -342,7 +342,7 @@
         </footer>
     </div>
 
-    <script src="../scripts/clickmenu.js"></script>
+    <script src="../scripts/general-config.js"></script>
     <script src="../scripts/form.js"></script>
 
 </body>

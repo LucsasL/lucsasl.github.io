@@ -69,14 +69,36 @@ div#bg-img {
     height: 620px;
 }
 
+header menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    cursor: pointer;
+}
+
+div.header-menu span {
+    font-size: 50px;
+    margin: 0px 20px;
+}
+
 div.social-links {
     display: none;
 }
 
-div.social-links a {
-    width: 40px;
-    height: 40px;
+div.social-links img {
     margin: 5px;
+}
+
+div.social-links a {
+    width: 100%;
+    height: 100%;
 }
 
 div.social-links a:hover {
@@ -96,10 +118,6 @@ header img.logo {
     width: 20px;
 
     margin-left: 20px;
-}
-
-div.social-links img {
-    margin: 10px;
 }
 
 div > img#img {
