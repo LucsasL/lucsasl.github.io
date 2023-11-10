@@ -52,21 +52,15 @@ body {
 /* Header Page Settings */
 header {
     background-color: var(--color1);
+    width: 100vw;
     height: 80px;
+
+    display: flex;
+    align-items: center;
 }
 
-div#img-container {
-    background-image: linear-gradient(to bottom, var(--color1), transparent);
-
+div#header-items {
     width: 100%;
-    height: 620px;
-}
-
-div#bg-img {
-    background: url('../Images/Lucsas\ GitHub\ Banner.png') center ;
-    background-size: cover;
-
-    height: 620px;
 }
 
 header menu {
@@ -90,6 +84,7 @@ div.header-menu span {
 
 div.social-links {
     display: none;
+    margin-right: 20px;
 }
 
 div.social-links img {
@@ -111,12 +106,11 @@ div#header-items {
     justify-content: space-between;
 }
 
-header img.logo {
+header img#logo {
     display: flex;
     align-items: center;
 
-    width: 20px;
-
+    width: 65%;
     margin-left: 20px;
 }
 
@@ -153,6 +147,20 @@ div#header-menu a {
     color: black;
     text-decoration: none;
     font-weight: bold;
+}
+
+div#img-container {
+    background-image: linear-gradient(to bottom, var(--color1), transparent);
+
+    width: 100%;
+    height: 620px;
+}
+
+div#bg-img {
+    background: url('../Images/Lucsas\ GitHub\ Banner.png') center ;
+    background-size: cover;
+
+    height: 620px;
 }
 
 /* Main Content */
