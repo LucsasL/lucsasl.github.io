@@ -19,6 +19,11 @@ div.header-menu {
     display: none;
 }
 
+div#sections-nav {
+    display: flex;
+    align-items: center;
+}
+
 div.social-links {
     display: flex;
     justify-content: space-around;
