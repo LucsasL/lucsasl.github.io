@@ -94,6 +94,16 @@ div#sections-nav ul, li {
     padding: 15px;
 }
 
+div#sections-nav a {
+    color: black;
+    text-decoration: none;
+}
+
+div#sections-nav a:hover {
+    opacity: .6;
+    transition-duration: .5s;
+}
+
 div.header-menu span {
     font-size: 50px;
     margin: 0px 20px;
