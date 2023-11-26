@@ -47,6 +47,10 @@ div#msg-div {
     width: 50%;
 }
 
+div#msg-div p {
+    text-align: right;
+}
+
 div#lucsas {
     background: radial-gradient(var(--color2), var(--color1));
 
@@ -174,4 +178,19 @@ section#forms-area div#forms-img {
 
 div#making-deal {
     width: 45%;
+}
+
+/* Footer Settings */
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h1 {
+    color: var(--color1);
+    font-size: 1.2em;
+}
+
+footer div ul li {
+    display: block;
 }
