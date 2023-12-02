@@ -39,9 +39,9 @@ article p {
 }
 
 /* Main Boxes Settings */
-body {
+html, body {
     background-color: var(--bg);
-    color: var(--white);
+    color: white;
 
     font-size: 1em;
 }
@@ -226,16 +226,49 @@ div.abilities {
     box-shadow: 0px 0px 15px 2px var(--color1);
 }
 
+div.button-port button {
+    background: linear-gradient(
+        to right,
+        var(--color1),
+        var(--color2)
+    );
+
+    width: 30vw;
+    padding: 10px 20px;
+
+    border-radius: 25px;
+    border: none;
+}
+
+div.div-img {
+    margin: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button a:hover {
+    transition-duration: .5s;
+}
+
 div#programming {
-    height: 380px;
+    
 }
 
 div#design {
-    height: 380px;
+    
 }
 
 div#traficking-managment {
-    height: 380px;
+    
 }
 
 section#effects-in-work {
@@ -269,7 +302,11 @@ section#effects-in-work div {
 
 /* Settings for Forms Section */
 section#forms-area {
-    background-image: linear-gradient(115deg, var(--color2), var(--color1));
+    background-image: linear-gradient(
+        115deg,
+        var(--color2),
+        var(--color1)
+    );
     width: 100vw;
     height: 900px;    
 
