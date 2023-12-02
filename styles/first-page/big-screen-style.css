@@ -61,8 +61,7 @@ div#lucsas {
 }
 
 div#programming {
-    height: 350px;
-
+    margin: 20px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -76,14 +75,13 @@ div#programming p {
 }
 
 div#programming img {
-    width: 60%;
+    width: 100%;
     padding: 20px;
 }
 
 /* Design Block */
 div#design {
-    height: 350px;
-
+    margin: 20px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -97,14 +95,13 @@ div#design p {
 }
 
 div#design img {
-    width: 60%;
+    width: 100%;
     padding: 20px;
 }
 
 /* Traffick Managment Block */
 div#trafficking-management {
-    height: 350px;
-
+    margin: 20px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -118,7 +115,7 @@ div#trafficking-management p {
 }
 
 div#trafficking-management img {
-    width: 60%;
+    width: 100%;
     padding: 20px;
 }
 

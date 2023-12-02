@@ -12,6 +12,9 @@
     --color2: #dd519a;
     --color3: #d91c7d;
 
+    --html: #e44d26;
+    --css: #2858ff;
+
     --footer: rgb(20, 22, 32);
 }
 
@@ -25,7 +28,17 @@
 
     box-sizing: border-box;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
 }
 
 /* Text Settings */
@@ -197,13 +210,23 @@ article p {
 
 span#guy-text {
     color: transparent;
-    background-image: linear-gradient(to right, var(--color1), var(--color3));
+    background-image: linear-gradient(
+        to right,
+        var(--color1),
+        var(--color3)
+    );
+
     background-clip: text;
     -webkit-background-clip: text;
 }
 
 h1#hire-me-text {
-    background-image: linear-gradient(to right, var(--color0), var(--color3));
+    background-image: linear-gradient(
+        to right,
+        var(--color0),
+        var(--color3)
+    );
+
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -216,7 +239,6 @@ h1#hire-me-text {
 div.abilities {
     display: block;
     width: 80vw;
-    height: 420px;
     padding: 20px;
     margin:  10px 0px;
 
@@ -234,6 +256,7 @@ div.button-port button {
     );
 
     width: 30vw;
+    height: 40px;
     padding: 10px 20px;
 
     border-radius: 25px;
@@ -241,8 +264,6 @@ div.button-port button {
 }
 
 div.div-img {
-    margin: 40px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -250,6 +271,10 @@ div.div-img {
 }
 
 button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -257,18 +282,6 @@ button a {
 
 button a:hover {
     transition-duration: .5s;
-}
-
-div#programming {
-    
-}
-
-div#design {
-    
-}
-
-div#traficking-managment {
-    
 }
 
 section#effects-in-work {
@@ -384,8 +397,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Settings for Media */
-div.div-iimg {
-    display: flex;
-    justify-content: right;
+/* Media Settings */
+div#programming, div#design, div#trafficking-management img {
+    width: 95%;
 }
