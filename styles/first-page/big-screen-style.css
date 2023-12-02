@@ -61,7 +61,7 @@ div#lucsas {
 }
 
 div#programming {
-    margin: 20px;
+    margin: 50px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -81,7 +81,7 @@ div#programming img {
 
 /* Design Block */
 div#design {
-    margin: 20px;
+    margin: 50px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -101,7 +101,7 @@ div#design img {
 
 /* Traffick Managment Block */
 div#trafficking-management {
-    margin: 20px;
+    margin: 50px;
     display: flex;
     justify-content: space-evenly;
 }
