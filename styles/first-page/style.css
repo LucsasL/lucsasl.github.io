@@ -51,6 +51,18 @@ article p {
     line-height: 1.9em;
 }
 
+div.jobs span {
+    background: linear-gradient(
+        to right,
+        var(--color1),
+        var(--color2)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
 /* Main Boxes Settings */
 html, body {
     background-color: var(--bg);

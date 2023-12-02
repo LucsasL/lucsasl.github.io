@@ -119,6 +119,34 @@ div#trafficking-management img {
     padding: 20px;
 }
 
+/* Video editing block */
+div#video-editing {
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#video-editing > div {
+    width: 45vw;
+}
+
+/* Writing Block */
+div#article {
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#article p {
+    text-align: right;
+}
+
+div#article > div {
+    width: 45vw;
+    text-align: right;
+}
+
+/*  */
 section#skills {
     display: flex;
     justify-content: space-evenly;
