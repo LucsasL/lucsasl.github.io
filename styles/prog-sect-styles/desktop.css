@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* Main Header Settings */
+div.header-menu {
+    display: none;
+}
+
+div.social-links {
+    display: block;
+}
+
+/* Main Content Settings */
+div#programming {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#programming > div {
+    width: 50vw;
+}
+
+div#design {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#design > div {
+    width: 50vw;
+}
+
+div#trafficking-management {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div#trafficking-management > div {
+    width: 50vw;
+}
+
+section#skills {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.abilities {
+    width: 50vw;
+
+    margin: 20px;
+}
