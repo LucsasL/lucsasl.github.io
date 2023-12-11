@@ -221,19 +221,23 @@ article p {
     margin-bottom: 16px;
 }
 
-section#secttext {
-    background-color: white;
-    color: black;
-
+/* Sections Settings */
+section > div {
+    width: 90%;
+    padding: 30px;
     margin: 20px 0px;
 }
 
-section#secttext div {
+section > div > div {
     width: 50%;
 }
 
-section#sectproj {
-    width: 50%;
+section#secttext > div {
+    background-color: white;
+    color: black;
+
+    padding: 30px;
+    margin: 20px -30px;
 }
 
 /* Settings for footer */
