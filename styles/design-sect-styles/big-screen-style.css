@@ -32,102 +32,15 @@ div.social-links {
 }
 
 /* Main Content Settings */
-article {
-    width: 80vw;
-}
-
-div#lucsas-container {
-    display: flex;
-    justify-content: space-between;
-
-    margin: 10px;
-}
-
-div#msg-div {
-    width: 50%;
-}
-
-div#msg-div p {
-    text-align: right;
-}
-
-div#lucsas {
-    background: radial-gradient(var(--color2), var(--color1));
-
-    width: 50%;
-    margin: 10px;
-
-    border-radius: 50%;
-}
-
-div#programming {
-    margin: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-div#programming > div {
-    width: 45vw;
-}
-
-div#programming p {
-    text-align: right;
-}
-
-div#programming img {
+section {
     width: 100%;
-    padding: 20px;
-}
 
-/* Design Block */
-div#design {
-    margin: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-div#design > div {
-    width: 45vw;
-}
-
-div#design p {
-    text-align: left;
-}
-
-div#design img {
-    width: 100%;
-    padding: 20px;
-}
-
-/* Traffick Managment Block */
-div#trafficking-management {
-    margin: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-div#trafficking-management > div {
-    width: 45vw;
-}
-
-div#trafficking-management p {
-    text-align: right;
-}
-
-div#trafficking-management img {
-    width: 100%;
-    padding: 20px;
-}
-
-/* Video editing block */
-div#video-editing {
-    margin: 50px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-div#video-editing > div {
-    width: 45vw;
+section > div {
+    width: 90vw;
 }
 
 /* Writing Block */
@@ -156,7 +69,6 @@ div.abilities {
     width: 45vw;
     margin: 20px;
 }
-
 
 /* Settings for Skill Section */
 section#skills-section {
@@ -194,15 +106,6 @@ div.prog-skills {
     align-items: center;
 
     border-radius: 50%;
-}
-
-/* Settings for Forms Section */
-section#forms-area div#forms-img {
-    display: flex;
-}
-
-div#making-deal {
-    width: 45%;
 }
 
 /* Footer Settings */

@@ -206,7 +206,7 @@ main {
 }
 
 article {
-    width: 95vw;
+    width: 100%;
     margin: 30px auto 50px auto;
 }
 
@@ -221,174 +221,19 @@ article p {
     margin-bottom: 16px;
 }
 
-span#guy-text {
-    color: transparent;
-    background-image: linear-gradient(
-        to right,
-        var(--color1),
-        var(--color3)
-    );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-}
-
-h1#hire-me-text {
-    background-image: linear-gradient(
-        to right,
-        var(--color0),
-        var(--color3)
-    );
-
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    text-align: center;
-    width: 200px;
-    margin: 15px auto;
-}
-
-div.abilities {
-    display: block;
-    width: 80vw;
-    padding: 20px;
-    margin:  10px 0px;
-
-    border: 3px solid white;
-    border-radius: 10px;
-
-    box-shadow: 0px 0px 15px 2px var(--color1);
-}
-
-div.button-port button {
-    background: linear-gradient(
-        to right,
-        var(--color1),
-        var(--color2)
-    );
-
-    width: 30vw;
-    height: 40px;
-    padding: 10px 20px;
-
-    border-radius: 25px;
-    border: none;
-}
-
-div.div-img {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-button a {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-button a:hover {
-    transition-duration: .5s;
-}
-
-section#effects-in-work {
-    background: white;
+section#secttext {
+    background-color: white;
     color: black;
 
-    margin: 0 -13%;
-
-    display: flex;
-    justify-content: center;
+    margin: 20px 0px;
 }
 
-div#before-feats {
-    background-color: white;
-    height: 100px;
-    margin: 15px -13% 0 -13%;
-    border-radius: 50% 50% 0 0;
+section#secttext div {
+    width: 50%;
 }
 
-div#after-feats {
-    background-color: white;
-    height: 100px;
-    margin: 0 -13% 50px -13%;
-    border-radius: 0 0 50% 50%;
-}
-
-section#effects-in-work div {
-    width: 95vw;
-
-}
-
-/* Settings for Forms Section */
-section#forms-area {
-    background-image: linear-gradient(
-        115deg,
-        var(--color2),
-        var(--color1)
-    );
-    width: 100vw;
-    height: 900px;    
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-section#forms-area div#forms-img {
-    width: 45%;
-    display: none;
-    align-items: center;
-}
-
-section#forms-area div#forms {
-    background-color: rgba(0, 0, 0, .7);
-    width: 80vw;
-    height: 700px;
-
-    padding: 20px;
-    margin: 30px;
-
-    box-shadow: 0px 0px 10px black;
-    border-radius: 20px;
-
-    display: flex;
-    justify-content: space-between;
-}
-
-div#making-deal {
-    width: 100%;
-}
-
-form, fieldset {
-    height: 100%;
-    padding: 8px;
-    border: none;
-}
-
-div.input-box {
-    margin: 10px 0px;
-}
-
-section#forms-area input, textarea, select {
-    background-color: rgba(0, 0, 0, 0.61);
-    color: white;
-
-    width: 100%;
-
-    padding: 10px;
-    margin-top: 8px;
-    margin-bottom: 15px;
-
-    outline: none;
-    border: #0000ff;
-    border-radius: 15px;
+section#sectproj {
+    width: 50%;
 }
 
 /* Settings for footer */
@@ -411,6 +256,6 @@ footer a:hover {
 }
 
 /* Media Settings */
-div#programming, div#design, div#trafficking-management img {
-    width: 95%;
+section#sectskill img {
+    width: 60%;
 }
