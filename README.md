@@ -3,7 +3,9 @@ I created another portfolio to showcase my skills and jobs.
 
 This one is just for my skills in ***PPC Management*** though.
 
-I'll make som updates to polish everything and make it better with time. I need to study more things lol
+I'll make some updates to polish everything and make it better with time. I need to study more things lol
+
+(I don't consider my skills as a programmer really useful yet, there are many things to study yet)
 
 ## Links and Tools
 
