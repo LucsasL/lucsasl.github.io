@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucsas - Web Development</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../img/lucsas-favicon.ico" type="image/x-icon">
+
+  <!-- Metadata -->
+  <meta name="author" content="Lucas Lira" />
+  <meta name="Description" content="Build responsive and interactive website to display the excellence of your business" />
+  <meta name="keywords" content="HTML, CSS, HTML5, CSS3, JavaScript, Web Development, Modern Web, Website creation, Spline" />
+  <meta name="theme-color" content="#060606" />
+
+  <!-- Style and Media Queries -->
+  <link rel="stylesheet" href="../styles/style.css" media="all">
+  <link rel="stylesheet" href="../styles/tablet/tablet-style.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+  <link rel="stylesheet" href="../styles/desktop/desktop-style.css" media="screen and (min-width: 992px) and (max-width: 1200px)">
+  <link rel="stylesheet" href="../styles/big/big-screen-style.css" media="screen and (min-width: 1200px)">
+
+  <!-- Print -->
+  <link rel="stylesheet" href="../styles/print/print.css" media="print">
+
+  <!-- Imports -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+</head>
+<body>
+  
+  <div id="ui">
+    <header>
+      <div>
+        <div>
+          <figure>
+            <img src="../img/lucsas-logo.webp" alt="Lucsas Logo" style="width: 75px; height: 75px;">
+            <h1 class="headerName">
+              Lucsas
+            </h1>
+          </figure>
+        </div>
+
+        <div id="mainHeader">
+          <menu>
+            <nav>
+              <ul>
+                <li>
+                  <button>
+                    <a href="./web.html#intro">Home</a>
+                  </button>
+                </li>
+
+                <li>
+                  <button>
+                    <a href="./web.html#about">About</a>
+                  </button>
+                </li>
+
+                <li>
+                  <button>
+                    <a href="./index.html#google">Web Development</a>
+                  </button>
+                </li>
+
+                <li>
+                  <button>
+                    <a href="./index.html#meta">Inovation</a>
+                  </button>
+                </li>
+
+                <li>
+                  <button id="contactButton">
+                    <a href="./web.html#grow">Contact</a>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <div id="musicDiv">
+              <canvas id="musicButton"></canvas>
+
+              <!-- Music by Eric Godlow
+              Music source: https://youtu.be/IUYaCe95dxw?si=KGSnNIIKn5uaWJY4 -->
+              <audio preload="auto" loop id="player">
+                <source src="../audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3" type="audio/mp3">
+                <source src="../audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg" type="audio/ogg">
+              </audio>
+            </div>
+          
+            <div id="bgcolor">
+              <label for="bgButton">
+                <input type="checkbox" id="bgButton" checked>
+                <span>
+                  <i id="symbol"></i>
+                  <i id="thumb"></i>
+                </span>
+              </label>
+            </div>
+          </menu>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div>
+        <section id="intro">
+        <div class="intro3D">
+            <!-- <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="" width='100%' height='100%'></iframe> -->
+        </div>
+
+        <div class="scroll-anim">
+            <div>
+
+            </div>
+        </div>  
+      </section>
+
+      <section id="skills">
+        <div class="cont">
+          <div class="center">
+            <h1 class="block-text big hidden1" style="margin: 30px 0px;">
+              In what can I help you?
+            </h1>
+          </div>
+
+          <div id="cards">
+            <div class="skill-block hidden">
+              <div class="img-sk">
+                <figure>
+                  <img src="../img/startup.webp" alt="Connection with your target audience" class="functions">
+                </figure>
+              </div>
+
+              <div>
+                <h1>
+                  Campaign Creation
+                </h1>
+                
+                <p>
+                  Create optimized campaigns to potential clients in different segmentation and locations. Making your business reach new clients in a better way and promoting your branch.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-block hidden">
+              <div class="img-sk">
+                <figure>
+                  <img src="../img/promote.webp" alt="Promote your brand" class="functions">
+                </figure>
+              </div>
+
+              <div>
+                <h1>
+                  Captivating Writing
+                </h1>
+                <p>
+                  With good use of Copywriting, we can convince more people and attract impressions, leads and conversions.
+                </p>
+              </div>
+            </div>
+
+            <div class="skill-block hidden">
+              <div class="img-sk">
+                <figure>
+                  <img src="../img/wireframe.webp" alt="Multi platform adverts" class="functions">
+                </figure>
+              </div>
+
+              <div>
+                <h1>
+                  Multi-Platform
+                </h1>
+            
+                <p>
+                  Expanding your brand in different social medias and all different places of internet, bringing more sight for you.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="about-style"></div>
+          <section id="about">
+            <div class="cont">
+              <div class="hidden">
+                <h1 class="big">
+                  Hi, My name is <span class="fancy">Lucas Lira</span>
+                </h1>
+                <p>
+                  I work as a <em style="font-weight: bold;">Pay-Per-Click Manager,</em> a professional which main function is to create, manage and optimizing ads campaign in different online advertising softwares, but the most important function, is to bring results for my clients.
+                </p>
+
+                <p>
+                  I've been studying topics surrounding the fields of Digital Marketing and Programming, always looking to improve and get better in delivering what you need.
+                </p>
+
+                <p>
+                  My job and commitment goes to give results, whether this being conversions, engagement, leads or even more recognition to your work.
+                </p>
+
+                <p>
+                  What do you thing? Can we grow together?
+                </p>
+              </div>
+
+              <div class="img-div hidden1">
+                <figure>
+                  <!-- <iframe src='https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/' title="Lucsas Mascot" width='100%' height='100%' id="mascot"></iframe> -->
+                </figure>
+              </div>
+            </div>
+        </section>
+
+         <section id="grow">
+          <div class="cont">
+            <div id="ways-contact">
+              <div>
+                <p>
+                  Want to bring more attention to your business?
+                </p>
+                
+                <h1 class="big fancy">
+                  Let's grow together!
+                </h1>
+              </div>
+
+              <div>
+                <div>
+                  <div class="contact">
+                    <figure>
+                      <img src="../img/email.webp" alt="Contact through E-mail" class="icons">
+                    </figure>
+                  </div>
+
+                  <p>
+                    <span>
+                      Send me an e-mail at:
+                    </span> <br>
+
+                    <strong>lucsas.lira@gmail.com</strong>
+                  </p>
+                </div>
+
+                <div>
+                  <div class="contact">
+                    <figure>
+                      <img src="../img/instagram-icon.webp" alt="Contact through Instagram" class="icons">
+                    </figure>
+                  </div>
+
+                  <p>
+                    <span>
+                      Call me in Direct Message:
+                    </span> <br>
+
+                    <strong>@lucsas.l</strong>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            
+            <div>
+              <div class="center">
+                <h1 class="block-text" style="margin: 10px 0px 40px 0px;">
+                  Contact
+                </h1>
+              </div>
+              
+              <form action="https://api.staticforms.xyz/submit" method="post" autocomplete="on">
+                  <div>
+                    <div>
+                      <label for="fullName">Name:</label> <br>
+                        <input type="text" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div>
+                      <label for="emailAddress">E-mail: </label> <br>
+                        <input type="email" name="email" placeholder="Your e-mail" required>
+                    </div>
+
+                    <div>
+                      <label for="userMsg">Message: </label> <br>
+                        <textarea name="message" cols="30" rows="10" placeholder="Write a message..." required></textarea>
+                    </div>
+
+                    <div>
+                      <input type="submit" value="Send" class="submit-button">
+                    </div>
+
+                    <div>
+                      <input type="hidden" name="accessKey" value="9f7e2bc4-d0c9-4819-ac06-2c58044142e0"> 
+                      <input type="hidden" name="redirectTo" value="document/success.html">
+                      <input type="hidden" name="replyTo" value="@">
+                    </div>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footerNav">
+        <div id="meetMe">
+          <h1>
+            Lucas Lira
+          </h1>
+
+          <p>
+            I work with Web Development and Ads Softwares, such as Google Ads & Meta Ads. Since I'm just beginning, I don't have much experience, but I'll make my best to deliver the best results possible.
+          </p>
+
+          <ul>
+            <li>
+              <figure>
+                <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
+                  <img src="../img/instagram-social.webp" alt="Instagram" class="icons">
+                </a>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="https://github.com/LucsasL" target="_blank" rel="noopener noreferrer">
+                  <img src="../img/github-social.webp" alt="GitHub" class="icons">
+                </a>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="https://www.linkedin.com/in/lucsas/?locale=en_US" target="_blank" rel="noopener noreferrer">
+                  <img src="../img/linkedin-social.webp" alt="Lucsas Linkedin" class="icons">
+                </a>
+              </figure>
+            </li>
+
+            <li>
+              <figure>
+                <a href="https://twitter.com/LucsasL" target="_blank" rel="noopener noreferrer">
+                  <img src="../img/twitter-social.webp" alt="Lucsas Twitter" class="icons">
+                </a>
+              </figure>
+            </li>
+
+          </ul>
+        </div>
+
+        <div>
+          <h1>
+            Quick links
+          </h1>
+
+          <ul>
+            <li>
+              <a href="web.html#intro">Home</a>
+            </li>
+
+            <li>
+              <a href="web.html#about">About</a>
+            </li>
+
+            <li>
+              <a href="index.html#google">Google Ads</a>
+            </li>
+
+            <li>
+              <a href="index.html#meta">Meta Ads</a>
+            </li>
+
+            <li>
+              <a href="web.html#grow">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="credits">
+        <div>
+          <figure>
+            <img src="../img/lucsas-logo.webp" alt="Lucsas Logo" style="width: 75px; height: 75px;">
+          </figure>
+        </div>
+
+        <p>
+          Built by <a href="http://github.com/lucsasl" target="_blank" rel="noopener noreferrer">Lucsas</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Different position elements -->
+    <div id="msg-me">
+      <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
+        <figure>
+          <figcaption>
+            Instagram
+          </figcaption>
+          <img src="../img/instagram-icon.webp" alt="Instagram contact" style="width: 45px; height: 45px;">
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <!-- Front-end Scripts -->
+  <script src="../scripts/header.js"></script>
+
+  <script src="../scripts/bg.js"></script>
+
+  <script type="module" src="../scripts/music.js"></script>
+
+  <script src="../scripts/scroll-icon.js"></script>
+
+  <script src="../scripts/content-animation.js"></script>
+
+</body>
+</html>
