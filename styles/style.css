@@ -613,7 +613,7 @@ section div.promises:nth-child(5) {
   display: flex;
   justify-content: space-around;
 
-  grid-column: span 2 / auto;
+  grid-column: span 3 / auto;
 }
 
 @keyframes gradient-move {

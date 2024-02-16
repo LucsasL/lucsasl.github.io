@@ -77,14 +77,20 @@ div#prom-container {
   height: auto;
 
   display: grid;
-  grid-template-columns: 60% 1fr;
-  grid-template-rows: 500px 500px 500px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 500px);
 
   gap: 30px;
 }
 
+div.promises:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 div.promises:nth-child(4) {
-  grid-template-columns: 2fr;
+  grid-column-start: 4;
+  grid-column-end: 2;
 }
 
 div.results div.promises {
