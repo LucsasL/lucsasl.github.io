@@ -633,6 +633,8 @@ section#intro div.intro3D {
   position: absolute;
   top: 0;
   left: 0;
+
+  display: none;
 }
 
 section#intro {

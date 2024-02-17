@@ -112,6 +112,10 @@ section#intro div.cont {
   align-items: center;
 }
 
+section#intro div.intro3D {
+  display: block;
+}
+
 section#intro div.cont > div {
   width: 80%;
   margin-left: 2%;
