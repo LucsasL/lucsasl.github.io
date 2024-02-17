@@ -2,7 +2,7 @@
 
 /* Header Settings */
 .headerName {
-  display: inline;
+  display: none;
 }
 
 header li {
@@ -11,6 +11,10 @@ header li {
 
 header div#mainHeader {
   width: 70%;
+}
+
+div#bgcolor label {
+  width: 80px;
 }
 
 /* Intro Section */
