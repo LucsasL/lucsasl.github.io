@@ -359,7 +359,7 @@ header a:hover {
 }
 
 header div#mainHeader {
-  width: 40%;
+  width: 60%;
 
   display: flex;
   justify-content: space-evenly;
@@ -413,7 +413,7 @@ div#bgcolor label {
     rgb(200, 0,255)
   );
 
-  width: 100px;
+  width: 80px;
   height: 40px;
   border-radius: 80px;
 

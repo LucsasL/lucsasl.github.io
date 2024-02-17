@@ -42,10 +42,6 @@ header li {
   display: inline;
 }
 
-div#bgcolor label {
-  width: 80px;
-}
-
 header div#bgcolor {
   width: 15%;
 }

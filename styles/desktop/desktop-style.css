@@ -13,10 +13,6 @@ header div#mainHeader {
   width: 70%;
 }
 
-div#bgcolor label {
-  width: 80px;
-}
-
 /* Intro Section */
 section#intro div.cont {
   width: 100%;
