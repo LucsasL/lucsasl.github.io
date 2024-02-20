@@ -284,6 +284,7 @@ iframe#mascot {
   display: block;
   width: 140vw;
   position: absolute;
+  top: -15%;
 }
 
 /* Header Settings */
@@ -761,6 +762,7 @@ div#socials img {
 /* About Section */
 section#about {
   padding-top: 50px;
+  position: relative;
 }
 
 div#about-style {

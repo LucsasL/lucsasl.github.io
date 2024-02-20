@@ -110,6 +110,7 @@ section#intro div.cont {
 
 section#intro div.intro3D {
   display: block;
+  pointer-events: all;
 }
 
 section#intro div.cont > div {
