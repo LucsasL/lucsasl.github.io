@@ -817,7 +817,8 @@ div.skill-block {
 }
 
 div.skill-block div.img-sk {
-  background: radial-gradient(
+  background: linear-gradient(
+    135deg,
     var(--color1),
     var(--color0)
   );
@@ -826,7 +827,24 @@ div.skill-block div.img-sk {
   height: 200px;
   margin: 20px;
 
-  border-radius: 50%;
+  animation: blob 10s ease-in-out infinite;
+}
+
+div.img-sk:nth-child(even) {
+    background: linear-gradient(
+    135deg,
+    var(--color1),
+    var(--color0)
+  );
+
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+  position: absolute;
+  z-index: -1;
+  filter: blur(30px);
+
   animation: blob 10s ease-in-out infinite;
 }
 
