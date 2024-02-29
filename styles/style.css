@@ -827,6 +827,7 @@ div.skill-block div.img-sk {
   margin: 20px;
 
   border-radius: 50%;
+  animation: blob 10s ease-in-out infinite;
 }
 
 div.img-sk img {
@@ -915,8 +916,9 @@ div.contact {
   width: 75px;
   height: 75px;
 
-  border-radius: 50%;
   display: inline-block;
+
+  animation: blob 10s ease-in-out infinite;
 }
 
 div#ways-contact p {
@@ -1067,5 +1069,15 @@ div.scroll-anim > div::after {
   to {
     top: 60%;
     opacity: .2;
+  }
+}
+
+@keyframes blob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
