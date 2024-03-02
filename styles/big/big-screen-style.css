@@ -77,20 +77,30 @@ div#prom-container {
   height: auto;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 500px);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 550px);
 
   gap: 30px;
 }
 
 div.promises:nth-child(1) {
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 8;
+}
+
+div.promises:nth-child(2) {
+  grid-column-start: 8;
+  grid-column-end: 13;
+}
+
+div.promises:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 6;
 }
 
 div.promises:nth-child(4) {
-  grid-column-start: 4;
-  grid-column-end: 2;
+  grid-column-start: 6;
+  grid-column-end: 13;
 }
 
 div.results div.promises {
