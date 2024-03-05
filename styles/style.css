@@ -1045,6 +1045,56 @@ footer div#credits {
   align-items: center;  
 }
 
+/* Loading Screen */
+.loading {
+  background: var(--bg);
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  transition: all .5s ease-out;
+}
+
+.loading-anim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-anim::before {
+  content: '';
+  width: 200px;
+  height: 200px;
+  border-top: 3px solid blue;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+
+  animation: load linear 3s infinite;
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Effects */
 div.scroll-anim {
   width: 100vw;
