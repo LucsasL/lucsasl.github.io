@@ -1,13 +1,7 @@
-document.addEventListener("click", () => {
-  while (loadingScreen.style.display == "flex") {
-    document.style.overflow = "clip";
-  }
-
-  // if (loadPerc != document.wind) {
-
-  // }
-
+iframeContent.addEventListener("load", () => {
   loadingScreen.style.display = "none";
 })
 
-loadingScreen = document.querySelector(".loading");
+const loadingScreen = document.querySelector(".loading");
+const iframe = document.querySelector("iframe#room3d");
+const iframeContent = iframe.contentDocument;
