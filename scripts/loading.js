@@ -1,18 +1,5 @@
-function checkIframeLoad() {
-  const loadingScreen = document.querySelector(".loading");
-  const iframe = document.querySelector("iframe#room3d");
-  const iframeContent = iframe.contentDocument;
+const loading = document.querySelector(".loading");
 
-  if (iframeContent.readyState == "complete") {
-    iframe.contentWindow.onload = () => {
-      alert("I'm loading");
-    }
-
-    loaded();
-    return;
-  }
-}
-
-function loaded() {
-  alert("It's working :D")
-}
+document.addEventListener("load", () => {
+  loading.style.display = "none";
+})
