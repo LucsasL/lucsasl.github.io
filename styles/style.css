@@ -360,7 +360,7 @@ header a:hover {
 }
 
 header div#mainHeader {
-  width: 60%;
+  width: 35%;
 
   display: flex;
   justify-content: space-evenly;
