@@ -1,6 +1,6 @@
 let pageURL = document.URL;
 
-document.addEventListener("keypress", (e) => {
+window.addEventListener("keypress", (e) => {
   switch (e.key) {
     case "1":
       document.URL.replace("#intro");
