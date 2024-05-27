@@ -65,7 +65,6 @@ a:hover {
   font-display: swap;
 }
 header {
-  background: white;
   color: white;
   width: 100vw;
   height: 90px;
@@ -79,7 +78,7 @@ header {
 }
 header > div {
   background: rgba(0, 0, 0, 0.5);
-  width: 110%;
+  width: 90%;
   height: 100%;
   padding: 30px;
   margin: 0px 15px;
@@ -88,47 +87,47 @@ header > div {
   justify-content: space-between;
   align-items: center;
 }
-header header li {
+header li {
   display: none;
   margin: 10px;
 }
-header header button {
+header button {
   background: transparent;
   width: auto;
 }
-header header button#contactButton {
+header button#contactButton {
   border-bottom: 3px solid rgb(54, 23, 255);
   transition: all 0.5s ease;
 }
-header header button#contactButton:hover {
+header button#contactButton:hover {
   box-shadow: 0px 3px 7px rgb(54, 23, 255);
 }
-header header a {
+header a {
   color: var(--txtColor);
   transition: all 0.5s ease;
 }
-header header a:hover {
+header a:hover {
   background: linear-gradient(to right, var(--color0), var(--color1));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-header header div#mainHeader {
+header div#mainHeader {
   width: 35%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-header header menu {
+header menu {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-header header div#musicDiv {
+header div#musicDiv {
   display: inline-flex;
   align-items: center;
 }
-header header canvas {
+header canvas {
   background: rgb(196, 196, 196);
   width: 50px;
   height: 50px;
@@ -137,7 +136,7 @@ header header canvas {
   transition: all 0.5s ease;
   cursor: pointer;
 }
-header header canvas:hover {
+header canvas:hover {
   background: linear-gradient(to right, var(--color0), var(--color1));
 }
 header div#bgcolor {
@@ -159,13 +158,6 @@ header div#bgcolor label {
 }
 header div#bgcolor input {
   display: none;
-}
-header div#bgcolor i#symbol {
-  background: white;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
 }
 header div#bgcolor input:not(:checked) ~ span i#symbol {
   border: 2px solid black;
@@ -190,6 +182,17 @@ header div#bgcolor input:checked ~ label {
   background: linear-gradient(to right, var(--color0), var(--color1));
   box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218), inset 0px 0px 15px var(--shadow);
 }
+header div#bgcolor input:checked ~ span i#thumb {
+  position: absolute;
+  left: calc(100% - 34px);
+}
+header div#bgcolor i#symbol {
+  background: white;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
 header div#bgcolor i#thumb {
   background: white;
   box-shadow: 0px 0px 10px var(--shadow);
@@ -202,10 +205,6 @@ header div#bgcolor i#thumb {
   left: 7%;
   transform: translateY(-50%);
   pointer-events: none;
-}
-header div#bgcolor input:checked ~ span i#thumb {
-  position: absolute;
-  left: calc(100% - 34px);
 }
 
 /*# sourceMappingURL=index.css.map */

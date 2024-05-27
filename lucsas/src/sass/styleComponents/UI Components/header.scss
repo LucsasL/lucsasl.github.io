@@ -1,5 +1,4 @@
 header {
-  background: $color;
   color: $color;
   
   width: 100vw;
@@ -15,7 +14,7 @@ header {
   > div {
     background: $header;
 
-    width: 110%;
+    width: 90%;
     height: 100%;
     padding: 30px;
     margin: 0px 15px;
@@ -23,46 +22,45 @@ header {
 
     @include spaceBetween;
   }
-
   
-  header li {
+  li {
     display: none;
     margin: 10px;
   }
 
-  header button {
+  button {
     background: transparent;
     width: auto;
   }
 
-  header button#contactButton {
+  button#contactButton {
     border-bottom: 3px solid rgb(54, 23, 255);
     transition: all .5s ease;
   }
 
-  header button#contactButton:hover {
+  button#contactButton:hover {
     box-shadow: 0px 3px 7px rgb(54, 23, 255);
   }
 
-  header a {
+  a {
     color: var(--txtColor);
     transition: all .5s ease;
+
+    &:hover {
+      background: linear-gradient(
+        to right,
+        var(--color0),
+        var(--color1)
+      );
+  
+      background-clip: text;
+      -webkit-background-clip: text;
+  
+      color: transparent;
+    }
   }
 
-  header a:hover {
-    background: linear-gradient(
-      to right,
-      var(--color0),
-      var(--color1)
-    );
-
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    color: transparent;
-  }
-
-  header div#mainHeader {
+  div#mainHeader {
     width: 35%;
 
     display: flex;
@@ -70,18 +68,18 @@ header {
     align-items: center;
   }
 
-  header menu {
+  menu {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
 
-  header div#musicDiv {
+  div#musicDiv {
     display: inline-flex;
     align-items: center;
   }
 
-  header canvas {
+  canvas {
     background: rgb(196, 196, 196);
 
     width: 50px;
@@ -91,14 +89,14 @@ header {
     border-radius: 50%;
     transition: all .5s ease;
     cursor: pointer;
-  }
 
-  header canvas:hover {
-    background: linear-gradient(
-      to right,
-      var(--color0),
-      var(--color1)
-    );
+    &:hover {
+      background: linear-gradient(
+        to right,
+        var(--color0),
+        var(--color1)
+      );
+    }
   }
 
   div#bgcolor {
@@ -108,105 +106,105 @@ header {
     align-items: center;
 
     position: relative;
-  }
 
-  div#bgcolor label {
-    background: linear-gradient(
-      to right,
-      rgb(106, 106, 255),
-      rgb(200, 0,255)
-    );
+    label {
+      background: linear-gradient(
+        to right,
+        rgb(106, 106, 255),
+        rgb(200, 0,255)
+      );
+  
+      width: 80px;
+      height: 40px;
+      border-radius: 80px;
+  
+      display: block;
+  
+      position: relative;
+      left: 0;
+  
+      cursor: pointer;
+      box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218),
+                  inset 0px 0px 15px var(--shadow);
+    }
 
-    width: 80px;
-    height: 40px;
-    border-radius: 80px;
+    input {
+      display: none;
 
-    display: block;
+      &:not(:checked) ~ span i#symbol {
+        border: 2px solid black;
+        box-shadow: 9px 0px 0px -6px white,
+                    -9px 0px 0px -6px white,
+                    0px 9px 0px -6px white,
+                    0px -9px 0px -6px white,
+                    7px -7px 0px -6px white,
+                    -7px -7px 0px -6px white,
+                    -7px 7px 0px -6px white,
+                    7px 7px 0px -6px white;
+    
+        width: 15px;
+        height: 15px;
+    
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+    
+        mix-blend-mode: screen;
+      }
 
-    position: relative;
-    left: 0;
+      &:checked ~ span i#symbol {
+        background: transparent;
+        box-shadow: -4px 4px 0px 2px white;
+    
+        position: absolute;
+        top: 40%;
+        left: 25%;
+        transform: translateY(-50%);
+      }
+  
+      &:checked ~ label {
+        background: linear-gradient(
+          to right,
+          var(--color0),
+          var(--color1)
+        );
+    
+        box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218),
+                    inset 0px 0px 15px var(--shadow);
+      }
 
-    cursor: pointer;
-    box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218),
-                inset 0px 0px 15px var(--shadow);
-  }
+      &:checked ~ span i#thumb {
+        position: absolute;
+        left: calc(100% - 34px);
+      }
+    }
 
-  div#bgcolor input {
-    display: none;
-  }
+    i#symbol {
+      background: white;
+  
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+  
+    i#thumb {
+      background: white;
+      box-shadow: 0px 0px 10px var(--shadow);
 
-  div#bgcolor i#symbol {
-    background: white;
+      width: 30px;
+      height: 30px;
 
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-  }
+      border-radius: 50%;
+      transition: .5s;
 
-  div#bgcolor input:not(:checked) ~ span i#symbol {
-    border: 2px solid black;
-    box-shadow: 9px 0px 0px -6px white,
-                -9px 0px 0px -6px white,
-                0px 9px 0px -6px white,
-                0px -9px 0px -6px white,
-                7px -7px 0px -6px white,
-                -7px -7px 0px -6px white,
-                -7px 7px 0px -6px white,
-                7px 7px 0px -6px white;
+      position: absolute;
+      top: 50%;
+      left: 7%;
+      transform: translateY(-50%);
 
-    width: 15px;
-    height: 15px;
-
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-
-    mix-blend-mode: screen;
-  }
-
-  div#bgcolor input:checked ~ span i#symbol {
-    background: transparent;
-    box-shadow: -4px 4px 0px 2px white;
-
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translateY(-50%);
-  }
-
-  div#bgcolor input:checked ~ label {
-    background: linear-gradient(
-      to right,
-      var(--color0),
-      var(--color1)
-    );
-
-    box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218),
-                inset 0px 0px 15px var(--shadow);
-  }
-
-  div#bgcolor i#thumb {
-    background: white;
-    box-shadow: 0px 0px 10px var(--shadow);
-
-    width: 30px;
-    height: 30px;
-
-    border-radius: 50%;
-    transition: .5s;
-
-    position: absolute;
-    top: 50%;
-    left: 7%;
-    transform: translateY(-50%);
-
-    pointer-events: none;
-  }
-
-  div#bgcolor input:checked ~ span i#thumb {
-    position: absolute;
-    left: calc(100% - 34px);
+      pointer-events: none;
+    }
   }
 }
