@@ -10,7 +10,7 @@ function About() {
             </h1>
             <p>
               I work as a{" "}
-              <em style="font-weight: bold;">Pay-Per-Click Manager,</em> a
+              <em style={{ fontWeight: "bold" }}>Pay-Per-Click Manager,</em> a
               professional which main function is to create, manage and
               optimizing ads campaign in different online advertising softwares,
               but the most important function, is to bring results for my
