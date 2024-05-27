@@ -1,0 +1,41 @@
+// Layout Mixins
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin spaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin verticalFlex($flex: space-between) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: $flex;
+  align-items: center;
+}
+
+// Elements Mixins
+@mixin buttonGen($inpSub: false, $link: false) {
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  cursor: pointer;
+
+  @if $inpSub or not $link {
+    padding: 10px 20px;
+
+  } @else {
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 10px 20px;
+    }
+  }
+}

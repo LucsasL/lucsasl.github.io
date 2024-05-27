@@ -1,4 +1,11 @@
 @charset "UTF-8";
 
-@import "./styleComponents/resets";
-@import "./styleComponents/variables";
+// General Styles
+@import "./styleComponents/generalSet/resets";
+@import "./styleComponents/generalSet/variables";
+@import "./styleComponents/generalSet/imports";
+@import "./styleComponents/generalSet/mixins";
+@import "./styleComponents/generalSet/mediaQuery";
+
+// Components Style 
+@import "./styleComponents/UI Components/header";

@@ -1,0 +1,63 @@
+@import "./variables";
+@import "./mixins";
+
+// General Settings
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: $mainFont;
+}
+
+html, body {
+  background: $bg;
+  color: $color;
+
+  width: 100vw;
+  min-width: 100%;
+  height: 100vh;
+
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+// UI
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+// Block Elements Reset
+fieldset {
+  border: none;
+  margin: 20px;
+}
+
+// Inline-Block Elements
+input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+button {
+  background: transparent;
+
+  @include buttonGen(false, false);
+}
+
+// Text Elements
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

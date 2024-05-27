@@ -1,0 +1,211 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html, body {
+  background: #060606;
+  color: white;
+  width: 100vw;
+  min-width: 100%;
+  height: 100vh;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 20px;
+}
+
+input {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+button {
+  background: transparent;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../../../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Kalam";
+  src: url("../../../fonts/Kalam/Kalam-Regular.ttf");
+  font-display: swap;
+}
+header {
+  background: white;
+  color: white;
+  width: 100vw;
+  height: 90px;
+  position: fixed;
+  /* top: -15%;  Add Javascript to animate header*/
+  top: 3%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div {
+  background: rgba(0, 0, 0, 0.5);
+  width: 110%;
+  height: 100%;
+  padding: 30px;
+  margin: 0px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header header li {
+  display: none;
+  margin: 10px;
+}
+header header button {
+  background: transparent;
+  width: auto;
+}
+header header button#contactButton {
+  border-bottom: 3px solid rgb(54, 23, 255);
+  transition: all 0.5s ease;
+}
+header header button#contactButton:hover {
+  box-shadow: 0px 3px 7px rgb(54, 23, 255);
+}
+header header a {
+  color: var(--txtColor);
+  transition: all 0.5s ease;
+}
+header header a:hover {
+  background: linear-gradient(to right, var(--color0), var(--color1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+header header div#mainHeader {
+  width: 35%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header header menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+header header div#musicDiv {
+  display: inline-flex;
+  align-items: center;
+}
+header header canvas {
+  background: rgb(196, 196, 196);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+header header canvas:hover {
+  background: linear-gradient(to right, var(--color0), var(--color1));
+}
+header div#bgcolor {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header div#bgcolor label {
+  background: linear-gradient(to right, rgb(106, 106, 255), rgb(200, 0, 255));
+  width: 80px;
+  height: 40px;
+  border-radius: 80px;
+  display: block;
+  position: relative;
+  left: 0;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218), inset 0px 0px 15px var(--shadow);
+}
+header div#bgcolor input {
+  display: none;
+}
+header div#bgcolor i#symbol {
+  background: white;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+header div#bgcolor input:not(:checked) ~ span i#symbol {
+  border: 2px solid black;
+  box-shadow: 9px 0px 0px -6px white, -9px 0px 0px -6px white, 0px 9px 0px -6px white, 0px -9px 0px -6px white, 7px -7px 0px -6px white, -7px -7px 0px -6px white, -7px 7px 0px -6px white, 7px 7px 0px -6px white;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+header div#bgcolor input:checked ~ span i#symbol {
+  background: transparent;
+  box-shadow: -4px 4px 0px 2px white;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+header div#bgcolor input:checked ~ label {
+  background: linear-gradient(to right, var(--color0), var(--color1));
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218), inset 0px 0px 15px var(--shadow);
+}
+header div#bgcolor i#thumb {
+  background: white;
+  box-shadow: 0px 0px 10px var(--shadow);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+header div#bgcolor input:checked ~ span i#thumb {
+  position: absolute;
+  left: calc(100% - 34px);
+}
+
+/*# sourceMappingURL=index.css.map */
