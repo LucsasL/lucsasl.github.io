@@ -33,11 +33,11 @@
   align-items: center;
 }
 
-@mixin verticalFlex($flex: space-between) {
+@mixin verticalFlex($flexVert: none, $flexHor: none) {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: $flex;
-  align-items: center;
+  justify-content: $flexVert;
+  align-items: $flexHor;
 }
 
 // Display Grid

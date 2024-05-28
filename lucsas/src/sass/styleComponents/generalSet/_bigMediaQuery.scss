@@ -242,14 +242,17 @@
   }
 
   /* CTA Section */
-  form {
-    width: 650px;
-    padding: 40px 20px;
-
-    div {
-      width: 95%;
+  section#contact {
+    form {
+      width: 650px;
+      padding: 40px 20px;
+  
+      div {
+        width: 95%;
+      }
     }
   }
+
 
   /* Footer Section */
   footer {

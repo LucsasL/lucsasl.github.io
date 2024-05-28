@@ -68,7 +68,7 @@ function Contact() {
             </div>
           </div>
 
-          <div>
+          <div className="formDiv">
             <div className="center">
               <h1
                 className="block-text"

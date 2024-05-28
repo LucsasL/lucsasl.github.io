@@ -43,7 +43,7 @@ function Skills() {
             <div className="img-div hidden">
               <figure>
                 <picture>
-                  <source media="(min-width: 1200px)" srcSet={metaBig} type="image/webp" />
+                  <source sizes="1200px" srcSet={metaBig} type="image/webp" />
                   <img src={meta} alt="Meta Ads Service" style={{width: "500px"}} />
                 </picture>
               </figure>
