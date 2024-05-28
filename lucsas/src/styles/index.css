@@ -112,6 +112,197 @@ figcaption {
   src: url("../../../fonts/Kalam/Kalam-Regular.ttf");
   font-display: swap;
 }
+@media screen and (min-width: 1200px) {
+  /* Header Settings */
+  header > div {
+    margin: 0px 150px;
+  }
+  header .headerName {
+    display: inline;
+  }
+  header div#mainHeader {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+  }
+  header div#mainHeader menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header div#mainHeader menu nav {
+    display: block;
+    width: 70%;
+  }
+  header li {
+    display: inline;
+  }
+  header div#bgcolor {
+    width: 15%;
+  }
+  header.scrolled > div {
+    padding: 30px;
+  }
+  /* Main Settings */
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section > div {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+  /* Intro Section */
+  section#intro > div {
+    width: 86%;
+    margin: 20px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section#intro div.intro3D {
+    display: block;
+    pointer-events: all;
+  }
+  section#intro > div div {
+    width: 80%;
+    margin-left: 2%;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+  section#intro h1 {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: inline-block;
+  }
+  section#intro h1 span.nickname {
+    font-size: 4em;
+    position: absolute;
+    top: 0;
+  }
+  section#intro h1 span.cursiveWords {
+    font: bolder 2em "Kalam", cursive;
+    letter-spacing: 0.25em;
+  }
+  section#intro h2.intro-h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  section#intro div#socials {
+    display: flex;
+    flex-direction: column;
+  }
+  section#intro div#socials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Services Section */
+  section#services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#services .skill-block {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  section#services .skill-block:nth-child(1) {
+    transition: transform 2.3s ease;
+  }
+  section#services .skill-block:nth-child(2) {
+    transition: transform 2s ease;
+  }
+  section#services .skill-block:nth-child(3) {
+    transition: transform 1.7s ease;
+  }
+  section#services div#cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* About Section */
+  section#about {
+    height: 900px;
+  }
+  section#about div {
+    width: 80%;
+  }
+  /* Area Section */
+  section#area > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#area > div div {
+    margin: 100px 0px;
+  }
+  section#area .platform {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#area .platform div {
+    width: 60%;
+  }
+  section#area .platform p {
+    width: 90%;
+  }
+  section#area #google-design {
+    width: 700px;
+    position: absolute;
+    transform: translateY(-25%);
+  }
+  /* Meta Section */
+  section#skills .platform {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  section#skills .platform div {
+    width: 50%;
+  }
+  /* CTA Section */
+  form {
+    width: 650px;
+    padding: 40px 20px;
+  }
+  form div {
+    width: 95%;
+  }
+  /* Footer Section */
+  footer {
+    margin-top: 0px;
+  }
+  footer #footerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer #footerNav > div {
+    width: 35%;
+    padding: 20px;
+  }
+  div#msg-me {
+    top: 85%;
+    left: 90%;
+  }
+  div.scroll-anim {
+    width: 100%;
+  }
+}
 header {
   color: white;
   width: 100vw;
