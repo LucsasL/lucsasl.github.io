@@ -1,3 +1,123 @@
 @media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Header Settings */
+  .headerName {
+    display: none;
+  }
 
+  header {
+    li {
+      display: inline-block;
+    }
+
+    #mainHeader {
+      width: 70%;
+    }
+  }
+
+  /* Intro Section */
+  section#intro {
+    > div {
+      width: 100%;
+
+      div{
+        width: 100%;
+      }
+    }
+
+    .intro3D {
+      display: block;
+    }
+
+    .intro-content {
+      @include spaceAround;
+
+      div {
+        width: 50%;
+
+        text-align: left;
+
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      #introImg {
+        display: block;
+      }
+    }
+
+    .introducing {
+      text-align: left;
+    }
+
+    #socials {
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+    }
+  }
+
+  section#intro div.intro-content div#introImg {
+    display: block;
+  }
+
+  div#scroll-anim {
+    width: 100vw;
+  }
+
+  /* Services Sections */
+  section#services {
+    #cards {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      transform: translateX(-10%);
+
+      .skill-block {
+        width: 44%;
+        margin: 20px;
+      }
+    }
+  }
+
+  /* About Section */
+  .about-style {
+    height: 700px;
+  }
+
+  section#about {
+    > div {
+      @include spaceAround;
+
+      div {
+        width: 50%;
+      }
+    }
+  }
+
+  /* Area Section */
+  #prom-container {
+    width: 100%;
+  }
+
+  .promises {
+    width: 45%;
+  }
+
+  .results > #prom-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* CTA Section */
+  section#contact {
+    > div {
+      @include spaceAround;
+    }
+  }
+
+  /* Footer Section */
+  #footerNav {
+    @include spaceAround;
+  }
 }
