@@ -1,7 +1,7 @@
 function Services() {
   return (
     <>
-      <section id="skills">
+      <section id="services">
         <div>
           <div class="center">
             <h1 class="block-text big hidden1" style={{ margin: "30px 0px" }}>

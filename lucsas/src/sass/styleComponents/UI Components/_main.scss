@@ -17,12 +17,78 @@ section#intro {
   }
 }
 
-/* About Section */
-section#about {
+// Skills Sections
+section#services {
+  box-shadow: 0px -10px 15px $shadow;
+
+  .skillBlock {
+    background: linear-gradient(
+      to bottom,
+      var(--baseBlur),
+      var(--bg3)
+    );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0px;
+
+    box-shadow: 0px 15px 15px 10px var(--shadow),
+                -3px -3px 2px rgba(255, 255, 255, .3),
+                0px 5px 15px 1px var(--shadow);            
+
+    border-radius: 10px;
+
+    .img-sk {
+      background: linear-gradient(
+        135deg,
+        var(--color1),
+        var(--color0)
+      );
+
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+
+      animation: blob 10s ease-in-out infinite;
+    }
+  }
   
+  h1 {
+    @include blockHeader;
+  }
+
+  img {
+    width: 50%;
+    filter: brightness(0);
+  }
 }
 
-/* Effects */
+// About Section
+section#about {
+  padding-top: 50px;
+  position: relative;
+
+  > div {
+    margin-top: 50px;
+    z-index: 1;
+  }
+}
+
+div#about-style {
+  background: var(--bg2);
+
+  width: 100%;
+  height: 850px;
+  z-index: 0;
+
+  transform: skewY(-5deg);
+  position: absolute;
+  left: 0;
+}
+
+// Effects
 div.scroll-anim {
   width: 100vw;
   margin-bottom: 20px;
