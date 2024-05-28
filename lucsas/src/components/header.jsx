@@ -1,6 +1,14 @@
+import { useState } from "react";
+
 import logo from "../img/lucsas-logo.webp";
 
 const Header = () => {
+  const [darkTheme, setDarkTheme] = useState(true);
+
+  function themeChange() {
+    setDarkTheme(!darkTheme);
+  }
+
   return (
     <>
       <header>
@@ -55,14 +63,26 @@ const Header = () => {
                 {/* Music by Eric Godlow
                 Music source: https://youtu.be/IUYaCe95dxw?si=KGSnNIIKn5uaWJY4 */}
                 <audio preload="auto" loop id="player">
-                  <source src="audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3" type="audio/mp3" />
-                  <source src="audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg" type="audio/ogg" />
+                  <source 
+                    src="audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3"
+                    type="audio/mp3"
+                  />
+                  <source 
+                    src="audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg"
+                    type="audio/ogg"
+                  />
                 </audio>
               </div>
             
               <div id="bgcolor">
                 <label htmlFor="bgButton">
-                  <input type="checkbox" id="bgButton" checked />
+                  <input 
+                    type="checkbox"
+                    id="bgButton"
+                    value={darkTheme}
+                    onChange={() => themeChange()}
+                    checked
+                  />
                   <span>
                     <i id="symbol"></i>
                     <i id="thumb"></i>
