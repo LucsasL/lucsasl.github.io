@@ -173,7 +173,69 @@ section#skills {
 
 // Contact Section
 section#contact {
-  height: auto;
+  > div {
+    width: 100%;
+  }
+
+  form {
+    background: var(--shadow);
+
+    width: 100%;
+    padding: 40px 30px;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+                -2px -2px 2px rgba(255, 255, 255, .3),
+                0px 15px 10px var(--shadow);
+            
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: center;
+
+    > div {
+      width: 100%;
+    }
+
+    .submit-button {
+      background: linear-gradient(
+        to right,
+        var(--color0),
+        var(--color1)
+      );
+
+      cursor: pointer;
+    }
+  }
+
+  #ways-contact {
+    @include verticalFlex(space-around);
+
+    .contact {
+      background: linear-gradient(
+        135deg,
+        $color0,
+        $color1
+      );
+  
+      width: 75px;
+      height: 75px;
+  
+      display: inline-block;
+  
+      animation: blob 10s ease-in-out infinite;
+    }
+
+    p {
+      display: inline-block;
+      margin: 20px 10px;
+    }
+
+    img {
+      filter: brightness(0);
+    }
+  }
 }
 
 // Effects
