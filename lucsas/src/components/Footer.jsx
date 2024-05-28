@@ -1,3 +1,10 @@
+import instaLogo from "../img/instagram-social.webp";
+import githubLogo from "../img/github-social.webp";
+import linkedinLogo from "../img/linkedin-social.webp";
+import twitterLogo from "../img/twitter-social.webp";
+
+import logo from "../img/lucsas-logo.webp";
+
 function Footer() {
   return (
     <>
@@ -16,7 +23,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
-                    <img src="img/instagram-social.webp" alt="Instagram" className="icons" />
+                    <img src={instaLogo} alt="Instagram" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -24,7 +31,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://github.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src="img/github-social.webp" alt="GitHub" className="icons" />
+                    <img src={githubLogo} alt="GitHub" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -32,7 +39,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://www.linkedin.com/in/lucsas/?locale=en_US" target="_blank" rel="noopener noreferrer">
-                    <img src="img/linkedin-social.webp" alt="Lucsas Linkedin" className="icons" />
+                    <img src={linkedinLogo} alt="Lucsas Linkedin" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -40,7 +47,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://twitter.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src="img/twitter-social.webp" alt="Lucsas Twitter" className="icons" />
+                    <img src={twitterLogo} alt="Lucsas Twitter" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -80,7 +87,7 @@ function Footer() {
         <div id="credits">
           <div>
             <figure>
-              <img src="img/lucsas-logo.webp" alt="Lucsas Logo" style={{ width: "75px", height: "75px" }} />
+              <img src={logo} alt="Lucsas Logo" style={{ width: "75px", height: "75px" }} />
             </figure>
           </div>
 
