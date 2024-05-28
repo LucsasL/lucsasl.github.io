@@ -1,3 +1,5 @@
+import instaLogo from "../img/instagram-icon.webp";
+
 function MsgMe() {
   return (
     <>
@@ -7,7 +9,7 @@ function MsgMe() {
           <figcaption>
             Instagram
           </figcaption>
-          <img src="img/instagram-icon.webp" alt="Instagram contact" style={{ width: "45px", height: "45px" }} />
+          <img src={instaLogo} alt="Instagram contact" style={{ width: "45px", height: "45px" }} />
         </figure>
       </a>
     </div>

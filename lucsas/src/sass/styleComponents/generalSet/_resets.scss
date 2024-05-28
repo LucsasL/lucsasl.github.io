@@ -5,9 +5,17 @@
 * {
   padding: 0;
   margin: 0;
+
   box-sizing: border-box;
 
+  border: none;
+  outline: none;
+
   font-family: $mainFont;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html, body {
@@ -18,12 +26,16 @@ html, body {
   min-width: 100%;
   height: 100vh;
 
+  @include verticalFlex();
+  position: relative;
+
   overflow-x: clip;
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
-::-webkit-scrollbar {
-  display: none;
+body * {
+  transition: background .5s;
 }
 
 // UI
@@ -34,16 +46,13 @@ html, body {
 
 // Block Elements Reset
 fieldset {
-  border: none;
   margin: 20px;
 }
 
 // Inline-Block Elements
 input {
   padding: 12px 20px;
-  border: none;
   border-radius: 20px;
-  outline: none;
 }
 
 button {
@@ -64,4 +73,8 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+figcaption {
+  display: none;
 }

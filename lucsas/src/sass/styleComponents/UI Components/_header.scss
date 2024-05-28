@@ -14,13 +14,17 @@ header {
   > div {
     background: $header;
 
-    width: 90%;
+    width: 80%;
     height: 100%;
     padding: 30px;
     margin: 0px 15px;
     border-radius: 50px;
 
     @include spaceBetween;
+
+    .logoDiv {
+      width: 20%;
+    }
   }
   
   li {
@@ -36,10 +40,26 @@ header {
   button#contactButton {
     border-bottom: 3px solid rgb(54, 23, 255);
     transition: all .5s ease;
+
+    &:hover {
+      box-shadow: 0px 3px 7px rgb(54, 23, 255);
+    }
   }
 
-  button#contactButton:hover {
-    box-shadow: 0px 3px 7px rgb(54, 23, 255);
+
+  figure {
+    width: 100%;
+
+    @include spaceBetween;
+
+    img {
+      width: 75px;
+      height: 75px;
+    }
+    
+    h1 {
+      width: 200px;
+    }
   }
 
   a {
@@ -63,9 +83,11 @@ header {
   div#mainHeader {
     width: 35%;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include spaceEvenly;
+
+    nav {
+      width: 50%;
+    }
   }
 
   menu {

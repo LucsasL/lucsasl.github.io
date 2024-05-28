@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+@mixin spaceEvenly {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 @mixin verticalFlex($flex: space-between) {
   display: flex;
   flex-flow: column nowrap;
