@@ -191,6 +191,101 @@ section#skills {
   @include spaceBetween;
 }
 
+// Portfolio Section
+section#portfolio {
+  background: $bg4;
+  padding: 50px;
+  margin: 50px 0px 100px 0px;
+
+  .prom-container {
+    width: 100%;
+
+    @include grid(12, 5);
+
+    .promises {
+      background: $promises;
+
+      font-size: 1.8em;
+      font-weight: bolder;
+
+      padding: 50px;
+      margin: 30px 10px;
+      border-radius: 20px;
+
+      transition-duration: .7s;
+
+      &:nth-child(1) {
+        background: linear-gradient(
+          to right,
+          $color0,
+          $color1,
+          rgb(205, 54, 255)
+        );
+        background-size: 300% 100%;
+      
+        transition-duration: 2s;
+      
+        animation: gradient-move 2s infinite alternate;
+      }
+      
+      &:nth-child(2) {
+        background: linear-gradient(
+          to bottom,
+          $bg2,
+          $promisesColor
+        );
+        transition-duration: 1.5s;
+      }
+      
+      &:nth-child(3) {
+        background: linear-gradient(
+          to bottom,
+          $bg2,
+          $promisesColor
+        );
+        transition-duration: 1s;
+      }
+      
+      &:nth-child(4) {
+        background: linear-gradient(
+          to right,
+          $color0,
+          $color1,
+          rgb(205, 54, 255)
+        );
+        background-size: 300% 100%;
+      
+        transition-duration: 2s;
+      
+        animation: gradient-move 2s infinite alternate;
+      }
+      
+      &:nth-child(5) {
+        transition-duration: 1.5s;
+      
+        display: flex;
+        justify-content: space-around;
+      
+        grid-column: span 12 / auto;
+      }
+    }
+  }
+
+  h1 {
+    @include blockHeader;
+    @include centerText;
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
 // Contact Section
 section#contact {
   > div {

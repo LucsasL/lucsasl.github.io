@@ -1,4 +1,6 @@
 // Layout Mixins
+
+// Display Flex
 @mixin center {
   display: flex;
   justify-content: center;
@@ -36,6 +38,14 @@
   flex-flow: column nowrap;
   justify-content: $flex;
   align-items: center;
+}
+
+// Display Grid
+@mixin grid($columns, $rows) {
+  display: grid;
+  grid-template-columns: repeat($columns);
+  grid-template-rows: repeat($rows);
+  gap: 30px;
 }
 
 // Elements Mixins
@@ -88,8 +98,8 @@
 @mixin fancyText {
   background: linear-gradient(
     to right,
-    var(--color0),
-    var(--color1)
+    $color0,
+    $color1
   );
 
   color: transparent;

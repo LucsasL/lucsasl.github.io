@@ -18,7 +18,8 @@
   display: none;
 }
 
-html, body {
+html,
+body {
   background: $bg;
   color: $color;
 
@@ -35,7 +36,7 @@ html, body {
 }
 
 body * {
-  transition: background .5s;
+  transition: background 0.5s;
 }
 
 // UI
@@ -50,7 +51,8 @@ fieldset {
 }
 
 // Inline-Block Elements
-input,textarea {
+input,
+textarea {
   background: $input;
   color: $color;
 
@@ -75,12 +77,12 @@ p {
 
   font-size: 1.2em;
   line-height: 2em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
   font-size: 2em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 li {
@@ -96,7 +98,8 @@ a {
   }
 }
 
-picture, figure {
+picture,
+figure {
   width: 100%;
   height: 100%;
 
@@ -109,4 +112,13 @@ figure img {
 
 figcaption {
   display: none;
+}
+
+// Text Classes
+.fancy {
+  @include fancyText;
+}
+
+.big {
+  font-size: 3em;
 }

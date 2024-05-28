@@ -1,11 +1,11 @@
 function Portfolio() {
   return (
     <>
-      <section id="functions">
-        <div className="cont">
+      <section id="portfolio">
+        <div>
           <div className="results">
-            <div className="center">
-              <h1 className="block-text big">What does a traffic manager do?</h1>
+            <div>
+              <h1 className="big">What does a traffic manager do?</h1>
             </div>
 
             <div id="prom-container">
