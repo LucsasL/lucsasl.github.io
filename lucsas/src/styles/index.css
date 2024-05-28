@@ -479,11 +479,14 @@ figcaption {
     grid-column-end: 13;
   }
   /* CTA Section */
-  section#contact form {
+  .formDiv {
     width: 650px;
+  }
+  .formDiv form {
+    width: 100%;
     padding: 40px 20px;
   }
-  section#contact form div {
+  .formDiv form div {
     width: 95%;
   }
   /* Footer Section */

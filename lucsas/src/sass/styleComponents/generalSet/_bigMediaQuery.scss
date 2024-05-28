@@ -242,9 +242,11 @@
   }
 
   /* CTA Section */
-  section#contact {
+  .formDiv {
+    width: 650px;
+
     form {
-      width: 650px;
+      width: 100%;
       padding: 40px 20px;
   
       div {

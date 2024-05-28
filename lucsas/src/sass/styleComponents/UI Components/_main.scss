@@ -143,7 +143,7 @@ section#about {
 // Area Section
 section#area {
   > div {
-    @include verticalFlex;
+    @include verticalFlex();
 
     div {
       margin-top: 100px;
