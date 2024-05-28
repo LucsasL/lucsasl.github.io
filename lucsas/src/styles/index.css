@@ -112,6 +112,57 @@ figcaption {
   src: url("../../../fonts/Kalam/Kalam-Regular.ttf");
   font-display: swap;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Intro Section */
+  .headerName {
+    display: inline;
+  }
+  section#intro .intro-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  section#intro .intro-content div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  section#intro .intro-content #introImg {
+    width: 40%;
+    display: block;
+  }
+  section#intro #introducing {
+    text-align: left;
+  }
+  section#intro #socials {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Services Sections */
+  section#services div#cards {
+    width: 100vw;
+    transform: translateX(-10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#services .skill-block {
+    width: 400px;
+    margin: 20px;
+  }
+  /* Area Section */
+  .promises {
+    width: 45%;
+  }
+  .results > div#prom-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* Footer Section */
+  #footerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   /* Header Settings */
   header > div {

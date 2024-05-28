@@ -1,0 +1,63 @@
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Intro Section */
+  .headerName {
+    display: inline;
+  }
+  
+  section#intro {
+    .intro-content {
+      display: flex;
+      justify-content: space-around;
+
+      div {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      #introImg {
+        width: 40%;
+      
+        display: block;
+      }
+    }
+
+    #introducing {
+      text-align: left;
+    }
+
+    #socials {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* Services Sections */
+  section#services {
+    div#cards {
+      width: 100vw;
+      transform: translateX(-10%);
+
+      @include center;
+    }
+
+    .skill-block {
+      width: 400px;
+      margin: 20px;
+    }
+  }
+
+  /* Area Section */
+  .promises {
+    width: 45%;
+  }
+
+  .results > div#prom-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Footer Section */
+  #footerNav {
+    @include spaceAround;
+  }
+}
