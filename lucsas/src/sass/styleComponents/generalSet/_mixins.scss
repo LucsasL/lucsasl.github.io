@@ -33,6 +33,12 @@
 
 // Elements Mixins
 @mixin buttonGen($inpSub: false, $link: false) {
+  background: linear-gradient(
+    to right,
+    $color0,
+    $color1
+  );
+
   margin: 10px;
   border: none;
   border-radius: 5px;
@@ -45,10 +51,13 @@
 
   } @else {
     a {
-      display: block;
+      color: white;
+
       width: 100%;
       height: 100%;
       padding: 10px 20px;
+      
+      display: block;
     }
   }
 }
@@ -81,3 +90,8 @@
   background-clip: text;
   -webkit-background-clip: text;
 }
+
+@mixin centerText {
+  display: flex;
+  justify-content: center;
+} 
