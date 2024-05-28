@@ -3,7 +3,7 @@ function About() {
     <>
       <div id="about-style"></div>
       <section id="about">
-        <div className="cont">
+        <div>
           <div className="hidden">
             <h1 className="big">
               Hi, My name is <span className="fancy">Lucas Lira</span>

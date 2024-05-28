@@ -1,11 +1,12 @@
 import notebook from "../img/google-ads-design.svg";
 import meta from "../img/meta-ads-design-mobile.webp";
+import metaBig from "../img/meta-ads-design.webp";
 
 function Skills() {
   return (
     <>
-      <section id="google">
-        <div className="cont">
+      <section id="area">
+        <div>
           <div className="platform">
             <div className="hidden1">
               <h1 className="big">
@@ -26,8 +27,8 @@ function Skills() {
         </div>
       </section>
 
-      <section id="meta">
-        <div className="cont">
+      <section id="skills">
+        <div>
           <div className="platform">
             <div>
               <h1 className="big hidden1">
@@ -42,7 +43,7 @@ function Skills() {
             <div className="img-div hidden">
               <figure>
                 <picture>
-                  <source media="(min-width: 1200px)" srcSet="img/meta-ads-design.webp" type="image/webp" />
+                  <source media="(min-width: 1200px)" srcSet={metaBig} type="image/webp" />
                   <img src={meta} alt="Meta Ads Service" style={{width: "500px"}} />
                 </picture>
               </figure>

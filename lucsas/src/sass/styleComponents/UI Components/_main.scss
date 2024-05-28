@@ -25,7 +25,7 @@ section#services {
     @include verticalFlex();
   }
 
-  .skillBlock {
+  .skill-block {
     background: linear-gradient(
       to bottom,
       $baseBlur,
@@ -59,6 +59,26 @@ section#services {
 
       animation: blob 10s ease-in-out infinite;
 
+      @include center;
+
+      &:nth-child(even) {
+        background: linear-gradient(
+          135deg,
+          var(--color1),
+          var(--color0)
+        );
+
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+
+        position: absolute;
+        z-index: -1;
+        filter: blur(30px);
+
+        animation: blob 10s ease-in-out infinite;
+      }
+
       img {
         width: 50%;
         filter: brightness(0)
@@ -77,16 +97,6 @@ section#services {
 }
 
 // About Section
-section#about {
-  padding-top: 50px;
-  position: relative;
-
-  > div {
-    margin-top: 50px;
-    z-index: 1;
-  }
-}
-
 div#about-style {
   background: $bg2;
 
@@ -97,6 +107,68 @@ div#about-style {
   transform: skewY(-5deg);
   position: absolute;
   left: 0;
+}
+
+section#about {
+  height: 900px;
+  padding-top: 50px;
+  position: relative;
+
+  > div {
+    margin-top: 50px;
+    z-index: 1;
+  }
+}
+
+// Area Section
+section#area {
+  > div {
+    @include verticalFlex;
+
+    div {
+      margin-top: 100px;
+    }
+
+    .platform {
+      margin: 20px 0px;
+    }
+
+    .img-div {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  figure {
+    display: block;
+    margin: 20px;
+  }
+
+  #google-design {
+    width: 450px;
+    position: relative;
+  }
+}
+
+// Skills Section
+section#skills {
+  > div {
+    @include verticalFlex;
+
+    div {
+      margin: 40px 0px;
+    }
+  }
+
+  figure, img {
+    width: 70%;
+  }
+}
+
+.platform {
+  width: 100%;
+
+  @include spaceBetween;
 }
 
 // Contact Section

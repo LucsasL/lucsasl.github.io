@@ -268,7 +268,7 @@ section#services > div {
   justify-content: space-between;
   align-items: center;
 }
-section#services .skillBlock {
+section#services .skill-block {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #151515);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -282,14 +282,27 @@ section#services .skillBlock {
   justify-content: space-between;
   align-items: center;
 }
-section#services .skillBlock .img-sk {
+section#services .skill-block .img-sk {
   background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
   width: 200px;
   height: 200px;
   margin: 20px;
   animation: blob 10s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-section#services .skillBlock .img-sk img {
+section#services .skill-block .img-sk:nth-child(even) {
+  background: linear-gradient(135deg, var(--color1), var(--color0));
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  position: absolute;
+  z-index: -1;
+  filter: blur(30px);
+  animation: blob 10s ease-in-out infinite;
+}
+section#services .skill-block .img-sk img {
   width: 50%;
   filter: brightness(0);
 }
@@ -307,15 +320,6 @@ section#services img {
   filter: brightness(0);
 }
 
-section#about {
-  padding-top: 50px;
-  position: relative;
-}
-section#about > div {
-  margin-top: 50px;
-  z-index: 1;
-}
-
 div#about-style {
   background: #010101;
   width: 100%;
@@ -324,6 +328,61 @@ div#about-style {
   transform: skewY(-5deg);
   position: absolute;
   left: 0;
+}
+
+section#about {
+  height: 900px;
+  padding-top: 50px;
+  position: relative;
+}
+section#about > div {
+  margin-top: 50px;
+  z-index: 1;
+}
+
+section#area > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+section#area > div div {
+  margin-top: 100px;
+}
+section#area > div .platform {
+  margin: 20px 0px;
+}
+section#area > div .img-div {
+  position: relative;
+  width: 100%;
+}
+section#area figure {
+  display: block;
+  margin: 20px;
+}
+section#area #google-design {
+  width: 450px;
+  position: relative;
+}
+
+section#skills > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+section#skills > div div {
+  margin: 40px 0px;
+}
+section#skills figure, section#skills img {
+  width: 70%;
+}
+
+.platform {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 section#contact {
