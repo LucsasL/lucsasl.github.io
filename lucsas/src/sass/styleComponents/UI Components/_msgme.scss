@@ -2,10 +2,10 @@
 div#msg-me {
   background: linear-gradient(
     135deg,
-    var(--color0),
-    var(--color1)
+    $color0,
+    $color1
   );
-  color: var(--txtColor);
+  color: $color;
 
   width: 75px;
   height: 75px;

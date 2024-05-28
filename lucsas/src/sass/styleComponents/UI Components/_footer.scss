@@ -1,7 +1,7 @@
 /* Footer Settings */
 footer {
-  background: var(--bg3);
-  color: var(--txtColor);
+  background: $bg3;
+  color: $color;
 
   padding: 30px 30px 0px 30px;
 
@@ -31,7 +31,7 @@ footer {
   }
 
   div#credits {
-    background: var(--bgCredit);
+    background: $bgCredit;
 
     margin: 20px -30px 0px -30px;
 
@@ -52,8 +52,8 @@ footer {
     &:hover {
       background: linear-gradient(
         to right,
-        var(--color0),
-        var(--color1)
+        $color0,
+        $color1
       );
       background-clip: text;
       -webkit-background-clip: text;

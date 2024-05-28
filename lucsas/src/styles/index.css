@@ -107,11 +107,11 @@ header button#contactButton:hover {
   box-shadow: 0px 3px 7px rgb(54, 23, 255);
 }
 header a {
-  color: var(--txtColor);
+  color: white;
   transition: all 0.5s ease;
 }
 header a:hover {
-  background: linear-gradient(to right, var(--color0), var(--color1));
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -141,7 +141,7 @@ header canvas {
   cursor: pointer;
 }
 header canvas:hover {
-  background: linear-gradient(to right, var(--color0), var(--color1));
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
 }
 header div#bgcolor {
   width: 50%;
@@ -158,7 +158,7 @@ header div#bgcolor label {
   position: relative;
   left: 0;
   cursor: pointer;
-  box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218), inset 0px 0px 15px var(--shadow);
+  box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218), inset 0px 0px 15px rgba(0, 0, 0, 0.488);
 }
 header div#bgcolor input {
   display: none;
@@ -183,8 +183,8 @@ header div#bgcolor input:checked ~ span i#symbol {
   transform: translateY(-50%);
 }
 header div#bgcolor input:checked ~ label {
-  background: linear-gradient(to right, var(--color0), var(--color1));
-  box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218), inset 0px 0px 15px var(--shadow);
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218), inset 0px 0px 15px rgba(0, 0, 0, 0.488);
 }
 header div#bgcolor input:checked ~ span i#thumb {
   position: absolute;
@@ -199,7 +199,7 @@ header div#bgcolor i#symbol {
 }
 header div#bgcolor i#thumb {
   background: white;
-  box-shadow: 0px 0px 10px var(--shadow);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.488);
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -230,17 +230,17 @@ section#services {
   box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.488);
 }
 section#services .skillBlock {
-  background: linear-gradient(to bottom, var(--baseBlur), var(--bg3));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #151515);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   width: 100%;
   padding: 20px;
   margin: 20px 0px;
-  box-shadow: 0px 15px 15px 10px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px var(--shadow);
+  box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px rgba(0, 0, 0, 0.488);
   border-radius: 10px;
 }
 section#services .skillBlock .img-sk {
-  background: linear-gradient(135deg, var(--color1), var(--color0));
+  background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
   width: 200px;
   height: 200px;
   margin: 20px;
@@ -270,7 +270,7 @@ section#about > div {
 }
 
 div#about-style {
-  background: var(--bg2);
+  background: #010101;
   width: 100%;
   height: 850px;
   z-index: 0;
@@ -331,8 +331,8 @@ div.scroll-anim > div::after {
 }
 /* Footer Settings */
 footer {
-  background: var(--bg3);
-  color: var(--txtColor);
+  background: #151515;
+  color: white;
   padding: 30px 30px 0px 30px;
   display: flex;
   flex-direction: column;
@@ -354,7 +354,7 @@ footer div#meetMe a:hover {
   filter: brightness(1);
 }
 footer div#credits {
-  background: var(--bgCredit);
+  background: #070707;
   margin: 20px -30px 0px -30px;
   display: flex;
   justify-content: space-around;
@@ -370,7 +370,7 @@ footer a {
   transition: all 0.5s ease;
 }
 footer a:hover {
-  background: linear-gradient(to right, var(--color0), var(--color1));
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -378,8 +378,8 @@ footer a:hover {
 
 /* Icons */
 div#msg-me {
-  background: linear-gradient(135deg, var(--color0), var(--color1));
-  color: var(--txtColor);
+  background: linear-gradient(135deg, #00f, rgb(128, 0, 255));
+  color: white;
   width: 75px;
   height: 75px;
   position: fixed;

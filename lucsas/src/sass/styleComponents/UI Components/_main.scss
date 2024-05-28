@@ -24,8 +24,8 @@ section#services {
   .skillBlock {
     background: linear-gradient(
       to bottom,
-      var(--baseBlur),
-      var(--bg3)
+      $baseBlur,
+      $bg3
     );
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -34,17 +34,17 @@ section#services {
     padding: 20px;
     margin: 20px 0px;
 
-    box-shadow: 0px 15px 15px 10px var(--shadow),
+    box-shadow: 0px 15px 15px 10px $shadow,
                 -3px -3px 2px rgba(255, 255, 255, .3),
-                0px 5px 15px 1px var(--shadow);            
+                0px 5px 15px 1px $shadow;
 
     border-radius: 10px;
 
     .img-sk {
       background: linear-gradient(
         135deg,
-        var(--color1),
-        var(--color0)
+        $color1,
+        $color0
       );
 
       width: 200px;
@@ -77,7 +77,7 @@ section#about {
 }
 
 div#about-style {
-  background: var(--bg2);
+  background: $bg2;
 
   width: 100%;
   height: 850px;
