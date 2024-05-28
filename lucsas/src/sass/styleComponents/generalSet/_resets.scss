@@ -22,6 +22,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 // UI
 #root {
   width: 100%;

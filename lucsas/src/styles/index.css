@@ -15,6 +15,10 @@ html, body {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #root {
   width: 100%;
   height: 100%;
@@ -205,6 +209,70 @@ header div#bgcolor i#thumb {
   left: 7%;
   transform: translateY(-50%);
   pointer-events: none;
+}
+
+section#intro {
+  height: 100vh;
+}
+section#intro > div {
+  width: 100vw;
+  height: 85vh;
+}
+section#intro .intro3d, section#intro iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* About Section */
+/* Effects */
+div.scroll-anim {
+  width: 100vw;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+div.scroll-anim > div {
+  width: 30px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+div.scroll-anim > div::after {
+  content: "";
+  background: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  top: 20%;
+  animation: scroll 1.1s ease-in-out infinite;
+}
+
+@keyframes scroll {
+  from {
+    top: 20%;
+  }
+  to {
+    top: 60%;
+    opacity: 0.2;
+  }
+}
+@keyframes blob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
