@@ -3,10 +3,10 @@ function About() {
     <>
       <div id="about-style"></div>
       <section id="about">
-        <div class="cont">
-          <div class="hidden">
-            <h1 class="big">
-              Hi, My name is <span class="fancy">Lucas Lira</span>
+        <div className="cont">
+          <div className="hidden">
+            <h1 className="big">
+              Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>
             <p>
               I work as a{" "}
@@ -32,7 +32,7 @@ function About() {
             <p>What do you thing? Can we grow together?</p>
           </div>
 
-          <div class="img-div hidden1">
+          <div className="img-div hidden1">
             <figure>
               {/* <iframe
                 src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"

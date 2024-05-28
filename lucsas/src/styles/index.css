@@ -262,6 +262,12 @@ section#intro .intro3d, section#intro iframe {
 section#services {
   box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.488);
 }
+section#services > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
 section#services .skillBlock {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #151515);
   backdrop-filter: blur(6px);
@@ -271,6 +277,10 @@ section#services .skillBlock {
   margin: 20px 0px;
   box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px rgba(0, 0, 0, 0.488);
   border-radius: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 section#services .skillBlock .img-sk {
   background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
@@ -278,6 +288,10 @@ section#services .skillBlock .img-sk {
   height: 200px;
   margin: 20px;
   animation: blob 10s ease-in-out infinite;
+}
+section#services .skillBlock .img-sk img {
+  width: 50%;
+  filter: brightness(0);
 }
 section#services h1 {
   background: rgba(0, 0, 0, 0.3);

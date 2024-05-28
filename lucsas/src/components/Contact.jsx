@@ -1,4 +1,25 @@
+import { useState } from "react";
+
+import email from "../img/email.webp";
+import instaLogo from "../img/instagram-icon.webp";
+
 function Contact() {
+  const [nameInput ,setNameInput] = useState("");
+  const [emailInput ,setEmailInput] = useState("");
+  const [msgInput ,setMsgInput] = useState("");
+
+  function changeName(inp) {
+    setNameInput(inp.target.value);
+  }
+
+  function changeEmail(inp) {
+    setEmailInput(inp.target.value);
+  }
+
+  function changeMsg(inp) {
+    setMsgInput(inp.target.value);
+  }
+
   return (
     <>
       <section id="contact">
@@ -9,16 +30,16 @@ function Contact() {
                 Want to bring more attention to your business?
               </p>
               
-              <h1 class="big fancy">
+              <h1 className="big fancy">
                 Let's grow together!
               </h1>
             </div>
 
             <div>
               <div>
-                <div class="contact">
+                <div className="contact">
                   <figure>
-                    <img src="img/email.webp" alt="Contact through E-mail" class="icons" />
+                    <img src={email} alt="Contact through E-mail" className="icons" />
                   </figure>
                 </div>
 
@@ -32,9 +53,9 @@ function Contact() {
               </div>
 
               <div>
-                <div class="contact">
+                <div className="contact">
                   <figure>
-                    <img src="img/instagram-icon.webp" alt="Contact through Instagram" class="icons" />
+                    <img src={instaLogo} alt="Contact through Instagram" className="icons" />
                   </figure>
                 </div>
 
@@ -51,37 +72,74 @@ function Contact() {
           </div>
           
           <div>
-            <div class="center">
-              <h1 class="block-text" style={{ margin: "10px 0px 40px 0px" }}>
+            <div className="center">
+              <h1 className="block-text" style={{ margin: "10px 0px 40px 0px" }}>
                 Contact
               </h1>
             </div>
             
-            <form action="https://api.staticforms.xyz/submit" method="post" autocomplete="on">
+            <form action="https://api.staticforms.xyz/submit" method="post" autoComplete="on">
               <div>
                 <div>
-                  <label for="fullName">Name:</label> <br />
-                    <input type="text" name="name" placeholder="Your name" required />
+                  <label htmlFor="fullName">Name:</label> <br />
+                    <input 
+                      type="text"
+                      name="name"
+                      placeholder="Your name"
+                      value={nameInput}
+                      onChange={(e) => changeName(e)}
+                      required 
+                    />
                 </div>
 
                 <div>
-                  <label for="emailAddress">E-mail: </label> <br />
-                    <input type="email" name="email" placeholder="Your e-mail" required />
+                  <label htmlFor="emailAddress">E-mail: </label> <br />
+                    <input 
+                      type="email"
+                      name="email"
+                      placeholder="Your e-mail"
+                      value={emailInput}
+                      onChange={(e) => changeEmail(e)}
+                      required
+                    />
                 </div>
 
                 <div>
-                  <label for="userMsg">Message: </label> <br />
-                    <textarea name="message" cols="30" rows="10" placeholder="Write a message..." required></textarea>
+                  <label htmlFor="userMsg">Message: </label> <br />
+                    <textarea 
+                      name="message"
+                      cols="30"
+                      rows="10"
+                      placeholder="Write a message..."
+                      value={msgInput}
+                      onChange={(e) => changeMsg(e)}
+                      required>
+                    </textarea>
                 </div>
 
                 <div>
-                  <input type="submit" value="Send" class="submit-button" />
+                  <input 
+                    type="submit"
+                    value="Send"
+                    className="submit-button"
+                  />
                 </div>
 
                 <div>
-                  <input type="hidden" name="accessKey" value="9f7e2bc4-d0c9-4819-ac06-2c58044142e0" /> 
-                  <input type="hidden" name="redirectTo" value="document/success.html" />
-                  <input type="hidden" name="replyTo" value="@" />
+                  <input 
+                    type="hidden"
+                    name="accessKey" value="9f7e2bc4-d0c9-4819-ac06-2c58044142e0"
+                  />
+                  <input 
+                    type="hidden"
+                    name="redirectTo"
+                    value="document/success.html"
+                  />
+                  <input 
+                    type="hidden"
+                    name="replyTo"
+                    value="@"
+                  />
                 </div>
               </div>
             </form>

@@ -21,6 +21,10 @@ section#intro {
 section#services {
   box-shadow: 0px -10px 15px $shadow;
 
+  > div {
+    @include verticalFlex();
+  }
+
   .skillBlock {
     background: linear-gradient(
       to bottom,
@@ -40,6 +44,8 @@ section#services {
 
     border-radius: 10px;
 
+    @include verticalFlex();
+
     .img-sk {
       background: linear-gradient(
         135deg,
@@ -52,6 +58,11 @@ section#services {
       margin: 20px;
 
       animation: blob 10s ease-in-out infinite;
+
+      img {
+        width: 50%;
+        filter: brightness(0)
+      }
     }
   }
   

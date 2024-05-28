@@ -16,7 +16,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
-                    <img src="img/instagram-social.webp" alt="Instagram" class="icons" />
+                    <img src="img/instagram-social.webp" alt="Instagram" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -24,7 +24,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://github.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src="img/github-social.webp" alt="GitHub" class="icons" />
+                    <img src="img/github-social.webp" alt="GitHub" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -32,7 +32,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://www.linkedin.com/in/lucsas/?locale=en_US" target="_blank" rel="noopener noreferrer">
-                    <img src="img/linkedin-social.webp" alt="Lucsas Linkedin" class="icons" />
+                    <img src="img/linkedin-social.webp" alt="Lucsas Linkedin" className="icons" />
                   </a>
                 </figure>
               </li>
@@ -40,7 +40,7 @@ function Footer() {
               <li>
                 <figure>
                   <a href="https://twitter.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src="img/twitter-social.webp" alt="Lucsas Twitter" class="icons" />
+                    <img src="img/twitter-social.webp" alt="Lucsas Twitter" className="icons" />
                   </a>
                 </figure>
               </li>

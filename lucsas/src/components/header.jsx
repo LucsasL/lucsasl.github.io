@@ -8,7 +8,7 @@ const Header = () => {
           <div className="logoDiv">
             <figure>
               <img src={logo} alt="Lucsas Logo" />
-              <h1 class="headerName">
+              <h1 className="headerName">
                 Lucsas
               </h1>
             </figure>
@@ -61,7 +61,7 @@ const Header = () => {
               </div>
             
               <div id="bgcolor">
-                <label for="bgButton">
+                <label htmlFor="bgButton">
                   <input type="checkbox" id="bgButton" checked />
                   <span>
                     <i id="symbol"></i>

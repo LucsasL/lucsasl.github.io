@@ -2,42 +2,42 @@ function Portfolio() {
   return (
     <>
       <section id="functions">
-        <div class="cont">
-          <div class="results">
-            <div class="center">
-              <h1 class="block-text big">What does a traffic manager do?</h1>
+        <div className="cont">
+          <div className="results">
+            <div className="center">
+              <h1 className="block-text big">What does a traffic manager do?</h1>
             </div>
 
             <div id="prom-container">
-              <div class="promises hidden1">
+              <div className="promises hidden1">
                 <p>
                   Make you reach any type of person on the internet through ads
                   campaign.
                 </p>
               </div>
 
-              <div class="promises hidden1">
+              <div className="promises hidden1">
                 <p>
                   Make your clients pay attention to your products or services
                   on the biggest attention attractor, the internet.
                 </p>
               </div>
 
-              <div class="promises hidden1">
+              <div className="promises hidden1">
                 <p>
                   Often reports of the results of your campaigns and the
                   strategies used to make it.
                 </p>
               </div>
 
-              <div class="promises hidden1">
+              <div className="promises hidden1">
                 <p>
                   Use strategies and segmentation to appear to the persons that
                   matter the most to you.
                 </p>
               </div>
 
-              <div class="promises hidden1">
+              <div className="promises hidden1">
                 <div>
                   <p>
                     Sell the right product, to the right person in the right
