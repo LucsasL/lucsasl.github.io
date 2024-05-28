@@ -436,6 +436,43 @@ figcaption {
   section#skills .platform div {
     width: 50%;
   }
+  div.result {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.result div {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+  }
+  div.result #prom-container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+  }
+  div.result #prom-container .promises {
+    margin: 0;
+  }
+  div.result #prom-container .promises:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 8;
+  }
+  div.result #prom-container .promises:nth-child(2) {
+    grid-column-start: 8;
+    grid-column-end: 13;
+  }
+  div.result #prom-container .promises:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  div.result #prom-container .promises:nth-child(4) {
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
   /* CTA Section */
   form {
     width: 650px;
@@ -794,10 +831,9 @@ section#portfolio {
 }
 section#portfolio .prom-container {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12);
-  grid-template-rows: repeat(5);
-  gap: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 section#portfolio .prom-container .promises {
   background: rgb(1, 1, 1);

@@ -199,8 +199,8 @@ section#portfolio {
 
   .prom-container {
     width: 100%;
-
-    @include grid(12, 5);
+    
+    @include center;
 
     .promises {
       background: $promises;
