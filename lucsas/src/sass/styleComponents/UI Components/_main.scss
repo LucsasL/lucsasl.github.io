@@ -1,3 +1,23 @@
+main {
+  background: $bg;
+  width: 100%;
+
+  > div {
+    width: 100%;
+  }
+
+  section {
+    width: 100%;
+    padding: 50px auto;
+
+    @include center;
+
+    > div {
+      width: 80%;
+    }
+  }
+}
+
 // Intro Section
 section#intro {
   height: 100vh;

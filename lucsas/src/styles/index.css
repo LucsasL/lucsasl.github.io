@@ -275,6 +275,24 @@ header div#bgcolor i#thumb {
   pointer-events: none;
 }
 
+main {
+  background: #060606;
+  width: 100%;
+}
+main > div {
+  width: 100%;
+}
+main section {
+  width: 100%;
+  padding: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section > div {
+  width: 80%;
+}
+
 section#intro {
   height: 100vh;
 }

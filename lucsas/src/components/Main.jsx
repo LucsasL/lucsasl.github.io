@@ -8,12 +8,16 @@ import Contact from "./Contact";
 function Main() {
   return (
     <>
-      <Introsect />
-      <Services />
-      <About />
-      <Skills />
-      <Portfolio />
-      <Contact />
+      <main>
+        <div>
+          <Introsect />
+          <Services />
+          <About />
+          <Skills />
+          <Portfolio />
+          <Contact />
+        </div>
+      </main>
     </>
   )
 }
