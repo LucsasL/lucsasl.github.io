@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+@mixin spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin verticalFlex($flex: space-between) {
   display: flex;
   flex-flow: column nowrap;
@@ -42,7 +48,7 @@
 
 // Text Mixins
 @mixin blockHeader {
-background: $bg3blur;
+  background: $bg3blur;
 
   display: inline-block;
   padding: 20px;

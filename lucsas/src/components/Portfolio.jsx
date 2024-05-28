@@ -47,13 +47,13 @@ function Portfolio() {
 
                 <div>
                   <figure>
-                    <iframe
+                    {/* <iframe
                       src="https://my.spline.design/untitled-f9173bd99cf55847c431ed275730d732/"
                       frameborder="0"
                       width="100%"
                       height="100%"
                       title="Quality Traffic to your business"
-                    ></iframe>
+                    ></iframe> */}
                   </figure>
                 </div>
               </div>

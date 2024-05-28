@@ -3,7 +3,7 @@ function Introsect() {
     <>
       <section id="intro">
         <div class="intro3D">
-          <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe>
+          {/* <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe> */}
         </div>
 
         <div style={{ display: "none" }}>

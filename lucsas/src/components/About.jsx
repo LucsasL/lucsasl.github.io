@@ -34,13 +34,13 @@ function About() {
 
           <div class="img-div hidden1">
             <figure>
-              <iframe
+              {/* <iframe
                 src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"
                 title="Lucsas Mascot"
                 width="100%"
                 height="100%"
                 id="mascot"
-              ></iframe>
+              ></iframe> */}
             </figure>
           </div>
         </div>

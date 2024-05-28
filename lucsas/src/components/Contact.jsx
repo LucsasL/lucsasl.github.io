@@ -1,8 +1,8 @@
 function Contact() {
   return (
     <>
-      <section id="grow">
-        <div class="cont">
+      <section id="contact">
+        <div>
           <div id="ways-contact">
             <div>
               <p>
