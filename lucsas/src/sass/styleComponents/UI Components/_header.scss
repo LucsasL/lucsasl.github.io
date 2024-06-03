@@ -14,7 +14,7 @@ header {
   > div {
     background: $header;
 
-    width: 80%;
+    width:110%;
     height: 100%;
     padding: 30px;
     margin: 0px 15px;
@@ -22,8 +22,9 @@ header {
 
     @include spaceBetween;
 
-    .logoDiv {
-      width: 20%;
+    .headerName {
+      margin-left: 8px;
+        // display: none;
     }
   }
 
@@ -33,8 +34,16 @@ header {
   }
 
   button {
+    @include buttonGen(false, true);
+
     background: transparent;
     width: auto;
+    padding: 0;
+    margin: 0;
+
+    a {
+      padding: 10px;
+    }
   }
 
   button#contactButton {
@@ -76,17 +85,16 @@ header {
   }
 
   #mainHeader {
+    @include spaceEvenly;
+
     width: 35%;
 
-    @include spaceEvenly;
+    menu {
+      @include spaceAround;
+      width: 100%;
+    }
   }
   
-  menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  }
-
   #musicDiv {
     display: inline-flex;
     align-items: center;

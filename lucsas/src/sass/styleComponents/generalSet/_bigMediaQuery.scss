@@ -10,20 +10,19 @@
     }
 
     #mainHeader {
-      width: 60%;
-      
       @include spaceAround;
-    }
-    
-    menu {
-      width: 100%;
-      
-      @include spaceBetween;
-    }
-    
-    nav {
-      display: block;
-      width: 70%;
+
+      width: 60%;
+
+      menu {
+        @include spaceBetween;
+        width: 100%;
+  
+        nav {
+          display: block;
+          width: 70%;
+        }
+      }
     }
     
     li {
