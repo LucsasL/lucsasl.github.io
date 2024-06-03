@@ -63,7 +63,7 @@ header {
 
   a {
     color: $color;
-    transition: all 0.5s ease;
+    transition: all .5s ease;
 
     &:hover {
       background: linear-gradient(to right, $color0, $color1);
@@ -75,23 +75,19 @@ header {
     }
   }
 
-  div#mainHeader {
+  #mainHeader {
     width: 35%;
 
     @include spaceEvenly;
-
-    nav {
-      width: 50%;
-    }
   }
-
+  
   menu {
     width: 100%;
     display: flex;
     justify-content: space-around;
   }
 
-  div#musicDiv {
+  #musicDiv {
     display: inline-flex;
     align-items: center;
   }

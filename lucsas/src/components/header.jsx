@@ -57,6 +57,7 @@ const Header = () => {
                   </li>
                 </ul>
               </nav>
+              
               <div id="musicDiv">
                 <canvas id="musicButton"></canvas>
 

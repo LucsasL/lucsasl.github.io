@@ -6,13 +6,13 @@
 @import "./styleComponents/generalSet/imports";
 @import "./styleComponents/generalSet/mixins";
 
-// Media Queries
-@import "./styleComponents/generalSet/tabletMediaQuery";
-@import "./styleComponents/generalSet/desktopMediaQuery";
-@import "./styleComponents/generalSet/bigMediaQuery";
-
 // Components Style
 @import "./styleComponents/UI Components/header";
 @import "./styleComponents/UI Components/main";
 @import "./styleComponents/UI Components/footer";
 @import "./styleComponents/UI Components/msgme";
+
+// Media Queries
+@import "./styleComponents/generalSet/tabletMediaQuery";
+@import "./styleComponents/generalSet/desktopMediaQuery";
+@import "./styleComponents/generalSet/bigMediaQuery";

@@ -9,25 +9,23 @@
       display: inline;
     }
 
-    div#mainHeader {
+    #mainHeader {
       width: 60%;
-
-      display: flex;
-      justify-content: space-around;
-
-      menu {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        nav {
-          display: block;
-          width: 70%;
-        }
-      }
+      
+      @include spaceAround;
     }
-
+    
+    menu {
+      width: 100%;
+      
+      @include spaceBetween;
+    }
+    
+    nav {
+      display: block;
+      width: 70%;
+    }
+    
     li {
       display: inline;
     }

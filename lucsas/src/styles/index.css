@@ -131,373 +131,6 @@ figcaption {
   src: url("../../../fonts/Kalam/Kalam-Regular.ttf");
   font-display: swap;
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  /* Intro Section */
-  .headerName {
-    display: inline;
-  }
-  section#intro .intro-content {
-    display: flex;
-    justify-content: space-around;
-  }
-  section#intro .intro-content div {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  section#intro .intro-content #introImg {
-    width: 40%;
-    display: block;
-  }
-  section#intro #introducing {
-    text-align: left;
-  }
-  section#intro #socials {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Services Sections */
-  section#services div#cards {
-    width: 100vw;
-    transform: translateX(-10%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  section#services .skill-block {
-    width: 400px;
-    margin: 20px;
-  }
-  /* Area Section */
-  .promises {
-    width: 45%;
-  }
-  .results > div#prom-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  /* Footer Section */
-  #footerNav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  /* Header Settings */
-  .headerName {
-    display: none;
-  }
-  header li {
-    display: inline-block;
-  }
-  header #mainHeader {
-    width: 70%;
-  }
-  /* Intro Section */
-  section#intro > div {
-    width: 100%;
-  }
-  section#intro > div div {
-    width: 100%;
-  }
-  section#intro .intro3D {
-    display: block;
-  }
-  section#intro .intro-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section#intro .intro-content div {
-    width: 50%;
-    text-align: left;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  section#intro .intro-content #introImg {
-    display: block;
-  }
-  section#intro .introducing {
-    text-align: left;
-  }
-  section#intro #socials {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-  }
-  section#intro div.intro-content div#introImg {
-    display: block;
-  }
-  div#scroll-anim {
-    width: 100vw;
-  }
-  /* Services Sections */
-  section#services #cards {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    transform: translateX(-10%);
-  }
-  section#services #cards .skill-block {
-    width: 44%;
-    margin: 20px;
-  }
-  /* About Section */
-  .about-style {
-    height: 700px;
-  }
-  section#about > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section#about > div div {
-    width: 50%;
-  }
-  /* Area Section */
-  #prom-container {
-    width: 100%;
-  }
-  .promises {
-    width: 45%;
-  }
-  .results > #prom-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  /* CTA Section */
-  section#contact > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  /* Footer Section */
-  #footerNav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* Header Settings */
-  header > div {
-    margin: 0px 150px;
-  }
-  header .headerName {
-    display: inline;
-  }
-  header div#mainHeader {
-    width: 60%;
-    display: flex;
-    justify-content: space-around;
-  }
-  header div#mainHeader menu {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  header div#mainHeader menu nav {
-    display: block;
-    width: 70%;
-  }
-  header li {
-    display: inline;
-  }
-  header div#bgcolor {
-    width: 15%;
-  }
-  header.scrolled > div {
-    padding: 30px;
-  }
-  /* Main Settings */
-  section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section > div {
-    width: 80%;
-    height: 90%;
-    display: flex;
-    justify-content: space-around;
-  }
-  /* Intro Section */
-  section#intro > div {
-    width: 86%;
-    margin: 10px 0px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  section#intro div.intro3D {
-    position: absolute;
-    display: block;
-    pointer-events: all;
-  }
-  section#intro > div div {
-    width: 80%;
-    text-align: left;
-    display: flex;
-    justify-content: start;
-    flex-direction: row-reverse;
-  }
-  section#intro h1 {
-    width: 100%;
-    position: relative;
-    top: 0;
-    display: inline-block;
-  }
-  section#intro h1 span.nickname {
-    font-size: 4em;
-    position: absolute;
-    top: 0;
-  }
-  section#intro h1 span.cursiveWords {
-    font: bolder 2em "Kalam", cursive;
-    letter-spacing: 0.25em;
-  }
-  section#intro h2.intro-h2 {
-    font-size: 2em;
-    margin-top: 0;
-  }
-  section#intro div#socials {
-    display: flex;
-    flex-direction: column;
-  }
-  section#intro div#socials div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* Services Section */
-  section#services #cards {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section#services #cards .skill-block {
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  section#services #cards .skill-block:nth-child(1) {
-    transition: transform 2.3s ease;
-  }
-  section#services #cards .skill-block:nth-child(2) {
-    transition: transform 2s ease;
-  }
-  section#services #cards .skill-block:nth-child(3) {
-    transition: transform 1.7s ease;
-  }
-  /* About Section */
-  section#about {
-    height: 900px;
-  }
-  section#about div {
-    width: 80%;
-  }
-  /* Area Section */
-  section#area > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section#area > div div {
-    margin: 100px 0px;
-  }
-  section#area .platform {
-    width: 100%;
-    margin: 20px 0px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  section#area .platform div {
-    width: 60%;
-  }
-  section#area .platform p {
-    width: 90%;
-  }
-  section#area #google-design {
-    width: 700px;
-    position: absolute;
-    transform: translateY(-25%);
-  }
-  /* Meta Section */
-  section#skills .platform {
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-  }
-  section#skills .platform div {
-    width: 50%;
-  }
-  div.result {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  div.result div {
-    width: 100%;
-    padding: 20px;
-    margin: 20px;
-  }
-  div.result #prom-container {
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 30px;
-  }
-  div.result #prom-container .promises {
-    margin: 0;
-  }
-  div.result #prom-container .promises:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 8;
-  }
-  div.result #prom-container .promises:nth-child(2) {
-    grid-column-start: 8;
-    grid-column-end: 13;
-  }
-  div.result #prom-container .promises:nth-child(3) {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-  div.result #prom-container .promises:nth-child(4) {
-    grid-column-start: 6;
-    grid-column-end: 13;
-  }
-  /* CTA Section */
-  .formDiv {
-    width: 650px;
-  }
-  .formDiv form {
-    width: 100%;
-    padding: 40px 20px;
-  }
-  .formDiv form div {
-    width: 95%;
-  }
-  /* Footer Section */
-  footer {
-    margin-top: 0px;
-  }
-  footer #footerNav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  footer #footerNav > div {
-    width: 35%;
-    padding: 20px;
-  }
-}
 header {
   color: white;
   width: 100vw;
@@ -562,22 +195,19 @@ header a:hover {
   -webkit-background-clip: text;
   color: transparent;
 }
-header div#mainHeader {
+header #mainHeader {
   width: 35%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
 }
-header div#mainHeader nav {
-  width: 50%;
-}
 header menu {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-header div#musicDiv {
+header #musicDiv {
   display: inline-flex;
   align-items: center;
 }
@@ -1055,6 +685,375 @@ div#msgMe a {
   div#msgMe {
     top: 85%;
     left: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Intro Section */
+  .headerName {
+    display: inline;
+  }
+  section#intro .intro-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  section#intro .intro-content div {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  section#intro .intro-content #introImg {
+    width: 40%;
+    display: block;
+  }
+  section#intro #introducing {
+    text-align: left;
+  }
+  section#intro #socials {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Services Sections */
+  section#services div#cards {
+    width: 100vw;
+    transform: translateX(-10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#services .skill-block {
+    width: 400px;
+    margin: 20px;
+  }
+  /* Area Section */
+  .promises {
+    width: 45%;
+  }
+  .results > div#prom-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* Footer Section */
+  #footerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Header Settings */
+  .headerName {
+    display: none;
+  }
+  header li {
+    display: inline-block;
+  }
+  header #mainHeader {
+    width: 70%;
+  }
+  /* Intro Section */
+  section#intro > div {
+    width: 100%;
+  }
+  section#intro > div div {
+    width: 100%;
+  }
+  section#intro .intro3D {
+    display: block;
+  }
+  section#intro .intro-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#intro .intro-content div {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  section#intro .intro-content #introImg {
+    display: block;
+  }
+  section#intro .introducing {
+    text-align: left;
+  }
+  section#intro #socials {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+  }
+  section#intro div.intro-content div#introImg {
+    display: block;
+  }
+  div#scroll-anim {
+    width: 100vw;
+  }
+  /* Services Sections */
+  section#services #cards {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform: translateX(-10%);
+  }
+  section#services #cards .skill-block {
+    width: 44%;
+    margin: 20px;
+  }
+  /* About Section */
+  .about-style {
+    height: 700px;
+  }
+  section#about > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#about > div div {
+    width: 50%;
+  }
+  /* Area Section */
+  #prom-container {
+    width: 100%;
+  }
+  .promises {
+    width: 45%;
+  }
+  .results > #prom-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* CTA Section */
+  section#contact > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* Footer Section */
+  #footerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* Header Settings */
+  header > div {
+    margin: 0px 150px;
+  }
+  header .headerName {
+    display: inline;
+  }
+  header #mainHeader {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    display: block;
+    width: 70%;
+  }
+  header li {
+    display: inline;
+  }
+  header div#bgcolor {
+    width: 15%;
+  }
+  header.scrolled > div {
+    padding: 30px;
+  }
+  /* Main Settings */
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section > div {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+  /* Intro Section */
+  section#intro > div {
+    width: 86%;
+    margin: 10px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  section#intro div.intro3D {
+    position: absolute;
+    display: block;
+    pointer-events: all;
+  }
+  section#intro > div div {
+    width: 80%;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    flex-direction: row-reverse;
+  }
+  section#intro h1 {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: inline-block;
+  }
+  section#intro h1 span.nickname {
+    font-size: 4em;
+    position: absolute;
+    top: 0;
+  }
+  section#intro h1 span.cursiveWords {
+    font: bolder 2em "Kalam", cursive;
+    letter-spacing: 0.25em;
+  }
+  section#intro h2.intro-h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  section#intro div#socials {
+    display: flex;
+    flex-direction: column;
+  }
+  section#intro div#socials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Services Section */
+  section#services #cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#services #cards .skill-block {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  section#services #cards .skill-block:nth-child(1) {
+    transition: transform 2.3s ease;
+  }
+  section#services #cards .skill-block:nth-child(2) {
+    transition: transform 2s ease;
+  }
+  section#services #cards .skill-block:nth-child(3) {
+    transition: transform 1.7s ease;
+  }
+  /* About Section */
+  section#about {
+    height: 900px;
+  }
+  section#about div {
+    width: 80%;
+  }
+  /* Area Section */
+  section#area > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#area > div div {
+    margin: 100px 0px;
+  }
+  section#area .platform {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#area .platform div {
+    width: 60%;
+  }
+  section#area .platform p {
+    width: 90%;
+  }
+  section#area #google-design {
+    width: 700px;
+    position: absolute;
+    transform: translateY(-25%);
+  }
+  /* Meta Section */
+  section#skills .platform {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  section#skills .platform div {
+    width: 50%;
+  }
+  div.result {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.result div {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+  }
+  div.result #prom-container {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+  }
+  div.result #prom-container .promises {
+    margin: 0;
+  }
+  div.result #prom-container .promises:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 8;
+  }
+  div.result #prom-container .promises:nth-child(2) {
+    grid-column-start: 8;
+    grid-column-end: 13;
+  }
+  div.result #prom-container .promises:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  div.result #prom-container .promises:nth-child(4) {
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
+  /* CTA Section */
+  .formDiv {
+    width: 650px;
+  }
+  .formDiv form {
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .formDiv form div {
+    width: 95%;
+  }
+  /* Footer Section */
+  footer {
+    margin-top: 0px;
+  }
+  footer #footerNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer #footerNav > div {
+    width: 35%;
+    padding: 20px;
   }
 }
 
