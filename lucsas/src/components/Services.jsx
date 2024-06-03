@@ -7,14 +7,14 @@ function Services() {
     <>
       <section id="services">
         <div>
-          <div className="center">
-            <h1 className="block-text big hidden1" style={{ margin: "30px 0px" }}>
+          <div>
+            <h1 className="block-text big" style={{ margin: "30px 0px" }}>
               In what can I help you?
             </h1>
           </div>
 
-          <div div id="cards">
-            <div className="skill-block hidden">
+          <div id="cards">
+            <div className="skill-block">
               <div className="img-sk">
                 <figure>
                   <img
@@ -38,7 +38,7 @@ function Services() {
               </div>
             </div>
 
-            <div className="skill-block hidden">
+            <div className="skill-block">
               <div className="img-sk">
                 <figure>
                   <img
@@ -60,7 +60,7 @@ function Services() {
               </div>
             </div>
 
-            <div className="skill-block hidden">
+            <div className="skill-block">
               <div className="img-sk">
                 <figure>
                   <img

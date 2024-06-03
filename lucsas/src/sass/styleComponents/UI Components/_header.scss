@@ -1,6 +1,6 @@
 header {
   color: $color;
-  
+
   width: 100vw;
   height: 90px;
 
@@ -8,9 +8,9 @@ header {
   /* top: -15%;  Add Javascript to animate header*/
   top: 3%;
   z-index: 2;
-  
+
   @include center;
-  
+
   > div {
     background: $header;
 
@@ -26,7 +26,7 @@ header {
       width: 20%;
     }
   }
-  
+
   li {
     display: none;
     margin: 10px;
@@ -39,13 +39,12 @@ header {
 
   button#contactButton {
     border-bottom: 3px solid rgb(54, 23, 255);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       box-shadow: 0px 3px 7px rgb(54, 23, 255);
     }
   }
-
 
   figure {
     width: 100%;
@@ -56,7 +55,7 @@ header {
       width: 75px;
       height: 75px;
     }
-    
+
     h1 {
       width: 200px;
     }
@@ -64,18 +63,14 @@ header {
 
   a {
     color: $color;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
-      background: linear-gradient(
-        to right,
-        $color0,
-        $color1
-      );
-  
+      background: linear-gradient(to right, $color0, $color1);
+
       background-clip: text;
       -webkit-background-clip: text;
-  
+
       color: transparent;
     }
   }
@@ -109,15 +104,11 @@ header {
     padding: 10px;
 
     border-radius: 50%;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
 
     &:hover {
-      background: linear-gradient(
-        to right,
-        $color0,
-        $color1
-      );
+      background: linear-gradient(to right, $color0, $color1);
     }
   }
 
@@ -133,84 +124,32 @@ header {
       background: linear-gradient(
         to right,
         rgb(106, 106, 255),
-        rgb(200, 0,255)
+        rgb(200, 0, 255)
       );
-  
+
       width: 80px;
       height: 40px;
       border-radius: 80px;
-  
+
       display: block;
-  
+
       position: relative;
       left: 0;
-  
+
       cursor: pointer;
       box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218),
-                  inset 0px 0px 15px $shadow;
-    }
-
-    input {
-      display: none;
-
-      &:not(:checked) ~ span i#symbol {
-        border: 2px solid black;
-        box-shadow: 9px 0px 0px -6px white,
-                    -9px 0px 0px -6px white,
-                    0px 9px 0px -6px white,
-                    0px -9px 0px -6px white,
-                    7px -7px 0px -6px white,
-                    -7px -7px 0px -6px white,
-                    -7px 7px 0px -6px white,
-                    7px 7px 0px -6px white;
-    
-        width: 15px;
-        height: 15px;
-    
-        position: absolute;
-        top: 50%;
-        left: 70%;
-        transform: translate(-50%, -50%);
-    
-        mix-blend-mode: screen;
-      }
-
-      &:checked ~ span i#symbol {
-        background: transparent;
-        box-shadow: -4px 4px 0px 2px white;
-    
-        position: absolute;
-        top: 40%;
-        left: 25%;
-        transform: translateY(-50%);
-      }
-  
-      &:checked ~ label {
-        background: linear-gradient(
-          to right,
-          $color0,
-          $color1
-        );
-    
-        box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218),
-                    inset 0px 0px 15px $shadow;
-      }
-
-      &:checked ~ span i#thumb {
-        position: absolute;
-        left: calc(100% - 34px);
-      }
+        inset 0px 0px 15px $shadow;
     }
 
     i#symbol {
       background: white;
-  
+
       display: inline-block;
       width: 18px;
       height: 18px;
       border-radius: 50%;
     }
-  
+
     i#thumb {
       background: white;
       box-shadow: 0px 0px 10px $shadow;
@@ -219,7 +158,7 @@ header {
       height: 30px;
 
       border-radius: 50%;
-      transition: .5s;
+      transition: 0.5s;
 
       position: absolute;
       top: 50%;
@@ -227,6 +166,50 @@ header {
       transform: translateY(-50%);
 
       pointer-events: none;
+    }
+
+    input {
+      display: none;
+    }
+
+    input:not(:checked) ~ span i#symbol {
+      border: 2px solid black;
+      box-shadow: 9px 0px 0px -6px white, -9px 0px 0px -6px white,
+        0px 9px 0px -6px white, 0px -9px 0px -6px white, 7px -7px 0px -6px white,
+        -7px -7px 0px -6px white, -7px 7px 0px -6px white,
+        7px 7px 0px -6px white;
+
+      width: 15px;
+      height: 15px;
+
+      position: absolute;
+      top: 50%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+
+      mix-blend-mode: screen;
+    }
+
+    input:checked ~ span i#symbol {
+      background: transparent;
+      box-shadow: -4px 4px 0px 2px white;
+
+      position: absolute;
+      top: 40%;
+      left: 25%;
+      transform: translateY(-50%);
+    }
+
+    input:checked ~ label {
+      background: linear-gradient(to right, $color0, $color1);
+
+      box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218),
+        inset 0px 0px 15px $shadow;
+    }
+
+    input:checked ~ span i#thumb {
+      position: absolute;
+      left: calc(100% - 34px);
     }
   }
 }

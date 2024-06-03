@@ -1,5 +1,5 @@
 /* Icons */
-div#msg-me {
+div#msgMe {
   background: linear-gradient(
     135deg,
     $color0,
@@ -32,5 +32,11 @@ div#msg-me {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // Msg Me Icons
+    top: 85%;
+    left: 90%;
   }
 }

@@ -58,19 +58,19 @@
   section#intro {
     > div {
       width: 86%;
-      margin: 20px 0px;
+      margin: 10px 0px;
 
       @include flexStart;
     }
 
     div.intro3D {
+      position: absolute;
       display: block;
       pointer-events: all;
     }
 
     > div div {
       width: 80%;
-      margin-left: 2%;
 
       text-align: left;
 
@@ -116,29 +116,27 @@
 
   /* Services Section */
   section#services {
-    @include spaceAround;
-
-    .skill-block {
-      padding: 20px;
-      margin: 20px;
-
-      border-radius: 10px;
-
-      &:nth-child(1) {
-        transition: transform 2.3s ease;
-      }
-
-      &:nth-child(2) {
-        transition: transform 2s ease;
-      }
-
-      &:nth-child(3) {
-        transition: transform 1.7s ease;
-      }
-    }
-
-    div#cards {
+    #cards {
       @include spaceAround;
+
+      .skill-block {
+        margin: 20px;
+        padding: 20px;
+  
+        border-radius: 10px;
+  
+        &:nth-child(1) {
+          transition: transform 2.3s ease;
+        }
+  
+        &:nth-child(2) {
+          transition: transform 2s ease;
+        }
+  
+        &:nth-child(3) {
+          transition: transform 1.7s ease;
+        }
+      }
     }
   }
 
@@ -268,16 +266,5 @@
         padding: 20px;
       }
     }
-  }
-
-  // Msg Me Icons
-  div#msg-me {
-    top: 85%;
-    left: 90%;
-  }
-
-  // Animations
-  div.scroll-anim {
-    width: 100%;
   }
 }

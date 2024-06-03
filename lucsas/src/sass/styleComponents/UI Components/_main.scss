@@ -1,413 +1,418 @@
-main {
-  background: $bg;
-  width: 100%;
-
-  > div {
+@media all {
+  main {
+    background: $bg;
     width: 100%;
-  }
-
-  section {
-    width: 100%;
-    padding: 50px auto;
-
-    @include center;
 
     > div {
-      width: 80%;
+      width: 100%;
     }
-  }
-}
 
-// Intro Section
-section#intro {
-  height: 100vh;
-
-  > div {
-    width: 100vw;
-    height: 85vh;
-  }
-
-  .intro3d, iframe {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
-// Skills Sections
-section#services {
-  box-shadow: 0px -10px 15px $shadow;
-
-  > div {
-    @include verticalFlex(none, center);
-  }
-
-  .skill-block {
-    background: linear-gradient(
-      to bottom,
-      $baseBlur,
-      $bg3
-    );
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-
-    width: 100%;
-    padding: 20px;
-    margin: 20px 0px;
-
-    box-shadow: 0px 15px 15px 10px $shadow,
-                -3px -3px 2px rgba(255, 255, 255, .3),
-                0px 5px 15px 1px $shadow;
-
-    border-radius: 10px;
-
-    @include verticalFlex(none, center);
-
-    .img-sk {
-      background: linear-gradient(
-        135deg,
-        $color1,
-        $color0
-      );
-
-      width: 200px;
-      height: 200px;
-      margin: 20px;
-
-      animation: blob 10s ease-in-out infinite;
+    section {
+      width: 100%;
+      padding: 50px auto;
 
       @include center;
 
-      &:nth-child(even) {
+      > div {
+        width: 80%;
+      }
+    }
+  }
+
+  // Intro Section
+  section#intro {
+    height: 100vh;
+
+    > div {
+      width: 100vw;
+      height: 90vh;
+    }
+
+    .intro3d, iframe {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .scroll-anim {
+      width: 100vw;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      z-index: 1;
+
+      div {
+        width: 30px;
+        height: 50px;
+        border: 3px solid black;
+        border-radius: 30px;
+    
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .scroll-anim > div::after {
+      content: '';
+      background: black;
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      display: inline-block;
+      position: relative;
+      top: 20%;
+
+      animation: scroll 1.1s ease-in-out infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        top: 20%;
+      }
+      to {
+        top: 60%;
+        opacity: .2;
+      }
+    }
+  }
+
+  // Services Sections
+  section#services {
+    box-shadow: 0px -10px 15px $shadow;
+    
+    @include spaceAround;
+
+    > div {
+      @include verticalFlex(none, center);
+      flex-flow: column nowrap;
+    }
+
+    .skill-block {
+      background: linear-gradient(
+        to bottom,
+        $baseBlur,
+        $bg3
+      );
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
+      width: 100%;
+      padding: 20px;
+      margin: 20px 0px;
+
+      box-shadow: 0px 15px 15px 10px $shadow,
+                  -3px -3px 2px rgba(255, 255, 255, .3),
+                  0px 5px 15px 1px $shadow;
+
+      border-radius: 10px;
+
+      @include verticalFlex(none, center);
+
+      .img-sk {
         background: linear-gradient(
           135deg,
-          var(--color1),
-          var(--color0)
+          $color1,
+          $color0
         );
 
         width: 200px;
         height: 200px;
         margin: 20px;
 
-        position: absolute;
-        z-index: -1;
-        filter: blur(30px);
-
         animation: blob 10s ease-in-out infinite;
+
+        @include center;
+
+        &:nth-child(even) {
+          background: linear-gradient(
+            135deg,
+            $color1,
+            $color0
+          );
+
+          width: 200px;
+          height: 200px;
+          margin: 20px;
+
+          position: absolute;
+          z-index: -1;
+          filter: blur(30px);
+
+          animation: blob 10s ease-in-out infinite;
+        }
+
+        img {
+          width: 50%;
+          filter: brightness(0)
+        }
       }
-
-      img {
-        width: 50%;
-        filter: brightness(0)
-      }
     }
-  }
-  
-  h1 {
-    @include blockHeader;
-  }
-
-  img {
-    width: 50%;
-    filter: brightness(0);
-  }
-}
-
-// About Section
-div#about-style {
-  background: $bg2;
-
-  width: 100%;
-  height: 850px;
-  z-index: 0;
-
-  transform: skewY(-5deg);
-  position: absolute;
-  left: 0;
-}
-
-section#about {
-  height: 900px;
-  padding-top: 50px;
-  position: relative;
-
-  > div {
-    margin-top: 50px;
-    z-index: 1;
-  }
-}
-
-// Area Section
-section#area {
-  > div {
-    @include verticalFlex();
-
-    div {
-      margin-top: 100px;
-    }
-
-    .platform {
-      margin: 20px 0px;
-    }
-
-    .img-div {
-      position: relative;
-      width: 100%;
-    }
-  }
-
-  figure {
-    display: block;
-    margin: 20px;
-  }
-
-  #google-design {
-    width: 450px;
-    position: relative;
-  }
-}
-
-// Skills Section
-section#skills {
-  > div {
-    @include verticalFlex;
-
-    div {
-      margin: 40px 0px;
-    }
-  }
-
-  figure, img {
-    width: 70%;
-  }
-}
-
-.platform {
-  width: 100%;
-
-  @include spaceBetween;
-}
-
-// Portfolio Section
-section#portfolio {
-  background: $bg4;
-  padding: 50px;
-  margin: 50px 0px 100px 0px;
-
-  .prom-container {
-    width: 100%;
     
-    @include center;
+    h1 {
+      @include blockHeader;
+    }
 
-    .promises {
-      background: $promises;
-
-      font-size: 1.8em;
-      font-weight: bolder;
-
-      padding: 50px;
-      margin: 30px 10px;
-      border-radius: 20px;
-
-      transition-duration: .7s;
-
-      &:nth-child(1) {
-        background: linear-gradient(
-          to right,
-          $color0,
-          $color1,
-          rgb(205, 54, 255)
-        );
-        background-size: 300% 100%;
-      
-        transition-duration: 2s;
-      
-        animation: gradient-move 2s infinite alternate;
-      }
-      
-      &:nth-child(2) {
-        background: linear-gradient(
-          to bottom,
-          $bg2,
-          $promisesColor
-        );
-        transition-duration: 1.5s;
-      }
-      
-      &:nth-child(3) {
-        background: linear-gradient(
-          to bottom,
-          $bg2,
-          $promisesColor
-        );
-        transition-duration: 1s;
-      }
-      
-      &:nth-child(4) {
-        background: linear-gradient(
-          to right,
-          $color0,
-          $color1,
-          rgb(205, 54, 255)
-        );
-        background-size: 300% 100%;
-      
-        transition-duration: 2s;
-      
-        animation: gradient-move 2s infinite alternate;
-      }
-      
-      &:nth-child(5) {
-        transition-duration: 1.5s;
-      
-        display: flex;
-        justify-content: space-around;
-      
-        grid-column: span 12 / auto;
-      }
+    img {
+      width: 50%;
+      filter: brightness(0);
     }
   }
 
-  h1 {
-    @include blockHeader;
-    @include centerText;
-  }
-}
-
-@keyframes gradient-move {
-  0% {
-    background-position-x: 0%;
-  }
-  100% {
-    background-position-x: 100%;
-  }
-}
-
-// Contact Section
-section#contact {
-  > div {
-    width: 100%;
-  }
-
-  .formDiv h1 {
-    @include blockHeader;
-  }
-
-  form { 
-    background: var(--shadow);
+  // About Section
+  div#about-style {
+    background: $bg2;
 
     width: 100%;
-    padding: 40px 30px;
+    height: 850px;
+    z-index: 0;
 
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
-                -2px -2px 2px rgba(255, 255, 255, .3),
-                0px 15px 10px $shadow;
-            
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    transform: skewY(-5deg);
+    position: absolute;
+    left: 0;
+  }
 
-    display: flex;
-    justify-content: center;
+  section#about {
+    height: 900px;
+    padding-top: 50px;
+    position: relative;
 
+    > div {
+      margin-top: 50px;
+      z-index: 1;
+    }
+  }
+
+  // Area Section
+  section#area {
+    > div {
+      @include verticalFlex();
+
+      div {
+        margin-top: 100px;
+      }
+
+      .platform {
+        margin: 20px 0px;
+      }
+
+      .img-div {
+        position: relative;
+        width: 100%;
+      }
+    }
+
+    figure {
+      display: block;
+      margin: 20px;
+    }
+
+    #google-design {
+      width: 450px;
+      position: relative;
+    }
+  }
+
+  // Skills Section
+  section#skills {
+    > div {
+      @include verticalFlex;
+
+      div {
+        margin: 40px 0px;
+      }
+    }
+
+    figure, img {
+      width: 70%;
+    }
+  }
+
+  .platform {
+    width: 100%;
+
+    @include spaceBetween;
+  }
+
+  // Portfolio Section
+  section#portfolio {
+    background: $bg4;
+    padding: 50px;
+    margin: 50px 0px 100px 0px;
+
+    .prom-container {
+      width: 100%;
+      
+      @include center;
+
+      .promises {
+        background: $promises;
+
+        font-size: 1.8em;
+        font-weight: bolder;
+
+        padding: 50px;
+        margin: 30px 10px;
+        border-radius: 20px;
+
+        transition-duration: .7s;
+
+        &:nth-child(1) {
+          background: linear-gradient(
+            to right,
+            $color0,
+            $color1,
+            rgb(205, 54, 255)
+          );
+          background-size: 300% 100%;
+        
+          transition-duration: 2s;
+        
+          animation: gradient-move 2s infinite alternate;
+        }
+        
+        &:nth-child(2) {
+          background: linear-gradient(
+            to bottom,
+            $bg2,
+            $promisesColor
+          );
+          transition-duration: 1.5s;
+        }
+        
+        &:nth-child(3) {
+          background: linear-gradient(
+            to bottom,
+            $bg2,
+            $promisesColor
+          );
+          transition-duration: 1s;
+        }
+        
+        &:nth-child(4) {
+          background: linear-gradient(
+            to right,
+            $color0,
+            $color1,
+            rgb(205, 54, 255)
+          );
+          background-size: 300% 100%;
+        
+          transition-duration: 2s;
+        
+          animation: gradient-move 2s infinite alternate;
+        }
+        
+        &:nth-child(5) {
+          transition-duration: 1.5s;
+        
+          display: flex;
+          justify-content: space-around;
+        
+          grid-column: span 12 / auto;
+        }
+      }
+    }
+
+    h1 {
+      @include blockHeader;
+      @include centerText;
+    }
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 100%;
+    }
+  }
+
+  // Contact Section
+  section#contact {
     > div {
       width: 100%;
     }
 
-    .submit-button {
-      background: linear-gradient(
-        to right,
-        $color0,
-        $color1
-      );
+    .formDiv h1 {
+      @include blockHeader;
+    }
 
-      cursor: pointer;
+    form { 
+      background: var(--shadow);
+
+      width: 100%;
+      padding: 40px 30px;
+
+      border-radius: 20px;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+                  -2px -2px 2px rgba(255, 255, 255, .3),
+                  0px 15px 10px $shadow;
+              
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+
+      display: flex;
+      justify-content: center;
+
+      > div {
+        width: 100%;
+      }
+
+      .submit-button {
+        background: linear-gradient(
+          to right,
+          $color0,
+          $color1
+        );
+
+        cursor: pointer;
+      }
+    }
+
+    #ways-contact {
+      @include verticalFlex(space-around);
+
+      .contact {
+        background: linear-gradient(
+          135deg,
+          $color0,
+          $color1
+        );
+    
+        width: 75px;
+        height: 75px;
+    
+        display: inline-block;
+    
+        animation: blob 10s ease-in-out infinite;
+      }
+
+      p {
+        display: inline-block;
+        margin: 20px 10px;
+      }
+
+      img {
+        filter: brightness(0);
+      }
     }
   }
 
-  #ways-contact {
-    @include verticalFlex(space-around);
-
-    .contact {
-      background: linear-gradient(
-        135deg,
-        $color0,
-        $color1
-      );
-  
-      width: 75px;
-      height: 75px;
-  
-      display: inline-block;
-  
-      animation: blob 10s ease-in-out infinite;
+  // Effects
+  @keyframes blob {
+    0%, 100% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
-    p {
-      display: inline-block;
-      margin: 20px 10px;
+    50% {
+      border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
     }
-
-    img {
-      filter: brightness(0);
-    }
-  }
-}
-
-// Effects
-div.scroll-anim {
-  width: 100vw;
-  margin-bottom: 20px;
-
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-}
-
-div.scroll-anim > div {
-  width: 30px;
-  height: 50px;
-  border: 3px solid black;
-  border-radius: 30px;
-
-  display: flex;
-  justify-content: center;
-}
-
-div.scroll-anim > div::after {
-  content: '';
-  background: black;
-  width: 10px;
-  height: 10px;
-
-  border-radius: 50%;
-
-  display: inline-block;
-  position: relative;
-  top: 20%;
-
-  animation: scroll 1.1s ease-in-out infinite;
-}
-
-@keyframes scroll {
-  from {
-    top: 20%;
-  }
-  to {
-    top: 60%;
-    opacity: .2;
-  }
-}
-
-@keyframes blob {
-  0%, 100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
   }
 }
