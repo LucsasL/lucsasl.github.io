@@ -9,35 +9,35 @@ function Portfolio() {
             </div>
 
             <div id="prom-container">
-              <div className="promises hidden1">
+              <div className="promises">
                 <p>
                   Make you reach any type of person on the internet through ads
                   campaign.
                 </p>
               </div>
 
-              <div className="promises hidden1">
+              <div className="promises">
                 <p>
                   Make your clients pay attention to your products or services
                   on the biggest attention attractor, the internet.
                 </p>
               </div>
 
-              <div className="promises hidden1">
+              <div className="promises">
                 <p>
                   Often reports of the results of your campaigns and the
                   strategies used to make it.
                 </p>
               </div>
 
-              <div className="promises hidden1">
+              <div className="promises">
                 <p>
                   Use strategies and segmentation to appear to the persons that
                   matter the most to you.
                 </p>
               </div>
 
-              <div className="promises hidden1">
+              <div className="promises">
                 <div>
                   <p>
                     Sell the right product, to the right person in the right

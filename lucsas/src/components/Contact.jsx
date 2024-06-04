@@ -25,7 +25,7 @@ function Contact() {
       <section id="contact">
         <div>
           <div id="ways-contact">
-            <div>
+            <div style={{ textAlign: "center" }}>
               <p>Want to bring more attention to your business?</p>
 
               <h1 className="big fancy">Let's grow together!</h1>
@@ -69,7 +69,7 @@ function Contact() {
           </div>
 
           <div className="formDiv">
-            <div className="center">
+            <div style={{ display: "flex", justifyContent: "center" }}>
               <h1
                 className="block-text"
                 style={{ margin: "10px 0px 40px 0px" }}

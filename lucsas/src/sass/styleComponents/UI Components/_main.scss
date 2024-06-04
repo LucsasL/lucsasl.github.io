@@ -209,7 +209,7 @@
 
     figure {
       display: block;
-      margin: 20px;
+      margin-top: 20px;
     }
 
     #google-design {
@@ -235,8 +235,6 @@
 
   .platform {
     width: 100%;
-
-    @include spaceBetween;
   }
 
   // Portfolio Section
@@ -336,7 +334,7 @@
 
   // Contact Section
   section#contact {
-    > div {
+    > div > div {
       width: 100%;
     }
 
@@ -377,7 +375,7 @@
     }
 
     #ways-contact {
-      @include verticalFlex(space-around);
+      @include verticalFlex(space-around, center);
 
       .contact {
         background: linear-gradient(

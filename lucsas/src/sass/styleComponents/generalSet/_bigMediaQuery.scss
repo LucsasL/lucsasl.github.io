@@ -151,7 +151,7 @@
     > div {
       @include spaceAround;
 
-      div {
+      > div {
         margin: 100px 0px;
       }
     }
@@ -161,6 +161,7 @@
       margin: 20px 0px;
 
       @include spaceAround;
+      align-items: flex-start;
 
       div {
         width: 60%;
@@ -194,7 +195,8 @@
     }
   }
 
-  div.result {
+  // Portfolio Section
+  .result {
     width: 100%;
 
     @include center;
@@ -237,19 +239,22 @@
   }
 
   /* CTA Section */
-  .formDiv {
-    width: 650px;
+  section#contact {
+    #ways-contact {
+      @include verticalFlex(space-around, start);
+    }
 
-    form {
-      width: 100%;
-      padding: 40px 20px;
-  
-      div {
-        width: 95%;
+    .formDiv {
+      form {
+        width: 650px;
+        padding: 40px 20px;
+
+        div {
+          width: 95%;
+        }
       }
     }
   }
-
 
   /* Footer Section */
   footer {
@@ -257,6 +262,7 @@
 
     #footerNav {
       @include spaceAround;
+      align-items: flex-start;
 
       > div {
         width: 35%;

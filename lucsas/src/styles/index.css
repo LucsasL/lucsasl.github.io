@@ -474,7 +474,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#area figure {
     display: block;
-    margin: 20px;
+    margin-top: 20px;
   }
   section#area #google-design {
     width: 450px;
@@ -494,9 +494,6 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   .platform {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   section#portfolio {
     background: rgb(15, 15, 15);
@@ -563,7 +560,7 @@ header div#bgcolor input:checked ~ span i#thumb {
       background-position-x: 100%;
     }
   }
-  section#contact > div {
+  section#contact > div > div {
     width: 100%;
   }
   section#contact .formDiv h1 {
@@ -597,7 +594,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: none;
+    align-items: center;
   }
   section#contact #ways-contact .contact {
     background: linear-gradient(135deg, #00f, rgb(128, 0, 255));
@@ -632,7 +629,6 @@ footer {
   box-shadow: 0px 10px 5px 5px rgba(0, 0, 0, 0.2);
 }
 footer div#footerNav > div {
-  width: 100%;
   padding: 20px;
 }
 footer div#meetMe li {
@@ -979,7 +975,7 @@ div#msgMe a {
     justify-content: space-around;
     align-items: center;
   }
-  section#area > div div {
+  section#area > div > div {
     margin: 100px 0px;
   }
   section#area .platform {
@@ -988,6 +984,7 @@ div#msgMe a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-items: flex-start;
   }
   section#area .platform div {
     width: 60%;
@@ -1010,52 +1007,55 @@ div#msgMe a {
   section#skills .platform div {
     width: 50%;
   }
-  div.result {
+  .result {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  div.result div {
+  .result div {
     width: 100%;
     padding: 20px;
     margin: 20px;
   }
-  div.result #prom-container {
+  .result #prom-container {
     height: auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 550px);
     gap: 30px;
   }
-  div.result #prom-container .promises {
+  .result #prom-container .promises {
     margin: 0;
   }
-  div.result #prom-container .promises:nth-child(1) {
+  .result #prom-container .promises:nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 8;
   }
-  div.result #prom-container .promises:nth-child(2) {
+  .result #prom-container .promises:nth-child(2) {
     grid-column-start: 8;
     grid-column-end: 13;
   }
-  div.result #prom-container .promises:nth-child(3) {
+  .result #prom-container .promises:nth-child(3) {
     grid-column-start: 1;
     grid-column-end: 6;
   }
-  div.result #prom-container .promises:nth-child(4) {
+  .result #prom-container .promises:nth-child(4) {
     grid-column-start: 6;
     grid-column-end: 13;
   }
   /* CTA Section */
-  .formDiv {
-    width: 650px;
+  section#contact #ways-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: start;
   }
-  .formDiv form {
-    width: 100%;
+  section#contact .formDiv form {
+    width: 650px;
     padding: 40px 20px;
   }
-  .formDiv form div {
+  section#contact .formDiv form div {
     width: 95%;
   }
   /* Footer Section */
@@ -1066,6 +1066,7 @@ div#msgMe a {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    align-items: flex-start;
   }
   footer #footerNav > div {
     width: 35%;
