@@ -573,7 +573,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     -webkit-backdrop-filter: blur(6px);
   }
   section#contact form {
-    background: var(--shadow);
+    background: rgba(0, 0, 0, 0.488);
     width: 100%;
     padding: 40px 30px;
     border-radius: 20px;
