@@ -62,7 +62,7 @@ function Portfolio() {
                             </button>
                             <button className="detailBtn">
                               <a
-                                href="#"
+                                href="https://github.com/lucsasl"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 onClick={() => alert("Work in Progress, I'm finishing creating these sections")}

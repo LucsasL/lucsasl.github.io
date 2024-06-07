@@ -23,7 +23,7 @@ function Introsect() {
               </p>
             
               <button id="skillsResume">
-                <a href="" download="">Download Resume</a>
+                {/* <a href="" download="">Download Resume</a> */}
               </button>
             </div>
             <div id="socials">

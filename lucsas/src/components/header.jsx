@@ -1,4 +1,4 @@
-import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
+// import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 import { useState, useRef } from "react";
 
 // Data Import
@@ -12,8 +12,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const inpTheme = useRef(null);
 
-  const musicButton = document.querySelector("canvas#musicButton");
-  const audioPlayer = document.querySelector("audio#player");
+  // const musicButton = document.querySelector("canvas#musicButton");
+  // const audioPlayer = document.querySelector("audio#player");
 
   function themeChange() {
     setDarkTheme(!darkTheme);
