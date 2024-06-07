@@ -10,57 +10,45 @@ function Portfolio() {
           </div>
 
           <div className="projCont">
-            {
-              webProjectsSect.projects.map(({ projTitle, projDesc, projImgDesc, techStack }) => {
+            {webProjectsSect.projects.map(
+              ({ projTitle, projDesc, projImgDesc, techStack, projImg }, index) => {
                 return (
                   <>
-                    <div className="proj">
+                    <div className="proj" key={index}>
                       <div className="projInfo">
-                        <h2 className="big">
-                          {projTitle}
-                        </h2>
-                        <p>
-                          {projDesc}
-                        </p>
+                        <h2 className="big">{projTitle}</h2>
+                        <p>{projDesc}</p>
 
                         <div className="techStackCont">
-                          {
-                            techStack.map(t => {
-                              return (
-                                  <picture>
-                                    <img src="" alt={t} />
-                                  </picture>
-                              );
-                            })
-                          }
-                          </div>
+                          {techStack.map((t, index) => {
+                            return (
+                              <picture key={index}>
+                                <img src="" alt={t} />
+                              </picture>
+                            );
+                          })}
+                        </div>
 
                         <div>
-                          <button>
-                            Visit Project
-                          </button>
-                          <button>
-                            See details
-                          </button>
+                          <button>Visit Project</button>
+                          <button>See details</button>
                         </div>
                       </div>
 
-                      <div>
-                        <picture>
-                          <img src="" alt={projImgDesc} />
+                      <div className="projImg">
+                        <picture key={index}>
+                          <img src={projImg[index]} alt={projImgDesc} />
                         </picture>
                       </div>
                     </div>
                   </>
                 );
-              })
-            }
+              }
+            )}
           </div>
 
           <div className="blockquote">
-            <h3 className="big">
-              More projects coming soon...
-            </h3>
+            <h3 className="big">More projects coming soon...</h3>
           </div>
         </div>
       </section>

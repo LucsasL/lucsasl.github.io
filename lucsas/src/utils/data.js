@@ -1,4 +1,8 @@
-export const contentWebDevPortfolio = {}
+// Import image
+import marknow from "../img/marknow-proj.png";
+import everyshop from "../img/everyshop-proj.png";
+
+export const contentWebDevPortfolio = {};
 
 export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
 
@@ -41,6 +45,7 @@ export const webProjectsSect = {
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
       techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
+      projImg: [marknow, everyshop],
     },
     {
       projTitle: "Everyshop",
@@ -56,16 +61,22 @@ export const webProjectsSect = {
         "Redux",
         "Git",
       ],
+      projImg: [marknow, everyshop],
     },
   ],
 };
 
 export const webContactSect = {
-  sectTitle:
-    "Want to make your business software real? Let's grow together!",
+  sectTitle: "Want to make your business software real? Let's grow together!",
 };
 
-export const navOptions = ["Home", "About", "Google Ads", "Meta Ads", "Contact"];
+export const navOptions = [
+  "Home",
+  "About",
+  "Google Ads",
+  "Meta Ads",
+  "Contact",
+];
 
 export const ppcIntroSect = {};
 

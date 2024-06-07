@@ -533,6 +533,14 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#portfolio .projCont .proj .techStackCont picture {
     width: 20%;
+  }
+  section#portfolio .projCont .proj .projImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#portfolio .projCont .proj .projImg picture, section#portfolio .projCont .proj .projImg img {
+    width: 90%;
     border-radius: 20px;
   }
   section#portfolio h1,
