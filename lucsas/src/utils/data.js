@@ -35,8 +35,28 @@ export const webSkillsSect = {
 export const webProjectsSect = {
   sectTitle: "In what did you work?",
   projects: [
-    { projTitle: "MARKNOW", projDesc: "lorem ipsulum dolor", projImgDesc: "Markdown project image" },
-    { projTitle: "Everyshop", projDesc: "lorem ipsulum dolor", projImgDesc: "Everyshop project image" },
+    {
+      projTitle: "MARKNOW",
+      projDesc:
+        "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
+      projImgDesc: "Markdown project image",
+      techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
+    },
+    {
+      projTitle: "Everyshop",
+      projDesc:
+        "EVERYSHOP is a web project of a shop that sells everything. Developed in React JS including SASS and responsive design. | WORK IN PROGRESS",
+      projImgDesc: "Everyshop project image",
+      techStack: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React JS",
+        "GSAP",
+        "Redux",
+        "Git",
+      ],
+    },
   ],
 };
 
