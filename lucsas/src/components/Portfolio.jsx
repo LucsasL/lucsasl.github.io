@@ -1,63 +1,42 @@
+import { webProjectsSect } from "../utils/data";
+
 function Portfolio() {
   return (
     <>
       <section id="portfolio">
         <div>
-          <div className="results">
-            <div>
-              <h1 className="big">What does a traffic manager do?</h1>
-            </div>
+          <div>
+            <h1 className="big">What does a traffic manager do?</h1>
+          </div>
 
-            <div id="prom-container">
-              <div className="promises">
-                <p>
-                  Make you reach any type of person on the internet through ads
-                  campaign.
-                </p>
-              </div>
+          <div className="projCont">
+            {
+              webProjectsSect.projects.map(({ projTitle, projDesc, projImgDesc }) => {
+                return (
+                  <>
+                    <div className="proj">
+                      <div>
+                        <h2>
+                          {projTitle}
+                        </h2>
+                        <p>
+                          {projDesc}
+                        </p>
+                        <button>
+                          Visit Project
+                        </button>
+                      </div>
 
-              <div className="promises">
-                <p>
-                  Make your clients pay attention to your products or services
-                  on the biggest attention attractor, the internet.
-                </p>
-              </div>
-
-              <div className="promises">
-                <p>
-                  Often reports of the results of your campaigns and the
-                  strategies used to make it.
-                </p>
-              </div>
-
-              <div className="promises">
-                <p>
-                  Use strategies and segmentation to appear to the persons that
-                  matter the most to you.
-                </p>
-              </div>
-
-              <div className="promises">
-                <div>
-                  <p>
-                    Sell the right product, to the right person in the right
-                    time, focusing only in the target audience of yours.
-                  </p>
-                </div>
-
-                <div>
-                  <figure>
-                    {/* <iframe
-                      src="https://my.spline.design/untitled-f9173bd99cf55847c431ed275730d732/"
-                      frameborder="0"
-                      width="100%"
-                      height="100%"
-                      title="Quality Traffic to your business"
-                    ></iframe> */}
-                  </figure>
-                </div>
-              </div>
-            </div>
+                      <div>
+                        <picture>
+                          <img src="" alt={projImgDesc} />
+                        </picture>
+                      </div>
+                    </div>
+                  </>
+                );
+              })
+            }
           </div>
         </div>
       </section>

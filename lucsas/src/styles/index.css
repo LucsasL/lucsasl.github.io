@@ -500,46 +500,22 @@ header div#bgcolor input:checked ~ span i#thumb {
     padding: 50px;
     margin: 50px 0px 100px 0px;
   }
-  section#portfolio .prom-container {
-    width: 100%;
+  section#portfolio > div {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
   }
-  section#portfolio .prom-container .promises {
-    background: rgb(1, 1, 1);
-    font-size: 1.8em;
-    font-weight: bolder;
-    padding: 50px;
-    margin: 30px 10px;
+  section#portfolio .projCont .proj {
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    height: 500px;
+    padding: 30px;
+    margin: 30px 0px;
     border-radius: 20px;
-    transition-duration: 0.7s;
-  }
-  section#portfolio .prom-container .promises:nth-child(1) {
-    background: linear-gradient(to right, #00f, rgb(128, 0, 255), rgb(205, 54, 255));
-    background-size: 300% 100%;
-    transition-duration: 2s;
-    animation: gradient-move 2s infinite alternate;
-  }
-  section#portfolio .prom-container .promises:nth-child(2) {
-    background: linear-gradient(to bottom, #010101, rgb(0, 0, 49));
-    transition-duration: 1.5s;
-  }
-  section#portfolio .prom-container .promises:nth-child(3) {
-    background: linear-gradient(to bottom, #010101, rgb(0, 0, 49));
-    transition-duration: 1s;
-  }
-  section#portfolio .prom-container .promises:nth-child(4) {
-    background: linear-gradient(to right, #00f, rgb(128, 0, 255), rgb(205, 54, 255));
-    background-size: 300% 100%;
-    transition-duration: 2s;
-    animation: gradient-move 2s infinite alternate;
-  }
-  section#portfolio .prom-container .promises:nth-child(5) {
-    transition-duration: 1.5s;
     display: flex;
     justify-content: space-around;
-    grid-column: span 12/auto;
+    align-items: center;
   }
   section#portfolio h1 {
     background: rgba(0, 0, 0, 0.3);
