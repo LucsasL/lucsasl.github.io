@@ -380,11 +380,12 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     flex-flow: column nowrap;
   }
-  section#services .skill-block {
+  section#services .servBlock {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #151515);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     width: 100%;
+    min-height: 600px;
     padding: 20px;
     margin: 20px 0px;
     box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px rgba(0, 0, 0, 0.488);
@@ -393,8 +394,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     flex-flow: column nowrap;
     justify-content: none;
     align-items: center;
+    z-index: 1;
   }
-  section#services .skill-block .img-sk {
+  section#services .servBlock .imgSv {
     background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
     width: 200px;
     height: 200px;
@@ -404,7 +406,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     justify-content: center;
     align-items: center;
   }
-  section#services .skill-block .img-sk:nth-child(even) {
+  section#services .servBlock .imgSv:nth-child(even) {
     background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
     width: 200px;
     height: 200px;
@@ -414,7 +416,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     filter: blur(30px);
     animation: blob 10s ease-in-out infinite;
   }
-  section#services .skill-block .img-sk img {
+  section#services .servBlock .imgSv img {
     width: 50%;
     filter: brightness(0);
   }
@@ -982,18 +984,18 @@ div#msgMe a {
     justify-content: space-around;
     align-items: center;
   }
-  section#services #cards .skill-block {
+  section#services #cards .servBlock {
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
   }
-  section#services #cards .skill-block:nth-child(1) {
+  section#services #cards .servBlock:nth-child(1) {
     transition: transform 2.3s ease;
   }
-  section#services #cards .skill-block:nth-child(2) {
+  section#services #cards .servBlock:nth-child(2) {
     transition: transform 2s ease;
   }
-  section#services #cards .skill-block:nth-child(3) {
+  section#services #cards .servBlock:nth-child(3) {
     transition: transform 1.7s ease;
   }
   /* About Section */

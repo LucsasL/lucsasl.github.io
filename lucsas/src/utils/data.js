@@ -20,18 +20,20 @@ export const webIntroSect = {};
 
 export const webServiceSect = {
   sectTitle: "In what can I help you?",
-  box1: {
-    title: "",
-    text: "",
-  },
-  box2: {
-    title: "",
-    text: "",
-  },
-  box3: {
-    title: "",
-    text: "",
-  },
+  servBoxes: [
+    {
+      title: "Semantics and SEO",
+      text: "Structuring a website semantically, respecting the basics of SEO and giving meaning to the components and objects of a website.",
+    },
+    {
+      title: "Responsive Design",
+      text: "Giving shapes and layouts that work in every way, adapting to the sizes and devices that show presence for you everywhere.",
+    },
+    {
+      title: "Dynamic Application",
+      text: "Developing websites with an array of different technologies with state.",
+    }
+  ],
 };
 
 export const webAboutSect = {

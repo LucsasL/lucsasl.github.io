@@ -93,7 +93,7 @@
       flex-flow: column nowrap;
     }
 
-    .skill-block {
+    .servBlock {
       background: linear-gradient(
         to bottom,
         $baseBlur,
@@ -103,6 +103,7 @@
       -webkit-backdrop-filter: blur(6px);
 
       width: 100%;
+      min-height: 600px;
       padding: 20px;
       margin: 20px 0px;
 
@@ -113,8 +114,9 @@
       border-radius: 10px;
 
       @include verticalFlex(none, center);
+      z-index: 1;
 
-      .img-sk {
+      .imgSv {
         background: linear-gradient(
           135deg,
           $color1,
