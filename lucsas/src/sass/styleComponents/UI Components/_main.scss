@@ -295,12 +295,20 @@
         @include buttonGen(false, true);
         padding: 0;
       }
+
+      .detailBtn {
+        background: transparent;
+      }
     }
 
     h1,
-    h3 {
+    h4 {
       @include blockHeader;
       @include centerText;
+    }
+
+    h2 {
+      font-weight: 900;
     }
   }
 

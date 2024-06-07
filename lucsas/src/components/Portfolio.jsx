@@ -11,12 +11,27 @@ function Portfolio() {
 
           <div className="projCont">
             {webProjectsSect.projects.map(
-              ({ projLink, projTitle, projDesc, projImgDesc, techStack, techStackImg, projImg }, index) => {
+              (
+                {
+                  projLink,
+                  projTitle,
+                  projSubtitle,
+                  projDesc,
+                  projImgDesc,
+                  techStack,
+                  techStackImg,
+                  projImg,
+                },
+                index
+              ) => {
                 return (
                   <>
                     <div className="proj" key={index}>
                       <div className="projInfo">
                         <h2 className="big">{projTitle}</h2>
+
+                        <h3>{projSubtitle}</h3>
+
                         <p>{projDesc}</p>
 
                         <div className="techStackCont">
@@ -39,7 +54,7 @@ function Portfolio() {
                               Visit Project
                             </a>
                           </button>
-                          <button>
+                          <button className="detailBtn">
                             <a
                               href="https://"
                               target="_blank"
@@ -64,7 +79,7 @@ function Portfolio() {
           </div>
 
           <div className="blockquote">
-            <h3 className="big">More projects coming soon...</h3>
+            <h4 className="big">More projects coming soon...</h4>
           </div>
         </div>
       </section>

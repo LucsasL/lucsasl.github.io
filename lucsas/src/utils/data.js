@@ -11,6 +11,7 @@ import gsap from "../img/gsap.webp";
 import redux from "../img/redux.webp";
 import git from "../img/git.webp";
 
+// Components Data
 export const contentWebDevPortfolio = {};
 
 export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -51,6 +52,7 @@ export const webProjectsSect = {
     {
       projLink: "https://marknow-lemon.vercel.app/",
       projTitle: "MARKNOW",
+      projSubtitle: "A Digital Marketing Agency that brings the success",
       projDesc:
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
@@ -61,6 +63,7 @@ export const webProjectsSect = {
     {
       projLink: "https://every-shop.vercel.app/",
       projTitle: "Everyshop",
+      projSubtitle: "A shop that sells everything",
       projDesc:
         "EVERYSHOP is a web project of a shop that sells everything. Developed in React JS including SASS and responsive design. | WORK IN PROGRESS",
       projImgDesc: "Everyshop project image",

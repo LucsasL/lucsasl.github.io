@@ -1,10 +1,15 @@
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 import { useState, useRef } from "react";
 
+// Data Import
+import { webNavOptions } from "../utils/data";
+
+// Image Import
 import logo from "../img/lucsas-logo.webp";
 
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
   const inpTheme = useRef(null);
 
   const musicButton = document.querySelector("canvas#musicButton");
@@ -12,6 +17,11 @@ const Header = () => {
 
   function themeChange() {
     setDarkTheme(!darkTheme);
+  }
+
+
+  async function hasScrolled() {
+    setScrolled(!scrolled);
   }
 
   // window.addEventListener("load", () => {
@@ -97,7 +107,7 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <header onLoad={hasScrolled}>
         <div>
           <div className="logoDiv">
             <figure>
@@ -110,7 +120,19 @@ const Header = () => {
             <menu>
               <nav>
                 <ul>
-                  <li>
+                  {
+                    webNavOptions.map(i => {
+                      return (
+                        <li>
+                          <button>
+                            <a href={`./index.html#${i}`}>{i}</a>
+                          </button>
+                        </li>
+                      );
+                    })
+                  }
+
+                  {/* <li>
                     <button>
                       <a href="./index.html#intro">Home</a>
                     </button>
@@ -138,7 +160,7 @@ const Header = () => {
                     <button id="contactButton">
                       <a href="./index.html#grow">Contact</a>
                     </button>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
 
