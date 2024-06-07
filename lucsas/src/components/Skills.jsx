@@ -1,6 +1,9 @@
+import { webSkillsSect } from "../utils/data";
+
+// Images Import
 import notebook from "../img/google-ads-design.svg";
-import meta from "../img/meta-ads-design-mobile.webp";
-import metaBig from "../img/meta-ads-design.webp";
+
+const { sectTitle, techStack } = webSkillsSect;
 
 function Skills() {
   return (
@@ -8,9 +11,9 @@ function Skills() {
       <section id="area">
         <div>
           <div className="platform">
-            <div className="hidden1">
+            <div>
               <h1 className="big">
-                Google Ads Specialist
+                Front-End Web Developer
               </h1>
 
               <p>
@@ -18,7 +21,7 @@ function Skills() {
               </p>
             </div>
 
-            <div className="img-div hidden2">
+            <div className="img-div">
               <figure>
                 <img src={notebook} alt="Google Ads Service" id="google-design" />
               </figure>
@@ -29,25 +32,20 @@ function Skills() {
 
       <section id="skills">
         <div>
-          <div className="platform">
-            <div>
-              <h1 className="big hidden1">
-                Reach beyond the bounds with Meta
-              </h1>
-
-              <p>
-                Elevate your social media presence and connect with your audience on a deeper level through <strong className="fancy">Meta Ads.</strong> From Facebook to Instagram, we can implement targeting strategies that resonate with your audience, driving conversions in the social spaces where your customers live, share, and interact.
-              </p>
-            </div>
-
-            <div className="img-div hidden">
-              <figure>
-                <picture>
-                  <source sizes="1200px" srcSet={metaBig} type="image/webp" />
-                  <img src={meta} alt="Meta Ads Service" style={{width: "500px"}} />
-                </picture>
-              </figure>
-            </div>
+          <h1 className="big">
+            {sectTitle}
+          </h1>
+          
+          <div className="techStack">
+            {
+              techStack.imgs.map((t, index) => {
+                return (
+                  <picture>
+                    <img src={t} alt={techStack.tech[index]} />
+                  </picture>
+                );
+              })
+            }
           </div>
         </div>
       </section>

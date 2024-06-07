@@ -44,6 +44,11 @@ export const webAboutSect = {
 
 export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
+  techStack: {
+    tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
+    imgs: [html, css, js, react, gsap, redux, git],
+    techDesc: [""],
+  },
 };
 
 export const webProjectsSect = {

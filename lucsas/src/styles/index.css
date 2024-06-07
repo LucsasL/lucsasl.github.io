@@ -342,14 +342,14 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#intro .scroll-anim div {
     width: 30px;
     height: 50px;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 30px;
     display: flex;
     justify-content: center;
   }
   section#intro .scroll-anim > div::after {
     content: "";
-    background: black;
+    background: white;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -482,8 +482,21 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills > div div {
     margin: 40px 0px;
   }
+  section#skills .techStack {
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    width: 100%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
   section#skills figure, section#skills img {
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
     width: 70%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
   }
   .platform {
     width: 100%;
