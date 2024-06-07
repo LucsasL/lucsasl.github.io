@@ -266,16 +266,20 @@
         }
           
         .projInfo {
-          @include verticalFlex(space-between);
+          @include verticalFlex(space-between, flex-start);
+          height: 85%;
         }
 
         .techStackCont {
           @include spaceAround;
 
+          width: 80%;
+
           picture {
             width: 20%;
-            }
-            }
+            margin: 0px 10px;
+          }
+        }
             
         .projImg {
           @include center;
@@ -285,6 +289,11 @@
             border-radius: 20px;
           }
         }
+      }
+
+      button {
+        @include buttonGen(false, true);
+        padding: 0;
       }
     }
 

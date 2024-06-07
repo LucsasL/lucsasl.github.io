@@ -49,22 +49,17 @@ export const webProjectsSect = {
   sectTitle: "In what did you work?",
   projects: [
     {
+      projLink: "https://marknow-lemon.vercel.app/",
       projTitle: "MARKNOW",
       projDesc:
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
       techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
-      techStackImg: [
-        html,
-        css,
-        js,
-        react,
-        gsap,
-        git
-      ],
+      techStackImg: [html, css, js, react, gsap, git],
       projImg: [marknow, everyshop],
     },
     {
+      projLink: "https://every-shop.vercel.app/",
       projTitle: "Everyshop",
       projDesc:
         "EVERYSHOP is a web project of a shop that sells everything. Developed in React JS including SASS and responsive design. | WORK IN PROGRESS",
@@ -78,15 +73,7 @@ export const webProjectsSect = {
         "Redux",
         "Git",
       ],
-      techStackImg: [
-        html,
-        css,
-        js,
-        react,
-        gsap,
-        redux,
-        git
-      ],
+      techStackImg: [html, css, js, react, gsap, redux, git],
       projImg: [marknow, everyshop],
     },
   ],

@@ -11,7 +11,7 @@ function Portfolio() {
 
           <div className="projCont">
             {webProjectsSect.projects.map(
-              ({ projTitle, projDesc, projImgDesc, techStack, techStackImg, projImg }, index) => {
+              ({ projLink, projTitle, projDesc, projImgDesc, techStack, techStackImg, projImg }, index) => {
                 return (
                   <>
                     <div className="proj" key={index}>
@@ -30,8 +30,24 @@ function Portfolio() {
                         </div>
 
                         <div>
-                          <button>Visit Project</button>
-                          <button>See details</button>
+                          <button>
+                            <a
+                              href={projLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              Visit Project
+                            </a>
+                          </button>
+                          <button>
+                            <a
+                              href="https://"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              See details
+                            </a>
+                          </button>
                         </div>
                       </div>
 
