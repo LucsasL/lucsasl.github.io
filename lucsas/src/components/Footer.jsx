@@ -1,3 +1,7 @@
+// Data Import
+import { webNavOptions } from "../utils/data";
+
+// Image Import
 import instaLogo from "../img/instagram-social.webp";
 import githubLogo from "../img/github-social.webp";
 import linkedinLogo from "../img/linkedin-social.webp";
@@ -61,25 +65,15 @@ function Footer() {
             </h1>
 
             <ul>
-              <li>
-                <a href="index.html#intro">Home</a>
-              </li>
-
-              <li>
-                <a href="index.html#about">About</a>
-              </li>
-
-              <li>
-                <a href="index.html#google">Google Ads</a>
-              </li>
-
-              <li>
-                <a href="index.html#meta">Meta Ads</a>
-              </li>
-
-              <li>
-                <a href="index.html#grow">Contact</a>
-              </li>
+              {
+                webNavOptions.map(li => {
+                  return (
+                    <li>
+                      <a href="index.html#intro">{li}</a>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
         </div>

@@ -1,7 +1,5 @@
 // Images Import
 import startup from "../img/startup.webp";
-import promote from "../img/promote.webp";
-import wireframe from "../img/wireframe.webp";
 
 // Data Import
 import { webServiceSect } from "../utils/data";

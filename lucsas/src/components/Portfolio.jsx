@@ -10,72 +10,80 @@ function Portfolio() {
           </div>
 
           <div className="projCont">
-            {webProjectsSect.projects.map(
-              (
-                {
-                  projLink,
-                  projTitle,
-                  projSubtitle,
-                  projDesc,
-                  projImgDesc,
-                  techStack,
-                  techStackImg,
-                  projImg,
-                },
-                index
-              ) => {
-                return (
-                  <>
-                    <div className="proj" key={index}>
-                      <div className="projInfo">
-                        <h2 className="big">{projTitle}</h2>
+            {
+              webProjectsSect.projects.map(
+                (
+                  {
+                    projLink,
+                    projTitle,
+                    projSubtitle,
+                    projDesc,
+                    projImgDesc,
+                    techStack,
+                    techStackImg,
+                    projImg,
+                  },
+                  index
+                ) => {
+                  return (
+                    <>
+                      <div className="proj" key={index}>
+                        <div className="projInfo">
+                          <h2 className="big">
+                            {projTitle}
+                            <span style={{ fontSize: ".5em", marginLeft: "15px" }}>
+                              (Work In Progress)
+                            </span>
+                          </h2>
 
-                        <h3>{projSubtitle}</h3>
+                          <h3>{projSubtitle}</h3>
 
-                        <p>{projDesc}</p>
+                          <p>{projDesc}</p>
 
-                        <div className="techStackCont">
-                          {techStack.map((t, index) => {
-                            return (
-                              <picture key={index}>
-                                <img src={techStackImg[index]} alt={t} />
-                              </picture>
-                            );
-                          })}
+                          <div className="techStackCont">
+                            {techStack.map((t, index) => {
+                              return (
+                                <picture key={index}>
+                                  <img src={techStackImg[index]} alt={t} />
+                                </picture>
+                              );
+                            })}
+                          </div>
+
+                          <div>
+                            <button>
+                              <a
+                                href={projLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                Visit Project
+                              </a>
+                            </button>
+                            <button className="detailBtn">
+                              <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => alert("Work in Progress, I'm finishing creating these sections")}
+                              >
+                                See details
+                              </a>
+                            </button>
+                          </div>
                         </div>
 
-                        <div>
-                          <button>
-                            <a
-                              href={projLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Visit Project
-                            </a>
-                          </button>
-                          <button className="detailBtn">
-                            <a
-                              href="https://"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              See details
-                            </a>
-                          </button>
+                        <div className="projImg">
+                          <picture key={index}>
+                            <img src={projImg[index]} alt={projImgDesc} />
+                          </picture>
                         </div>
                       </div>
-
-                      <div className="projImg">
-                        <picture key={index}>
-                          <img src={projImg[index]} alt={projImgDesc} />
-                        </picture>
-                      </div>
-                    </div>
-                  </>
-                );
-              }
-            )}
+                    </>
+                  );
+                }
+              )
+            }
           </div>
 
           <div className="blockquote">
