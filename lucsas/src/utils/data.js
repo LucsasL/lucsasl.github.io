@@ -2,6 +2,15 @@
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
 
+// Tech Stack Images Import
+import html from "../img/html5.webp";
+import css from "../img/css3.webp";
+import js from "../img/JS.webp";
+import react from "../img/react.webp";
+import gsap from "../img/gsap.webp";
+import redux from "../img/redux.webp";
+import git from "../img/git.webp";
+
 export const contentWebDevPortfolio = {};
 
 export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
@@ -45,6 +54,14 @@ export const webProjectsSect = {
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
       techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
+      techStackImg: [
+        html,
+        css,
+        js,
+        react,
+        gsap,
+        git
+      ],
       projImg: [marknow, everyshop],
     },
     {
@@ -60,6 +77,15 @@ export const webProjectsSect = {
         "GSAP",
         "Redux",
         "Git",
+      ],
+      techStackImg: [
+        html,
+        css,
+        js,
+        react,
+        gsap,
+        redux,
+        git
       ],
       projImg: [marknow, everyshop],
     },

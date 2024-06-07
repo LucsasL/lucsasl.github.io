@@ -11,7 +11,7 @@ function Portfolio() {
 
           <div className="projCont">
             {webProjectsSect.projects.map(
-              ({ projTitle, projDesc, projImgDesc, techStack, projImg }, index) => {
+              ({ projTitle, projDesc, projImgDesc, techStack, techStackImg, projImg }, index) => {
                 return (
                   <>
                     <div className="proj" key={index}>
@@ -23,7 +23,7 @@ function Portfolio() {
                           {techStack.map((t, index) => {
                             return (
                               <picture key={index}>
-                                <img src="" alt={t} />
+                                <img src={techStackImg[index]} alt={t} />
                               </picture>
                             );
                           })}
