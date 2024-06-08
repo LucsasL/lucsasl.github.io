@@ -6,7 +6,7 @@ function Introsect() {
           {/* <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe> */}
         </div>
 
-        <div style={{ display: "none" }}>
+        <div>
           <div className="intro">
             <div id="introducing">
               <h1>
