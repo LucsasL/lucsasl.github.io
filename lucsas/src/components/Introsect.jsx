@@ -20,11 +20,10 @@ function Introsect() {
                 <span className="nickname">Lucsas</span>
                 <span className="cursiveWords">Lucas Lira</span>
               </h1>
-              <h2 className="fancy intro-h2">PPC Manager</h2>
+              <h2 className="fancy intro-h2">Web Developer</h2>
 
               <p>
-                I create and optimize adverts campaign in Google Ads and Meta
-                Ads, delivering the best to engage and convert.
+                I create and optimize websites with React and JavaScript, delivering the best to make good software that solves real problems.
               </p>
 
               <button id="skillsResume">

@@ -1,6 +1,3 @@
-// Images Import
-import startup from "../img/startup.webp";
-
 // Data Import
 import { webServiceSect } from "../utils/data";
 const { sectTitle, servBoxes } = webServiceSect;
@@ -18,13 +15,13 @@ function Services() {
 
           <div id="cards">
             {
-              servBoxes.map(({ title, text }) => {
+              servBoxes.map(({ title, text, img }) => {
                 return (
                   <div className="servBlock">
                     <div className="imgSv">
                       <figure>
                         <img
-                          src={startup}
+                          src={img}
                           alt="Connection with your target audience"
                           className="functions"
                         />

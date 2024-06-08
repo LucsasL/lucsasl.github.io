@@ -19,7 +19,6 @@ const Header = () => {
     setDarkTheme(!darkTheme);
   }
 
-
   async function hasScrolled() {
     setScrolled(!scrolled);
   }

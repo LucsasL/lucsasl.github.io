@@ -2,6 +2,10 @@
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
 
+import seo from "../img/setting.png";
+import design from "../img/web-developer.png";
+import webStructure from "../img/web-structure.png";
+
 // Tech Stack Images Import
 import html from "../img/html5.webp";
 import css from "../img/css3.webp";
@@ -61,15 +65,18 @@ export const webServiceSect = {
     {
       title: "Semantics and SEO",
       text: "Structuring a website semantically, respecting the basics of SEO and giving meaning to the components and objects of a website.",
+      img: seo,
     },
     {
       title: "Responsive Design",
       text: "Giving shapes and layouts that work in every way, adapting to the sizes and devices that show presence for you everywhere.",
+      img: design,
     },
     {
       title: "Dynamic Application",
       text: "Developing websites with an array of different technologies with state.",
-    }
+      img: webStructure,
+    },
   ],
 };
 
