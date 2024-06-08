@@ -59,14 +59,13 @@
 
       @include flexStart;
 
-      > div {
-        width: 80%;
+      .intro {
+        width: 50%;
 
         text-align: left;
 
-        display: flex;
-        justify-content: start;
-        flex-direction: row-reverse;
+        @include center;
+        flex-flow: row-reverse nowrap;
       }
     }
 

@@ -23,19 +23,13 @@
   section#intro {
     height: 100vh;
 
+    @include verticalFlex;
+
     > div {
-      width: 100vw;
-      height: 90vh;
+      width: 80vw;
+      height: 100vh;
 
-      > div {
-        width: 100%;
-        padding: 30px;
-
-        text-align: center;
-
-        display: flex;
-        flex-direction: column;
-      }
+      @include center;
     }
 
     .intro3d, iframe {
@@ -47,6 +41,10 @@
       left: 0;
     }
 
+    button {
+      width: 100%;
+    }
+
     h1 {
       width: 100%;
       height: 160px;
@@ -56,7 +54,7 @@
     }
 
     span.nickname {
-      color: var(--txtColor);
+      color: $color;
 
       font-size: 3em;
 
@@ -76,7 +74,7 @@
 
       text-align: center;
       font: bolder 1.5em 'Kalam', cursive;
-      letter-spacing: .21em;
+      letter-spacing: .26em;
       filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
 
       display: inline-block;
@@ -143,11 +141,14 @@
     }
 
     .scroll-anim {
-      width: 100vw;
+      height: auto;
+      margin-bottom: 30px;
 
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      position: absolute;
+      top: 88%;
       z-index: 1;
 
       div {
