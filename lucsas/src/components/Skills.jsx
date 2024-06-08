@@ -12,9 +12,11 @@ function Skills() {
         <div>
           <div className="platform">
             <div>
-              <h1 className="big">
-                Front-End Web Developer
-              </h1>
+              <div className="blockquote">
+                <h1 className="big">
+                  Front-End Web Developer
+                </h1>
+              </div>
 
               <p>
                 Meticulously target your audience through the lens of <strong className="fancy">Google Ads,</strong> ensuring that every click counts. Your business spotted by the right customer by the right advert. Using <strong>Audience Segmentation</strong> we can track all the different types of interests and ideas, and use these statistics to bring more potential clients to you.
@@ -32,9 +34,11 @@ function Skills() {
 
       <section id="skills">
         <div>
-          <h1 className="big">
-            {sectTitle}
-          </h1>
+          <div className="blockquote">
+            <h1 className="big block-text">
+              {sectTitle}
+            </h1>
+          </div>
           
           <div className="techStack">
             {

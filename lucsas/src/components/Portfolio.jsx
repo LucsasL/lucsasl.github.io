@@ -5,7 +5,7 @@ function Portfolio() {
     <>
       <section id="portfolio">
         <div>
-          <div>
+          <div className="blockquote">
             <h1 className="big">In what projects have you used your skills?</h1>
           </div>
 

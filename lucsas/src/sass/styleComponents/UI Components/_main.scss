@@ -192,12 +192,10 @@
 
   // Area Section
   section#area {
+    margin-top: 50px;
+
     > div {
       @include verticalFlex();
-
-      div {
-        margin-top: 100px;
-      }
 
       .platform {
         margin: 20px 0px;
@@ -241,7 +239,7 @@
       border-radius: 20px;
 
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 
     figure, img {
@@ -254,6 +252,11 @@
       padding: 20px;
       margin: 20px;
       border-radius: 20px;
+    }
+
+    h1 {
+      @include blockHeader;
+      text-align: center;
     }
   }
 
@@ -328,7 +331,7 @@
     h1,
     h4 {
       @include blockHeader;
-      @include centerText;
+      margin: auto;
     }
 
     h2 {

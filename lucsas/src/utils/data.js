@@ -11,6 +11,14 @@ import gsap from "../img/gsap.webp";
 import redux from "../img/redux.webp";
 import git from "../img/git.webp";
 
+import htmlBig from "../img/html5-big.webp";
+import cssBig from "../img/css-big.webp";
+import jsBig from "../img/JS-big.webp";
+import reactBig from "../img/react-big.webp";
+import gsapBig from "../img/gsap-big.webp";
+import reduxBig from "../img/redux-big.webp";
+import gitBig from "../img/git-big.webp";
+
 // Components Data
 export const contentWebDevPortfolio = {};
 
@@ -48,7 +56,7 @@ export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
   techStack: {
     tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
-    imgs: [html, css, js, react, gsap, redux, git],
+    imgs: [htmlBig, cssBig, jsBig, reactBig, gsapBig, reduxBig, gitBig],
     techDesc: [""],
   },
 };
@@ -63,7 +71,7 @@ export const webProjectsSect = {
       projDesc:
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
-      techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
+      techStack: ["HTML", "CSBig", "JavaScript", "React JS", "GSAP", "Git"],
       techStackImg: [html, css, js, react, gsap, git],
       projImg: [marknow, everyshop],
     },

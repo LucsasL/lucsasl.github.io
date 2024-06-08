@@ -164,7 +164,7 @@
       align-items: flex-start;
 
       div {
-        width: 60%;
+        width: 100%;
       }
 
       p {
@@ -192,6 +192,10 @@
       div {
         width: 50%;
       }
+    }
+
+    .techStack {
+      width: 50%;
     }
   }
 

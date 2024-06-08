@@ -118,6 +118,12 @@ figcaption {
   height: 50px;
 }
 
+.blockquote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("../../../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
@@ -451,14 +457,14 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin-top: 50px;
     z-index: 1;
   }
+  section#area {
+    margin-top: 50px;
+  }
   section#area > div {
     display: flex;
     flex-flow: column nowrap;
     justify-content: none;
     align-items: none;
-  }
-  section#area > div div {
-    margin-top: 100px;
   }
   section#area > div .platform {
     margin: 20px 0px;
@@ -490,7 +496,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 100%;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   section#skills figure, section#skills img {
     background: rgba(0, 0, 0, 0.488);
@@ -499,6 +505,16 @@ header div#bgcolor input:checked ~ span i#thumb {
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+  }
+  section#skills h1 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px rgba(0, 0, 0, 0.488);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    text-align: center;
   }
   .platform {
     width: 100%;
@@ -582,8 +598,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px rgba(0, 0, 0, 0.488);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: center;
+    margin: auto;
   }
   section#portfolio h2 {
     font-weight: 900;
@@ -1027,7 +1042,7 @@ div#msgMe a {
     align-items: flex-start;
   }
   section#area .platform div {
-    width: 60%;
+    width: 100%;
   }
   section#area .platform p {
     width: 90%;
@@ -1045,6 +1060,9 @@ div#msgMe a {
     justify-content: space-around;
   }
   section#skills .platform div {
+    width: 50%;
+  }
+  section#skills .techStack {
     width: 50%;
   }
   .result {
