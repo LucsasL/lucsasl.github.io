@@ -1,3 +1,6 @@
+// Hooks Import
+import { useState } from "react";
+
 import { webSkillsSect } from "../utils/data";
 
 // Images Import
@@ -6,6 +9,8 @@ import notebook from "../img/google-ads-design.svg";
 const { sectTitle, techStack } = webSkillsSect;
 
 function Skills() {
+  const [activeTech, setActiveTech] = useState("HTML");
+
   return (
     <>
       <section id="area">
@@ -39,17 +44,33 @@ function Skills() {
               {sectTitle}
             </h1>
           </div>
-          
-          <div className="techStack">
-            {
-              techStack.imgs.map((t, index) => {
-                return (
-                  <picture>
-                    <img src={t} alt={techStack.tech[index]} />
-                  </picture>
-                );
-              })
-            }
+
+          <div className="langsCont">
+            <div className="techStack">
+              {
+                techStack.imgs.map((t, index) => {
+                  return (
+                    <abbr title={techStack.tech[index]} key={index}>
+                      <button className="tech">
+                        <picture>
+                          <img src={t} alt={techStack.tech[index]} />
+                        </picture>
+                      </button>
+                    </abbr>
+                  );
+                })
+              }
+            </div>
+            <div className="laptop">
+              <picture>
+                <figure>
+                  <img src={notebook} alt="Website" />
+                  <figcaption>
+                    Website
+                  </figcaption>
+                </figure>
+              </picture>
+            </div>
           </div>
         </div>
       </section>

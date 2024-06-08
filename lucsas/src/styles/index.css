@@ -481,30 +481,46 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 450px;
     position: relative;
   }
+  section#skills {
+    width: 100%;
+  }
   section#skills > div {
     display: flex;
     flex-flow: column nowrap;
     justify-content: none;
     align-items: none;
   }
-  section#skills > div div {
-    margin: 40px 0px;
+  section#skills > div > div {
+    margin: 40px 0px 20px 0px;
   }
-  section#skills .techStack {
+  section#skills .langsCont {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+  section#skills .langsCont > div {
+    width: 70%;
+  }
+  section#skills .langsCont .techStack {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
-    width: 100%;
+    width: 40%;
+    height: 100%;
     border-radius: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   }
-  section#skills figure, section#skills img {
+  section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
-    width: 70%;
-    padding: 20px;
+    height: 100px;
     margin: 20px;
     border-radius: 20px;
+  }
+  section#skills .langsCont .techStack figure, section#skills .langsCont .techStack img {
+    width: 70%;
   }
   section#skills h1 {
     background: rgba(0, 0, 0, 0.3);
@@ -515,6 +531,11 @@ header div#bgcolor input:checked ~ span i#thumb {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     text-align: center;
+  }
+  section#skills figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .platform {
     width: 100%;
@@ -557,8 +578,8 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     width: 80%;
   }
-  section#portfolio .projCont .proj .techStackCont picture {
-    width: 20%;
+  section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
+    width: 50px;
     margin: 0px 10px;
   }
   section#portfolio .projCont .proj .projImg {
