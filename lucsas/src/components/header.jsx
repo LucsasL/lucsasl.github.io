@@ -9,8 +9,8 @@ import logo from "../img/lucsas-logo.webp";
 
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(true);
-  const [scrolled, setScrolled] = useState(false);
   const inpTheme = useRef(null);
+  const container = useRef(null);
 
   // const musicButton = document.querySelector("canvas#musicButton");
   // const audioPlayer = document.querySelector("audio#player");
@@ -19,8 +19,11 @@ const Header = () => {
     setDarkTheme(!darkTheme);
   }
 
-  async function hasScrolled() {
-    setScrolled(!scrolled);
+  function hasScrolled(e) {
+    if (document.scrollY > 0) {
+      container.current.style.background = "rgba(0, 0, 0, .5)";
+      container.current.style.filter = "blur(6px)";
+    }
   }
 
   // window.addEventListener("load", () => {
@@ -106,7 +109,7 @@ const Header = () => {
 
   return (
     <>
-      <header onLoad={hasScrolled}>
+      <header ref={container} onScroll={() => hasScrolled()}>
         <div>
           <div className="logoDiv">
             <figure>
@@ -120,9 +123,9 @@ const Header = () => {
               <nav>
                 <ul>
                   {
-                    webNavOptions.map(i => {
+                    webNavOptions.map((i, index) => {
                       return (
-                        <li>
+                        <li key={index}>
                           <button>
                             <a href={`./index.html#${i}`}>{i}</a>
                           </button>

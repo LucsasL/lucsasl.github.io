@@ -33,9 +33,9 @@ function Introsect() {
               </button>
             </div>
             <div id="socials">
-              {socialMedias.map(({ link, name, img }) => {
+              {socialMedias.map(({ link, name, img }, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <figure>
                       <figcaption></figcaption>
                       <a href={link} target="_blank" rel="noopener noreferrer">

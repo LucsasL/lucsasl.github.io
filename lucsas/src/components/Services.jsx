@@ -15,9 +15,9 @@ function Services() {
 
           <div id="cards">
             {
-              servBoxes.map(({ title, text, img }) => {
+              servBoxes.map(({ title, text, img }, index) => {
                 return (
-                  <div className="servBlock">
+                  <div className="servBlock" key={index}>
                     <div className="imgSv">
                       <figure>
                         <img

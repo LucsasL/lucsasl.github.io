@@ -66,9 +66,9 @@ function Footer() {
 
             <ul>
               {
-                webNavOptions.map(li => {
+                webNavOptions.map((li, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <a href="index.html#intro">{li}</a>
                     </li>
                   );
