@@ -93,7 +93,14 @@ export const webSkillsSect = {
   techStack: {
     tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
     imgs: [htmlBig, cssBig, jsBig, reactBig, gsapBig, reduxBig, gitBig],
-    techDesc: [""],
+    techDesc: [
+      "A combination with the stylesheets of CSS and HTML do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
+      "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+      "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance it as well, bringing state management, routers, and even more abstraction to your app.",
+      "Animation to your website ",
+      "State Management that makes the structure more put together",
+      "An essential tool for project management and version control,",
+    ],
   },
 };
 

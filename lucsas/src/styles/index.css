@@ -648,6 +648,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     line-height: 1em;
   }
   section#skills .langsCont a {
+    font-family: serif;
     color: blue;
     text-decoration: underline;
     margin: 16px;
