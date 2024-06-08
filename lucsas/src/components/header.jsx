@@ -12,21 +12,26 @@ import { webNavOptions } from "../utils/data";
 import logo from "../img/lucsas-logo.webp";
 
 const Header = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  // const [scrolled, setScrolled] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(true);  
   const inpTheme = useRef(null);
   const container = useRef(null);
-
+  
   // gsap.registerPlugin(useGSAP);
-
+  
   // const musicButton = document.querySelector("canvas#musicButton");
   // const audioPlayer = document.querySelector("audio#player");
-
+  
   function themeChange() {
+    const body = document.querySelector("body");
+    body.classList.toggle("light-theme");
     setDarkTheme(!darkTheme);
   }
 
-  function hasScrolled(e) {
-    if (document.scrollY > 0) {
+  function hasScrolled() {
+    const scrollPos = window.scrollY;
+
+    if (scrollPos > 0) {
       container.current.style.background = "rgba(0, 0, 0, .5)";
       container.current.style.filter = "blur(6px)";
     }
