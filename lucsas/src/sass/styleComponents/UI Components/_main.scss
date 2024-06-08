@@ -29,7 +29,7 @@
       width: 80vw;
       height: 100vh;
 
-      @include center;
+      @include spaceBetween;
     }
 
     .intro3d, iframe {
@@ -51,37 +51,37 @@
 
       position: relative;
       display: inline-block;
-    }
 
-    span.nickname {
-      color: $color;
+      span.nickname {
+        color: $color;
 
-      font-size: 3em;
+        font-size: 3em;
 
-      position: absolute;
-      top: 10%;
-    }
+        position: absolute;
+        top: 10%;
+      }
 
-    span.cursiveWords {
-        background: linear-gradient(
-        to right,
-        $color0,
-        $color1
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
+      span.cursiveWords {
+          background: linear-gradient(
+          to right,
+          $color0,
+          $color1
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
 
-      text-align: center;
-      font: bolder 1.5em 'Kalam', cursive;
-      letter-spacing: .26em;
-      filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+        text-align: center;
+        font: bolder 1.5em 'Kalam', cursive;
+        letter-spacing: .26em;
+        filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
 
-      display: inline-block;
+        display: inline-block;
 
-      position: relative;
-      top: 20%;
-      z-index: 1;
+        position: relative;
+        top: 20%;
+        z-index: 1;
+      }
     }
 
     h2.intro-h2 {
@@ -138,6 +138,42 @@
 
       filter: brightness(0);
       transition: all .5s ease;
+    }
+
+    .introPresent {
+      width: 50%;
+
+      @include center;
+
+      .picCont {
+        background: linear-gradient(
+          135deg,
+          $color1,
+          $color0
+        );
+
+        width: 500px;
+        height: 500px;
+
+        animation: blob 10s ease-in-out infinite;
+
+        &:nth-child(even) {
+          background: linear-gradient(
+            135deg,
+            $color1,
+            $color0
+          );
+
+          width: 500px;
+          height: 500px;
+
+          position: absolute;
+          z-index: -1;
+          filter: blur(30px);
+
+          animation: blob 10s ease-in-out infinite;
+        }
+      }
     }
 
     .scroll-anim {

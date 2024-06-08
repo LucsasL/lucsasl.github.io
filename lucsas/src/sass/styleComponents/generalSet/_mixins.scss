@@ -9,8 +9,10 @@
 
 @mixin spaceBetween {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 @mixin spaceAround {

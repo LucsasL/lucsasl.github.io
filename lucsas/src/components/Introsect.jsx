@@ -28,7 +28,9 @@ function Introsect() {
               </p>
 
               <button id="skillsResume">
-                <a href="#" download="">Download Resume</a>
+                <a href="#" download="">
+                  Download Resume
+                </a>
               </button>
             </div>
             <div id="socials">
@@ -45,6 +47,19 @@ function Introsect() {
                 );
               })}
             </div>
+          </div>
+
+          <div className="introPresent">
+            <div className="picCont">
+              <picture>
+                <figure>
+                  <img src="" alt="I'm Lucsas, The GUY!" />
+                  <figcaption>I'm Lucsas, The GUY!</figcaption>
+                </figure>
+              </picture>
+            </div>
+
+            <div className="picCont"></div>
           </div>
         </div>
 

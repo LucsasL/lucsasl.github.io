@@ -154,8 +154,10 @@ header > div {
   margin: 0px 15px;
   border-radius: 50px;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 header > div .headerName {
   margin-left: 8px;
@@ -188,9 +190,6 @@ header button a {
 }
 header figure {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 header figure img {
   width: 75px;
@@ -335,8 +334,10 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 80vw;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
+    gap: 30px;
   }
   section#intro .intro3d, section#intro iframe {
     width: 100%;
@@ -354,13 +355,13 @@ header div#bgcolor input:checked ~ span i#thumb {
     position: relative;
     display: inline-block;
   }
-  section#intro span.nickname {
+  section#intro h1 span.nickname {
     color: white;
     font-size: 3em;
     position: absolute;
     top: 10%;
   }
-  section#intro span.cursiveWords {
+  section#intro h1 span.cursiveWords {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
     background-clip: text;
     -webkit-background-clip: text;
@@ -414,6 +415,27 @@ header div#bgcolor input:checked ~ span i#thumb {
     height: 100%;
     filter: brightness(0);
     transition: all 0.5s ease;
+  }
+  section#intro .introPresent {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section#intro .introPresent .picCont {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 500px;
+    height: 500px;
+    animation: blob 10s ease-in-out infinite;
+  }
+  section#intro .introPresent .picCont:nth-child(even) {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(30px);
+    animation: blob 10s ease-in-out infinite;
   }
   section#intro .scroll-anim {
     height: auto;
@@ -1049,8 +1071,10 @@ div#msgMe a {
   }
   header #mainHeader menu {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     width: 100%;
   }
   header #mainHeader menu nav {
@@ -1082,10 +1106,6 @@ div#msgMe a {
   section#intro > div {
     width: 86%;
     margin: 10px 0px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
   }
   section#intro > div .intro {
     width: 50%;
