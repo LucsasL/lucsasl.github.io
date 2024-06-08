@@ -436,6 +436,10 @@ header div#bgcolor input:checked ~ span i#thumb {
     filter: blur(30px);
     animation: blob 10s ease-in-out infinite;
   }
+  section#intro .introPresent img {
+    width: 50%;
+    filter: brightness(0);
+  }
   section#intro .scroll-anim {
     height: auto;
     margin-bottom: 30px;
@@ -574,11 +578,16 @@ header div#bgcolor input:checked ~ span i#thumb {
     position: relative;
     width: 100%;
   }
+  section#area > div .img-div figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   section#area figure {
     display: block;
     margin-top: 20px;
   }
-  section#area #google-design {
+  section#area #webdev-design {
     width: 450px;
     position: relative;
   }

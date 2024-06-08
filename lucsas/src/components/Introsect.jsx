@@ -23,28 +23,35 @@ function Introsect() {
               <h2 className="fancy intro-h2">Web Developer</h2>
 
               <p>
-                I create and optimize websites with React and JavaScript, delivering the best to make good software that solves real problems.
+                I create and optimize websites with React and JavaScript,
+                delivering the best to make good software that solves real
+                problems.
               </p>
 
               <button id="skillsResume">
-                <a href="https://github.com/lucsasl" download="">
+                <a
+                  href="https://lucsas.vercel.app/"
+                  download="../../public/Resume.pdf"
+                >
                   Download Resume
                 </a>
               </button>
             </div>
             <div id="socials">
-              {socialMedias.map(({ link, name, img }, index) => {
-                return (
-                  <div key={index}>
-                    <figure>
-                      <figcaption></figcaption>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img src={img} alt={name} className="icons" />
-                      </a>
-                    </figure>
-                  </div>
-                );
-              })}
+              {
+                socialMedias.map(({ link, name, img }, index) => {
+                  return (
+                    <div key={index}>
+                      <figure>
+                        <figcaption></figcaption>
+                        <a href={link} target="_blank" rel="noopener noreferrer">
+                          <img src={img} alt={name} className="icons" />
+                        </a>
+                      </figure>
+                    </div>
+                  );
+                })
+              }
             </div>
           </div>
 
@@ -52,7 +59,7 @@ function Introsect() {
             <div className="picCont">
               <picture>
                 <figure>
-                  <img src="" alt="I'm Lucsas, The GUY!" />
+                  <img src={webIntroSect.introImg} alt="I'm Lucsas, The GUY!" />
                   <figcaption>I'm Lucsas, The GUY!</figcaption>
                 </figure>
               </picture>

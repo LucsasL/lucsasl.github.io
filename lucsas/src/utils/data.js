@@ -1,4 +1,7 @@
 // Import image
+import code from "../img/codeIntro.png";
+import webDev from "../img/webDev.webp";
+
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
 
@@ -57,6 +60,7 @@ export const webIntroSect = {
       img: twitterLogo,
     },
   ],
+  introImg: code
 };
 
 export const webServiceSect = {
@@ -90,6 +94,7 @@ export const webAboutSect = {
 
 export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
+  sectImg: webDev,
   techStack: {
     tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
     imgs: [htmlBig, cssBig, jsBig, reactBig, gsapBig, reduxBig, gitBig],

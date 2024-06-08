@@ -5,7 +5,7 @@ import { useReducer } from "react";
 import notebook from "../img/google-ads-design.svg";
 
 import { webSkillsSect } from "../utils/data";
-const { sectTitle, techStack } = webSkillsSect;
+const { sectTitle, sectImg, techStack } = webSkillsSect;
 const { techDesc } = techStack;
 
 function reducer(state, action) {
@@ -132,9 +132,9 @@ function Skills() {
             <div className="img-div">
               <figure>
                 <img
-                  src={notebook}
+                  src={sectImg}
                   alt="Google Ads Service"
-                  id="google-design"
+                  id="webdev-design"
                 />
               </figure>
             </div>
