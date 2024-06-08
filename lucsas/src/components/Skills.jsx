@@ -74,6 +74,10 @@ function Skills() {
                   </figcaption>
                 </figure>
               </picture>
+
+              <div className="laptopContent">
+
+              </div>
             </div>
           </div>
         </div>

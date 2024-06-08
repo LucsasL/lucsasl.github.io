@@ -267,6 +267,18 @@
         figure, img {
           width: 70%;
         }
+
+        .laptopContent {
+          background: blue;
+
+          width: 100px;
+          height: 100px;
+
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
       }
     }
 

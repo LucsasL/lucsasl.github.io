@@ -522,6 +522,15 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .techStack figure, section#skills .langsCont .techStack img {
     width: 70%;
   }
+  section#skills .langsCont .techStack .laptopContent {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
   section#skills h1 {
     background: rgba(0, 0, 0, 0.3);
     display: inline-block;
