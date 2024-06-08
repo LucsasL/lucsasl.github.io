@@ -27,7 +27,7 @@ function Introsect() {
               </p>
 
               <button id="skillsResume">
-                <a href="#" download="">
+                <a href="https://github.com/lucsasl" download="">
                   Download Resume
                 </a>
               </button>
