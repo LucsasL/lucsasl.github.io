@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState } from "react";
+import { useReducer } from "react";
 
 import { webSkillsSect } from "../utils/data";
 
@@ -9,7 +9,11 @@ import notebook from "../img/google-ads-design.svg";
 const { sectTitle, techStack } = webSkillsSect;
 
 function Skills() {
-  const [activeTech, setActiveTech] = useState("HTML");
+  // const [activeTech, setActiveTech] = useReducer("HTML", dispatch);
+
+  // const changeTech = (e) => {
+    // setActiveTech(techStack.tech[e.target.])
+  // }
 
   return (
     <>
