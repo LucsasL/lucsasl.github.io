@@ -58,22 +58,22 @@
       margin: 10px 0px;
 
       @include flexStart;
+
+      > div {
+        width: 80%;
+
+        text-align: left;
+
+        display: flex;
+        justify-content: start;
+        flex-direction: row-reverse;
+      }
     }
 
-    div.intro3D {
+    .intro3D {
       position: absolute;
       display: block;
       pointer-events: all;
-    }
-
-    > div div {
-      width: 80%;
-
-      text-align: left;
-
-      display: flex;
-      justify-content: start;
-      flex-direction: row-reverse;
     }
 
     h1 {
@@ -101,7 +101,7 @@
       margin-top: 0;
     }
 
-    div#socials {
+    #socials {
       display: flex;
       flex-direction: column;
 

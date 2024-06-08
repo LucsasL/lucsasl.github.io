@@ -364,7 +364,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     color: transparent;
     text-align: center;
     font: bolder 1.5em "Kalam", cursive;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.21em;
     filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
     display: inline-block;
     position: relative;
@@ -1081,17 +1081,17 @@ div#msgMe a {
     justify-content: flex-start;
     align-items: center;
   }
-  section#intro div.intro3D {
-    position: absolute;
-    display: block;
-    pointer-events: all;
-  }
-  section#intro > div div {
+  section#intro > div > div {
     width: 80%;
     text-align: left;
     display: flex;
     justify-content: start;
     flex-direction: row-reverse;
+  }
+  section#intro .intro3D {
+    position: absolute;
+    display: block;
+    pointer-events: all;
   }
   section#intro h1 {
     width: 100%;
@@ -1112,11 +1112,11 @@ div#msgMe a {
     font-size: 2em;
     margin-top: 0;
   }
-  section#intro div#socials {
+  section#intro #socials {
     display: flex;
     flex-direction: column;
   }
-  section#intro div#socials div {
+  section#intro #socials div {
     display: flex;
     justify-content: center;
     align-items: center;

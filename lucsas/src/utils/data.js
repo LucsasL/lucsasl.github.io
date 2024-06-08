@@ -19,12 +19,41 @@ import gsapBig from "../img/gsap-big.webp";
 import reduxBig from "../img/redux-big.webp";
 import gitBig from "../img/git-big.webp";
 
+// Social Media Image Import
+import instaLogo from "../img/instagram-social.webp";
+import githubLogo from "../img/github-social.webp";
+import linkedinLogo from "../img/linkedin-social.webp";
+import twitterLogo from "../img/twitter-social.webp";
+
 // Components Data
 export const contentWebDevPortfolio = {};
 
 export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
 
-export const webIntroSect = {};
+export const webIntroSect = {
+  socialMedias: [
+    {
+      link: "https://www.instagram.com/lucsas.l/",
+      name: "Lucsas Instagram",
+      img: instaLogo,
+    },
+    {
+      link: "http://github.com/lucsasl",
+      name: "Lucsas Github",
+      img: githubLogo,
+    },
+    {
+      link: "https://www.linkedin.com/in/lucsas/?locale=en_US",
+      name: "Lucsas Linkedin",
+      img: linkedinLogo,
+    },
+    {
+      link: "https://twitter.com/LucsasL",
+      name: "Lucsas Twitter",
+      img: twitterLogo,
+    },
+  ],
+};
 
 export const webServiceSect = {
   sectTitle: "In what can I help you?",

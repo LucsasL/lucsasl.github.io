@@ -1,3 +1,6 @@
+import { webIntroSect } from "../utils/data";
+const { socialMedias } = webIntroSect;
+
 function Introsect() {
   return (
     <>
@@ -27,42 +30,28 @@ function Introsect() {
               </button>
             </div>
             <div id="socials">
-              <div>
-                <figure>
-                  <figcaption>
-                  </figcaption>
-                  <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
-                    <img src="img/instagram-social.webp" alt="Lucsas Instagram" className="icons" />
-                  </a>
-                </figure>
-              </div>
-              <div>
-                <figure>
-                  <figcaption>
-                  </figcaption>
-                  <a href="http://github.com/lucsasl" target="_blank" rel="noopener noreferrer">
-                    <img src="img/github-social.webp" alt="Lucsas GitHub" className="icons" />
-                  </a>
-                </figure>
-              </div>
-              <div>
-                <figure>
-                  <figcaption>
-                  </figcaption>
-                  <a href="https://www.linkedin.com/in/lucsas/?locale=en_US" target="_blank" rel="noopener noreferrer">
-                    <img src="img/linkedin-social.webp" alt="Lucsas Linkedin" className="icons" />
-                  </a>
-                </figure>
-              </div>
-              <div>
-                <figure>
-                  <figcaption>
-                  </figcaption>
-                  <a href="https://twitter.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src="img/twitter-social.webp" alt="Lucsas Twitter" className="icons" />
-                  </a>
-                </figure>
-              </div>
+              {
+                socialMedias.map(({ link, name, img }) => {
+                  return (
+                    <div>
+                      <figure>
+                        <figcaption></figcaption>
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={img}
+                            alt={name}
+                            className="icons"
+                          />
+                        </a>
+                      </figure>
+                    </div>
+                  );
+                })
+              }
             </div>
           </div>
         </div>
