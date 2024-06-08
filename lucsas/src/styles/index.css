@@ -522,14 +522,34 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .techStack figure, section#skills .langsCont .techStack img {
     width: 70%;
   }
-  section#skills .langsCont .techStack .laptopContent {
-    background: blue;
-    width: 100px;
-    height: 100px;
+  section#skills .langsCont .laptop {
+    position: relative;
+  }
+  section#skills .langsCont .laptop .laptopContent {
+    background: white;
+    color: black;
+    width: 586.9px;
+    height: 369.5px;
+    border-radius: 2px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 5%;
+    left: 11.7%;
     z-index: 1;
+  }
+  section#skills .langsCont h1 {
+    background: transparent;
+    box-shadow: none;
+    font-family: serif;
+  }
+  section#skills .langsCont p {
+    font-family: serif;
+    margin: 16px;
+    line-height: 1em;
+  }
+  section#skills .langsCont a {
+    color: blue;
+    text-decoration: underline;
+    margin: 16px;
   }
   section#skills h1 {
     background: rgba(0, 0, 0, 0.3);

@@ -267,19 +267,44 @@
         figure, img {
           width: 70%;
         }
+      }
+
+      .laptop {
+        position: relative;
 
         .laptopContent {
-          background: blue;
-
-          width: 100px;
-          height: 100px;
-
+          background: white;
+          color: black;
+  
+          width: 586.9px;
+          height: 369.5px;
+          border-radius: 2px;
+  
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 5%;
+          left: 11.7%;
           z-index: 1;
         }
       }
+
+      h1 {
+        background: transparent;
+        box-shadow: none;
+
+        font-family: serif;
+      }
+
+      p {
+        font-family: serif;
+        margin: 16px;
+        line-height: 1em;
+        }
+        
+        a {
+          color: blue;
+          text-decoration: underline;
+          margin: 16px;
+        }
     }
 
     h1 {

@@ -76,7 +76,17 @@ function Skills() {
               </picture>
 
               <div className="laptopContent">
+                <h1>
+                  This is HTML
+                </h1>
 
+                <p>
+                  A markup language that allow developers to build documents 
+                  for the web, adding anchors between sites and adding basic
+                  interaction to the user.
+                </p>
+
+                <a href="">Learn more about HTML</a>
               </div>
             </div>
           </div>
