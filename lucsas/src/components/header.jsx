@@ -1,15 +1,19 @@
 // Hooks Import
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // import { useGSAP } from "@gsap/react";  
-// import gsap from "gsap";
+import gsap from "gsap";
 // import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 // Data Import
 import { webNavOptions } from "../utils/data";
 
 // Image Import
 import logo from "../img/lucsas-logo.webp";
+
+// GSAP Register
+gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   // const [scrolled, setScrolled] = useState(true);
@@ -21,6 +25,16 @@ const Header = () => {
   
   // const musicButton = document.querySelector("canvas#musicButton");
   // const audioPlayer = document.querySelector("audio#player");
+
+  useEffect(() => {
+    const el = container.current;
+    gsap.to(el, {
+      scrollTrigger: {
+        background: "rgba(0, 0, 0, .5)",
+        trigger: el
+      }
+    });
+  }, []);
   
   function themeChange() {
     const body = document.querySelector("body");
@@ -122,8 +136,8 @@ const Header = () => {
 
   return (
     <>
-      <header ref={container} onScroll={() => hasScrolled()}>
-        <div>
+      <header onScroll={() => hasScrolled()}>
+        <div ref={container}>
           <div className="logoDiv">
             <figure>
               <img src={logo} alt="Lucsas Logo" />
@@ -135,17 +149,15 @@ const Header = () => {
             <menu>
               <nav>
                 <ul>
-                  {
-                    webNavOptions.map((i, index) => {
-                      return (
-                        <li key={index}>
-                          <button>
-                            <a href={`./index.html#${i}`}>{i}</a>
-                          </button>
-                        </li>
-                      );
-                    })
-                  }
+                  {webNavOptions.map((i, index) => {
+                    return (
+                      <li key={index}>
+                        <button>
+                          <a href={`./index.html#${i}`}>{i}</a>
+                        </button>
+                      </li>
+                    );
+                  })}
 
                   {/* <li>
                     <button>

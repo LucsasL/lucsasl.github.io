@@ -1,10 +1,15 @@
+// Hooks Import
+import { useRef } from "react";
+
 function About() {
+  const aboutInfo = useRef(null);
+
   return (
     <>
       <div id="about-style"></div>
-      <section id="about">
+      <section id="about" className="hidden">
         <div>
-          <div className="hidden">
+          <div ref={aboutInfo}>
             <h1 className="big">
               Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>

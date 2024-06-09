@@ -260,6 +260,8 @@
 
       border-radius: 10px;
 
+      transition: all .5s ease;
+
       @include verticalFlex(none, center);
       z-index: 1;
 

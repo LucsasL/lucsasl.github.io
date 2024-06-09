@@ -1,8 +1,26 @@
+// Hooks Import
+import { useRef } from "react";
+
 // Data Import
 import { webServiceSect } from "../utils/data";
 const { sectTitle, servBoxes } = webServiceSect;
 
 function Services() {
+  const infoBox = useRef([]);
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      console.log(entry);
+
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    })
+  });
+
+  infoBox.current.forEach(el => observer.observe(el));
+
   return (
     <>
       <section id="services">
@@ -17,7 +35,7 @@ function Services() {
             {
               servBoxes.map(({ title, text, img }, index) => {
                 return (
-                  <div className="servBlock" key={index}>
+                  <div className="servBlock hidden" key={index} ref={infoBox}>
                     <div className="imgSv">
                       <figure>
                         <img

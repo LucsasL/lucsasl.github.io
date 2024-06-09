@@ -503,6 +503,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: 20px 0px;
     box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px rgba(0, 0, 0, 0.488);
     border-radius: 10px;
+    transition: all 0.5s ease;
     display: flex;
     flex-flow: column nowrap;
     justify-content: none;
@@ -1334,6 +1335,25 @@ div#msgMe a {
     width: 35%;
     padding: 20px;
   }
+}
+.hidden {
+  opacity: 0;
+}
+
+.hidden2 {
+  opacity: 0;
+}
+
+.hidden3 {
+  opacity: 0;
+}
+
+.hidden4 {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
