@@ -28,7 +28,7 @@ $mainFont: "Plus Jakarta Sans", sans-serif;
 $color: white;
 
 // Light Theme Variables
-.light-theme {
+[data-theme="light"] {
   $baseBlur: rgba(255, 255, 255, .3);
 
   $bg: rgb(225, 225, 225);

@@ -3,21 +3,21 @@ import gsap from "gsap";
 import logo from "../img/lucsas-logo.webp";
 import { useRef } from "react";
 // import ScrollTrigger from "gsap/ScrollTrigger";
-// import { useGSAP } from "@gsap/react";  
-// import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
+import { useGSAP } from "@gsap/react";  
+import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 import { webNavOptions } from "../utils/data";
 
-// GSAP Register
-// gsap.registerPlugin(useGSAP);
+// GSAP Registers
+gsap.registerPlugin(useGSAP);
 // gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   // const [scrolled, setScrolled] = useState(true);
   const container = useRef(null);
-  
-  // const musicButton = document.querySelector("canvas#musicButton");
-  // const audioPlayer = document.querySelector("audio#player");
 
+  const musicButton = useRef(null);
+  const audioPlayer = useRef(null);
+  
   // useEffect(() => {
   //   const el = container.current;
   //   gsap.to(el, {
@@ -52,88 +52,88 @@ const Header = () => {
     }
   }
 
-  // useGSAP(() => {
-        // window.addEventListener("load", () => {
-    //   /* Rendering button animation */
-    //   let opt = {
-    //     width: musicButton.offsetWidth,
-    //     height: musicButton.offsetHeight,
-    //     midY: musicButton.offsetHeight / 2,
-    //     points: 20,
-    //     stretch: 10,
-    //     sinHeight: 0,
-    //     speed: -0.1,
-    //     strokeColor: "black",
-    //     strokeWidth: 1.5,
-    //     power: false,
-    //   };
+  useGSAP(() => {
+    window.addEventListener("load", () => {
+      /* Rendering button animation */
+      let opt = {
+        width: musicButton.current.offsetWidth,
+        height: musicButton.current.offsetHeight,
+        midY: musicButton.current.offsetHeight / 2,
+        points: 20,
+        stretch: 10,
+        sinHeight: 0,
+        speed: -0.1,
+        strokeColor: "black",
+        strokeWidth: 1.5,
+        power: false,
+      };
   
-    //   musicButton.width = opt.width * 2;
-    //   musicButton.height = opt.height * 2;
-    //   musicButton.style.width = opt.width;
-    //   musicButton.style.height = opt.height;
+      musicButton.current.width = opt.width * 2;
+      musicButton.current.height = opt.height * 2;
+      musicButton.current.style.width = opt.width;
+      musicButton.current.style.height = opt.height;
   
-    //   const ctx = musicButton.getContext("2d");
-    //   ctx.scale(2, 2);
+      const ctx = musicButton.current.getContext("2d");
+      ctx.scale(2, 2);
   
-    //   ctx.strokeStyle = opt.strokeColor;
-    //   ctx.lineWidth = opt.strokeWidth;
-    //   ctx.lineCap = "round";
-    //   ctx.lineJoin = "round";
+      ctx.strokeStyle = opt.strokeColor;
+      ctx.lineWidth = opt.strokeWidth;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
   
-    //   let time = 0;
+      let time = 0;
   
-    //   const render = () => {
-    //     window.requestAnimationFrame(render);
-    //     ctx.clearRect(0, 0, opt.width, opt.height);
-    //     time++;
-    //     ctx.beginPath();
-    //     let increment = 0;
+      const render = () => {
+        window.requestAnimationFrame(render);
+        ctx.clearRect(0, 0, opt.width, opt.height);
+        time++;
+        ctx.beginPath();
+        let increment = 0;
   
-    //     for (let i = 0; i <= opt.points; i++) {
-    //       if (i <= opt.points / 2) {
-    //         increment += 0.1;
-    //       } else {
-    //         increment += -0.1;
-    //       }
+        for (let i = 0; i <= opt.points; i++) {
+          if (i <= opt.points / 2) {
+            increment += 0.1;
+          } else {
+            increment += -0.1;
+          }
   
-    //       const x = (opt.width / opt.points) * i;
-    //       const y =
-    //         opt.midY +
-    //         Math.sin((time * opt.speed * i) / opt.stretch) *
-    //           opt.sinHeight *
-    //           increment;
+          const x = (opt.width / opt.points) * i;
+          const y =
+            opt.midY +
+            Math.sin((time * opt.speed * i) / opt.stretch) *
+              opt.sinHeight *
+              increment;
   
-    //       ctx.lineTo(x, y);
-    //     }
+          ctx.lineTo(x, y);
+        }
   
-    //     ctx.stroke();
-    //   };
+        ctx.stroke();
+      };
   
-    //   render();
+      render();
   
-    //   /* Audio play */
-    //   musicButton.addEventListener("click", () => {
-    //     opt.power = !opt.power;
-  
-    //     if (opt.power) {
-    //       audioPlayer.play();
-    //       TweenMax.to(opt, 1, {
-    //         sinHeight: 10,
-    //         stretch: 5,
-    //         ease: Power2.easeInOut,
-    //       });
-    //     } else {
-    //       audioPlayer.pause();
-    //       TweenMax.to(opt, 1, {
-    //         sinHeight: 0,
-    //         stretch: 10,
-    //         power: Power3.easeOut,
-    //       });
-    //     }
-    //   });
-    // });
-  // })
+      /* Audio play */
+      musicButton.current.addEventListener("click", () => {
+        opt.power = !opt.power;
+
+        if (opt.power) {
+          audioPlayer.current.play();
+          TweenMax.to(opt, 1, {
+            sinHeight: 10,
+            stretch: 5,
+            ease: Power2.easeInOut,
+          });
+        } else {
+          audioPlayer.current.pause();
+          TweenMax.to(opt, 1, {
+            sinHeight: 0,
+            stretch: 10,
+            power: Power3.easeOut,
+          });
+        }
+      });
+    });
+  })
 
   return (
     <>
@@ -159,45 +159,15 @@ const Header = () => {
                       </li>
                     );
                   })}
-
-                  {/* <li>
-                    <button>
-                      <a href="./index.html#intro">Home</a>
-                    </button>
-                  </li>
-
-                  <li>
-                    <button>
-                      <a href="./index.html#about">About</a>
-                    </button>
-                  </li>
-
-                  <li>
-                    <button>
-                      <a href="./index.html#google">Google Ads</a>
-                    </button>
-                  </li>
-
-                  <li>
-                    <button>
-                      <a href="./index.html#meta">Meta Ads</a>
-                    </button>
-                  </li>
-
-                  <li>
-                    <button id="contactButton">
-                      <a href="./index.html#grow">Contact</a>
-                    </button>
-                  </li> */}
                 </ul>
               </nav>
 
               <div id="musicDiv">
-                <canvas id="musicButton"></canvas>
+                <canvas id="musicButton" ref={musicButton}></canvas>
 
                 {/* Music by Eric Godlow
                 Music source: https://youtu.be/IUYaCe95dxw?si=KGSnNIIKn5uaWJY4 */}
-                <audio preload="auto" loop id="player">
+                <audio preload="auto" loop id="player" ref={audioPlayer}>
                   <source
                     src="audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3"
                     type="audio/mp3"
