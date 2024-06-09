@@ -8,6 +8,7 @@ function About() {
             <h1 className="big">
               Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>
+
             <p>
               I work as a{" "}
               <em style={{ fontWeight: "bold" }}>Pay-Per-Click Manager,</em> a

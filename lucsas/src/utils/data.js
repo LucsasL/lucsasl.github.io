@@ -60,7 +60,7 @@ export const webIntroSect = {
       img: twitterLogo,
     },
   ],
-  introImg: code
+  introImg: code,
 };
 
 export const webServiceSect = {
@@ -78,7 +78,7 @@ export const webServiceSect = {
     },
     {
       title: "Dynamic Application",
-      text: "Developing websites with an array of different technologies with state.",
+      text: "Developing websites with an array of different technologies, from technologies that build simple components to others that make complex structures with great architecture.",
       img: webStructure,
     },
   ],
@@ -86,15 +86,19 @@ export const webServiceSect = {
 
 export const webAboutSect = {
   sectTitle: "Hi, My name is Lucas Lira",
-  par1: "",
-  par2: "",
-  par3: "",
-  par4: "",
+  aboutText: [
+    "I work as a <strong>Front-End Web Developer;</strong> working with interfaces and consuming APIs for websites. My expertise lies in crafting dynamic, visually appealing, and user-friendly web applications. Having gained substantial experience in my abilities, I am now looking to work as a Junior Developer.",
+    "Since I began, I've been studying topics in the field of programming for a while now, always looking to improve and get better at delivering what is necessary to enhance my applications. My GitHub shows how much effort I put into really understanding the technologies.",
+    "My job and commitment goes to give results, whether this being coding, projecting, or giving ideas.",
+    "What do you thing? Can we grow together?",
+  ],
 };
 
 export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
   sectImg: webDev,
+  areaDesc:
+    "I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git.",
   techStack: {
     tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
     imgs: [htmlBig, cssBig, jsBig, reactBig, gsapBig, reduxBig, gitBig],

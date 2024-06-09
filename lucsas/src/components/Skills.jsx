@@ -156,7 +156,7 @@ function Skills() {
                   <abbr title={techStack.tech[index]} key={index}>
                     <button
                       className="tech"
-                      onClick={() => changeTech(techStack.tech[index])}
+                      /* onClick={() => {changeTech(techStack.tech[index])} */
                     >
                       <picture>
                         <img src={t} alt={techStack.tech[index]} />
