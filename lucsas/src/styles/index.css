@@ -216,6 +216,7 @@ header #mainHeader {
 }
 header #mainHeader menu {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -481,6 +482,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#services {
     box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.488);
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -606,18 +608,20 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont {
     width: 100%;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+    flex-flow: row nowrap;
     gap: 30px;
   }
   section#skills .langsCont > div {
-    width: 70%;
+    width: 100%;
+    margin: 60px 0px;
   }
   section#skills .langsCont .techStack {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
-    width: 40%;
-    height: 100%;
+    width: 55%;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -638,12 +642,12 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .laptop .laptopContent {
     background: white;
     color: black;
-    width: 586.9px;
-    height: 369.5px;
+    width: 77.1%;
+    height: 80.5%;
     border-radius: 2px;
     position: absolute;
-    top: 5%;
-    left: 11.7%;
+    top: 4.9%;
+    left: 11.68%;
     z-index: 1;
   }
   section#skills .langsCont h1 {
@@ -682,7 +686,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#portfolio {
     background: rgb(15, 15, 15);
-    padding: 50px;
+    padding: 50px 0px;
     margin: 50px 0px 100px 0px;
   }
   section#portfolio > div {
@@ -694,26 +698,26 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#portfolio .projCont .proj {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
-    height: 600px;
     padding: 30px;
     margin: 30px 0px;
     border-radius: 20px;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
   section#portfolio .projCont .proj > div {
-    width: 50%;
+    width: 100%;
   }
   section#portfolio .projCont .proj .projInfo {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    height: 85%;
   }
   section#portfolio .projCont .proj .techStackCont {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     width: 80%;
@@ -862,6 +866,7 @@ footer div#credits {
   background: #070707;
   margin: 20px -30px 0px -30px;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -963,6 +968,7 @@ div#msgMe a {
   /* Footer Section */
   #footerNav {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -990,6 +996,7 @@ div#msgMe a {
   }
   section#intro .intro-content {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1034,6 +1041,7 @@ div#msgMe a {
   }
   section#about > div {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1054,12 +1062,14 @@ div#msgMe a {
   /* CTA Section */
   section#contact > div {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
   /* Footer Section */
   #footerNav {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1074,6 +1084,7 @@ div#msgMe a {
   }
   header #mainHeader {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     width: 60%;
@@ -1102,6 +1113,7 @@ div#msgMe a {
   /* Main Settings */
   section {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1160,6 +1172,7 @@ div#msgMe a {
   /* Services Section */
   section#services #cards {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1187,6 +1200,7 @@ div#msgMe a {
   /* Area Section */
   section#area > div {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -1197,6 +1211,7 @@ div#msgMe a {
     width: 100%;
     margin: 20px 0px;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     align-items: flex-start;
@@ -1213,6 +1228,9 @@ div#msgMe a {
     transform: translateY(-25%);
   }
   /* Meta Section */
+  section#skills {
+    padding: 50px;
+  }
   section#skills .platform {
     width: 100%;
     display: flex;
@@ -1222,8 +1240,35 @@ div#msgMe a {
   section#skills .platform div {
     width: 50%;
   }
-  section#skills .techStack {
-    width: 50%;
+  section#skills .platform .langsCont {
+    width: 100%;
+  }
+  section#skills .platform .langsCont > div {
+    width: 70%;
+  }
+  section#skills .platform .langsCont .techStack {
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  section#skills .platform .langsCont .techStack .tech {
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+  section#skills .platform .langsCont .techStack figure, section#skills .platform .langsCont .techStack img {
+    width: 70%;
+  }
+  section#skills .platform .langsCont .laptop {
+    position: relative;
+  }
+  section#skills .platform .langsCont .laptop .laptopContent {
+    width: 586.9px;
+    height: 369.5px;
+    position: absolute;
+    top: 5%;
+    left: 11.7%;
+    z-index: 1;
   }
   .result {
     width: 100%;
@@ -1236,31 +1281,29 @@ div#msgMe a {
     padding: 20px;
     margin: 20px;
   }
-  .result #prom-container {
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 550px);
-    gap: 30px;
+  .result .projCont .proj {
+    height: 600px;
   }
-  .result #prom-container .promises {
-    margin: 0;
+  .result .projCont .proj > div {
+    width: 100%;
   }
-  .result #prom-container .promises:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 8;
+  .result .projCont .proj .projInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 85%;
   }
-  .result #prom-container .promises:nth-child(2) {
-    grid-column-start: 8;
-    grid-column-end: 13;
+  .result .projCont .proj .techStackCont {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
   }
-  .result #prom-container .promises:nth-child(3) {
-    grid-column-start: 1;
-    grid-column-end: 6;
-  }
-  .result #prom-container .promises:nth-child(4) {
-    grid-column-start: 6;
-    grid-column-end: 13;
+  .result .projCont .proj .techStackCont picture, .result .projCont .proj .techStackCont img {
+    width: 50px;
+    margin: 0px 10px;
   }
   /* CTA Section */
   section#contact #ways-contact {
@@ -1282,6 +1325,7 @@ div#msgMe a {
   }
   footer #footerNav {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
     align-items: flex-start;

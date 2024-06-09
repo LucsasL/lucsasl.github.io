@@ -385,10 +385,12 @@
       width: 100%;
 
       @include spaceAround;
+      flex-flow: row nowrap;
       gap: 30px;
 
       > div {
-        width: 70%;
+        width: 100%;
+        margin: 60px 0px;
       }
 
       .techStack {
@@ -397,8 +399,7 @@
                     -2px -2px 2px rgba(255, 255, 255, .3),
                     0px 15px 10px $shadow;
 
-        width: 40%;
-        height: 100%;
+        width: 55%;
         border-radius: 20px;
 
         display: grid;
@@ -427,13 +428,13 @@
           background: white;
           color: black;
   
-          width: 586.9px;
-          height: 369.5px;
+          width: 77.1%;
+          height: 80.5%;
           border-radius: 2px;
   
           position: absolute;
-          top: 5%;
-          left: 11.7%;
+          top: 4.9%;
+          left: 11.68%;
           z-index: 1;
         }
       }
@@ -449,14 +450,14 @@
         font-family: serif;
         margin: 16px;
         line-height: 1em;
-        }
-        
-        a {
-          font-family: serif;
-          color: blue;
-          text-decoration: underline;
-          margin: 16px;
-        }
+      }
+      
+      a {
+        font-family: serif;
+        color: blue;
+        text-decoration: underline;
+        margin: 16px;
+      }
     }
 
     h1 {
@@ -476,7 +477,7 @@
   // Portfolio Section
   section#portfolio {
     background: $bg4;
-    padding: 50px;
+    padding: 50px 0px;
     margin: 50px 0px 100px 0px;
     
     > div {
@@ -490,7 +491,6 @@
                   -2px -2px 2px rgba(255, 255, 255, .3),
                   0px 15px 10px $shadow;
 
-        height: 600px;
         padding: 30px;
         margin: 30px 0px;
         border-radius: 20px;
@@ -498,12 +498,11 @@
         @include spaceAround;
 
         > div {
-          width: 50%;
+          width: 100%;
         }
           
         .projInfo {
           @include verticalFlex(space-between, flex-start);
-          height: 85%;
         }
 
         .techStackCont {

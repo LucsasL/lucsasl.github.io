@@ -179,6 +179,8 @@
 
   /* Meta Section */
   section#skills {
+    padding: 50px;
+
     .platform {
       width: 100%;
   
@@ -189,10 +191,44 @@
       div {
         width: 50%;
       }
-    }
 
-    .techStack {
-      width: 50%;
+      .langsCont {
+        width: 100%;
+
+        > div {
+          width: 70%;
+        }
+
+        .techStack {
+          width: 40%;
+          height: 100%;
+          border-radius: 20px;
+
+          .tech {
+            height: 100px;
+            margin: 20px;
+            border-radius: 20px;
+          }
+
+          figure, img {
+            width: 70%;
+          }
+        }
+
+        .laptop {
+          position: relative;
+
+          .laptopContent {
+            width: 586.9px;
+            height: 369.5px;
+    
+            position: absolute;
+            top: 5%;
+            left: 11.7%;
+            z-index: 1;
+          }
+        }
+      }
     }
   }
 
@@ -208,32 +244,28 @@
       margin: 20px;
     }
 
-    #prom-container {
-      height: auto;
-  
-      @include grid(12, 3);
+    .projCont {
+      .proj {
+        height: 600px;
 
-      .promises {
-        margin: 0;
+        > div {
+          width: 100%;
+        }
+          
+        .projInfo {
+          @include verticalFlex(space-between, flex-start);
+          height: 85%;
+        }
 
-        &:nth-child(1) {
-          grid-column-start: 1;
-          grid-column-end: 8;
-        }
-      
-        &:nth-child(2) {
-          grid-column-start: 8;
-          grid-column-end: 13;
-        }
-      
-        &:nth-child(3) {
-          grid-column-start: 1;
-          grid-column-end: 6;
-        }
-      
-        &:nth-child(4) {
-          grid-column-start: 6;
-          grid-column-end: 13;
+        .techStackCont {
+          @include spaceAround;
+
+          width: 80%;
+
+          picture, img {
+            width: 50px;
+            margin: 0px 10px;
+          }
         }
       }
     }
