@@ -28,19 +28,9 @@ const Header = () => {
   //   });
   // }, []);
 
-  function toggleTheme(e) {
-    if (e.target.checked) darkTheme()
-    else lightTheme() 
-  }
-
-  function darkTheme() {
+  function toggleTheme() {
     const body = document.querySelector("body");
-    body.setAttribute("data-theme", "dark");
-  }
-
-  function lightTheme() {
-    const body = document.querySelector("body");
-    body.setAttribute("data-theme", "light");
+    body.classList.toggle("light");
   }
 
   function hasScrolled() {
@@ -184,8 +174,7 @@ const Header = () => {
                   <input
                     type="checkbox"
                     id="bgButton"
-                    value={darkTheme}
-                    onChange={(e) => toggleTheme(e)}
+                    onChange={() => toggleTheme()}
                   />
                   <span>
                     <i id="symbol"></i>

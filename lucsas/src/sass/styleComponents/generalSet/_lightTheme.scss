@@ -1,0 +1,163 @@
+:root {
+  --baseBlur: rgba(255, 255, 255, .3);
+  
+  --bg: rgb(225, 225, 225);
+  --bg2: rgb(210, 210, 210);
+  --bg3: rgb(200, 200, 200);
+  --bg3Blur: rgba(255, 255, 255, .3);
+  --bg4: rgb(230, 230, 230);
+  
+  --shadow: rgba(0, 0, 0, .1);
+  
+  --header: rgba(255, 255, 255, .5);
+  --promises: rgb(235, 235, 235, .5);
+  --promisesColor: rgb(139, 139, 250);
+  --input: #e5e5e5d6;
+  --bgCredit: #a8a8a8;
+  
+  --color: rgb(20, 20, 20);
+}
+
+// Light theme Settings
+.light {
+  color: var(--color);
+  
+  header {
+    color: var(--color);  
+  }
+
+  main {
+    background: var(--bg);
+
+    section#intro {
+      span.nickname {
+        color: var(--color);
+      }
+    }
+
+    section#services {
+      box-shadow: 0px -10px 15px var(--shadow);
+
+      .servBlock {
+        background: linear-gradient(
+          to bottom,
+          var(--baseBlur),
+          var(--bg3)
+        );
+
+        box-shadow: 0px 15px 15px 10px var(--shadow),
+        -3px -3px 2px rgba(255, 255, 255, .3),
+        0px 5px 15px  1px var(--shadow);
+      }
+
+      h1 {
+        background: var(--bg3Blur);
+        box-shadow: 0px 5px 15px var(--shadow),
+        -3px -3px 2px rgba(255, 255, 255, .3),
+        15px 15px 15px var(--shadow); 
+      }
+    }
+
+    #about-style {
+      background: var(--bg2);
+    }
+
+    section#skills {
+      .techStack {
+        background: var(--shadow);
+        box-shadow: 5px 5px 15px 5px var(--shadow),
+        -2px -2px 2px rgba(255, 255, 255, .3),
+        0px 15px 10px var(--shadow);
+
+        .tech {
+          background: var(--shadow);
+          box-shadow: 5px 5px 15px 5px var(--shadow),
+          -2px -2px 2px rgba(255, 255, 255, .3),
+          0px 15px 10px var(--shadow);
+        }
+      }
+
+      h1 {
+        background: var(--bg3Blur);
+        box-shadow: 0px 5px 15px var(--shadow),
+        -3px -3px 2px rgba(255, 255, 255, .3),
+        15px 15px 15px var(--shadow); 
+      }
+
+      .laptop h1 {
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    section#portfolio {
+      background: var(--bg4);
+
+      .proj {
+        background: var(--bg3Blur);
+        box-shadow: 5px 5px 15px 5px var(--shadow),
+        -2px -2px 2px rgba(255, 255, 255, .3),
+        0px 15px 10px var(--shadow);
+
+        a {
+          color: var(--color);
+        }
+      }
+
+      h1,
+      h4 {
+        background: var(--bg3Blur);
+        box-shadow: 0px 5px 15px var(--shadow),
+        -3px -3px 2px rgba(255, 255, 255, .3),
+        15px 15px 15px var(--shadow); 
+      }
+    }
+
+    section#contact {
+      form {
+        background: var(--shadow);
+        box-shadow: 5px 5px 15px 5px var(--shadow),
+        -2px -2px 2px rgba(255, 255, 255, .3),
+        0px 15px 10px var(--shadow);
+      }
+
+      .formDiv {
+        h1 {
+          background: var(--bg3Blur);
+          box-shadow: 0px 5px 15px var(--shadow),
+          -3px -3px 2px rgba(255, 255, 255, .3),
+          15px 15px 15px var(--shadow); 
+        }
+      }
+
+    }
+  }
+
+  footer {
+    background: var(--bg3);
+    color: var(--color);
+
+    #credits {
+      background: var(--bgCredit);
+    }
+  }
+
+  a {
+    color: var(--color);
+  }
+
+  input, textarea {
+    background: var(--input);
+    color: var(--color);
+  }
+
+  .scroll-anim {
+    div {
+      border-color: black;
+    }
+
+    &::after {
+      background: white;
+    }
+  }
+}

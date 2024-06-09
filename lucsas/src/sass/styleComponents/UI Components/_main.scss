@@ -405,7 +405,7 @@
 
       .techStack {
         background: $shadow;
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+        box-shadow: 5px 5px 15px 5px $shadow,
                     -2px -2px 2px rgba(255, 255, 255, .3),
                     0px 15px 10px $shadow;
 
@@ -417,7 +417,7 @@
 
         .tech {
           background: $shadow;
-          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+          box-shadow: 5px 5px 15px 5px $shadow,
           -2px -2px 2px rgba(255, 255, 255, .3),
           0px 15px 10px $shadow;
           
@@ -497,7 +497,7 @@
     .projCont {
       .proj {
         background: $shadow;
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+        box-shadow: 5px 5px 15px 5px $shadow,
                   -2px -2px 2px rgba(255, 255, 255, .3),
                   0px 15px 10px $shadow;
 
@@ -584,7 +584,7 @@
       padding: 40px 30px;
 
       border-radius: 20px;
-      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3),
+      box-shadow: 5px 5px 15px 5px $shadow,
                   -2px -2px 2px rgba(255, 255, 255, .3),
                   0px 15px 10px $shadow;
               

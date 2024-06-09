@@ -7,10 +7,6 @@ $bg3:  #151515;
 $bg3blur:  rgba(0, 0, 0, .3);
 $bg4:  rgb(15, 15, 15);
 
-// Colors Variables
-$color0: #00f;
-$color1: rgb(128, 0, 255);
-
 // Boxes and Elements Colors
 $header:  rgba(0, 0, 0, .5);
 $promises:  rgba(01, 01, 01);
@@ -21,29 +17,12 @@ $bgCredit:  #070707;
 // UI Details
 $shadow:  rgba(0, 0, 0, 0.488);
 
-// Fonts Variables
-$mainFont: "Plus Jakarta Sans", sans-serif;
-
 // Text Color
 $color: white;
 
-// Light Theme Variables
-[data-theme="light"] {
-  $baseBlur: rgba(255, 255, 255, .3);
+// Colors Variables
+$color0: #00f;
+$color1: rgb(128, 0, 255);
 
-  $bg: rgb(225, 225, 225);
-  $bg2: rgb(210, 210, 210);
-  $bg3: rgb(200, 200, 200);
-  $bg3Blur: rgba(255, 255, 255, .3);
-  $bg4: rgb(190, 190, 190);
-
-  $shadow: rgba(0, 0, 0, .1);
-
-  $txtColor: black;
-
-  $header: rgba(255, 255, 255, .5);
-  $promises: rgb(235, 235, 235, .5);
-  $promisesColor: rgb(139, 139, 250);
-  $input: #e5e5e5d6;
-  $bgCredit: #a8a8a8;
-}
+// Fonts Variables
+$mainFont: "Plus Jakarta Sans", sans-serif;

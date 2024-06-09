@@ -628,7 +628,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#skills .langsCont .techStack {
     background: rgba(0, 0, 0, 0.488);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
     width: 55%;
     border-radius: 20px;
     display: grid;
@@ -636,7 +636,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
     height: 100px;
     margin: 20px;
     border-radius: 20px;
@@ -705,7 +705,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#portfolio .projCont .proj {
     background: rgba(0, 0, 0, 0.488);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
     padding: 30px;
     margin: 30px 0px;
     border-radius: 20px;
@@ -805,7 +805,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 100%;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     display: flex;
@@ -1343,24 +1343,106 @@ div#msgMe a {
     padding: 20px;
   }
 }
-.hidden {
-  opacity: 0;
+:root {
+  --baseBlur: rgba(255, 255, 255, .3);
+  --bg: rgb(225, 225, 225);
+  --bg2: rgb(210, 210, 210);
+  --bg3: rgb(200, 200, 200);
+  --bg3Blur: rgba(255, 255, 255, .3);
+  --bg4: rgb(230, 230, 230);
+  --shadow: rgba(0, 0, 0, .1);
+  --header: rgba(255, 255, 255, .5);
+  --promises: rgb(235, 235, 235, .5);
+  --promisesColor: rgb(139, 139, 250);
+  --input: #e5e5e5d6;
+  --bgCredit: #a8a8a8;
+  --color: rgb(20, 20, 20);
 }
 
-.hidden2 {
-  opacity: 0;
+.light {
+  color: var(--color);
 }
-
-.hidden3 {
-  opacity: 0;
+.light header {
+  color: var(--color);
 }
-
-.hidden4 {
-  opacity: 0;
+.light main {
+  background: var(--bg);
 }
-
-.show {
-  opacity: 1;
+.light main section#intro span.nickname {
+  color: var(--color);
+}
+.light main section#services {
+  box-shadow: 0px -10px 15px var(--shadow);
+}
+.light main section#services .servBlock {
+  background: linear-gradient(to bottom, var(--baseBlur), var(--bg3));
+  box-shadow: 0px 15px 15px 10px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px var(--shadow);
+}
+.light main section#services h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main #about-style {
+  background: var(--bg2);
+}
+.light main section#skills .techStack {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#skills .techStack .tech {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#skills h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main section#skills .laptop h1 {
+  background: none;
+  box-shadow: none;
+}
+.light main section#portfolio {
+  background: var(--bg4);
+}
+.light main section#portfolio .proj {
+  background: var(--bg3Blur);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#portfolio .proj a {
+  color: var(--color);
+}
+.light main section#portfolio h1,
+.light main section#portfolio h4 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main section#contact form {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#contact .formDiv h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light footer {
+  background: var(--bg3);
+  color: var(--color);
+}
+.light footer #credits {
+  background: var(--bgCredit);
+}
+.light a {
+  color: var(--color);
+}
+.light input, .light textarea {
+  background: var(--input);
+  color: var(--color);
+}
+.light .scroll-anim div {
+  border-color: black;
+}
+.light .scroll-anim::after {
+  background: white;
 }
 
 /*# sourceMappingURL=index.css.map */
