@@ -1,5 +1,5 @@
 // Hooks Import
-import { useReducer } from "react";
+import { useReducer, useEffect } from "react";
 
 // Images Import
 import notebook from "../img/google-ads-design.svg";
@@ -72,41 +72,42 @@ function Skills() {
     aDecoration: "underline",
    });
 
-  const changeTech = (tech) => {
-    switch (tech) {
-      case "HTML":
-        dispatch({ type: "change_tech_HTML" });
-        return;
-          
-      case "CSS":
-        dispatch({ type: "change_tech_CSS" });
-        return;
-
-      case "JavaScript":
-        dispatch({ type: "change_tech_JS" });
-        return;
-
-      case "React JS":
-        dispatch({ type: "change_tech_React" });
-        return;
-
-      case "GSAP":
-        dispatch({ type: "change_tech_GSAP" });
-        return;
-
-      case "Redux":
-        dispatch({ type: "change_tech_Redux" });
-        return;
-
-      case "Git":
-        dispatch({ type: "change_tech_Git" });
-        return;
-
-      default:
-        return;
-          
+  useEffect(() => {
+    const changeTech = (tech) => {
+      switch (tech) {
+        case "HTML":
+          dispatch({ type: "change_tech_HTML" });
+          return;
+            
+        case "CSS":
+          dispatch({ type: "change_tech_CSS" });
+          return;
+  
+        case "JavaScript":
+          dispatch({ type: "change_tech_JS" });
+          return;
+  
+        case "React JS":
+          dispatch({ type: "change_tech_React" });
+          return;
+  
+        case "GSAP":
+          dispatch({ type: "change_tech_GSAP" });
+          return;
+  
+        case "Redux":
+          dispatch({ type: "change_tech_Redux" });
+          return;
+  
+        case "Git":
+          dispatch({ type: "change_tech_Git" });
+          return;
+  
+        default:
+          return;       
+      }
     }
-  }
+  }, [activeTech]);
 
   return (
     <>
