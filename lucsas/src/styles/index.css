@@ -585,6 +585,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -50px;
   }
   section#area figure {
     display: block;
