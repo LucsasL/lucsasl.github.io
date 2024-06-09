@@ -593,6 +593,12 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#area #webdev-design {
     width: 350px;
     position: relative;
+    animation: rotImg 7s infinite linear;
+  }
+  @keyframes rotImg {
+    100% {
+      transform: rotate(360deg);
+    }
   }
   section#skills {
     width: 100%;

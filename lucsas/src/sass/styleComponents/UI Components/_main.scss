@@ -368,6 +368,13 @@
     #webdev-design {
       width: 350px;
       position: relative;
+      animation: rotImg 7s infinite linear;
+    }
+
+    @keyframes rotImg {
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 

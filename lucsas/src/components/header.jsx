@@ -1,45 +1,46 @@
 // Hooks Import
-import { useState, useEffect, useRef } from "react";
-
-// import { useGSAP } from "@gsap/react";  
 import gsap from "gsap";
+import logo from "../img/lucsas-logo.webp";
+import { useRef } from "react";
+// import ScrollTrigger from "gsap/ScrollTrigger";
+// import { useGSAP } from "@gsap/react";  
 // import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
-import ScrollTrigger from "gsap/ScrollTrigger";
-
-// Data Import
 import { webNavOptions } from "../utils/data";
 
-// Image Import
-import logo from "../img/lucsas-logo.webp";
-
 // GSAP Register
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(useGSAP);
+// gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
   // const [scrolled, setScrolled] = useState(true);
-  const [darkTheme, setDarkTheme] = useState(true);  
-  const inpTheme = useRef(null);
   const container = useRef(null);
-  
-  // gsap.registerPlugin(useGSAP);
   
   // const musicButton = document.querySelector("canvas#musicButton");
   // const audioPlayer = document.querySelector("audio#player");
 
-  useEffect(() => {
-    const el = container.current;
-    gsap.to(el, {
-      scrollTrigger: {
-        background: "rgba(0, 0, 0, .5)",
-        trigger: el
-      }
-    });
-  }, []);
-  
-  function themeChange() {
+  // useEffect(() => {
+  //   const el = container.current;
+  //   gsap.to(el, {
+  //     scrollTrigger: {
+  //       background: "rgba(0, 0, 0, .5)",
+  //       trigger: el
+  //     }
+  //   });
+  // }, []);
+
+  function toggleTheme(e) {
+    if (e.target.checked) darkTheme()
+    else lightTheme() 
+  }
+
+  function darkTheme() {
     const body = document.querySelector("body");
-    body.classList.toggle("light-theme");
-    setDarkTheme(!darkTheme);
+    body.setAttribute("data-theme", "dark");
+  }
+
+  function lightTheme() {
+    const body = document.querySelector("body");
+    body.setAttribute("data-theme", "light");
   }
 
   function hasScrolled() {
@@ -214,8 +215,7 @@ const Header = () => {
                     type="checkbox"
                     id="bgButton"
                     value={darkTheme}
-                    onChange={() => themeChange()}
-                    ref={inpTheme}
+                    onChange={(e) => toggleTheme(e)}
                   />
                   <span>
                     <i id="symbol"></i>
