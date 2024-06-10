@@ -5,7 +5,7 @@ import { useRef } from "react";
 // import ScrollTrigger from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";  
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
-import { webNavOptions } from "../utils/data";
+import { webNavOptions, webNavOptionsLink } from "../utils/data";
 
 // GSAP Registers
 gsap.registerPlugin(useGSAP);
@@ -146,7 +146,7 @@ const Header = () => {
                     return (
                       <li key={index}>
                         <button>
-                          <a href={`./index.html#${i}`}>{i}</a>
+                          <a href={`./#${webNavOptionsLink[index]}`}>{i}</a>
                         </button>
                       </li>
                     );

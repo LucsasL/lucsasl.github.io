@@ -36,6 +36,7 @@ import twitterLogo from "../img/twitter-social.webp";
 export const contentWebDevPortfolio = {};
 
 export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
+export const webNavOptionsLink = ["intro", "services", "skills", "portfolio", "contact"];
 
 export const webIntroSect = {
   socialMedias: [

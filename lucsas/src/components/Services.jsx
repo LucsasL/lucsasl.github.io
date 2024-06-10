@@ -35,7 +35,7 @@ function Services() {
             {
               servBoxes.map(({ title, text, img }, index) => {
                 return (
-                  <div className="servBlock hidden" key={index} ref={infoBox}>
+                  <div className="servBlock" key={index} ref={infoBox}>
                     <div className="imgSv">
                       <figure>
                         <img
