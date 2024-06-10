@@ -1371,6 +1371,13 @@ div#msgMe a {
 .light main section#intro span.nickname {
   color: var(--color);
 }
+.light main section#intro .scroll-anim div {
+  border-color: black;
+}
+.light main section#intro .scroll-anim > div::after {
+  content: "";
+  background: black;
+}
 .light main section#services {
   box-shadow: 0px -10px 15px var(--shadow);
 }
@@ -1437,12 +1444,6 @@ div#msgMe a {
 .light input, .light textarea {
   background: var(--input);
   color: var(--color);
-}
-.light .scroll-anim div {
-  border-color: black;
-}
-.light .scroll-anim::after {
-  background: white;
 }
 
 /*# sourceMappingURL=index.css.map */

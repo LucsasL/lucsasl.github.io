@@ -33,6 +33,17 @@
       span.nickname {
         color: var(--color);
       }
+
+      .scroll-anim {
+        div {
+          border-color: black;
+        }
+      }
+
+      .scroll-anim > div::after {
+        content: '';
+        background: black;
+      }
     }
 
     section#services {
@@ -149,15 +160,5 @@
   input, textarea {
     background: var(--input);
     color: var(--color);
-  }
-
-  .scroll-anim {
-    div {
-      border-color: black;
-    }
-
-    &::after {
-      background: white;
-    }
   }
 }
