@@ -31,7 +31,7 @@ const Header = () => {
 
   function toggleTheme(e) {
     const body = document.querySelector("body");
-    themeInp.current.defaultChecked = !(e.target.value);
+    themeInp.current.defaultChecked = ! (e.target.value);
     body.classList.toggle("light");
   }
 
