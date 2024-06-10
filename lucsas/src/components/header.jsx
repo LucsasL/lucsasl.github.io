@@ -1,8 +1,7 @@
 // Hooks Import
 import gsap from "gsap";
 import logo from "../img/lucsas-logo.webp";
-import { useRef } from "react";
-// import ScrollTrigger from "gsap/ScrollTrigger";
+import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";  
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 import { webNavOptions, webNavOptionsLink } from "../utils/data";
@@ -12,37 +11,31 @@ gsap.registerPlugin(useGSAP);
 // gsap.registerPlugin(ScrollTrigger);
 
 const Header = () => {
-  // const [scrolled, setScrolled] = useState(true);
-  const container = useRef(null);
+  const [headerBg, setHeaderBg] = useState("#00000000");
+  const [headerBlur, setHeaderBlur] = useState("");
   const themeInp = useRef(null);
 
   const musicButton = useRef(null);
   const audioPlayer = useRef(null);
-  
-  // useEffect(() => {
-  //   const el = container.current;
-  //   gsap.to(el, {
-  //     scrollTrigger: {
-  //       background: "rgba(0, 0, 0, .5)",
-  //       trigger: el
-  //     }
-  //   });
-  // }, []);
 
   function toggleTheme(e) {
     const body = document.querySelector("body");
-    themeInp.current.defaultChecked = ! (e.target.value);
+    themeInp.current.defaultChecked = !(e.target.value);
     body.classList.toggle("light");
   }
 
-  function hasScrolled() {
+  window.addEventListener("scroll", () => {
     const scrollPos = window.scrollY;
 
     if (scrollPos > 0) {
-      container.current.style.background = "rgba(0, 0, 0, .5)";
-      container.current.style.filter = "blur(6px)";
+      console.log(scrollPos);
+      setHeaderBg("rgba(0, 0, 0, .5)");
+      setHeaderBlur("blur(6px)");
+      } else {
+        setHeaderBg("rgba(0, 0, 0, 0)");
+        setHeaderBlur("blur(0px)");
     }
-  }
+  })
 
   useGSAP(() => {
     window.addEventListener("load", () => {
@@ -129,8 +122,8 @@ const Header = () => {
 
   return (
     <>
-      <header onScroll={() => hasScrolled()}>
-        <div ref={container}>
+      <header>
+        <div style={{ background: headerBg, backdropFilter: headerBlur }}>
           <div className="logoDiv">
             <figure>
               <img src={logo} alt="Lucsas Logo" />
