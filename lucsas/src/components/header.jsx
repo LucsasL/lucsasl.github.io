@@ -14,6 +14,7 @@ gsap.registerPlugin(useGSAP);
 const Header = () => {
   // const [scrolled, setScrolled] = useState(true);
   const container = useRef(null);
+  const themeInp = useRef(null);
 
   const musicButton = useRef(null);
   const audioPlayer = useRef(null);
@@ -28,8 +29,9 @@ const Header = () => {
   //   });
   // }, []);
 
-  function toggleTheme() {
+  function toggleTheme(e) {
     const body = document.querySelector("body");
+    themeInp.current.defaultChecked = !(e.target.value);
     body.classList.toggle("light");
   }
 
@@ -174,7 +176,9 @@ const Header = () => {
                   <input
                     type="checkbox"
                     id="bgButton"
-                    onChange={() => toggleTheme()}
+                    onChange={(e) => toggleTheme(e)}
+                    ref={themeInp}
+                    defaultChecked
                   />
                   <span>
                     <i id="symbol"></i>
