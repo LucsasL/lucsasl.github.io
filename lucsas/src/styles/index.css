@@ -1447,4 +1447,12 @@ div#msgMe a {
   color: var(--color);
 }
 
+.hidden {
+  opacity: 0.1;
+}
+
+.show {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=index.css.map */

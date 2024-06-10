@@ -28,7 +28,6 @@ const Header = () => {
     const scrollPos = window.scrollY;
 
     if (scrollPos > 0) {
-      console.log(scrollPos);
       setHeaderBg("rgba(0, 0, 0, .5)");
       setHeaderBlur("blur(6px)");
       } else {
