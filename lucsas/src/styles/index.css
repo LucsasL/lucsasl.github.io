@@ -722,6 +722,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    gap: 20px;
   }
   section#portfolio .projCont .proj .techStackCont {
     display: flex;

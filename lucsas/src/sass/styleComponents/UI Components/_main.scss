@@ -513,6 +513,7 @@
           
         .projInfo {
           @include verticalFlex(space-between, flex-start);
+          gap: 20px;
         }
 
         .techStackCont {

@@ -124,7 +124,7 @@ export const webProjectsSect = {
       projDesc:
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
-      techStack: ["HTML", "CSBig", "JavaScript", "React JS", "GSAP", "Git"],
+      techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
       techStackImg: [html, css, js, react, gsap, git],
       projImg: [marknow, everyshop],
     },

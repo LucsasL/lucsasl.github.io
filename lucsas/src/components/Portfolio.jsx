@@ -43,9 +43,11 @@ function Portfolio() {
                           <div className="techStackCont">
                             {techStack.map((t, index) => {
                               return (
-                                <picture key={index}>
-                                  <img src={techStackImg[index]} alt={t} />
-                                </picture>
+                                <abbr title={t} key={index}>
+                                  <picture>
+                                    <img src={techStackImg[index]} alt={t} />
+                                  </picture>
+                                </abbr>
                               );
                             })}
                           </div>

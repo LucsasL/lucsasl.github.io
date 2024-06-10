@@ -1,15 +1,11 @@
 // Data Import
-import { webNavOptions } from "../utils/data";
-
-// Image Import
-import instaLogo from "../img/instagram-social.webp";
-import githubLogo from "../img/github-social.webp";
-import linkedinLogo from "../img/linkedin-social.webp";
-import twitterLogo from "../img/twitter-social.webp";
+import { webNavOptions, webNavOptionsLink, webIntroSect } from "../utils/data";
 
 import logo from "../img/lucsas-logo.webp";
 
 function Footer() {
+  const { socialMedias } = webIntroSect;
+
   return (
     <>
       <footer>
@@ -24,38 +20,27 @@ function Footer() {
             </p>
 
             <ul>
-              <li>
-                <figure>
-                  <a href="https://www.instagram.com/lucsas.l/" target="_blank" rel="noopener noreferrer">
-                    <img src={instaLogo} alt="Instagram" className="icons" />
-                  </a>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <a href="https://github.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src={githubLogo} alt="GitHub" className="icons" />
-                  </a>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <a href="https://www.linkedin.com/in/lucsas/?locale=en_US" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedinLogo} alt="Lucsas Linkedin" className="icons" />
-                  </a>
-                </figure>
-              </li>
-
-              <li>
-                <figure>
-                  <a href="https://twitter.com/LucsasL" target="_blank" rel="noopener noreferrer">
-                    <img src={twitterLogo} alt="Lucsas Twitter" className="icons" />
-                  </a>
-                </figure>
-              </li>
-
+              {
+                socialMedias.map(({ link, name, img }, index) => {
+                  return (
+                    <li key={index}>
+                      <figure>
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={img}
+                            alt={name}
+                            className="icons"
+                          />
+                        </a>
+                      </figure>
+                    </li>
+                  );
+                })
+              }
             </ul>
           </div>
 
@@ -69,7 +54,7 @@ function Footer() {
                 webNavOptions.map((li, index) => {
                   return (
                     <li key={index}>
-                      <a href="index.html#intro">{li}</a>
+                      <a href={`#${webNavOptionsLink[index]}`}>{li}</a>
                     </li>
                   );
                 })
