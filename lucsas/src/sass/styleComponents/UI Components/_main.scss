@@ -260,8 +260,6 @@
 
       border-radius: 10px;
 
-      transition: all .5s ease;
-
       @include verticalFlex(none, center);
       z-index: 1;
 
@@ -307,6 +305,7 @@
     
     h1 {
       @include blockHeader;
+      margin: 30px 0px;
     }
 
     img {

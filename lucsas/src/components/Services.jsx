@@ -27,13 +27,14 @@ function Services() {
   }, []);
 
   const changeVisibility = () => {
-    console.log(boxIntersect);
     return boxIntersect
       ? {
           opacity: 1,
-        }
+          transition: "all .5s ease"
+          }
       : {
-          opacity: 0.3,
+          opacity: 0,
+          transition: "all .5s ease"
         };
   };
 
@@ -44,7 +45,7 @@ function Services() {
           <div>
             <h1
               className="block-text big"
-              style={{ margin: "30px 0px" }}
+              style={changeVisibility()}
               ref={servHeader}
             >
               {sectTitle}
@@ -55,7 +56,7 @@ function Services() {
             {servBoxes.map(({ title, text, img }, index) => {
               return (
                 <div
-                  className="servBlock hidden"
+                  className="servBlock"
                   key={index}
                   ref={infoBox}
                   style={changeVisibility()}

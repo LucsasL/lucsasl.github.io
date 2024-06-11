@@ -1,15 +1,44 @@
 // Hooks Import
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 function About() {
+  const [aboutIntersect, setAboutIntersect] = useState(false);
   const aboutInfo = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          aboutInfo.current.classList.add("show");
+          setAboutIntersect(entry.isIntersecting);
+        } else {
+          aboutInfo.current.classList.remove("show");
+          setAboutIntersect(entry.isIntersecting);
+        }
+      });
+    });
+
+    observer.observe(aboutInfo.current);
+  }, []);
+
+  const changeVisibility = () => {
+    return aboutIntersect
+      ? {
+          opacity: 1,
+          transition: "all .5s ease",
+        }
+      : {
+          opacity: 0,
+          transition: "all .5s ease",
+        };
+  };
 
   return (
     <>
       <div id="about-style"></div>
       <section id="about" className="hidden">
         <div>
-          <div ref={aboutInfo}>
+          <div ref={aboutInfo} style={changeVisibility()}>
             <h1 className="big">
               Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>

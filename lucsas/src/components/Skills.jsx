@@ -1,5 +1,5 @@
 // Hooks Import
-import { useReducer, useEffect } from "react";
+import { useState, useReducer, useEffect, useRef } from "react";
 
 // Images Import
 import notebook from "../img/google-ads-design.svg";
@@ -9,112 +9,141 @@ const { sectTitle, sectImg, techStack } = webSkillsSect;
 const { techDesc } = techStack;
 
 function reducer(state, action) {
-    switch (action) {
-      case "change_tech_HTML":
-        state = {
-          title: techStack.tech[0],
-          text: techDesc[0],
-        };
-        return;
+  switch (action) {
+    case "change_tech_HTML":
+      state = {
+        title: techStack.tech[0],
+        text: techDesc[0],
+      };
+      return;
 
-      case "change_tech_CSS":
-        state = {
-          title: techStack.tech[1],
-          text: techDesc[1],
-        };
-        return;
+    case "change_tech_CSS":
+      state = {
+        title: techStack.tech[1],
+        text: techDesc[1],
+      };
+      return;
 
-      case "change_tech_JS":
-        state = {
-          title: techStack.tech[2],
-          text: techDesc[2],
-        };
-        return;
+    case "change_tech_JS":
+      state = {
+        title: techStack.tech[2],
+        text: techDesc[2],
+      };
+      return;
 
-      case "change_tech_React":
-        state = {
-          title: techStack.tech[3],
-          text: techDesc[3],
-        };
-        return;
+    case "change_tech_React":
+      state = {
+        title: techStack.tech[3],
+        text: techDesc[3],
+      };
+      return;
 
-      case "change_tech_GSAP":
-        state = {
-          title: techStack.tech[4],
-          text: techDesc[4],
-        };
-        return;
+    case "change_tech_GSAP":
+      state = {
+        title: techStack.tech[4],
+        text: techDesc[4],
+      };
+      return;
 
-      case "change_tech_Redux":
-        state = {
-          title: techStack.tech[5],
-          text: techDesc[5],
-        };
-        return;
+    case "change_tech_Redux":
+      state = {
+        title: techStack.tech[5],
+        text: techDesc[5],
+      };
+      return;
 
-      case "change_tech_Git":
-        state = {
-          title: techStack.tech[6],
-          text: techDesc[6],
-        };
-        return;
+    case "change_tech_Git":
+      state = {
+        title: techStack.tech[6],
+        text: techDesc[6],
+      };
+      return;
 
-      default:
-        return;
-    }
+    default:
+      return;
+  }
 }
 
 function Skills() {
-  const [activeTech, dispatch] = useReducer(reducer, { 
+  const [infoIntersect, setInfoIntersect] = useState(false);
+  const [activeTech, dispatch] = useReducer(reducer, {
     bg: "white",
     color: "black",
     font: "serif",
     aDecoration: "underline",
-   });
+  });
+
+  const infoBox = useRef();
 
   useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          infoBox.current.classList.add("show");
+          setInfoIntersect(entry.isIntersecting);
+        } else {
+          infoBox.current.classList.remove("show");
+          setInfoIntersect(entry.isIntersecting);
+        }
+      });
+    });
+
+    observer.observe(infoBox.current);
+
     const changeTech = (tech) => {
       switch (tech) {
         case "HTML":
           dispatch({ type: "change_tech_HTML" });
           return;
-            
+
         case "CSS":
           dispatch({ type: "change_tech_CSS" });
           return;
-  
+
         case "JavaScript":
           dispatch({ type: "change_tech_JS" });
           return;
-  
+
         case "React JS":
           dispatch({ type: "change_tech_React" });
           return;
-  
+
         case "GSAP":
           dispatch({ type: "change_tech_GSAP" });
           return;
-  
+
         case "Redux":
           dispatch({ type: "change_tech_Redux" });
           return;
-  
+
         case "Git":
           dispatch({ type: "change_tech_Git" });
           return;
-  
+
         default:
-          return;       
+          return;
       }
-    }
+    };
   }, [activeTech]);
+
+  const changeVisibility = () => {
+    return infoIntersect
+      ? {
+          opacity: 1,
+          transition: "all .5s ease",
+        }
+      : {
+          opacity: 0,
+          transition: "all .5s ease",
+        };
+  };
 
   return (
     <>
       <section id="area">
         <div>
           <div className="platform">
-            <div>
+            <div ref={infoBox} style={changeVisibility()}>
               <div className="blockquote">
                 <h1 className="big">Front-End Web Developer</h1>
               </div>
@@ -145,7 +174,7 @@ function Skills() {
 
       <section id="skills">
         <div>
-          <div className="blockquote">
+          <div className="blockquote" ref={infoBox} style={changeVisibility()}>
             <h1 className="big block-text">{sectTitle}</h1>
           </div>
 
@@ -179,7 +208,7 @@ function Skills() {
 
                 <p>{activeTech.text}</p>
 
-                <a 
+                <a
                   href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   target="_blank"
                   rel="noopener noreferrer"
