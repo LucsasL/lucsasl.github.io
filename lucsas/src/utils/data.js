@@ -12,6 +12,7 @@ import webStructure from "../img/web-structure.png";
 // Tech Stack Images Import
 import html from "../img/html5.webp";
 import css from "../img/css3.webp";
+import ts from "../img/typescript.webp";
 import js from "../img/JS.webp";
 import react from "../img/react.webp";
 import gsap from "../img/gsap.webp";
@@ -21,6 +22,7 @@ import git from "../img/git.webp";
 import htmlBig from "../img/html5-big.webp";
 import cssBig from "../img/css-big.webp";
 import jsBig from "../img/JS-big.webp";
+import tsBig from "../img/typescript-big.webp";
 import reactBig from "../img/react-big.webp";
 import gsapBig from "../img/gsap-big.webp";
 import reduxBig from "../img/redux-big.webp";
@@ -101,8 +103,8 @@ export const webSkillsSect = {
   areaDesc:
     "I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git.",
   techStack: {
-    tech: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
-    imgs: [htmlBig, cssBig, jsBig, reactBig, gsapBig, reduxBig, gitBig],
+    tech: ["HTML", "CSS", "TypeScript", "JavaScript", "React JS", "GSAP", "Redux", "Git"],
+    imgs: [htmlBig, cssBig, jsBig, tsBig, reactBig, gsapBig, reduxBig, gitBig],
     techDesc: [
       "A combination with the stylesheets of CSS and HTML do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
       "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
@@ -124,8 +126,16 @@ export const webProjectsSect = {
       projDesc:
         "MARKNOW is a web project showcasing a digital marketing company that has great numbers and partners. Fully build with React JS and it's technologies. It has several features, such as Hooks, States and Routers. | WORK IN PROGRESS",
       projImgDesc: "Markdown project image",
-      techStack: ["HTML", "CSS", "JavaScript", "React JS", "GSAP", "Git"],
-      techStackImg: [html, css, js, react, gsap, git],
+      techStack: [
+        "HTML",
+        "CSS",
+        "TypeScript",
+        "JavaScript",
+        "React JS",
+        "GSAP",
+        "Git",
+      ],
+      techStackImg: [html, css, ts, js, react, gsap, git],
       projImg: [marknow, everyshop],
     },
     {
@@ -138,13 +148,14 @@ export const webProjectsSect = {
       techStack: [
         "HTML",
         "CSS",
+        "TypeScript",
         "JavaScript",
         "React JS",
         "GSAP",
         "Redux",
         "Git",
       ],
-      techStackImg: [html, css, js, react, gsap, redux, git],
+      techStackImg: [html, css, ts, js, react, gsap, redux, git],
       projImg: [marknow, everyshop],
     },
   ],
