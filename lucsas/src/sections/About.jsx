@@ -9,10 +9,8 @@ function About() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          aboutInfo.current.classList.add("show");
           setAboutIntersect(entry.isIntersecting);
         } else {
-          aboutInfo.current.classList.remove("show");
           setAboutIntersect(entry.isIntersecting);
         }
       });
@@ -21,15 +19,16 @@ function About() {
     observer.observe(aboutInfo.current);
   }, []);
 
-  const changeVisibility = () => {
+  const changeVisibility = (side) => {
     return aboutIntersect
       ? {
           opacity: 1,
-          transition: "all .5s ease",
+          transition: "all 1.5s ease",
         }
       : {
           opacity: 0,
-          transition: "all .5s ease",
+          transition: "all 1.5s ease",
+          transform: `translateX(${side})`,
         };
   };
 
@@ -38,7 +37,7 @@ function About() {
       <div id="about-style"></div>
       <section id="about" className="hidden">
         <div>
-          <div ref={aboutInfo} style={changeVisibility()}>
+          <div ref={aboutInfo} style={changeVisibility("-100%")}>
             <h1 className="big">
               Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>
@@ -67,7 +66,7 @@ function About() {
             <p>What do you thing? Can we grow together?</p>
           </div>
 
-          <div className="img-div hidden1">
+          <div className="img-div" style={changeVisibility("100%")}>
             <figure>
               {/* <iframe
                 src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"

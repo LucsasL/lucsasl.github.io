@@ -261,6 +261,8 @@
       border-radius: 10px;
 
       @include verticalFlex(none, center);
+
+      position: relative;
       z-index: 1;
 
       .imgSv {

@@ -1,5 +1,5 @@
 // Image Import
-import logo from "../img/lucsas-logo.webp";
+import logo from "../../img/lucsas-logo.webp";
 
 function HeaderLogo() {
   const lucsasDesc = "Lucsas Web Developer";

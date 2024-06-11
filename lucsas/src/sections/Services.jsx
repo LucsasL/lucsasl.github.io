@@ -8,16 +8,14 @@ const { sectTitle, servBoxes } = webServiceSect;
 function Services() {
   const [boxIntersect, setBoxIntersect] = useState(false);
   const infoBox = useRef([]);
-  const servHeader = useRef(null);
+  const servHeader = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          infoBox.current.classList.add("show");
           setBoxIntersect(entry.isIntersecting);
         } else {
-          infoBox.current.classList.remove("show");
           setBoxIntersect(entry.isIntersecting);
         }
       });
@@ -27,14 +25,49 @@ function Services() {
   }, []);
 
   const changeVisibility = () => {
+    return [
+      boxIntersect
+        ? {
+            opacity: 1,
+            transition: `all 2.3s ease`,
+          }
+        : {
+            opacity: 0,
+            transition: `all 2.3s ease`,
+            transform: "translateX(-100%)",
+          },
+      boxIntersect
+        ? {
+            opacity: 1,
+            transition: `all 2s ease`,
+          }
+        : {
+            opacity: 0,
+            transition: `all 2s ease`,
+            transform: "translateX(-100%)",
+          },
+      boxIntersect
+        ? {
+            opacity: 1,
+            transition: `all 1.7s ease`,
+          }
+        : {
+            opacity: 0,
+            transition: `all 1.7s ease`,
+            transform: "translateX(-100%)",
+          },
+    ];
+  };
+
+  const changeVisibilityHeader = () => {
     return boxIntersect
       ? {
           opacity: 1,
-          transition: "all .5s ease"
-          }
+          transition: "all .5s ease",
+        }
       : {
           opacity: 0,
-          transition: "all .5s ease"
+          transition: "all .5s ease",
         };
   };
 
@@ -45,7 +78,7 @@ function Services() {
           <div>
             <h1
               className="block-text big"
-              style={changeVisibility()}
+              style={changeVisibilityHeader()}
               ref={servHeader}
             >
               {sectTitle}
@@ -59,7 +92,7 @@ function Services() {
                   className="servBlock"
                   key={index}
                   ref={infoBox}
-                  style={changeVisibility()}
+                  style={changeVisibility()[index]}
                 >
                   <div className="imgSv">
                     <figure>

@@ -1,5 +1,5 @@
 // Data Import
-import { webNavOptions, webNavOptionsLink } from "../utils/data";
+import { webNavOptions, webNavOptionsLink } from "../../utils/data";
 
 function NavLinks() {
   return (

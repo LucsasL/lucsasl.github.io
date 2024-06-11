@@ -4,6 +4,7 @@ import { useState, useReducer, useEffect, useRef } from "react";
 // Images Import
 import notebook from "../img/google-ads-design.svg";
 
+// Data Import
 import { webSkillsSect } from "../utils/data";
 const { sectTitle, sectImg, techStack } = webSkillsSect;
 const { techDesc } = techStack;
@@ -11,49 +12,38 @@ const { techDesc } = techStack;
 function reducer(state, action) {
   switch (action) {
     case "change_tech_HTML":
-      state = {
-        title: techStack.tech[0],
-        text: techDesc[0],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_CSS":
-      state = {
-        title: techStack.tech[1],
-        text: techDesc[1],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_JS":
-      state = {
-        title: techStack.tech[2],
-        text: techDesc[2],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_React":
-      state = {
-        title: techStack.tech[3],
-        text: techDesc[3],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_GSAP":
-      state = {
-        title: techStack.tech[4],
-        text: techDesc[4],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_Redux":
-      state = {
-        title: techStack.tech[5],
-        text: techDesc[5],
-      };
+      state.title = "BRUH";
+      state.text = "It's all working";
       return;
 
     case "change_tech_Git":
       state = {
+        ...state,
         title: techStack.tech[6],
         text: techDesc[6],
       };
@@ -71,6 +61,8 @@ function Skills() {
     color: "black",
     font: "serif",
     aDecoration: "underline",
+    title: "HTML",
+    text: "The technology that gives meaning to websites, A document build with objects."
   });
 
   const infoBox = useRef();
@@ -79,62 +71,74 @@ function Skills() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          infoBox.current.classList.add("show");
           setInfoIntersect(entry.isIntersecting);
         } else {
-          infoBox.current.classList.remove("show");
           setInfoIntersect(entry.isIntersecting);
         }
       });
     });
 
     observer.observe(infoBox.current);
-
-    const changeTech = (tech) => {
-      switch (tech) {
-        case "HTML":
-          dispatch({ type: "change_tech_HTML" });
-          return;
-
-        case "CSS":
-          dispatch({ type: "change_tech_CSS" });
-          return;
-
-        case "JavaScript":
-          dispatch({ type: "change_tech_JS" });
-          return;
-
-        case "React JS":
-          dispatch({ type: "change_tech_React" });
-          return;
-
-        case "GSAP":
-          dispatch({ type: "change_tech_GSAP" });
-          return;
-
-        case "Redux":
-          dispatch({ type: "change_tech_Redux" });
-          return;
-
-        case "Git":
-          dispatch({ type: "change_tech_Git" });
-          return;
-
-        default:
-          return;
-      }
-    };
   }, [activeTech]);
 
-  const changeVisibility = () => {
+  const changeTech = (tech) => {
+    switch (tech) {
+      case "HTML":
+        dispatch({ ...activeTech, type: "change_tech_HTML" });
+        return;
+
+      case "CSS":
+        dispatch({ ...activeTech, type: "change_tech_CSS" });
+        return;
+
+      case "JavaScript":
+        dispatch({ ...activeTech, type: "change_tech_JS" });
+        return;
+
+      case "React JS":
+        dispatch({ ...activeTech, type: "change_tech_React" });
+        return;
+
+      case "GSAP":
+        dispatch({ ...activeTech, type: "change_tech_GSAP" });
+        return;
+
+      case "Redux":
+        dispatch({ ...activeTech, type: "change_tech_Redux" });
+        return;
+
+      case "Git":
+        dispatch({ ...activeTech, type: "change_tech_Git" });
+        return;
+
+      default:
+        return;
+    }
+  };
+
+  const changeVisibility = (side) => {
     return infoIntersect
       ? {
           opacity: 1,
-          transition: "all .5s ease",
+          transition: "all 1.5s ease",
         }
       : {
           opacity: 0,
-          transition: "all .5s ease",
+          transition: "all 1.5s ease",
+          transform: `translateX(${side})`,
+        };
+  };
+
+  const changeVisibilityLaptop = (side) => {
+    return infoIntersect
+      ? {
+          opacity: 1,
+          transition: "all 1.5s ease",
+        }
+      : {
+          opacity: 1,
+          transition: "all 1.5s ease",
+          transform: `translateX(${side})`,
         };
   };
 
@@ -143,7 +147,7 @@ function Skills() {
       <section id="area">
         <div>
           <div className="platform">
-            <div ref={infoBox} style={changeVisibility()}>
+            <div ref={infoBox} style={changeVisibility(0)}>
               <div className="blockquote">
                 <h1 className="big">Front-End Web Developer</h1>
               </div>
@@ -174,18 +178,18 @@ function Skills() {
 
       <section id="skills">
         <div>
-          <div className="blockquote" ref={infoBox} style={changeVisibility()}>
+          <div className="blockquote" ref={infoBox} style={changeVisibility(0)}>
             <h1 className="big block-text">{sectTitle}</h1>
           </div>
 
           <div className="langsCont">
-            <div className="techStack">
+            <div className="techStack" style={changeVisibility("-100%")}>
               {techStack.imgs.map((t, index) => {
                 return (
                   <abbr title={techStack.tech[index]} key={index}>
                     <button
                       className="tech"
-                      /* onClick={() => {changeTech(techStack.tech[index])} */
+                      onClick={() => {changeTech(techStack.tech[index])}}
                     >
                       <picture>
                         <img src={t} alt={techStack.tech[index]} />
@@ -195,7 +199,7 @@ function Skills() {
                 );
               })}
             </div>
-            <div className="laptop">
+            <div className="laptop" style={changeVisibilityLaptop("150%")}>
               <picture>
                 <figure>
                   <img src={notebook} alt="Website" />

@@ -9,10 +9,8 @@ function Portfolio() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          project.current.classList.add("show");
           setProjectBoxIntersect(entry.isIntersecting);
         } else {
-          project.current.classList.remove("show");
           setProjectBoxIntersect(entry.isIntersecting);
         }
       });

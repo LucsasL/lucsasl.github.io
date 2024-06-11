@@ -2,10 +2,10 @@
 import { useState } from "react";
 
 // Components Import
-import HeaderLogo from "../components/HeaderLogo";
-import NavLinks from "../components/NavLinks";
-import MusicButton from "../components/MusicButton";
-import ThemeToggle from "../components/ThemeToggle";
+import HeaderLogo from "../components/HeaderComps/HeaderLogo";
+import NavLinks from "../components/HeaderComps/NavLinks";
+import MusicButton from "../components/HeaderComps/MusicButton";
+import ThemeToggle from "../components/HeaderComps/ThemeToggle";
 
 const Header = () => {
   const [headerBg, setHeaderBg] = useState("#00000000");

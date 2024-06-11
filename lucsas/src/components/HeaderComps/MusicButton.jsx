@@ -7,8 +7,8 @@ import gsap from "gsap";
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 
 // Audio Import
-import mp3Audio from "../audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3";
-import oggAudio from "../audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg";
+import mp3Audio from "../../audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3";
+import oggAudio from "../../audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg";
 
 // GSAP Plugins
 gsap.registerPlugin(useGSAP);

@@ -120,15 +120,15 @@
         border-radius: 10px;
   
         &:nth-child(1) {
-          transition: transform 2.3s ease;
+          transition: all 2.3s ease;
         }
   
         &:nth-child(2) {
-          transition: transform 2s ease;
+          transition: all 2s ease;
         }
   
         &:nth-child(3) {
-          transition: transform 1.7s ease;
+          transition: all 1.7s ease;
         }
       }
     }
