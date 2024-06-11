@@ -1,9 +1,4 @@
 // Hooks Import
-import { 
-  BrowserRouter as Router,
-  Routes,
-  Route
- } from "react-router-dom";
 
 // Pages Import
 import Header from "./components/Header";
@@ -16,11 +11,7 @@ function App() {
   return (
     <>
       <Header />
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Main />}></Route>
-        </Routes>
-      </Router>
+      <Main />
       <Footer />
       <MsgMe />
     </>
