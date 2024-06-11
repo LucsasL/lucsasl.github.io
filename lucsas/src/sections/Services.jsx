@@ -15,8 +15,6 @@ function Services() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setBoxIntersect(entry.isIntersecting);
-        } else {
-          setBoxIntersect(entry.isIntersecting);
         }
       });
     });

@@ -10,8 +10,6 @@ function About() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setAboutIntersect(entry.isIntersecting);
-        } else {
-          setAboutIntersect(entry.isIntersecting);
         }
       });
     });

@@ -10,8 +10,6 @@ function Portfolio() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setProjectBoxIntersect(entry.isIntersecting);
-        } else {
-          setProjectBoxIntersect(entry.isIntersecting);
         }
       });
     });

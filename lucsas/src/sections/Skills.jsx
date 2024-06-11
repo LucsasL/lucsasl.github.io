@@ -9,8 +9,8 @@ import { webSkillsSect } from "../utils/data";
 const { sectTitle, sectImg, techStack } = webSkillsSect;
 const { techDesc } = techStack;
 
-function reducer(state, action) {
-  switch (action) {
+function reducer(state) {
+  switch (state.type) {
     case "change_tech_HTML":
       state.title = "BRUH";
       state.text = "It's all working";
@@ -62,7 +62,7 @@ function Skills() {
     font: "serif",
     aDecoration: "underline",
     title: "HTML",
-    text: "The technology that gives meaning to websites, A document build with objects."
+    text: "The technology that gives meaning to websites through tags, building the document that you see in the browser."
   });
 
   const infoBox = useRef();
@@ -71,8 +71,6 @@ function Skills() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setInfoIntersect(entry.isIntersecting);
-        } else {
           setInfoIntersect(entry.isIntersecting);
         }
       });
