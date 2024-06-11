@@ -128,3 +128,7 @@ figcaption {
 .blockquote {
   @include center;
 }
+
+abbr {
+  text-decoration: none;
+}

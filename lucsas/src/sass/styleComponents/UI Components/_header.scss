@@ -20,9 +20,10 @@ header {
 
     @include spaceBetween;
 
-    .headerName {
-      margin-left: 8px;
-      // display: none;
+    .logoDiv {
+      a:hover {
+        color: $color;
+      }
     }
   }
 

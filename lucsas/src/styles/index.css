@@ -124,6 +124,10 @@ figcaption {
   align-items: center;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
@@ -158,8 +162,8 @@ header > div {
   align-items: center;
   gap: 30px;
 }
-header > div .headerName {
-  margin-left: 8px;
+header > div .logoDiv a:hover {
+  color: white;
 }
 header li {
   display: none;
@@ -1364,6 +1368,9 @@ div#msgMe a {
   color: var(--color);
 }
 .light header {
+  color: var(--color);
+}
+.light header .logoDiv a:hover {
   color: var(--color);
 }
 .light main {

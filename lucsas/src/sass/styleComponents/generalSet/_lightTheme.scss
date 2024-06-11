@@ -24,6 +24,12 @@
   
   header {
     color: var(--color);  
+
+    .logoDiv {
+      a:hover {
+        color: var(--color);
+      }
+    }
   }
 
   main {
