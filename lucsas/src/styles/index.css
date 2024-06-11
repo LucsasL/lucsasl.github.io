@@ -666,6 +666,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont h1 {
     background: transparent;
     box-shadow: none;
+    padding: 16px;
     font-family: serif;
   }
   section#skills .langsCont p {
