@@ -15,6 +15,9 @@ import css from "../img/css3.webp";
 import ts from "../img/typescript.webp";
 import js from "../img/JS.webp";
 import react from "../img/react.webp";
+import sass from "../img/sass.webp";
+import python from "../img/python.webp";
+import jest from "../img/jest.webp";
 import gsap from "../img/gsap.webp";
 import redux from "../img/redux.webp";
 import git from "../img/git.webp";
@@ -24,8 +27,10 @@ import cssBig from "../img/css-big.webp";
 import jsBig from "../img/JS-big.webp";
 import tsBig from "../img/typescript-big.webp";
 import reactBig from "../img/react-big.webp";
-import gsapBig from "../img/gsap-big.webp";
+import sassBig from "../img/sass-big.webp";
+import jestBig from "../img/jest-big.webp";
 import reduxBig from "../img/redux-big.webp";
+import gsapBig from "../img/gsap-big.webp";
 import gitBig from "../img/git-big.webp";
 
 // Social Media Image Import
@@ -109,11 +114,14 @@ export const webSkillsSect = {
       "JavaScript",
       "TypeScript",
       "React JS",
+      "SASS",
+      "Jest",
       "GSAP",
       "Redux",
+      "Python",
       "Git",
     ],
-    imgs: [htmlBig, cssBig, jsBig, tsBig, reactBig, gsapBig, reduxBig, gitBig],
+    imgs: [html, css, js, ts, react, sass, jest, gsap, redux, python, git],
     techDesc: [
       "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
       "A combination with the stylesheets of HTML and CSS do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
@@ -139,14 +147,26 @@ export const webProjectsSect = {
       techStack: [
         "HTML",
         "CSS",
-        "TypeScript",
         "JavaScript",
+        "TypeScript",
         "React JS",
+        "SASS",
         "GSAP",
+        "Jest",
         "Git",
       ],
-      techStackImg: [html, css, ts, js, react, gsap, git],
-      projImg: [marknow, everyshop],
+      techStackImg: [
+        htmlBig,
+        cssBig,
+        jsBig,
+        tsBig,
+        reactBig,
+        sassBig,
+        gsapBig,
+        jestBig,
+        gitBig,
+      ],
+      projImg: marknow,
     },
     {
       projLink: "https://every-shop.vercel.app/",
@@ -158,15 +178,28 @@ export const webProjectsSect = {
       techStack: [
         "HTML",
         "CSS",
-        "TypeScript",
         "JavaScript",
+        "TypeScript",
         "React JS",
+        "SASS",
         "GSAP",
         "Redux",
+        "Jest",
         "Git",
       ],
-      techStackImg: [html, css, ts, js, react, gsap, redux, git],
-      projImg: [marknow, everyshop],
+      techStackImg: [
+        htmlBig,
+        cssBig,
+        jsBig,
+        tsBig,
+        reactBig,
+        sassBig,
+        gsapBig,
+        reduxBig,
+        jestBig,
+        gitBig,
+      ],
+      projImg: everyshop,
     },
   ],
 };

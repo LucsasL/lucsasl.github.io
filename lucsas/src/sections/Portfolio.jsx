@@ -115,7 +115,7 @@ function Portfolio() {
 
                       <div className="projImg">
                         <picture key={index}>
-                          <img src={projImg[index]} alt={projImgDesc} />
+                          <img src={projImg} alt={projImgDesc} />
                         </picture>
                       </div>
                     </div>

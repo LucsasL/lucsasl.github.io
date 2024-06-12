@@ -254,7 +254,12 @@
           
         .projInfo {
           @include verticalFlex(space-between, flex-start);
+          width: 50%;
           height: 85%;
+        }
+
+        .projImg {
+          width: 50%;
         }
 
         .techStackCont {
