@@ -1,15 +1,13 @@
 // Hooks Import
-import { useState, useReducer, useEffect, useRef, act } from "react";
+import { useState, useReducer, useEffect, useRef } from "react";
 
 // Images Import
 import notebook from "../img/google-ads-design.svg";
 
-// Font Import
-import plusJakartaSans from "../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf";
-
 // Data Import
 import { webSkillsSect } from "../utils/data";
 const { sectTitle, sectImg, techStack } = webSkillsSect;
+const plusJakartaSans = "Plus Jakarta Sans";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -19,6 +17,12 @@ const reducer = (state, action) => {
           bg: "white",
           color: "black",
           font: "serif",
+        },
+
+        header: {
+          headerPadding: "0px",
+          headerMargin: "0px",
+          headerBoxShadow: "none",
         },
 
         text: {
@@ -47,7 +51,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -76,7 +87,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -105,7 +123,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -134,7 +159,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -163,7 +195,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -192,7 +231,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -221,7 +267,14 @@ const reducer = (state, action) => {
         basicSettings: {
           bg: "#060606",
           color: "white",
-          font: plusJakartaSans,
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
         },
 
         text: {
@@ -257,6 +310,12 @@ function Skills() {
       bg: "white",
       color: "black",
       font: "serif",
+    },
+
+    header: {
+      headerPadding: "0px",
+      headerMargin: "20px",
+      headerBoxShadow: "none",
     },
 
     text: {
@@ -432,7 +491,15 @@ function Skills() {
                   fontFamily: activeTech.basicSettings.font,
                 }}
               >
-                <h1>{`This is ${activeTech.content.title}`}</h1>
+                <h1
+                  style={{
+                    padding: activeTech.header.headerPadding,
+                    margin: activeTech.header.headerMargin,
+                    boxShadow: activeTech.header.headerBoxShadow,
+                  }}
+                >
+                  {`This is ${activeTech.content.title}`}
+                </h1>
 
                 <p
                   style={{
