@@ -105,8 +105,8 @@ export const webSkillsSect = {
   techStack: {
     tech: [
       "HTML",
-      "HTML + CSS",
-      "HTML + CSS + JS",
+      "CSS",
+      "JavaScript",
       "TypeScript",
       "React JS",
       "GSAP",

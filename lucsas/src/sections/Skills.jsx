@@ -9,17 +9,67 @@ import { webSkillsSect } from "../utils/data";
 const { sectTitle, sectImg, techStack } = webSkillsSect;
 const { tech, techDesc } = techStack;
 
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "change_tech_HTML":
+      return {
+        title: "HTML",
+      };
+
+    case "change_tech_CSS":
+      return {
+        title: "CSS",
+      };
+
+    case "change_tech_JS":
+      return {
+        title: "JavaScript",
+      };
+
+    case "change_tech_TS":
+      return {
+        title: "TypeScript",
+      };
+
+    case "change_tech_React":
+      return {
+        title: "React JS",
+      };
+
+    case "change_tech_GSAP":
+      return {
+        title: "GSAP",
+      };
+
+    case "change_tech_Redux":
+      return {
+        title: "Redux",
+      };
+
+    case "change_tech_Git":
+      return {
+        title: "Git",
+      };
+
+    default:
+      return state;
+  }
+};
+
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
   const [techListIndex, setTechListIndex] = useState(0);
-  // const [activeTech, dispatch] = useReducer(reducer, {
-  //   bg: "white",
-  //   color: "black",
-  //   font: "serif",
-  //   aDecoration: "underline",
-  //   title: "HTML",
-  //   text: "The technology that gives meaning to websites through tags, building the document that you see in the browser."
-  // });
+  const [activeTech, dispatch] = useReducer(
+    reducer,
+    {
+      bg: "white",
+      color: "black",
+      font: "serif",
+      aDecoration: "underline",
+      title: "HTML",
+      text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
+    }
+  );
 
   const infoBox = useRef();
 
@@ -35,40 +85,44 @@ function Skills() {
     observer.observe(infoBox.current);
   }, []);
 
-  // const changeTech = (tech) => {
-  //   switch (tech) {
-  //     case "HTML":
-  //       dispatch({ ...activeTech, type: "change_tech_HTML" });
-  //       return;
+  const changeTech = (tech) => {
+    switch (tech) {
+      case "HTML":
+        dispatch({ type: "change_tech_HTML" });
+        return;
 
-  //     case "CSS":
-  //       dispatch({ ...activeTech, type: "change_tech_CSS" });
-  //       return;
+      case "CSS":
+        dispatch({ type: "change_tech_CSS" });
+        return;
 
-  //     case "JavaScript":
-  //       dispatch({ ...activeTech, type: "change_tech_JS" });
-  //       return;
+      case "JavaScript":
+        dispatch({ type: "change_tech_JS" });
+        return;
 
-  //     case "React JS":
-  //       dispatch({ ...activeTech, type: "change_tech_React" });
-  //       return;
+      case "TypeScript":
+        dispatch({ type: "change_tech_TS" });
+        return;
 
-  //     case "GSAP":
-  //       dispatch({ ...activeTech, type: "change_tech_GSAP" });
-  //       return;
+      case "React JS":
+        dispatch({ type: "change_tech_React" });
+        return;
 
-  //     case "Redux":
-  //       dispatch({ ...activeTech, type: "change_tech_Redux" });
-  //       return;
+      case "GSAP":
+        dispatch({ type: "change_tech_GSAP" });
+        return;
 
-  //     case "Git":
-  //       dispatch({ ...activeTech, type: "change_tech_Git" });
-  //       return;
+      case "Redux":
+        dispatch({ type: "change_tech_Redux" });
+        return;
 
-  //     default:
-  //       return;
-  //   }
-  // };
+      case "Git":
+        dispatch({ type: "change_tech_Git" });
+        return;
+
+      default:
+        return;
+    }
+  };
 
   const changeVisibility = (side) => {
     return infoIntersect
@@ -143,7 +197,7 @@ function Skills() {
                   <abbr title={techStack.tech[index]} key={index}>
                     <button
                       className="tech"
-                      onClick={() => setTechListIndex(index)}
+                      onClick={() => changeTech(techStack.tech[index])}
                     >
                       <picture>
                         <img src={t} alt={techStack.tech[index]} />
@@ -162,7 +216,7 @@ function Skills() {
               </picture>
 
               <div className="laptopContent" style={{}}>
-                <h1>{`This is ${tech[techListIndex]}`}</h1>
+                <h1>{`This is ${activeTech.title}`}</h1>
 
                 <p>{techDesc[techListIndex]}</p>
 
