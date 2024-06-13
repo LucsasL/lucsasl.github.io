@@ -1,6 +1,9 @@
 // Hooks Import
 import { useState, useRef, useEffect } from "react";
 
+// Component Import
+import ServBlock from "../components/ServSectComps/servBlock";
+
 // Data Import
 import { webServiceSect } from "../utils/data";
 const { sectTitle, servBoxes } = webServiceSect;
@@ -84,32 +87,16 @@ function Services() {
           </div>
 
           <div id="cards">
-            {servBoxes.map(({ title, text, img }, index) => {
+            {servBoxes.map(({ ref, title, text, img }, index) => {
               return (
-                <div
-                  className="servBlock"
-                  key={index}
-                  ref={infoBox}
-                  style={changeVisibility()[index]}
-                >
-                  <div className="imgSv">
-                    <figure>
-                      <img
-                        src={img}
-                        alt="Connection with your target audience"
-                        className="functions"
-                      />
-                    </figure>
-                  </div>
-
-                  <div className="imgSv"></div>
-
-                  <div>
-                    <h2 style={{ fontSize: "2em" }}>{title}</h2>
-
-                    <p>{text}</p>
-                  </div>
-                </div>
+                <ServBlock
+                  title={title}
+                  text={text}
+                  img={img}
+                  index={index}
+                  ref={ref}
+                  style={changeVisibility()}
+                />
               );
             })}
           </div>

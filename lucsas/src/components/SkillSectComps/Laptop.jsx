@@ -4,7 +4,7 @@ import { useState, useEffect, useRef, useContext } from "react";
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
 
-// const Data = useContext(Data);
+const Data = useContext([techStack]);
 
 function Laptop({ title, text }) {
   const [infoIntersect, setInfoIntersect] = useState(false);
