@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { webProjectsSect } from "../utils/data";
 
 // Components Import
-import projectCont from "../components/PortfolioSectComps/projectCont";
+import ProjectCont from "../components/PortfolioSectComps/ProjectCont";
 
 function Portfolio() {
   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
@@ -53,7 +53,7 @@ function Portfolio() {
                 projImg
               ) => {
                 return (
-                  <projectCont
+                  <ProjectCont
                     value={{
                       projLink,
                       projTitle,

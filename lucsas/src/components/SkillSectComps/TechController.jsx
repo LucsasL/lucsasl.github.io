@@ -1,5 +1,8 @@
 // Hooks Import
-import { useState, useEffect, useRef, createContext, useContext } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+
+// Context Import
+import { Data } from "../../sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
@@ -8,9 +11,8 @@ const { techStack } = webSkillsSect;
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
-  const [activeTech, dispatch] = useContext([]);
+  const techSelected = useContext(Data);
 
-  const TechSelected = createContext();
   const infoBox = useRef();
 
   useEffect(() => {
@@ -28,47 +30,47 @@ function Skills() {
   const changeTech = (tech) => {
     switch (tech) {
       case "HTML":
-        dispatch({ type: "change_tech_HTML" });
+        techSelected.dispatch({ type: "change_tech_HTML" });
         return;
 
       case "CSS":
-        dispatch({ type: "change_tech_CSS" });
+        techSelected.dispatch({ type: "change_tech_CSS" });
         return;
 
       case "JavaScript":
-        dispatch({ type: "change_tech_JS" });
+        techSelected.dispatch({ type: "change_tech_JS" });
         return;
 
       case "TypeScript":
-        dispatch({ type: "change_tech_TS" });
+        techSelected.dispatch({ type: "change_tech_TS" });
         return;
 
       case "React JS":
-        dispatch({ type: "change_tech_React" });
+        techSelected.dispatch({ type: "change_tech_React" });
         return;
 
       case "SASS":
-        dispatch({ type: "change_tech_SASS" });
+        techSelected.dispatch({ type: "change_tech_SASS" });
         return;
 
       case "GSAP":
-        dispatch({ type: "change_tech_GSAP" });
+        techSelected.dispatch({ type: "change_tech_GSAP" });
         return;
 
       case "Jest":
-        dispatch({ type: "change_tech_Jest" });
+        techSelected.dispatch({ type: "change_tech_Jest" });
         return;
 
       case "Redux":
-        dispatch({ type: "change_tech_Redux" });
+        techSelected.dispatch({ type: "change_tech_Redux" });
         return;
 
       case "Python":
-        dispatch({ type: "change_tech_Python" });
+        techSelected.dispatch({ type: "change_tech_Python" });
         return;
 
       case "Git":
-        dispatch({ type: "change_tech_Git" });
+        techSelected.dispatch({ type: "change_tech_Git" });
         return;
 
       default:
@@ -91,28 +93,26 @@ function Skills() {
 
   return (
     <>
-    <TechSelected.Provider value={activeTech}>
-        <div
-          className="techStack"
-          style={changeVisibility("-100%")}
-          ref={infoBox}
-        >
-          {techStack.imgs.map((t, index) => {
-            return (
-              <abbr title={techStack.tech[index]} key={index}>
-                <button
-                  className="tech"
-                  onClick={() => changeTech(techStack.tech[index])}
-                >
-                  <picture>
-                    <img src={t} alt={techStack.tech[index]} />
-                  </picture>
-                </button>
-              </abbr>
-            );
-          })}
-        </div>
-      </TechSelected.Provider>
+      <div
+        className="techStack"
+        style={changeVisibility("-100%")}
+        ref={infoBox}
+      >
+        {techStack.imgs.map((t, index) => {
+          return (
+            <abbr title={techStack.tech[index]} key={index}>
+              <button
+                className="tech"
+                onClick={() => changeTech(techStack.tech[index])}
+              >
+                <picture>
+                  <img src={t} alt={techStack.tech[index]} />
+                </picture>
+              </button>
+            </abbr>
+          );
+        })}
+      </div>
     </>
   );
 }

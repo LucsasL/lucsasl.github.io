@@ -1,4 +1,4 @@
-function projectCont({
+function ProjectCont({
   index,
   project,
   projLink,
@@ -76,4 +76,4 @@ function projectCont({
   );
 }
 
-export default projectCont;
+export default ProjectCont;
