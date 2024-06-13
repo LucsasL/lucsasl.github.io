@@ -6,8 +6,8 @@ import notebook from "../img/google-ads-design.svg";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
-const { sectTitle, sectImg, techStack } = webSkillsSect;
-const plusJakartaSans = "Plus Jakarta Sans";
+const { sectTitle, techStack } = webSkillsSect;
+// const plusJakartaSans = "Plus Jakarta Sans";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -21,7 +21,7 @@ const reducer = (state, action) => {
 
         header: {
           headerPadding: "0px",
-          headerMargin: "0px",
+          headerMargin: "20px",
           headerBoxShadow: "none",
         },
 
@@ -190,6 +190,42 @@ const reducer = (state, action) => {
         },
       };
 
+    case "change_tech_SASS":
+      return {
+        basicSettings: {
+          bg: "#060606",
+          color: "white",
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+        },
+
+        text: {
+          textSize: "1.5em",
+          textLine: "2em",
+        },
+
+        links: {
+          aDecoration: "none",
+          aDisplay: "inline",
+          aBg: "linear-gradient(to right, blue, #8000ff)",
+          aColor: "white",
+          aPadding: "12px 20px",
+          aBorderRadius: "10px",
+        },
+
+        content: {
+          title: "SASS",
+          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+          textLink: "",
+        },
+      };
+
     case "change_tech_GSAP":
       return {
         basicSettings: {
@@ -226,6 +262,42 @@ const reducer = (state, action) => {
         },
       };
 
+    case "change_tech_Jest":
+      return {
+        basicSettings: {
+          bg: "#060606",
+          color: "white",
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+        },
+
+        text: {
+          textSize: "1.5em",
+          textLine: "2em",
+        },
+
+        links: {
+          aDecoration: "none",
+          aDisplay: "inline",
+          aBg: "linear-gradient(to right, blue, #8000ff)",
+          aColor: "white",
+          aPadding: "12px 20px",
+          aBorderRadius: "10px",
+        },
+
+        content: {
+          title: "Jest",
+          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+          textLink: "",
+        },
+      };
+
     case "change_tech_Redux":
       return {
         basicSettings: {
@@ -258,6 +330,42 @@ const reducer = (state, action) => {
         content: {
           title: "Redux",
           text: "State Management that makes the structure more put together",
+          textLink: "",
+        },
+      };
+
+    case "change_tech_Python":
+      return {
+        basicSettings: {
+          bg: "#060606",
+          color: "white",
+          font: "none",
+        },
+
+        header: {
+          headerPadding: "20px",
+          headerMargin: "20px",
+          headerBoxShadow:
+            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+        },
+
+        text: {
+          textSize: "1.5em",
+          textLine: "2em",
+        },
+
+        links: {
+          aDecoration: "none",
+          aDisplay: "inline",
+          aBg: "linear-gradient(to right, blue, #8000ff)",
+          aColor: "white",
+          aPadding: "12px 20px",
+          aBorderRadius: "10px",
+        },
+
+        content: {
+          title: "Python",
+          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
           textLink: "",
         },
       };
@@ -375,12 +483,24 @@ function Skills() {
         dispatch({ type: "change_tech_React" });
         return;
 
+      case "SASS":
+        dispatch({ type: "change_tech_SASS" });
+        return;
+
       case "GSAP":
         dispatch({ type: "change_tech_GSAP" });
         return;
 
+      case "Jest":
+        dispatch({ type: "change_tech_Jest" });
+        return;
+
       case "Redux":
         dispatch({ type: "change_tech_Redux" });
+        return;
+
+      case "Python":
+        dispatch({ type: "change_tech_Python" });
         return;
 
       case "Git":
@@ -420,38 +540,6 @@ function Skills() {
 
   return (
     <>
-      <section id="area">
-        <div>
-          <div className="platform">
-            <div ref={infoBox} style={changeVisibility(0)}>
-              <div className="blockquote">
-                <h1 className="big">Front-End Web Developer</h1>
-              </div>
-
-              <p>
-                Meticulously target your audience through the lens of{" "}
-                <strong className="fancy">Google Ads,</strong> ensuring that
-                every click counts. Your business spotted by the right customer
-                by the right advert. Using{" "}
-                <strong>Audience Segmentation</strong> we can track all the
-                different types of interests and ideas, and use these statistics
-                to bring more potential clients to you.
-              </p>
-            </div>
-
-            <div className="img-div">
-              <figure>
-                <img
-                  src={sectImg}
-                  alt="Google Ads Service"
-                  id="webdev-design"
-                />
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="skills">
         <div>
           <div className="blockquote" ref={infoBox} style={changeVisibility(0)}>

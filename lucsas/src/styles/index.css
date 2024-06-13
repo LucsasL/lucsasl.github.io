@@ -662,6 +662,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     top: 4.9%;
     left: 11.68%;
     z-index: 1;
+    overflow-y: auto;
   }
   section#skills .langsCont h1 {
     background: transparent;
@@ -672,6 +673,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont p {
     font-family: serif;
     margin: 16px;
+    font-size: 1em;
     line-height: 1em;
   }
   section#skills .langsCont a {
@@ -735,7 +737,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 50%;
   }
   section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
@@ -1300,14 +1302,18 @@ div#msgMe a {
     height: 600px;
   }
   .result .projCont .proj > div {
-    width: 100%;
+    width: 50%;
   }
   .result .projCont .proj .projInfo {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 50%;
     height: 85%;
+  }
+  .result .projCont .proj .projImg {
+    width: 50%;
   }
   .result .projCont .proj .techStackCont {
     display: flex;

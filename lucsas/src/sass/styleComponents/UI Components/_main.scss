@@ -447,6 +447,8 @@
           top: 4.9%;
           left: 11.68%;
           z-index: 1;
+
+          overflow-y: auto;
         }
       }
 
@@ -461,6 +463,7 @@
       p {
         font-family: serif;
         margin: 16px;
+        font-size: 1em;
         line-height: 1em;
       }
       
