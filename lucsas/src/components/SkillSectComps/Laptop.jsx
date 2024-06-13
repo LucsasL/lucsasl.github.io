@@ -1,28 +1,26 @@
 // Hooks Import
-import { useState, useReducer } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 
 // Images Import
-import notebook from "../img/google-ads-design.svg";
+import notebook from "../../img/google-ads-design.svg";
 
-// Data Import
-import { webSkillsSect } from "../utils/data";
-const { sectTitle, sectImg, techStack } = webSkillsSect;
-const { techDesc } = techStack;
-
-function reducer() {
-  return;
-}
-
-function Laptop() {
+function Laptop({ title, text }) {
   const [infoIntersect, setInfoIntersect] = useState(false);
-  const [activeTech, dispatch] = useReducer(reducer, {
-    bg: "white",
-    color: "black",
-    font: "serif",
-    aDecoration: "underline",
-    title: "HTML",
-    text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
-  });
+  const laptopIntersect = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setInfoIntersect(entry.isIntersecting);
+        }
+      });
+    });
+
+    observer.observe(laptopIntersect.current);
+  }, []);
+
+  // Conte
 
   const changeVisibilityLaptop = (side) => {
     return infoIntersect
@@ -39,25 +37,26 @@ function Laptop() {
 
   return (
     <>
-      <div className="laptop" style={changeVisibilityLaptop("150%")}>
+      <div
+        className="laptop"
+        style={changeVisibilityLaptop("150%")}
+        ref={laptopIntersect}
+      >
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
             <figcaption>Website</figcaption>
           </figure>
         </picture>
-
         <div className="laptopContent" style={{}}>
-          <h1>{`This is ${activeTech.title}`}</h1>
-
-          <p>{activeTech.text}</p>
-
+          <h1>{`This is ${title}`}</h1>
+          <p>{text}</p>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn more about {activeTech.title}
+            Learn more about {title}
           </a>
         </div>
       </div>

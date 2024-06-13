@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useReducer, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
