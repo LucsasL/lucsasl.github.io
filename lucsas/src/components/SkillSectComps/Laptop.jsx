@@ -4,7 +4,8 @@ import { useState, useEffect, useRef, useContext } from "react";
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
 
-const Data = useContext([techStack]);
+// Data Import
+import { Data } from "../../sections/Skills";
 
 function Laptop({ title, text }) {
   const [infoIntersect, setInfoIntersect] = useState(false);
@@ -22,7 +23,8 @@ function Laptop({ title, text }) {
     observer.observe(laptopIntersect.current);
   }, []);
 
-  // Conte
+  // Context
+  const TechSelected = useContext(Data);
 
   const changeVisibilityLaptop = (side) => {
     return infoIntersect

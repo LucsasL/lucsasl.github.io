@@ -9,7 +9,7 @@ import Laptop from "../components/SkillSectComps/Laptop.jsx";
 import { webSkillsSect } from "../utils/data";
 const { sectTitle } = webSkillsSect;
 
-// export const Data = createContext(activeTech);
+export const Data = createContext();
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -414,7 +414,6 @@ const reducer = (state, action) => {
 };  
 
 function Skills() {
-  // Section States and Ref
   const [infoIntersect, setInfoIntersect] = useState(false);
   const infoBox = useRef();
 
@@ -487,10 +486,10 @@ function Skills() {
           </div>
 
           <div className="langsCont">
-            {/* <Data.Provider value={[activeTech, dispatch]}> */}
+            <Data.Provider value={[activeTech, dispatch]}>
               <TechController />
               <Laptop />
-            {/* </Data.Provider> */}
+            </Data.Provider>
           </div>
         </div>
       </section>
