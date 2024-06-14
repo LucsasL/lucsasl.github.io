@@ -1294,24 +1294,18 @@ div#msgMe a {
     left: 11.7%;
     z-index: 1;
   }
-  .result {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .result div {
-    width: 100%;
+  section#portfolio > div {
+    width: 85%;
     padding: 20px;
     margin: 20px;
   }
-  .result .projCont .proj {
-    height: 600px;
+  section#portfolio .projCont .proj {
+    width: 100%;
   }
-  .result .projCont .proj > div {
+  section#portfolio .projCont .proj > div {
     width: 50%;
   }
-  .result .projCont .proj .projInfo {
+  section#portfolio .projCont .proj .projInfo {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -1319,17 +1313,16 @@ div#msgMe a {
     width: 50%;
     height: 85%;
   }
-  .result .projCont .proj .projImg {
+  section#portfolio .projCont .proj .projImg {
     width: 50%;
   }
-  .result .projCont .proj .techStackCont {
+  section#portfolio .projCont .proj .techStackCont {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
   }
-  .result .projCont .proj .techStackCont picture, .result .projCont .proj .techStackCont img {
+  section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
     margin: 0px 10px;
   }
