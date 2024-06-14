@@ -9,7 +9,44 @@ import Laptop from "../components/SkillSectComps/Laptop.jsx";
 import { webSkillsSect } from "../utils/data";
 const { sectTitle } = webSkillsSect;
 
-export const Data = createContext();
+// Variables
+const techObj = {
+  basicSettings: {
+    bg: "white",
+    color: "black",
+    font: "serif",
+    boxShadow:
+      "background: $shadow; box-shadow: 5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
+  },
+
+  header: {
+    headerPadding: "0px",
+    headerMargin: "20px",
+    headerBoxShadow: "none",
+  },
+
+  text: {
+    textSize: "1em",
+    textLine: "1em",
+  },
+
+  links: {
+    aDecoration: "underline",
+    aDisplay: "inline",
+    aBg: "none",
+    aColor: "blue",
+    aPadding: "0px",
+    aBorderRadius: "0px",
+  },
+
+  content: {
+    title: "HTML",
+    text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
+    textLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+};
+
+export const Data = createContext(techObj);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -418,41 +455,7 @@ function Skills() {
   const infoBox = useRef();
 
   // TechController States and Ref
-  const [activeTech, dispatch] = useReducer(reducer, {
-    basicSettings: {
-      bg: "white",
-      color: "black",
-      font: "serif",
-      boxShadow:
-        "background: $shadow; box-shadow: 5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
-    },
-
-    header: {
-      headerPadding: "0px",
-      headerMargin: "20px",
-      headerBoxShadow: "none",
-    },
-
-    text: {
-      textSize: "1em",
-      textLine: "1em",
-    },
-
-    links: {
-      aDecoration: "underline",
-      aDisplay: "inline",
-      aBg: "none",
-      aColor: "blue",
-      aPadding: "0px",
-      aBorderRadius: "0px",
-    },
-
-    content: {
-      title: "HTML",
-      text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
-      textLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    },
-  });
+  const [activeTech, dispatch] = useReducer(reducer, techObj);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {

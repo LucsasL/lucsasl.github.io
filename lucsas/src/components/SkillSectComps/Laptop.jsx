@@ -1,51 +1,18 @@
 // Hooks Import
-import { useState, useEffect, useRef, useContext } from "react";
+import { useContext } from "react";
 
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
 
 // Data Import
-import { Data } from "../../sections/Skills";
+import Data from "../../sections/Skills";
 
-function Laptop({ title, text }) {
-  const [infoIntersect, setInfoIntersect] = useState(false);
-  const laptopIntersect = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setInfoIntersect(entry.isIntersecting);
-        }
-      });
-    });
-
-    observer.observe(laptopIntersect.current);
-  }, []);
-
+function Laptop() {
   // Context
-  const TechSelected = useContext(Data);
-
-  const changeVisibilityLaptop = (side) => {
-    return infoIntersect
-      ? {
-          opacity: 1,
-          transition: "all 1.5s ease",
-        }
-      : {
-          opacity: 1,
-          transition: "all 1.5s ease",
-          transform: `translateX(${side})`,
-        };
-  };
-
+  const activeTech = useContext(Data);
   return (
     <>
-      <div
-        className="laptop"
-        style={changeVisibilityLaptop("150%")}
-        ref={laptopIntersect}
-      >
+      <div className="laptop">
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
@@ -53,14 +20,14 @@ function Laptop({ title, text }) {
           </figure>
         </picture>
         <div className="laptopContent" style={{}}>
-          <h1>{`This is ${title}`}</h1>
-          <p>{text}</p>
+          <h1>{`This is ${activeTech}`}</h1>
+          <p>{activeTech}</p>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn more about {title}
+            Learn more about {activeTech}
           </a>
         </div>
       </div>
