@@ -1,9 +1,14 @@
-// import { Context } = "../../sections";
+// Hooks Import
+import { useContext } from "react";
 
-function servBlock({ ref, img, key, style, title, text, index }) {
+import BlocksData from "../../sections/Services";
+
+function ServBlock() {
+  const [ title, text, img ] = useContext(BlocksData);
+
   return (
     <>
-      <div className="servBlock" ref={ref} key={key} style={style[index]}>
+      <div className="S">
         <div className="imgSv">
           <figure>
             <img
@@ -26,4 +31,4 @@ function servBlock({ ref, img, key, style, title, text, index }) {
   );
 }
 
-export default servBlock;
+export default ServBlock;

@@ -1,3 +1,6 @@
+import { webProjectsSect } from "../../utils/data";
+const { projects } = webProjectsSect;
+
 function ProjectCont({
   index,
   project,
@@ -9,7 +12,7 @@ function ProjectCont({
   techStack,
   techStackImg,
   projImg,
-  changeVisibility,
+  projectBoxIntersect,
 }) {
   return (
     <>
@@ -17,7 +20,17 @@ function ProjectCont({
         className="proj"
         key={index}
         ref={project}
-        style={changeVisibility()}
+        style={
+          projectBoxIntersect
+            ? {
+                opacity: 1,
+                transition: "all 1s ease",
+              }
+            : {
+                opacity: 0,
+                transition: "all 1s ease",
+              }
+        }
       >
         <div className="projInfo">
           <h2 className="big">
@@ -32,7 +45,7 @@ function ProjectCont({
           <p>{projDesc}</p>
 
           <div className="techStackCont">
-            {techStack.map((t, index) => {
+            {projects.techStack.map((t, index) => {
               return (
                 <abbr title={t} key={index}>
                   <picture>

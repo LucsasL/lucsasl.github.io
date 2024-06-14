@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, createContext } from "react";
 
 // Component Import
 import ServBlock from "../components/ServSectComps/servBlock";
@@ -7,6 +7,9 @@ import ServBlock from "../components/ServSectComps/servBlock";
 // Data Import
 import { webServiceSect } from "../utils/data";
 const { sectTitle, servBoxes } = webServiceSect;
+
+// Contexts
+export const BlocksData = createContext(servBoxes);
 
 function Services() {
   const [boxIntersect, setBoxIntersect] = useState(false);
@@ -23,7 +26,7 @@ function Services() {
     });
 
     observer.observe(infoBox.current);
-  }, []);
+  }, [boxIntersect]);
 
   const changeVisibility = () => {
     return [
@@ -86,20 +89,26 @@ function Services() {
             </h1>
           </div>
 
-          <div id="cards">
-            {servBoxes.map(({ ref, title, text, img }, index) => {
-              return (
-                <ServBlock
-                  title={title}
-                  text={text}
-                  img={img}
-                  index={index}
-                  ref={ref}
-                  style={changeVisibility()}
-                />
-              );
-            })}
-          </div>
+          <BlocksData.Provider value={servBoxes}>
+            <div id="cards">
+              {servBoxes.map(({ title, text, img }, index ) => {
+                return (
+                  <ServBlock
+                    value={{
+                      title,
+                      text,
+                      img,
+                      index,
+                      changeVisibility,
+                    }}
+                    ref={infoBox}
+                    key={index}
+                    style={changeVisibility[index]}
+                  />
+                );
+              })}
+            </div>
+          </BlocksData.Provider>
         </div>
       </section>
     </>
