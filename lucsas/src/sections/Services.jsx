@@ -25,10 +25,10 @@ function Services() {
       });
     });
 
-    observer.observe(infoBox.current);
+    // observer.observe(infoBox.current);
   }, [boxIntersect]);
 
-  const changeVisibility = () => {
+  const changeVisibility = ({ children }) => {
     return [
       boxIntersect
         ? {
@@ -91,7 +91,7 @@ function Services() {
 
           <BlocksData.Provider value={servBoxes}>
             <div id="cards">
-              {servBoxes.map(({ title, text, img }, index ) => {
+              {/* {servBoxes.map(({ title, text, img }, index ) => {
                 return (
                   <ServBlock
                     value={{
@@ -106,7 +106,7 @@ function Services() {
                     style={changeVisibility[index]}
                   />
                 );
-              })}
+              })} */}
             </div>
           </BlocksData.Provider>
         </div>
