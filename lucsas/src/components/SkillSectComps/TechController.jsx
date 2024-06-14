@@ -13,34 +13,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "change_tech_HTML":
       return {
-        basicSettings: {
-          bg: "white",
-          color: "black",
-          font: "serif",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
-        },
-
-        header: {
-          headerPadding: "0px",
-          headerMargin: "20px",
-          headerBoxShadow: "none",
-        },
-
-        text: {
-          textSize: "1.2em",
-          textLine: "1em",
-        },
-
-        links: {
-          aDecoration: "underline",
-          aDisplay: "inline",
-          aBg: "none",
-          aColor: "blue",
-          aPadding: "0px",
-          aBorderRadius: "0px",
-        },
-
+        ...state,
         content: {
           title: "HTML",
           text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
@@ -50,12 +23,11 @@ const reducer = (state, action) => {
 
     case "change_tech_CSS":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -86,14 +58,13 @@ const reducer = (state, action) => {
         },
       };
 
-    case "change_tech_JS":
+    case "change_tech_JavaScript":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -124,14 +95,13 @@ const reducer = (state, action) => {
         },
       };
 
-    case "change_tech_TS":
+    case "change_tech_TypeScript":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -164,12 +134,11 @@ const reducer = (state, action) => {
 
     case "change_tech_React":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -202,12 +171,11 @@ const reducer = (state, action) => {
 
     case "change_tech_SASS":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -240,12 +208,11 @@ const reducer = (state, action) => {
 
     case "change_tech_GSAP":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -278,12 +245,11 @@ const reducer = (state, action) => {
 
     case "change_tech_Jest":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -316,12 +282,11 @@ const reducer = (state, action) => {
 
     case "change_tech_Redux":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -354,12 +319,11 @@ const reducer = (state, action) => {
 
     case "change_tech_Python":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -392,12 +356,11 @@ const reducer = (state, action) => {
 
     case "change_tech_Git":
       return {
+        ...state,
         basicSettings: {
           bg: "#060606",
           color: "white",
           font: "none",
-          boxShadow:
-            "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
         },
 
         header: {
@@ -438,7 +401,6 @@ function Skills() {
   const [techSelected, dispatch] = useContext(Data);
 
   const infoBox = useRef();
-  const techButt = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -453,79 +415,7 @@ function Skills() {
   }, []);
 
   const changeTech = (tech) => {
-    switch (tech) {
-      case "HTML":
-        dispatch({ type: "change_tech_HTML" });
-        techButt.current.map(
-          (b) =>
-            (b.style.boxShadow =
-              "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow")
-        );
-        return;
-
-      case "CSS":
-        dispatch({ type: "change_tech_CSS" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "JavaScript":
-        dispatch({ type: "change_tech_JS" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "TypeScript":
-        dispatch({ type: "change_tech_TS" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "React JS":
-        dispatch({ type: "change_tech_React" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "SASS":
-        dispatch({ type: "change_tech_SASS" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "GSAP":
-        dispatch({ type: "change_tech_GSAP" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "Jest":
-        dispatch({ type: "change_tech_Jest" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "Redux":
-        dispatch({ type: "change_tech_Redux" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "Python":
-        dispatch({ type: "change_tech_Python" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      case "Git":
-        dispatch({ type: "change_tech_Git" });
-        techButt.current.style.boxShadow =
-          "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow";
-        return;
-
-      default:
-        return;
-    }
+    dispatch({ type: `change_tech_${tech}` });
   };
 
   const changeVisibility = (side) => {
@@ -554,7 +444,7 @@ function Skills() {
               <button
                 className="tech"
                 onClick={() => changeTech(techStack.tech[index])}
-                ref={techButt}
+                style={{ boxShadow: techSelected.boxShadow }}
               >
                 <picture>
                   <img src={t} alt={techStack.tech[index]} />
