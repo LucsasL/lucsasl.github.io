@@ -343,7 +343,8 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     gap: 30px;
   }
-  section#intro .intro3d, section#intro iframe {
+  section#intro .intro3d,
+  section#intro iframe {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -644,12 +645,13 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.488), inset -2px -2px 2px rgba(255, 255, 255, 0.16), inset 0px 15px 10px rgba(0, 0, 0, 0.488);
     height: 100px;
     margin: 20px;
     border-radius: 20px;
   }
-  section#skills .langsCont .techStack figure, section#skills .langsCont .techStack img {
+  section#skills .langsCont .techStack figure,
+  section#skills .langsCont .techStack img {
     width: 70%;
   }
   section#skills .langsCont .laptop {
@@ -742,7 +744,8 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     width: 50%;
   }
-  section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
+  section#portfolio .projCont .proj .techStackCont picture,
+  section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
     margin: 0px 10px;
   }
@@ -751,7 +754,8 @@ header div#bgcolor input:checked ~ span i#thumb {
     justify-content: center;
     align-items: center;
   }
-  section#portfolio .projCont .proj .projImg picture, section#portfolio .projCont .proj .projImg img {
+  section#portfolio .projCont .proj .projImg picture,
+  section#portfolio .projCont .proj .projImg img {
     width: 90%;
     border-radius: 20px;
   }
@@ -1417,7 +1421,7 @@ div#msgMe a {
 }
 .light main section#skills .techStack .tech {
   background: var(--shadow);
-  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+  box-shadow: inset 5px 5px 15px 5px var(--shadow), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset 0px 15px 10px var(--shadow);
 }
 .light main section#skills h1 {
   background: var(--bg3Blur);

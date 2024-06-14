@@ -32,7 +32,8 @@
       @include spaceBetween;
     }
 
-    .intro3d, iframe {
+    .intro3d,
+    iframe {
       width: 100%;
       height: 100%;
 
@@ -62,18 +63,14 @@
       }
 
       span.cursiveWords {
-          background: linear-gradient(
-          to right,
-          $color0,
-          $color1
-        );
+        background: linear-gradient(to right, $color0, $color1);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
 
         text-align: center;
-        font: bolder 1.5em 'Kalam', cursive;
-        letter-spacing: .26em;
+        font: bolder 1.5em "Kalam", cursive;
+        letter-spacing: 0.26em;
         filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
 
         display: inline-block;
@@ -95,7 +92,7 @@
       button {
         margin: 0px auto;
 
-        transition: all .5s ease;
+        transition: all 0.5s ease;
 
         &:hover {
           scale: 1.05;
@@ -114,11 +111,7 @@
       justify-content: center;
 
       div {
-          background: linear-gradient(
-          45deg,
-          $color0,
-          $color1
-        );
+        background: linear-gradient(45deg, $color0, $color1);
         box-shadow: 5px 2px 10px $shadow;
 
         width: 50px;
@@ -137,7 +130,7 @@
       height: 100%;
 
       filter: brightness(0);
-      transition: all .5s ease;
+      transition: all 0.5s ease;
     }
 
     .introPresent {
@@ -146,11 +139,7 @@
       @include center;
 
       .picCont {
-        background: linear-gradient(
-          135deg,
-          $color1,
-          $color0
-        );
+        background: linear-gradient(135deg, $color1, $color0);
 
         width: 500px;
         height: 500px;
@@ -158,11 +147,7 @@
         animation: blob 10s ease-in-out infinite;
 
         &:nth-child(even) {
-          background: linear-gradient(
-            135deg,
-            $color1,
-            $color0
-          );
+          background: linear-gradient(135deg, $color1, $color0);
 
           width: 500px;
           height: 500px;
@@ -197,14 +182,14 @@
         height: 50px;
         border: 3px solid white;
         border-radius: 30px;
-    
+
         display: flex;
         justify-content: center;
       }
     }
 
     .scroll-anim > div::after {
-      content: '';
+      content: "";
       background: white;
       width: 10px;
       height: 10px;
@@ -224,7 +209,7 @@
       }
       to {
         top: 60%;
-        opacity: .2;
+        opacity: 0.2;
       }
     }
   }
@@ -232,7 +217,7 @@
   // Services Sections
   section#services {
     box-shadow: 0px -10px 15px $shadow;
-    
+
     @include spaceAround;
 
     > div {
@@ -241,11 +226,7 @@
     }
 
     .servBlock {
-      background: linear-gradient(
-        to bottom,
-        $baseBlur,
-        $bg3
-      );
+      background: linear-gradient(to bottom, $baseBlur, $bg3);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
 
@@ -255,8 +236,7 @@
       margin: 20px 0px;
 
       box-shadow: 0px 15px 15px 10px $shadow,
-                  -3px -3px 2px rgba(255, 255, 255, .3),
-                  0px 5px 15px 1px $shadow;
+        -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px $shadow;
 
       border-radius: 10px;
 
@@ -266,11 +246,7 @@
       z-index: 1;
 
       .imgSv {
-        background: linear-gradient(
-          135deg,
-          $color1,
-          $color0
-        );
+        background: linear-gradient(135deg, $color1, $color0);
 
         width: 200px;
         height: 200px;
@@ -281,11 +257,7 @@
         @include center;
 
         &:nth-child(even) {
-          background: linear-gradient(
-            135deg,
-            $color1,
-            $color0
-          );
+          background: linear-gradient(135deg, $color1, $color0);
 
           width: 200px;
           height: 200px;
@@ -300,11 +272,11 @@
 
         img {
           width: 50%;
-          filter: brightness(0)
+          filter: brightness(0);
         }
       }
     }
-    
+
     h1 {
       @include blockHeader;
       margin: 30px 0px;
@@ -411,8 +383,7 @@
       .techStack {
         background: $shadow;
         box-shadow: 5px 5px 15px 5px $shadow,
-                    -2px -2px 2px rgba(255, 255, 255, .3),
-                    0px 15px 10px $shadow;
+          -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
 
         width: 55%;
         border-radius: 20px;
@@ -422,16 +393,21 @@
 
         .tech {
           background: $shadow;
-          box-shadow: 5px 5px 15px 5px $shadow,
-          -2px -2px 2px rgba(255, 255, 255, .3),
-          0px 15px 10px $shadow;
-          
+          box-shadow: inset 5px 5px 15px 5px $shadow,
+            inset -2px -2px 2px rgba(255, 255, 255, 0.16),
+            inset 0px 15px 10px $shadow;
+          // background: $shadow;
+          // box-shadow: 5px 5px 15px 5px $shadow,
+          // -2px -2px 2px rgba(255, 255, 255, .3),
+          // 0px 15px 10px $shadow;
+
           height: 100px;
           margin: 20px;
           border-radius: 20px;
         }
 
-        figure, img {
+        figure,
+        img {
           width: 70%;
         }
       }
@@ -442,11 +418,11 @@
         .laptopContent {
           background: white;
           color: black;
-  
+
           width: 77.1%;
           height: 80.5%;
           border-radius: 2px;
-  
+
           position: absolute;
           top: 4.9%;
           left: 11.68%;
@@ -470,7 +446,7 @@
         font-size: 1em;
         line-height: 1em;
       }
-      
+
       a {
         font-family: serif;
         color: blue;
@@ -498,7 +474,7 @@
     background: $bg4;
     padding: 50px 0px;
     margin: 50px 0px 100px 0px;
-    
+
     > div {
       @include verticalFlex;
     }
@@ -507,8 +483,7 @@
       .proj {
         background: $shadow;
         box-shadow: 5px 5px 15px 5px $shadow,
-                  -2px -2px 2px rgba(255, 255, 255, .3),
-                  0px 15px 10px $shadow;
+          -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
 
         padding: 30px;
         margin: 30px 0px;
@@ -519,7 +494,7 @@
         > div {
           width: 100%;
         }
-          
+
         .projInfo {
           @include verticalFlex(space-between, flex-start);
           gap: 20px;
@@ -530,16 +505,18 @@
 
           width: 50%;
 
-          picture, img {
+          picture,
+          img {
             width: 50px;
             margin: 0px 10px;
           }
         }
-            
+
         .projImg {
           @include center;
 
-          picture, img {
+          picture,
+          img {
             width: 90%;
             border-radius: 20px;
           }
@@ -587,7 +564,7 @@
       @include blockHeader;
     }
 
-    form { 
+    form {
       background: $shadow;
 
       width: 100%;
@@ -595,9 +572,8 @@
 
       border-radius: 20px;
       box-shadow: 5px 5px 15px 5px $shadow,
-                  -2px -2px 2px rgba(255, 255, 255, .3),
-                  0px 15px 10px $shadow;
-              
+        -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
+
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
 
@@ -609,11 +585,7 @@
       }
 
       .submit-button {
-        background: linear-gradient(
-          to right,
-          $color0,
-          $color1
-        );
+        background: linear-gradient(to right, $color0, $color1);
 
         cursor: pointer;
       }
@@ -623,17 +595,13 @@
       @include verticalFlex(space-around, center);
 
       .contact {
-        background: linear-gradient(
-          135deg,
-          $color0,
-          $color1
-        );
-    
+        background: linear-gradient(135deg, $color0, $color1);
+
         width: 75px;
         height: 75px;
-    
+
         display: inline-block;
-    
+
         animation: blob 10s ease-in-out infinite;
       }
 
@@ -650,7 +618,8 @@
 
   // Effects
   @keyframes blob {
-    0%, 100% {
+    0%,
+    100% {
       border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 

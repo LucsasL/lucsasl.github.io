@@ -411,7 +411,7 @@ const reducer = (state, action) => {
     default:
       return state;
   }
-};  
+};
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
@@ -423,6 +423,8 @@ function Skills() {
       bg: "white",
       color: "black",
       font: "serif",
+      boxShadow:
+        "background: $shadow; box-shadow: 5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
     },
 
     header: {
