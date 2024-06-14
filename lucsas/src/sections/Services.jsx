@@ -1,9 +1,6 @@
 // Hooks Import
 import { useState, useRef, useEffect, createContext } from "react";
 
-// Component Import
-import ServBlock from "../components/ServSectComps/servBlock";
-
 // Data Import
 import { webServiceSect } from "../utils/data";
 const { sectTitle, servBoxes } = webServiceSect;
@@ -25,10 +22,10 @@ function Services() {
       });
     });
 
-    // observer.observe(infoBox.current);
+    observer.observe(infoBox.current);
   }, [boxIntersect]);
 
-  const changeVisibility = ({ children }) => {
+  const changeVisibility = () => {
     return [
       boxIntersect
         ? {
@@ -91,22 +88,29 @@ function Services() {
 
           <BlocksData.Provider value={servBoxes}>
             <div id="cards">
-              {/* {servBoxes.map(({ title, text, img }, index ) => {
+              {servBoxes.map(({ title, text, img }, index ) => {
                 return (
-                  <ServBlock
-                    value={{
-                      title,
-                      text,
-                      img,
-                      index,
-                      changeVisibility,
-                    }}
-                    ref={infoBox}
-                    key={index}
-                    style={changeVisibility[index]}
-                  />
+                  <div className="servBlock" key={index} ref={infoBox} style={changeVisibility()[index]}>
+                    <div className="imgSv">
+                      <figure>
+                        <img
+                          src={img}
+                          alt="Connection with your target audience"
+                          className="functions"
+                        />
+                      </figure>
+                    </div>
+
+                    <div className="imgSv"></div>
+
+                    <div>
+                      <h2 style={{ fontSize: "2em" }}>{title}</h2>
+
+                      <p>{text}</p>
+                    </div>
+                  </div>
                 );
-              })} */}
+              })}
             </div>
           </BlocksData.Provider>
         </div>
