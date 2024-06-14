@@ -10,6 +10,9 @@ import Data from "../../sections/Skills";
 function Laptop() {
   // Context
   const activeTech = useContext(Data);
+  console.log(activeTech);
+  console.log(Data);
+
   return (
     <>
       <div className="laptop">

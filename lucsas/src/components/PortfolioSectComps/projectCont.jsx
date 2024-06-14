@@ -1,35 +1,36 @@
 import { webProjectsSect } from "../../utils/data";
 const { projects } = webProjectsSect;
 
-function ProjectCont({
+function ProjectCont(
+  {
+    projLink,
+    projTitle,
+    projSubtitle,
+    projDesc,
+    projImgDesc,
+    techStack,
+    techStackImg,
+    projImg
+  },
   index,
-  project,
-  projLink,
-  projTitle,
-  projSubtitle,
-  projDesc,
-  projImgDesc,
-  techStack,
-  techStackImg,
-  projImg,
-  projectBoxIntersect,
-}) {
+  project
+) {
   return (
     <>
       <div
         className="proj"
         key={index}
         ref={project}
-        style={
-          projectBoxIntersect
-            ? {
-                opacity: 1,
-                transition: "all 1s ease",
-              }
-            : {
-                opacity: 0,
-                transition: "all 1s ease",
-              }
+        style={{}
+          // projectBoxIntersect
+          //   ? {
+          //       opacity: 1,
+          //       transition: "all 1s ease",
+          //     }
+          //   : {
+          //       opacity: 0,
+          //       transition: "all 1s ease",
+          //     }
         }
       >
         <div className="projInfo">
@@ -45,11 +46,11 @@ function ProjectCont({
           <p>{projDesc}</p>
 
           <div className="techStackCont">
-            {projects.techStack.map((t, index) => {
+            {projects.map(({ techStack, techStackImg }, index) => {
               return (
-                <abbr title={t} key={index}>
+                <abbr title={techStack} key={index}>
                   <picture>
-                    <img src={techStackImg[index]} alt={t} />
+                    <img src={techStackImg} alt={techStack} />
                   </picture>
                 </abbr>
               );

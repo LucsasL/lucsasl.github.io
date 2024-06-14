@@ -2,11 +2,16 @@ import { useState, useEffect, useRef } from "react";
 import { webProjectsSect } from "../utils/data";
 
 // Components Import
-// import ProjectCont from "../components/PortfolioSectComps/ProjectCont";
+import ProjectCont from "../components/PortfolioSectComps/projectCont";
+
+// Destructuring
+const { projects } = webProjectsSect;
 
 function Portfolio() {
   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
   const project = useRef();
+  console.log(webProjectsSect);
+  console.log(webProjectsSect.projects);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -18,7 +23,7 @@ function Portfolio() {
     });
 
     observer.observe(project.current);
-  }, [projectBoxIntersect]);
+  }, []);
 
   return (
     <>
@@ -43,37 +48,9 @@ function Portfolio() {
           </div>
 
           <div className="projCont">
-            {webProjectsSect.projects.map(
-              (
-                projLink,
-                projTitle,
-                projSubtitle,
-                projDesc,
-                projImgDesc,
-                techStack,
-                techStackImg,
-                projImg,
-                projectBoxIntersect
-              ) => {
-                return (
-                  <>
-                  </>
-                  // <ProjectCont
-                  //   value={{
-                  //     projLink,
-                  //     projTitle,
-                  //     projSubtitle,
-                  //     projDesc,
-                  //     projImgDesc,
-                  //     techStack,
-                  //     techStackImg,
-                  //     projImg,
-                  //     projectBoxIntersect,
-                  //   }}
-                  // />
-                );
-              }
-            )}
+            {projects.map(() => {
+              return <ProjectCont />;
+            })}
           </div>
 
           <div className="blockquote">
