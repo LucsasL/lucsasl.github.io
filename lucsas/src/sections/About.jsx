@@ -1,6 +1,9 @@
 // Hooks Import
 import { useState, useRef, useEffect } from "react";
 
+import { webAboutSect } from "../utils/data";
+const  { aboutImg } = webAboutSect;
+
 function About() {
   const [aboutIntersect, setAboutIntersect] = useState(false);
   const aboutInfo = useRef(null);
@@ -65,15 +68,21 @@ function About() {
           </div>
 
           <div className="img-div" style={changeVisibility("100%")}>
-            <figure>
-              {/* <iframe
-                src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"
-                title="Lucsas Mascot"
-                width="100%"
-                height="100%"
-                id="mascot"
-              ></iframe> */}
-            </figure>
+            <picture>
+              <figure>
+                {/* <iframe
+                  src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"
+                  title="Lucsas Chilling"
+                  width="100%"
+                  height="100%"
+                  id="mascot"
+                ></iframe> */}
+                <img src={aboutImg} alt="Lucsas Chilling" />
+                <figcaption>
+                  Lucsas Chilling
+                </figcaption>
+              </figure>
+            </picture>
           </div>
         </div>
       </section>

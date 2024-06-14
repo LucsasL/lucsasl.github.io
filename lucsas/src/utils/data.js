@@ -1,5 +1,6 @@
-// Import image
+// Image Import
 import code from "../img/codeIntro.png";
+import lucsas from "../img/Lucsas.webp"
 import webDev from "../img/webDev.webp";
 
 import marknow from "../img/marknow-proj.png";
@@ -100,6 +101,7 @@ export const webAboutSect = {
     "My job and commitment goes to give results, whether this being coding, projecting, or giving ideas.",
     "What do you thing? Can we grow together?",
   ],
+  aboutImg: lucsas
 };
 
 export const webSkillsSect = {

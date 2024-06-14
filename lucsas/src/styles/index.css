@@ -570,6 +570,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin-top: 50px;
     z-index: 1;
   }
+  section#about picture {
+    height: 70%;
+  }
   section#area {
     margin-top: 50px;
   }
