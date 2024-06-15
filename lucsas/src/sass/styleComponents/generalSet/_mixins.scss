@@ -15,9 +15,9 @@
   gap: 30px;
 }
 
-@mixin spaceAround {
+@mixin spaceAround($wrap: row nowrap) {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: $wrap;
   justify-content: space-around;
   align-items: center;
 }

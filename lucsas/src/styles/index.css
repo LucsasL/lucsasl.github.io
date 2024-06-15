@@ -723,7 +723,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: 30px 0px;
     border-radius: 20px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -739,24 +739,26 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#portfolio .projCont .proj .techStackCont {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    width: 50%;
+    justify-content: flex-start;
   }
   section#portfolio .projCont .proj .techStackCont picture,
   section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
-    margin: 0px 10px;
+    margin: 0px 10px 10px 10px;
   }
   section#portfolio .projCont .proj .projImg {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
   section#portfolio .projCont .proj .projImg picture,
   section#portfolio .projCont .proj .projImg img {
-    width: 90%;
+    width: 100%;
+    margin-top: 10px;
     border-radius: 20px;
   }
   section#portfolio .projCont button {
@@ -1301,6 +1303,7 @@ div#msgMe a {
   }
   section#portfolio .projCont .proj {
     width: 100%;
+    min-height: 600px;
   }
   section#portfolio .projCont .proj > div {
     width: 50%;
@@ -1314,17 +1317,15 @@ div#msgMe a {
     height: 85%;
   }
   section#portfolio .projCont .proj .projImg {
-    width: 50%;
+    width: 40%;
   }
-  section#portfolio .projCont .proj .techStackCont {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+  section#portfolio .projCont .proj .projImg picture,
+  section#portfolio .projCont .proj .projImg img {
+    margin: 0;
   }
   section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
-    margin: 0px 10px;
+    margin: 0px 10px 10px 10px;
   }
   /* CTA Section */
   section#contact #ways-contact {
