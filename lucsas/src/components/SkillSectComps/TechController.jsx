@@ -407,12 +407,14 @@ function Skills() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setInfoIntersect(entry.isIntersecting);
+        } else {
+          setInfoIntersect(entry.isIntersecting);
         }
       });
     });
 
     observer.observe(infoBox.current);
-  }, []);
+  }, [infoIntersect]);
 
   const changeTech = (tech) => {
     dispatch({ type: `change_tech_${tech}` });

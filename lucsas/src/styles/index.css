@@ -161,7 +161,7 @@ header {
   position: fixed;
   /* top: -15%;  Add Javascript to animate header*/
   top: 3%;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -650,23 +650,31 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: 60px 0px;
   }
   section#skills .langsCont .techStack {
-    background: rgba(0, 0, 0, 0.488);
+    background: rgba(6, 6, 6, 0.8666666667);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px rgba(0, 0, 0, 0.488);
-    width: 55%;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 17%;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    position: fixed;
+    top: 9%;
+    left: 2%;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
   }
   section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: inset 5px 5px 15px 5px rgba(0, 0, 0, 0.488), inset -2px -2px 2px rgba(255, 255, 255, 0.16), inset 0px 15px 10px rgba(0, 0, 0, 0.488);
-    height: 100px;
-    margin: 20px;
+    height: 80px;
+    margin: 10px;
     border-radius: 20px;
   }
   section#skills .langsCont .techStack figure,
   section#skills .langsCont .techStack img {
-    width: 70%;
+    width: 50%;
   }
   section#skills .langsCont .laptop {
     position: relative;

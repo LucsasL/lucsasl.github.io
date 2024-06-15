@@ -494,7 +494,6 @@ function Skills() {
             <Data.Provider value={[activeTech, dispatch]}>
               <TechController />
               <Laptop />
-              <TechController />
             </Data.Provider>
           </div>
         </div>

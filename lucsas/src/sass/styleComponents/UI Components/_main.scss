@@ -382,15 +382,25 @@
       }
 
       .techStack {
-        background: $shadow;
+        background: #060606dd;
         box-shadow: 5px 5px 15px 5px $shadow,
           -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
 
-        width: 55%;
+        width: 17%;
         border-radius: 20px;
 
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+
+        position: fixed;
+        top: 9%;
+        left: 2%;
+        z-index: 3;
+
+        opacity: 0;
+        pointer-events: none;
 
         .tech {
           background: $shadow;
@@ -402,14 +412,14 @@
           // -2px -2px 2px rgba(255, 255, 255, .3),
           // 0px 15px 10px $shadow;
 
-          height: 100px;
-          margin: 20px;
+          height: 80px;
+          margin: 10px;
           border-radius: 20px;
         }
 
         figure,
         img {
-          width: 70%;
+          width: 50%;
         }
       }
 

@@ -135,43 +135,6 @@ export const webSkillsSect = {
       "An essential tool for project management and version control,",
     ],
   },
-  techStackDesktop: [
-    {
-      techStackCont1: {
-        tech: [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "React JS",
-          "SASS",
-        ],
-        imgs: [html, css, js, ts, react, sass],
-        techDesc: [
-          "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
-          "A combination with the stylesheets of HTML and CSS do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
-          "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
-          "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance it as well, bringing state management, routers, and even more abstraction to your app.",
-          "Animation to your website ",
-          "Preprocessor of CSS",
-        ],
-      },
-      techStackCont2: {
-        tech: [
-          "GSAP",
-          "Jest",
-          "Redux",
-          "Python",
-          "Git",
-        ],
-        imgs: [gsap, jest, redux, python, git],
-        techDesc: [
-          "State Management that makes the structure more put together",
-          "An essential tool for project management and version control,",
-        ],
-      },
-    },
-  ],
 };
 
 export const webProjectsSect = {
