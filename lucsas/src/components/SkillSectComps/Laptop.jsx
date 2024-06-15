@@ -5,13 +5,11 @@ import { useContext } from "react";
 import notebook from "../../img/google-ads-design.svg";
 
 // Data Import
-import Data from "../../sections/Skills";
+import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
-  const activeTech = useContext(Data);
-  console.log(activeTech);
-  console.log(Data);
+  const { activeTech } = useContext(Data);
 
   return (
     <>
@@ -23,14 +21,14 @@ function Laptop() {
           </figure>
         </picture>
         <div className="laptopContent" style={{}}>
-          <h1>{`This is ${activeTech}`}</h1>
-          <p>{activeTech}</p>
+          <h1>{`This is ${activeTech.content.title}`}</h1>
+          <p>{activeTech.content.text}</p>
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn more about {activeTech}
+            Learn more about {activeTech.content.title}
           </a>
         </div>
       </div>

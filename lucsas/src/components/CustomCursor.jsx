@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function CustomMouse() {
+function CustomCursor() {
   const mouse = useRef();
 
   window.addEventListener("mouseout", () => {
@@ -22,4 +22,4 @@ function CustomMouse() {
   return <div className="mouseCursor" ref={mouse}></div>;
 }
 
-export default CustomMouse;
+export default CustomCursor;

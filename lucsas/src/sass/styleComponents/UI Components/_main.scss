@@ -497,7 +497,7 @@
         margin: 30px 0px;
         border-radius: 20px;
 
-        @include spaceAround(row wrap);
+        @include spaceBetween(row wrap);
 
         > div {
           width: 100%;

@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 
 import { webAboutSect } from "../utils/data";
-const  { aboutImg } = webAboutSect;
+const  { aboutText, aboutImg } = webAboutSect;
 
 function About() {
   const [aboutIntersect, setAboutIntersect] = useState(false);
@@ -43,28 +43,13 @@ function About() {
               Hi, My name is <span className="fancy">Lucas Lira</span>
             </h1>
 
-            <p>
-              I work as a{" "}
-              <em style={{ fontWeight: "bold" }}>Pay-Per-Click Manager,</em> a
-              professional which main function is to create, manage and
-              optimizing ads campaign in different online advertising softwares,
-              but the most important function, is to bring results for my
-              clients.
-            </p>
-
-            <p>
-              I've been studying topics surrounding the fields of Digital
-              Marketing and Programming, always looking to improve and get
-              better in delivering what you need.
-            </p>
-
-            <p>
-              My job and commitment goes to give results, whether this being
-              conversions, engagement, leads or even more recognition to your
-              work.
-            </p>
-
-            <p>What do you thing? Can we grow together?</p>
+            {aboutText.map(p => {
+              return (
+                <p>
+                  {p}
+                </p>
+              );
+            })}
           </div>
 
           <div className="img-div" style={changeVisibility("100%")}>

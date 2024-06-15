@@ -5,7 +5,7 @@ import Header from "./sections/Header";
 import Main from "./sections/Main";
 import Footer from "./sections/Footer";
 import MsgMe from "./components/MsgMe";
-import CustomMouse from "./components/CustomMouse";
+import CustomCursor from "./components/CustomCursor";
 import "./styles/index.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Main />
       <Footer />
       <MsgMe />
-      <CustomMouse />
+      <CustomCursor />
     </>
   );
 }

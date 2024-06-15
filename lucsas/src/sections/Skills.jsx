@@ -16,7 +16,7 @@ const techObj = {
     color: "black",
     font: "serif",
     boxShadow:
-      "background: $shadow; box-shadow: 5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
+      "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
   },
 
   header: {
@@ -46,7 +46,7 @@ const techObj = {
   },
 };
 
-export const Data = createContext(techObj);
+export const Data = createContext([techObj]);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -490,8 +490,8 @@ function Skills() {
             <h1 className="big block-text">{sectTitle}</h1>
           </div>
 
-          <div className="langsCont" ref={skillSectBox}>
-            <Data.Provider value={[activeTech, dispatch, skillSectBox]}>
+          <div className="langsCont" ref={skillSectBox}> 
+            <Data.Provider value={{ activeTech, dispatch, skillSectBox }}>
               <TechController />
               <Laptop />
             </Data.Provider>

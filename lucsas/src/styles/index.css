@@ -744,8 +744,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     border-radius: 20px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    gap: 30px;
   }
   section#portfolio .projCont .proj > div {
     width: 100%;
