@@ -59,7 +59,7 @@ function Portfolio() {
                       key={index}
                       style={changeVisibility()}
                     >
-                      <div className="projInfo" ref={project}>
+                      <div className="projInfo">
                         <h2 className="big">
                           {projTitle}
                           <span
