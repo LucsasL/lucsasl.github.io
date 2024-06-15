@@ -626,11 +626,11 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont {
     width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    flex-flow: row nowrap;
     gap: 30px;
+    position: relative;
   }
   section#skills .langsCont > div {
     width: 100%;
@@ -1281,6 +1281,7 @@ div#msgMe a {
   }
   section#skills .platform .langsCont {
     width: 100%;
+    position: relative;
   }
   section#skills .platform .langsCont > div {
     width: 70%;
@@ -1299,6 +1300,7 @@ div#msgMe a {
     width: 70%;
   }
   section#skills .platform .langsCont .laptop {
+    width: 50%;
     position: relative;
   }
   section#skills .platform .langsCont .laptop .laptopContent {

@@ -372,9 +372,9 @@
     .langsCont {
       width: 100%;
 
-      @include spaceAround;
-      flex-flow: row nowrap;
+      @include spaceAround(row wrap);
       gap: 30px;
+      position: relative;
 
       > div {
         width: 100%;
