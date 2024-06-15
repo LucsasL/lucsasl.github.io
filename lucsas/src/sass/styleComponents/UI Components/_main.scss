@@ -29,7 +29,7 @@
       width: 80vw;
       height: 100vh;
 
-      @include spaceBetween;
+      @include spaceBetween(row wrap);
     }
 
     .intro3d,
@@ -134,9 +134,10 @@
     }
 
     .introPresent {
-      width: 50%;
-
+      width: 100%;
+      
       @include center;
+      display: none;
 
       .picCont {
         background: linear-gradient(135deg, $color1, $color0);
@@ -293,7 +294,7 @@
     background: $bg2;
 
     width: 100%;
-    height: 850px;
+    height: 1550px;
     z-index: 0;
 
     transform: skewY(-5deg);
@@ -302,7 +303,7 @@
   }
 
   section#about {
-    height: 900px;
+    height: 1550px;
     padding-top: 50px;
     position: relative;
 

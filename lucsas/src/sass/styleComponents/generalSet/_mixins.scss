@@ -7,9 +7,9 @@
   align-items: center;
 }
 
-@mixin spaceBetween {
+@mixin spaceBetween($wrap: row nowrap) {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: $wrap;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
