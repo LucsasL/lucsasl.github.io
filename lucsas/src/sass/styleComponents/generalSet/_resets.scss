@@ -33,10 +33,33 @@ body {
   overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+
+  cursor: none;
 }
 
 body * {
   transition: background 0.5s;
+  cursor: none;
+}
+
+// Cursor
+.mouseCursor {
+  background: linear-gradient(
+    45deg,
+    $color0,
+    $color1
+  );
+  
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  pointer-events: none;
 }
 
 // UI
@@ -62,12 +85,14 @@ textarea {
   border-radius: 10px;
 
   resize: none;
+
+  cursor: none;
 }
 
 button {
   background: transparent;
-
   @include buttonGen(false, false);
+  cursor: none;
 }
 
 // Text Elements
@@ -92,6 +117,7 @@ li {
 a {
   text-decoration: none;
   color: $color;
+  cursor: none;
 }
 
 picture,

@@ -64,8 +64,6 @@
   border-radius: 5px;
   outline: none;
 
-  cursor: pointer;
-
   @if $inpSub or not $link {
     padding: 10px 20px;
 

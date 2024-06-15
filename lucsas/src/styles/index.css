@@ -26,10 +26,24 @@ body {
   overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  cursor: none;
 }
 
 body * {
   transition: background 0.5s;
+  cursor: none;
+}
+
+.mouseCursor {
+  background: linear-gradient(45deg, #00f, rgb(128, 0, 255));
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
 }
 
 #root {
@@ -50,6 +64,7 @@ textarea {
   margin: 10px 0px;
   border-radius: 10px;
   resize: none;
+  cursor: none;
 }
 
 button {
@@ -59,8 +74,8 @@ button {
   border: none;
   border-radius: 5px;
   outline: none;
-  cursor: pointer;
   padding: 10px 20px;
+  cursor: none;
 }
 
 p {
@@ -83,6 +98,7 @@ li {
 a {
   text-decoration: none;
   color: white;
+  cursor: none;
 }
 
 picture,
@@ -175,7 +191,6 @@ header button {
   border: none;
   border-radius: 5px;
   outline: none;
-  cursor: pointer;
   background: transparent;
   width: auto;
   padding: 0;
@@ -236,7 +251,6 @@ header canvas {
   padding: 10px;
   border-radius: 50%;
   transition: all 0.5s ease;
-  cursor: pointer;
 }
 header canvas:hover {
   background: linear-gradient(to right, #00f, rgb(128, 0, 255));
@@ -255,7 +269,6 @@ header div#bgcolor label {
   display: block;
   position: relative;
   left: 0;
-  cursor: pointer;
   box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218), inset 0px 0px 15px rgba(0, 0, 0, 0.488);
 }
 header div#bgcolor i#symbol {
@@ -768,7 +781,6 @@ header div#bgcolor input:checked ~ span i#thumb {
     border: none;
     border-radius: 5px;
     outline: none;
-    cursor: pointer;
     padding: 0;
   }
   section#portfolio .projCont button a {
@@ -835,7 +847,6 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#contact form .submit-button {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
-    cursor: pointer;
   }
   section#contact #ways-contact {
     display: flex;
