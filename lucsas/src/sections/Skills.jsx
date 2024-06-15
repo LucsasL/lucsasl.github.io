@@ -452,7 +452,7 @@ const reducer = (state, action) => {
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
-  const infoBox = useRef();
+  const skillSectBox = useRef();
 
   // TechController States and Ref
   const [activeTech, dispatch] = useReducer(reducer, techObj);
@@ -466,7 +466,7 @@ function Skills() {
       });
     });
 
-    observer.observe(infoBox.current);
+    observer.observe(skillSectBox.current);
   }, []);
 
   const changeVisibility = (side) => {
@@ -486,12 +486,12 @@ function Skills() {
     <>
       <section id="skills">
         <div>
-          <div className="blockquote" ref={infoBox} style={changeVisibility(0)}>
+          <div className="blockquote" style={changeVisibility(0)}>
             <h1 className="big block-text">{sectTitle}</h1>
           </div>
 
-          <div className="langsCont">
-            <Data.Provider value={[activeTech, dispatch]}>
+          <div className="langsCont" ref={skillSectBox}>
+            <Data.Provider value={[activeTech, dispatch, skillSectBox]}>
               <TechController />
               <Laptop />
             </Data.Provider>

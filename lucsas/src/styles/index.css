@@ -662,8 +662,6 @@ header div#bgcolor input:checked ~ span i#thumb {
     top: 9%;
     left: 2%;
     z-index: 3;
-    opacity: 0;
-    pointer-events: none;
   }
   section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
@@ -1247,7 +1245,7 @@ div#msgMe a {
   }
   /* About Section */
   div#about-style {
-    height: 900px;
+    height: 850px;
   }
   section#about {
     height: 900px;
