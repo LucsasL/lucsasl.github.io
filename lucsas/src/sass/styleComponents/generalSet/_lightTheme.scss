@@ -154,6 +154,12 @@
     }
   }
 
+  .success {
+    background: var(--bg4);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+    color: var(--color);
+  }
+
   footer {
     background: var(--bg3);
     color: var(--color);

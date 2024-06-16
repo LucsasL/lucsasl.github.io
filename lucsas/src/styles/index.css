@@ -1481,6 +1481,11 @@ div#msgMe a {
   background: var(--bg3Blur);
   box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
 }
+.light .success {
+  background: var(--bg4);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+  color: var(--color);
+}
 .light footer {
   background: var(--bg3);
   color: var(--color);
@@ -1494,6 +1499,53 @@ div#msgMe a {
 .light input, .light textarea {
   background: var(--input);
   color: var(--color);
+}
+
+.success {
+  background: rgb(15, 15, 15);
+  box-shadow: 0px 0px 20px black;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 4;
+  transform: translate(-50%, -50%);
+}
+.success > div {
+  text-align: center;
+}
+.success .iconCont {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  margin-bottom: 30px;
+  border: 5px solid rgb(104, 228, 33);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success .iconCont .doneIcon {
+  color: rgb(104, 228, 33);
+  width: 80px;
+  height: 80px;
+}
+.success .closeButtCont {
+  width: 93%;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-self: flex-start;
+}
+.success .closeButtCont .closeButt {
+  width: 30px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=index.css.map */
