@@ -15,8 +15,6 @@ const techObj = {
     bg: "white",
     color: "black",
     font: "serif",
-    boxShadow:
-      "5px 5px 15px 5px $shadow, -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px $shadow;",
   },
 
   header: {
@@ -81,7 +79,7 @@ const reducer = (state, action) => {
         content: {
           title: "HTML",
           text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
-          textLink: "",
+          textLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
         },
       };
 
@@ -121,7 +119,7 @@ const reducer = (state, action) => {
         },
       };
 
-    case "change_tech_JS":
+    case "change_tech_JavaScript":
       return {
         basicSettings: {
           bg: "#060606",
@@ -157,7 +155,7 @@ const reducer = (state, action) => {
         },
       };
 
-    case "change_tech_TS":
+    case "change_tech_TypeScript":
       return {
         basicSettings: {
           bg: "#060606",

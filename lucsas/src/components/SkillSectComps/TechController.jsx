@@ -11,6 +11,9 @@ const { techStack } = webSkillsSect;
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
+  const [techButton, setTechButton] = useState(
+    "5px 5px 15px 5px rgba(0, 0, 0, .5), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, .5)"
+  );
   const { activeTech, dispatch, skillSectBox } = useContext(Data);
 
   useEffect(() => {
@@ -28,6 +31,9 @@ function Skills() {
   }, [infoIntersect, skillSectBox]);
 
   const changeTech = (tech) => {
+    setTechButton(
+      "inset 5px 5px 15px 5px rgba(0, 0, 0, .5), inset -2px -2px 2px rgba(255, 255, 255, .3), inset 0px 15px 10px rgba(0, 0, 0, .5)"
+    );
     dispatch({ type: `change_tech_${tech}` });
   };
 
@@ -56,7 +62,7 @@ function Skills() {
               <button
                 className="tech"
                 onClick={() => changeTech(techStack.tech[index])}
-                style={{ boxShadow: activeTech.basicSettings.boxShadow }}
+                style={{ boxShadow: techButton }}
               >
                 <picture>
                   <img src={t} alt={techStack.tech[index]} />

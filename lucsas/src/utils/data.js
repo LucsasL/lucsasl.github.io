@@ -128,7 +128,7 @@ export const webSkillsSect = {
       "CSS",
       "JavaScript",
       "TypeScript",
-      "React JS",
+      "React",
       "SASS",
       "GSAP",
       "Jest",
