@@ -135,7 +135,7 @@
 
     .introPresent {
       width: 100%;
-      
+
       @include center;
       display: none;
 
@@ -402,12 +402,17 @@
         .tech {
           background: $shadow;
           box-shadow: 5px 5px 15px 5px $shadow,
-          -2px -2px 2px rgba(255, 255, 255, .3),
-          0px 15px 10px $shadow;
+            -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
 
           height: 80px;
           margin: 10px;
           border-radius: 20px;
+        }
+
+        .active {
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5),
+            inset -2px -2px 2px rgba(255, 255, 255, 0.3),
+            inset 0px 15px 10px rgba(0, 0, 0, 0.5);
         }
 
         figure,

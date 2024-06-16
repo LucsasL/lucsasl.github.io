@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useEffect, useContext } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 
 // Context Import
 import { Data } from "../../sections/Skills";
@@ -11,10 +11,8 @@ const { techStack } = webSkillsSect;
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
-  const [techButton, setTechButton] = useState(
-    "5px 5px 15px 5px rgba(0, 0, 0, .5), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, .5)"
-  );
-  const { activeTech, dispatch, skillSectBox } = useContext(Data);
+  const { dispatch, skillSectBox } = useContext(Data);
+  const buttons = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -28,12 +26,13 @@ function Skills() {
     });
 
     observer.observe(skillSectBox.current);
-  }, [infoIntersect, skillSectBox]);
 
-  const changeTech = (tech) => {
-    setTechButton(
-      "inset 5px 5px 15px 5px rgba(0, 0, 0, .5), inset -2px -2px 2px rgba(255, 255, 255, .3), inset 0px 15px 10px rgba(0, 0, 0, .5)"
-    );
+    buttons.current = buttons.current.slice(0, techStack.tech.length);
+  }, [infoIntersect, skillSectBox, buttons]);
+
+  const changeTech = (tech, e) => {
+    // buttons.current[]
+    e.target.classList.add("active");
     dispatch({ type: `change_tech_${tech}` });
   };
 
@@ -52,17 +51,17 @@ function Skills() {
 
   return (
     <>
-      <div
-        className="techStack"
-        style={changeVisibility("-150%")}
-      >
+      <div className="techStack" style={changeVisibility("-150%")}>
         {techStack.imgs.map((t, index) => {
           return (
-            <abbr title={techStack.tech[index]} key={index}>
+            <abbr
+              title={techStack.tech[index]}
+              key={index}
+              ref={(el) => (buttons.current[index] = el)}
+            >
               <button
                 className="tech"
-                onClick={() => changeTech(techStack.tech[index])}
-                style={{ boxShadow: techButton }}
+                onClick={(e) => changeTech(techStack.tech[index], e)}
               >
                 <picture>
                   <img src={t} alt={techStack.tech[index]} />
