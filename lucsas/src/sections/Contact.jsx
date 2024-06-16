@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import email from "../img/email.webp";
 import instaLogo from "../img/instagram-icon.webp";
+
+// Context
+import { SubmitData } from "../App";
 
 function Contact() {
   const [nameInput ,setNameInput] = useState("");
   const [emailInput ,setEmailInput] = useState("");
   const [msgInput ,setMsgInput] = useState("");
+
+  const { setOpen } = useContext(SubmitData);
 
   function changeName(inp) {
     setNameInput(inp.target.value);
@@ -126,6 +131,7 @@ function Contact() {
                     type="submit"
                     value="Send"
                     className="submit-button"
+                    onSubmit={() => setOpen(true)}
                   />
                 </div>
 
@@ -134,11 +140,6 @@ function Contact() {
                     type="hidden"
                     name="accessKey"
                     value="9f7e2bc4-d0c9-4819-ac06-2c58044142e0"
-                  />
-                  <input
-                    type="hidden"
-                    name="redirectTo"
-                    value="document/success.html"
                   />
                   <input type="hidden" name="replyTo" value="@" />
                 </div>

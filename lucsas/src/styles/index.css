@@ -42,7 +42,7 @@ body * {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 20;
   pointer-events: none;
 }
 
@@ -1501,7 +1501,21 @@ div#msgMe a {
   color: var(--color);
 }
 
-.success {
+.popupFilter {
+  background: rgba(0, 0, 0, 0.488);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.popupFilter .success {
   background: rgb(15, 15, 15);
   box-shadow: 0px 0px 20px black;
   width: 600px;
@@ -1511,16 +1525,14 @@ div#msgMe a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: relative;
   z-index: 4;
-  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
 }
-.success > div {
+.popupFilter .success > div {
   text-align: center;
 }
-.success .iconCont {
+.popupFilter .success .iconCont {
   width: 130px;
   height: 130px;
   margin: auto;
@@ -1531,19 +1543,19 @@ div#msgMe a {
   justify-content: center;
   align-items: center;
 }
-.success .iconCont .doneIcon {
+.popupFilter .success .iconCont .doneIcon {
   color: rgb(104, 228, 33);
   width: 80px;
   height: 80px;
 }
-.success .closeButtCont {
+.popupFilter .success .closeButtCont {
   width: 93%;
   position: absolute;
   display: flex;
   justify-content: end;
   align-self: flex-start;
 }
-.success .closeButtCont .closeButt {
+.popupFilter .success .closeButtCont .closeButt {
   width: 30px;
   height: 30px;
 }
