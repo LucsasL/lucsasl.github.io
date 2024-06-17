@@ -31,7 +31,9 @@ function Skills() {
 
   const changeTech = (tech, e) => {
     // buttons.current[]
+    console.log(e.target);
     e.target.classList.add("active");
+
     dispatch({ type: `change_tech_${tech}` });
   };
 

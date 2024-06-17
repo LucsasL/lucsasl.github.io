@@ -14,13 +14,14 @@ function Laptop() {
   return (
     <>
       <div className="laptop" style={changeVisibility("100%", infoIntersect, 1.5)}>
+        <div className="image"></div>
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
             <figcaption>Website</figcaption>
           </figure>
         </picture>
-        <div
+        <div  
           className="laptopContent"
           style={{
             background: activeTech.basicSettings.bg,
@@ -28,6 +29,9 @@ function Laptop() {
             font: activeTech.basicSettings.font,
           }}
         >
+          <div>
+            <ul></ul>
+          </div>
           <h1
             style={{
               padding: activeTech.header.headerPadding,
@@ -46,7 +50,7 @@ function Laptop() {
             {activeTech.content.text}
           </p>
           <a
-            href={activeTech.content.textLink}
+            href={activeTech.content.link}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -58,7 +62,7 @@ function Laptop() {
               borderRadius: activeTech.links.aBorderRadius,
             }}
           >
-            Learn more about {activeTech.content.title}
+            Learn more about {activeTech.content.textLink}
           </a>
         </div>
       </div>

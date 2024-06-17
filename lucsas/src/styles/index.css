@@ -691,6 +691,17 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .laptop {
     position: relative;
   }
+  section#skills .langsCont .laptop .image {
+    background: url("../img/landscape.webp") no-repeat center;
+    background-size: cover;
+    width: 77.1%;
+    height: 80.5%;
+    border-radius: 2px;
+    position: absolute;
+    top: 4.9%;
+    left: 11.68%;
+    z-index: 1;
+  }
   section#skills .langsCont .laptop .laptopContent {
     background: white;
     color: black;
@@ -700,8 +711,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     position: absolute;
     top: 4.9%;
     left: 11.68%;
-    z-index: 1;
-    overflow-y: auto;
+    z-index: 2;
   }
   section#skills .langsCont h1 {
     background: transparent;
