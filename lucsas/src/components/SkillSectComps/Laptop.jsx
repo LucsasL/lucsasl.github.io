@@ -29,8 +29,13 @@ function Laptop() {
             font: activeTech.basicSettings.font,
           }}
         >
-          <div>
-            <ul></ul>
+          <div className="pageHeader">
+            <ul>
+              <li>Spring</li>
+              <li>Summer</li>
+              <li>Fall</li>
+              <li>Winter</li>
+            </ul>
           </div>
           <h1
             style={{

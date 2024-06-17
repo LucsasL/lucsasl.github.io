@@ -682,54 +682,11 @@ header div#bgcolor input:checked ~ span i#thumb {
     border-radius: 20px;
   }
   section#skills .langsCont .techStack .active {
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset 0px 15px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset 0px 15px 10px rgba(0, 0, 0, 0.5);
   }
   section#skills .langsCont .techStack figure,
   section#skills .langsCont .techStack img {
     width: 50%;
-  }
-  section#skills .langsCont .laptop {
-    position: relative;
-  }
-  section#skills .langsCont .laptop .image {
-    background: url("../img/landscape.webp") no-repeat center;
-    background-size: cover;
-    width: 77.1%;
-    height: 80.5%;
-    border-radius: 2px;
-    position: absolute;
-    top: 4.9%;
-    left: 11.68%;
-    z-index: 1;
-  }
-  section#skills .langsCont .laptop .laptopContent {
-    background: white;
-    color: black;
-    width: 77.1%;
-    height: 80.5%;
-    border-radius: 2px;
-    position: absolute;
-    top: 4.9%;
-    left: 11.68%;
-    z-index: 2;
-  }
-  section#skills .langsCont h1 {
-    background: transparent;
-    box-shadow: none;
-    padding: 16px;
-    font-family: serif;
-  }
-  section#skills .langsCont p {
-    font-family: serif;
-    margin: 16px;
-    font-size: 1em;
-    line-height: 1em;
-  }
-  section#skills .langsCont a {
-    font-family: serif;
-    color: blue;
-    text-decoration: underline;
-    margin: 16px;
   }
   section#skills h1 {
     background: rgba(0, 0, 0, 0.3);
@@ -908,6 +865,61 @@ header div#bgcolor input:checked ~ span i#thumb {
     }
   }
 }
+.laptop {
+  position: relative;
+}
+.laptop .image {
+  background: url("../img/landscape.webp") no-repeat center;
+  background-size: cover;
+  width: 77.1%;
+  height: 80.5%;
+  border-radius: 2px;
+  position: absolute;
+  top: 4.9%;
+  left: 11.68%;
+  z-index: 1;
+}
+.laptop .laptopContent {
+  background: white;
+  color: black;
+  width: 77.1%;
+  height: 80.5%;
+  border-radius: 2px;
+  position: absolute;
+  top: 4.9%;
+  left: 11.68%;
+  z-index: 2;
+}
+.laptop .pageHeader {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.laptop .pageHeader li {
+  display: inline-block;
+  margin: 10px 15px;
+}
+.laptop h1 {
+  background: transparent;
+  box-shadow: none;
+  padding: 16px;
+  font-family: serif;
+}
+.laptop p {
+  font-family: serif;
+  margin: 16px;
+  font-size: 1em;
+  line-height: 1em;
+}
+.laptop a {
+  font-family: serif;
+  color: blue;
+  text-decoration: underline;
+  margin: 16px;
+}
+
 /* Footer Settings */
 footer {
   background: #151515;
