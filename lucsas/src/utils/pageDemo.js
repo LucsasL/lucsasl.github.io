@@ -80,20 +80,24 @@ export const reducer = (state, action) => {
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },

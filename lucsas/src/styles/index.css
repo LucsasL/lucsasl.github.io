@@ -883,7 +883,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   background: white;
   color: black;
   width: 77.1%;
-  height: 80.5%;
+  height: 80.61%;
   border-radius: 2px;
   position: absolute;
   top: 4.9%;
@@ -892,10 +892,13 @@ header div#bgcolor input:checked ~ span i#thumb {
 }
 .laptop .pageHeader {
   width: 100%;
-  height: 50px;
+  height: 70px;
   display: flex;
   justify-content: end;
   align-items: center;
+}
+.laptop .pageHeader ul {
+  margin-right: 20px;
 }
 .laptop .pageHeader li {
   display: inline-block;
@@ -904,17 +907,15 @@ header div#bgcolor input:checked ~ span i#thumb {
 .laptop h1 {
   background: transparent;
   box-shadow: none;
-  padding: 16px;
   font-family: serif;
 }
 .laptop p {
-  font-family: serif;
-  margin: 16px;
+  margin: 10px 25px;
   font-size: 1em;
   line-height: 1em;
 }
 .laptop a {
-  font-family: serif;
+  display: block;
   color: blue;
   text-decoration: underline;
   margin: 16px;
