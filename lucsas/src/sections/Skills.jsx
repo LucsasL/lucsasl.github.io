@@ -450,7 +450,9 @@ const reducer = (state, action) => {
 
 function Skills() {
   const [infoIntersect, setInfoIntersect] = useState(false);
+  const [menuAppear, setMenuAppear] = useState(false);
   const skillSectBox = useRef();
+  const menuDiv = useRef();
 
   // TechController States and Ref
   const [activeTech, dispatch] = useReducer(reducer, techObj);
@@ -465,17 +467,18 @@ function Skills() {
     });
 
     observer.observe(skillSectBox.current);
+    observer.observe(menuDiv.current);
   }, []);
 
-  const changeVisibility = (side) => {
-    return infoIntersect
+  const changeVisibility = (side, state, time = .5) => {
+    return state
       ? {
           opacity: 1,
-          transition: "all 1.5s ease",
+          transition: `all ${time}s ease`,
         }
       : {
           opacity: 0,
-          transition: "all 1.5s ease",
+          transition: `all ${time}s ease`,
           transform: `translateX(${side})`,
         };
   };
@@ -484,16 +487,31 @@ function Skills() {
     <>
       <section id="skills">
         <div>
-          <div className="blockquote" style={changeVisibility(0)}>
+          <div
+            className="blockquote"
+            style={changeVisibility(0, infoIntersect)}
+          >
             <h1 className="big block-text">{sectTitle}</h1>
           </div>
 
-          <div className="langsCont" ref={skillSectBox}> 
-            <Data.Provider value={{ activeTech, dispatch, skillSectBox }}>
+          <div className="langsCont" ref={skillSectBox}>
+            <Data.Provider
+              value={{
+                activeTech,
+                dispatch,
+                infoIntersect,
+                skillSectBox,
+                changeVisibility,
+                menuDiv,
+                menuAppear,
+                setMenuAppear,
+              }}
+            >
               <TechController />
               <Laptop />
             </Data.Provider>
           </div>
+          <div className="intersectArea" ref={menuDiv}></div>
         </div>
       </section>
     </>

@@ -9,34 +9,40 @@ import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
-  const { activeTech } = useContext(Data);
+  const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
 
   return (
     <>
-      <div className="laptop">
+      <div className="laptop" style={changeVisibility("100%", infoIntersect, 1.5)}>
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
             <figcaption>Website</figcaption>
           </figure>
         </picture>
-        <div className="laptopContent" style={{ 
-          background: activeTech.basicSettings.bg,
-          color: activeTech.basicSettings.color,
-          font: activeTech.basicSettings.font,
-        }}>
+        <div
+          className="laptopContent"
+          style={{
+            background: activeTech.basicSettings.bg,
+            color: activeTech.basicSettings.color,
+            font: activeTech.basicSettings.font,
+          }}
+        >
           <h1
-            style={{ 
+            style={{
               padding: activeTech.header.headerPadding,
               margin: activeTech.header.headerMargin,
-              boxShadow: activeTech.header.headerBoxShadow
-          }}>
+              boxShadow: activeTech.header.headerBoxShadow,
+            }}
+          >
             {`This is ${activeTech.content.title}`}
           </h1>
-          <p style={{
-            fontSize: activeTech.text.textSize,
-            lineHeight: activeTech.text.textLine,
-          }}>
+          <p
+            style={{
+              fontSize: activeTech.text.textSize,
+              lineHeight: activeTech.text.textLine,
+            }}
+          >
             {activeTech.content.text}
           </p>
           <a
@@ -50,7 +56,8 @@ function Laptop() {
               color: activeTech.links.aColor,
               padding: activeTech.links.aPadding,
               borderRadius: activeTech.links.aBorderRadius,
-          }}>
+            }}
+          >
             Learn more about {activeTech.content.title}
           </a>
         </div>
