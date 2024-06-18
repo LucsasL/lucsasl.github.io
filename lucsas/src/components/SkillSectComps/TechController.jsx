@@ -6,11 +6,17 @@ import { Data } from "../../sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
-const { techStack, } = webSkillsSect;
-// const plusJakartaSans = "Plus Jakarta Sans";
+const { techStack } = webSkillsSect;
 
 function Skills() {
-  const { dispatch, menuDiv, menuAppear, setMenuAppear, changeVisibility } = useContext(Data);
+  const {
+    dispatch,
+    menuDiv,
+    menuAppear,
+    setMenuAppear,
+    changeVisibility,
+    setFeatureOpacity,
+  } = useContext(Data);
   const buttons = useRef([]);
 
   useEffect(() => {
@@ -33,6 +39,39 @@ function Skills() {
     // buttons.current[]
     console.log(e.target);
     e.target.classList.add("active");
+
+    switch (tech) {
+      case "TypeScript":
+        setFeatureOpacity([1, 0, 0, 0, 0, 0, 0]);
+        break;
+
+      case "React":
+        setFeatureOpacity([1, 1, 0, 0, 0, 0, 0]);
+        break;
+
+      case "SASS":
+        setFeatureOpacity([1, 1, 1, 0, 0, 0, 0]);
+        break;
+
+      case "Jest":
+        setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
+        break;
+
+      case "Redux" :
+        setFeatureOpacity([1, 1, 1, 1, 1, 0, 0]);
+        break;
+
+      case "Python" :
+        setFeatureOpacity([1, 1, 1, 1, 1, 1, 0]);
+        break;
+
+      case "Git" :
+        setFeatureOpacity([1, 1, 1, 1, 1, 1, 1]);
+        break;
+
+      default:
+        break;
+    }
 
     dispatch({ type: `change_tech_${tech}` });
   };

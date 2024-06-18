@@ -23,6 +23,9 @@ function Skills() {
   // TechController States and Ref
   const [activeTech, dispatch] = useReducer(reducer, techObj);
 
+  // Features States
+  const [featureOpacity, setFeatureOpacity] = useState([0, 0, 0, 0, 0, 0, 0]);
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -36,7 +39,7 @@ function Skills() {
     observer.observe(menuDiv.current);
   }, []);
 
-  const changeVisibility = (side, state, time = .5) => {
+  const changeVisibility = (side, state, time = 0.5) => {
     return state
       ? {
           opacity: 1,
@@ -71,7 +74,9 @@ function Skills() {
                 menuDiv,
                 menuAppear,
                 setMenuAppear,
-                techFeature
+                techFeature,
+                featureOpacity,
+                setFeatureOpacity
               }}
             >
               <TechController />

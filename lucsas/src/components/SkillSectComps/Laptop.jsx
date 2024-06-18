@@ -18,8 +18,13 @@ import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
-  const { activeTech, techFeature, infoIntersect, changeVisibility } = useContext(Data);
-  // const [featureOpacity, setFeatureOpacity] = useState(0);
+  const {
+    activeTech,
+    techFeature,
+    infoIntersect,
+    changeVisibility,
+    featureOpacity,
+  } = useContext(Data);
   const laptopImg = useRef();
 
   // Icons Array
@@ -54,7 +59,7 @@ function Laptop() {
       default:
         return;
     }
-  }
+  };
 
   return (
     <>
@@ -136,7 +141,7 @@ function Laptop() {
         {techFeature.map((desc, index) => {
           return (
             <abbr title={desc} key={index}>
-              <div className="feature">
+              <div className="feature" style={{ opacity: featureOpacity[index] ? 1 : 0 }}>
                 {featIcons[index]}
               </div>
             </abbr>
