@@ -39,7 +39,7 @@ function Skills() {
     // buttons.current[]
     console.log(e.target);
     e.target.classList.add("active");
-
+    
     switch (index) {
       case 3:
         setFeatureOpacity([1, 0, 0, 0, 0, 0, 0]);
@@ -95,7 +95,7 @@ function Skills() {
                 className="tech"
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
               >
-                <picture style={{ boxShadow: "none" }}>
+                <picture style={{ boxShadow: "none", pointerEvents: "none" }}>
                   <img src={t} alt={techStack.tech[index]} />
                 </picture>
               </button>
