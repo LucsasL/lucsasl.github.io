@@ -122,7 +122,17 @@ function Laptop() {
       </div>
 
       <div className="archFeatures">
-        
+        {
+          activeTech.techFeature.map((desc, index) => {
+            return (
+              <abbr title={desc} key={index}>
+                <div className="feature">
+                  <div className="featSvg" />
+                </div>
+              </abbr>
+            );
+          })
+        }
         <div className="feature">
           <MdOutlineTypeSpecimen className="types featSvg" />
         </div>

@@ -147,6 +147,15 @@ export const webSkillsSect = {
       "State Management that makes the structure more put together",
       "An essential tool for project management and version control,",
     ],
+    techFeature: [
+      "Strong Type Variables",
+      "Great Architecture",
+      "StyleSheets",
+      "Testing our algorithms",
+      "Managing the State of our application",
+      "Adding depth to our Website",
+      "Control over the projects",
+    ],
   },
 };
 
