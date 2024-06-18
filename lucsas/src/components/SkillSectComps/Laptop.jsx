@@ -107,6 +107,30 @@ function Laptop() {
           </div>
         </div>
       </div>
+
+      <div className="archFeatures">
+        <div className="types feature">
+          ,
+        </div>
+        <div className="components feature">
+          ,
+        </div>
+        <div className="cssPreproc feature">
+          ,
+        </div>
+        <div className="tests feature">
+          ,
+        </div>
+        <div className="state feature">
+          ,
+        </div>
+        <div className="backend feature">
+          ,
+        </div>
+        <div className="projManag feature">
+          ,
+        </div>
+      </div>
     </>
   );
 }

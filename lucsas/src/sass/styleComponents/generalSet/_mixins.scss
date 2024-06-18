@@ -36,9 +36,9 @@
   align-items: center;
 }
 
-@mixin verticalFlex($flexVert: none, $flexHor: none) {
+@mixin verticalFlex($flexVert: none, $flexHor: none, $wrap: column nowrap) {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: $wrap;
   justify-content: $flexVert;
   align-items: $flexHor;
 }
