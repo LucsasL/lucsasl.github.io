@@ -95,7 +95,7 @@ function Skills() {
                 className="tech"
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
               >
-                <picture>
+                <picture style={{ boxShadow: "none" }}>
                   <img src={t} alt={techStack.tech[index]} />
                 </picture>
               </button>
