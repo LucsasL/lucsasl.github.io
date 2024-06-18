@@ -35,41 +35,46 @@ function Skills() {
     buttons.current = buttons.current.slice(0, techStack.tech.length);
   }, [menuDiv, setMenuAppear, buttons]);
 
-  const changeTech = (tech, e) => {
+  const changeTech = (tech, e, index) => {
     // buttons.current[]
     console.log(e.target);
     e.target.classList.add("active");
 
-    switch (tech) {
-      case "TypeScript":
+    switch (index) {
+      case 3:
         setFeatureOpacity([1, 0, 0, 0, 0, 0, 0]);
         break;
 
-      case "React":
+      case 4:
         setFeatureOpacity([1, 1, 0, 0, 0, 0, 0]);
         break;
 
-      case "SASS":
+      case 5:
         setFeatureOpacity([1, 1, 1, 0, 0, 0, 0]);
         break;
 
-      case "Jest":
+      case 6:
         setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
         break;
 
-      case "Redux" :
+      case 7:
+        setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
+        break;
+
+      case 8 :
         setFeatureOpacity([1, 1, 1, 1, 1, 0, 0]);
         break;
 
-      case "Python" :
+      case 9:
         setFeatureOpacity([1, 1, 1, 1, 1, 1, 0]);
         break;
 
-      case "Git" :
+      case 10:
         setFeatureOpacity([1, 1, 1, 1, 1, 1, 1]);
         break;
-
-      default:
+        
+        default:
+        setFeatureOpacity([0, 0, 0, 0, 0, 0, 0]);
         break;
     }
 
@@ -88,7 +93,7 @@ function Skills() {
             >
               <button
                 className="tech"
-                onClick={(e) => changeTech(techStack.tech[index], e)}
+                onClick={(e) => changeTech(techStack.tech[index], e, index)}
               >
                 <picture>
                   <img src={t} alt={techStack.tech[index]} />
