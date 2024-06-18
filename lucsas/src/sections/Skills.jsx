@@ -9,7 +9,8 @@ import Laptop from "../components/SkillSectComps/Laptop.jsx";
 import { webSkillsSect } from "../utils/data";
 import { reducer } from "../utils/pageDemo.js";
 import { techObj } from "../utils/pageDemo.js";
-const { sectTitle } = webSkillsSect;
+const { sectTitle, techStack } = webSkillsSect;
+const { techFeature } = techStack;
 
 export const Data = createContext(techObj);
 
@@ -70,6 +71,7 @@ function Skills() {
                 menuDiv,
                 menuAppear,
                 setMenuAppear,
+                techFeature
               }}
             >
               <TechController />

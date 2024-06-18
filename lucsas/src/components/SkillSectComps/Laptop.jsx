@@ -8,7 +8,7 @@ import { GiProcessor } from "react-icons/gi";
 import { IoIosGitBranch } from "react-icons/io";
 
 // Hooks Import
-import { useContext, useState, useRef } from "react";
+import { useContext, useRef } from "react";
 
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
@@ -18,9 +18,20 @@ import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
-  const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
-  const [featureOpacity, setFeatureOpacity] = useState(0);
+  const { activeTech, techFeature, infoIntersect, changeVisibility } = useContext(Data);
+  // const [featureOpacity, setFeatureOpacity] = useState(0);
   const laptopImg = useRef();
+
+  // Icons Array
+  const featIcons = [
+    <MdOutlineTypeSpecimen className="featSvg" />,
+    <PiTreeStructure className="featSvg" />,
+    <CgStyle className="featSvg" />,
+    <GrTest className="featSvg" />,
+    <MdOutlineRealEstateAgent className="featSvg" />,
+    <GiProcessor className="featSvg" />,
+    <IoIosGitBranch className="featSvg" />,
+  ];
 
   const changeSeason = (e) => {
     switch (e.target.innerText) {
@@ -122,38 +133,15 @@ function Laptop() {
       </div>
 
       <div className="archFeatures">
-        {
-          activeTech.techFeature.map((desc, index) => {
-            return (
-              <abbr title={desc} key={index}>
-                <div className="feature">
-                  <div className="featSvg" />
-                </div>
-              </abbr>
-            );
-          })
-        }
-        <div className="feature">
-          <MdOutlineTypeSpecimen className="types featSvg" />
-        </div>
-        <div className="feature">
-          <PiTreeStructure className="components featSvg" />
-        </div>
-        <div className="feature">
-          <CgStyle className="cssPreproc featSvg" />
-        </div>
-        <div className="feature">
-          <GrTest className="tests featSvg" />
-        </div>
-        <div className="feature">
-          <MdOutlineRealEstateAgent className="state featSvg" />
-        </div>
-        <div className="feature">
-          <GiProcessor className="backend featSvg" />
-        </div>
-        <div className="feature">
-          <IoIosGitBranch className="projManag featSvg" />
-        </div>
+        {techFeature.map((desc, index) => {
+          return (
+            <abbr title={desc} key={index}>
+              <div className="feature">
+                {featIcons[index]}
+              </div>
+            </abbr>
+          );
+        })}
       </div>
     </>
   );
