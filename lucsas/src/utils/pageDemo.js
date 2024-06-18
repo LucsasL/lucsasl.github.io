@@ -28,7 +28,8 @@ export const techObj = {
   content: {
     title: "HTML",
     text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
-    textLink: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    textLink: "HTML",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
 };
 
@@ -113,98 +114,108 @@ export const reducer = (state, action) => {
     case "change_tech_JavaScript":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
 
         content: {
-          title: "JavaScript",
+          title: "HTML + CSS + JS",
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
-          textLink: "",
+          textLink: "JavaScript",
+          link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
         },
       };
 
     case "change_tech_TypeScript":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
 
         content: {
-          title: "TypeScript",
+          title: "HTML + CSS + TS",
           text: "Work In Progress",
-          textLink: "",
+          textLink: "TypeScript",
+          link: "https://www.typescriptlang.org/",
         },
       };
 
     case "change_tech_React":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -212,35 +223,38 @@ export const reducer = (state, action) => {
         content: {
           title: "React JS",
           text: "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance i as well, bringing state management, routers, and even more abstraction to your app.",
-          textLink: "",
+          textLink: "React JS",
+          link: "https://react.dev/",
         },
       };
 
     case "change_tech_SASS":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -248,35 +262,38 @@ export const reducer = (state, action) => {
         content: {
           title: "SASS",
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
-          textLink: "",
+          textLink: "SASS",
+          link: "https://sass-lang.com/",
         },
       };
 
     case "change_tech_GSAP":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -284,35 +301,38 @@ export const reducer = (state, action) => {
         content: {
           title: "GSAP",
           text: "Animation to your website ",
-          textLink: "",
+          textLink: "GSAP",
+          link: "https://gsap.com/",
         },
       };
 
     case "change_tech_Jest":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -320,35 +340,38 @@ export const reducer = (state, action) => {
         content: {
           title: "Jest",
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
-          textLink: "",
+          textLink: "Jest",
+          link: "https://jestjs.io/",
         },
       };
 
     case "change_tech_Redux":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -356,35 +379,38 @@ export const reducer = (state, action) => {
         content: {
           title: "Redux",
           text: "State Management that makes the structure more put together",
-          textLink: "",
+          textLink: "Redux",
+          link: "https://redux.js.org/",
         },
       };
 
     case "change_tech_Python":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -392,35 +418,38 @@ export const reducer = (state, action) => {
         content: {
           title: "Python",
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
-          textLink: "",
+          textLink: "Python",
+          link: "https://www.python.org/",
         },
       };
 
     case "change_tech_Git":
       return {
         basicSettings: {
-          bg: "#060606",
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
           font: "none",
         },
 
         header: {
+          headerSize: "3.5em",
           headerPadding: "20px",
-          headerMargin: "20px",
-          headerBoxShadow:
-            "5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, .3), 0px 15px 10px rgba(0, 0, 0, 0.488)",
+          headerMargin: "1px 5px",
         },
 
         text: {
-          textSize: "1.5em",
-          textLine: "2em",
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
         },
 
         links: {
           aDecoration: "none",
-          aDisplay: "inline",
+          aDisplay: "block",
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
+          aWidth: "50%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },
@@ -428,7 +457,8 @@ export const reducer = (state, action) => {
         content: {
           title: "Git",
           text: "An essential tool for project management and version control,",
-          textLink: "",
+          textLink: "Git",
+          link: "https://git-scm.com/",
         },
       };
 

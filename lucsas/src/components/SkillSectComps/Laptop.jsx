@@ -1,5 +1,5 @@
 // Hooks Import
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
@@ -10,6 +10,30 @@ import { Data } from "../../sections/Skills";
 function Laptop() {
   // Context
   const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
+  const laptopImg = useRef();
+
+  const changeSeason = (e) => {
+    switch (e.target.innerText) {
+      case "Spring":
+        laptopImg.current.style.background = "url('../../img/landscape.webp')";
+        return;
+
+      case "Summer":
+        laptopImg.current.style.background = "url('../../img/.webp')";
+        return;
+
+      case "Fall":
+        laptopImg.current.style.background = "url('../../img/.webp')";
+        return;
+
+      case "Winter":
+        laptopImg.current.style.background = "url('../../img/.webp')";
+        return;
+
+      default:
+        return;
+    }
+  }
 
   return (
     <>
@@ -17,7 +41,7 @@ function Laptop() {
         className="laptop"
         style={changeVisibility("100%", infoIntersect, 1.5)}
       >
-        <div className="image"></div>
+        <div className="image" ref={laptopImg}></div>
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
@@ -34,10 +58,10 @@ function Laptop() {
         >
           <div className="pageHeader">
             <ul>
-              <li>Spring</li>
-              <li>Summer</li>
-              <li>Fall</li>
-              <li>Winter</li>
+              <li onClick={(e) => changeSeason(e)}>Spring</li>
+              <li onClick={(e) => changeSeason(e)}>Summer</li>
+              <li onClick={(e) => changeSeason(e)}>Fall</li>
+              <li onClick={(e) => changeSeason(e)}>Winter</li>
             </ul>
           </div>
           <div className="mainPageCont" style={{
