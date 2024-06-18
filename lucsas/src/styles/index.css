@@ -712,6 +712,11 @@ header div#bgcolor input:checked ~ span i#thumb {
     justify-content: center;
     align-items: center;
   }
+  section#skills .langsCont .featSvg {
+    background: red;
+    color: blue;
+    width: 70px;
+  }
   section#skills h1 {
     background: rgba(0, 0, 0, 0.3);
     display: inline-block;

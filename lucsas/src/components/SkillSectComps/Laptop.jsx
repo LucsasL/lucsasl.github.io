@@ -1,3 +1,12 @@
+// React Icons
+import { MdOutlineTypeSpecimen } from "react-icons/md";
+import { PiTreeStructure } from "react-icons/pi";
+import { CgStyle } from "react-icons/cg";
+import { GrTest } from "react-icons/gr";
+import { MdOutlineRealEstateAgent } from "react-icons/md";
+import { GiProcessor } from "react-icons/gi";
+import { IoIosGitBranch } from "react-icons/io";
+
 // Hooks Import
 import { useContext, useRef } from "react";
 
@@ -64,9 +73,12 @@ function Laptop() {
               <li onClick={(e) => changeSeason(e)}>Winter</li>
             </ul>
           </div>
-          <div className="mainPageCont" style={{
-            alignSelf: "center"
-          }}>
+          <div
+            className="mainPageCont"
+            style={{
+              alignSelf: "center",
+            }}
+          >
             <h2
               style={{
                 fontSize: activeTech.header.headerSize,
@@ -109,26 +121,26 @@ function Laptop() {
       </div>
 
       <div className="archFeatures">
-        <div className="types feature">
-          ,
+        <div className="feature">
+          <MdOutlineTypeSpecimen className="types featSvg" />
         </div>
-        <div className="components feature">
-          ,
+        <div className="feature">
+          <PiTreeStructure className="components featSvg" />
         </div>
-        <div className="cssPreproc feature">
-          ,
+        <div className="feature">
+          <CgStyle className="cssPreproc featSvg" />
         </div>
-        <div className="tests feature">
-          ,
+        <div className="feature">
+          <GrTest className="tests featSvg" />
         </div>
-        <div className="state feature">
-          ,
+        <div className="feature">
+          <MdOutlineRealEstateAgent className="state featSvg" />
         </div>
-        <div className="backend feature">
-          ,
+        <div className="feature">
+          <GiProcessor className="backend featSvg" />
         </div>
-        <div className="projManag feature">
-          ,
+        <div className="feature">
+          <IoIosGitBranch className="projManag featSvg" />
         </div>
       </div>
     </>
