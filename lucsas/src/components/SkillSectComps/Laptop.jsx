@@ -8,7 +8,7 @@ import { GiProcessor } from "react-icons/gi";
 import { IoIosGitBranch } from "react-icons/io";
 
 // Hooks Import
-import { useContext, useRef } from "react";
+import { useContext, useState, useRef } from "react";
 
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
@@ -19,6 +19,7 @@ import { Data } from "../../sections/Skills";
 function Laptop() {
   // Context
   const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
+  const [featureOpacity, setFeatureOpacity] = useState(0);
   const laptopImg = useRef();
 
   const changeSeason = (e) => {
@@ -121,6 +122,7 @@ function Laptop() {
       </div>
 
       <div className="archFeatures">
+        
         <div className="feature">
           <MdOutlineTypeSpecimen className="types featSvg" />
         </div>
