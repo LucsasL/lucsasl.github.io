@@ -1,8 +1,9 @@
 // Hooks Import
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 
 // Images Import
 import notebook from "../../img/google-ads-design.svg";
+import { webSkillsSect } from "../../utils/data";
 
 // Data Import
 import { Data } from "../../sections/Skills";
@@ -10,31 +11,30 @@ import { Data } from "../../sections/Skills";
 function Laptop() {
   // Context
   const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
+
+  // Refs
   const laptopImg = useRef();
+
+  // States
+  const [currentImg, setCurrentImg] = useState(
+    "url('../img/landscape.webp') no-repeat center"
+  );
+
+  // Data extraction
+  const { laptopBgImg, laptopNav } = webSkillsSect;
 
   const timeDate = new Date();
 
   const changeSeason = (e) => {
-    switch (e.target.innerText) {
-      case "Spring":
-        laptopImg.current.style.background = "url('../../img/landscape.webp')";
-        return;
+    const prop = e.target.innerText;
+    const stations = {
+      Spring: `url(${laptopBgImg[0]}) no-repeat center`,
+      Summer: `url(${laptopBgImg[1]}) no-repeat center`,
+      Fall: `url(${laptopBgImg[2]}) no-repeat center`,
+      Winter: `url(${laptopBgImg[3]}) no-repeat center`,
+    };
 
-      case "Summer":
-        laptopImg.current.style.background = "url('../../img/.webp')";
-        return;
-
-      case "Fall":
-        laptopImg.current.style.background = "url('../../img/.webp')";
-        return;
-
-      case "Winter":
-        laptopImg.current.style.background = "url('../../img/.webp')";
-        return;
-
-      default:
-        return;
-    }
+    setCurrentImg(stations[prop]);
   };
 
   const weekDay = (day) => {
@@ -64,7 +64,7 @@ function Laptop() {
       "September",
       "October",
       "November",
-      "December"
+      "December",
     ];
 
     return months[month];
@@ -76,7 +76,7 @@ function Laptop() {
         className="laptop"
         style={changeVisibility("100%", infoIntersect, 1.5)}
       >
-        <div className="image" ref={laptopImg}></div>
+        <div className="image" ref={laptopImg} style={{ background: currentImg }}></div>
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
@@ -93,10 +93,13 @@ function Laptop() {
         >
           <div className="pageHeader">
             <ul>
-              <li onClick={(e) => changeSeason(e)}>Spring</li>
-              <li onClick={(e) => changeSeason(e)}>Summer</li>
-              <li onClick={(e) => changeSeason(e)}>Fall</li>
-              <li onClick={(e) => changeSeason(e)}>Winter</li>
+              {laptopNav.map((li) => {
+                return (
+                  <abbr title={li}>
+                    <li onClick={(e) => changeSeason(e)}>{li}</li>
+                  </abbr>
+                );
+              })}
             </ul>
           </div>
           <div
@@ -144,12 +147,15 @@ function Laptop() {
             </a>
           </div>
 
-          <div className="dateTime" style={{
-            display: activeTech.content.dateTime.display,
-            width: activeTech.content.dateTime.width,
-            padding: activeTech.content.dateTime.padding,
-            textAlign: activeTech.content.dateTime.textAlign,
-          }}>
+          <div
+            className="dateTime"
+            style={{
+              display: activeTech.content.dateTime.display,
+              width: activeTech.content.dateTime.width,
+              padding: activeTech.content.dateTime.padding,
+              textAlign: activeTech.content.dateTime.textAlign,
+            }}
+          >
             <h3>
               <span className="time">
                 {timeDate.getHours().toLocaleString("en-US", {
