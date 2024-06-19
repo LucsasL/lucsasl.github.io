@@ -1,12 +1,3 @@
-// React Icons
-import { MdOutlineTypeSpecimen } from "react-icons/md";
-import { PiTreeStructure } from "react-icons/pi";
-import { CgStyle } from "react-icons/cg";
-import { GrTest } from "react-icons/gr";
-import { MdOutlineRealEstateAgent } from "react-icons/md";
-import { GiProcessor } from "react-icons/gi";
-import { IoIosGitBranch } from "react-icons/io";
-
 // Hooks Import
 import { useContext, useRef } from "react";
 
@@ -20,23 +11,10 @@ function Laptop() {
   // Context
   const {
     activeTech,
-    techFeature,
     infoIntersect,
     changeVisibility,
-    featureOpacity,
   } = useContext(Data);
   const laptopImg = useRef();
-
-  // Icons Array
-  const featIcons = [
-    <MdOutlineTypeSpecimen className="featSvg" />,
-    <PiTreeStructure className="featSvg" />,
-    <CgStyle className="featSvg" />,
-    <GrTest className="featSvg" />,
-    <MdOutlineRealEstateAgent className="featSvg" />,
-    <GiProcessor className="featSvg" />,
-    <IoIosGitBranch className="featSvg" />,
-  ];
 
   const changeSeason = (e) => {
     switch (e.target.innerText) {
@@ -135,18 +113,6 @@ function Laptop() {
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="archFeatures">
-        {techFeature.map((desc, index) => {
-          return (
-            <abbr title={desc} key={index}>
-              <div className="feature" style={{ opacity: featureOpacity[index] ? 1 : 0 }}>
-                {featIcons[index]}
-              </div>
-            </abbr>
-          );
-        })}
       </div>
     </>
   );

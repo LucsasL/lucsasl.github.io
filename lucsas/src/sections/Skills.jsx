@@ -4,6 +4,7 @@ import { useState, useReducer, useEffect, useRef, createContext } from "react";
 // Components Import
 import TechController from "../components/SkillSectComps/TechController.jsx";
 import Laptop from "../components/SkillSectComps/Laptop.jsx";
+import Features from "../components/SkillSectComps/features.jsx";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
@@ -81,6 +82,7 @@ function Skills() {
             >
               <TechController />
               <Laptop />
+              <Features />
             </Data.Provider>
           </div>
           <div className="intersectArea" ref={menuDiv}></div>
