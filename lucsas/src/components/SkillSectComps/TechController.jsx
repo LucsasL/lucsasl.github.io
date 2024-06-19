@@ -98,7 +98,7 @@ function Skills() {
               ref={(el) => (buttons.current[index] = el)}
             >
               <button
-                className="tech"
+                className={`tech ${index === 0 ? "active" : ""}`}
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
                 ref={(el) => (buttonsBlock.current[index] = el)}
               >
