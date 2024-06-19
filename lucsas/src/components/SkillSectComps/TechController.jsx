@@ -9,6 +9,7 @@ import { webSkillsSect } from "../../utils/data";
 const { techStack } = webSkillsSect;
 
 function Skills() {
+  // Context
   const {
     dispatch,
     menuDiv,
@@ -17,8 +18,12 @@ function Skills() {
     changeVisibility,
     setFeatureOpacity,
   } = useContext(Data);
-  const buttons = useRef([]);
 
+  // Refs
+  const buttons = useRef([]);
+  const buttonsBlock = useRef([]);
+
+  // Render Effects
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -36,10 +41,11 @@ function Skills() {
   }, [menuDiv, setMenuAppear, buttons]);
 
   const changeTech = (tech, e, index) => {
-    // buttons.current[]
+    buttonsBlock.current.forEach((el) => el.classList.remove("active"));
+
     console.log(e.target);
     e.target.classList.add("active");
-    
+
     switch (index) {
       case 3:
         setFeatureOpacity([1, 0, 0, 0, 0, 0, 0]);
@@ -61,7 +67,7 @@ function Skills() {
         setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
         break;
 
-      case 8 :
+      case 8:
         setFeatureOpacity([1, 1, 1, 1, 1, 0, 0]);
         break;
 
@@ -72,8 +78,8 @@ function Skills() {
       case 10:
         setFeatureOpacity([1, 1, 1, 1, 1, 1, 1]);
         break;
-        
-        default:
+
+      default:
         setFeatureOpacity([0, 0, 0, 0, 0, 0, 0]);
         break;
     }
@@ -94,6 +100,7 @@ function Skills() {
               <button
                 className="tech"
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
+                ref={(el) => (buttonsBlock.current[index] = el)}
               >
                 <picture style={{ boxShadow: "none", pointerEvents: "none" }}>
                   <img src={t} alt={techStack.tech[index]} />

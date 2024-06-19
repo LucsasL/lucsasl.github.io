@@ -378,6 +378,8 @@
         transform: translateY(-110%);
         left: 0;
         z-index: 6;
+
+        pointer-events: none;
       }
     }
 

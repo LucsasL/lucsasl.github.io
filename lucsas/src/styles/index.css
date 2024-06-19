@@ -646,6 +646,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     transform: translateY(-110%);
     left: 0;
     z-index: 6;
+    pointer-events: none;
   }
   section#skills .langsCont {
     width: 100%;
@@ -914,7 +915,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   background: white;
   color: black;
   width: 77.1%;
-  height: 80.61%;
+  height: 80.62%;
   border-radius: 2px;
   position: absolute;
   top: 4.9%;
