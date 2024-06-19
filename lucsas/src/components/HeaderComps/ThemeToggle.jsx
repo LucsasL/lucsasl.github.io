@@ -1,8 +1,11 @@
 // Hooks Import
-import { useState, useRef } from "react";
+import { useRef, useContext } from "react";
+
+// Context Import
+import { BgTheme } from "../../sections/Header";
 
 function ThemeToggle() {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const { darkTheme, setDarkTheme } = useContext(BgTheme);
   const themeInp = useRef();
 
   const toggleTheme = (e) => {

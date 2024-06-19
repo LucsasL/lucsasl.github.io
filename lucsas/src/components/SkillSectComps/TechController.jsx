@@ -60,7 +60,7 @@ function Skills() {
         break;
 
       case 6:
-        setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
+        setFeatureOpacity([1, 1, 1, 0, 0, 0, 0]);
         break;
 
       case 7:
