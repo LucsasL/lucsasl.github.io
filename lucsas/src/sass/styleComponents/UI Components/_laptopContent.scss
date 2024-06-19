@@ -47,11 +47,26 @@
     }
   }
 
-  h1 {
-    background: transparent;
-    box-shadow: none;
+  .dateTime {
+    width: 50%;
+    padding: 30px;
 
-    font-family: serif;
+    text-align: right;
+
+    display: flex;
+    justify-content: end;
+
+    position: absolute;
+    top: 64%;
+    left: 50%;
+
+    .time {
+      font-size: 4em;
+    }
+
+    .date {
+      font: normal 2em $mainFont;
+    }
   }
 
   p {

@@ -9,12 +9,10 @@ import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
-  const {
-    activeTech,
-    infoIntersect,
-    changeVisibility,
-  } = useContext(Data);
+  const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
   const laptopImg = useRef();
+
+  const timeDate = new Date();
 
   const changeSeason = (e) => {
     switch (e.target.innerText) {
@@ -37,6 +35,39 @@ function Laptop() {
       default:
         return;
     }
+  };
+
+  const weekDay = (day) => {
+    const days = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ];
+
+    return days[day - 1];
+  };
+
+  const monthName = (month) => {
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ];
+
+    return months[month];
   };
 
   return (
@@ -111,6 +142,27 @@ function Laptop() {
             >
               Learn more about {activeTech.content.textLink}
             </a>
+          </div>
+
+          <div className="dateTime" style={{}}>
+            <h3>
+              <span className="time">
+                {timeDate.getHours().toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}
+                :
+                {timeDate.getMinutes().toLocaleString("en-US", {
+                  minimumIntegerDigits: 2,
+                  useGrouping: false,
+                })}
+              </span>{" "}
+              <br />
+              <span className="date">
+                {weekDay(timeDate.getDay())}, {monthName(timeDate.getMonth())}{" "}
+                {timeDate.getDate()}
+              </span>
+            </h3>
           </div>
         </div>
       </div>

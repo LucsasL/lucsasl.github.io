@@ -69,6 +69,9 @@ export const reducer = (state, action) => {
           text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
           textLink: "HTML",
           link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+          dateTime: {
+            display: "block",
+          },
         },
       };
 
@@ -108,6 +111,12 @@ export const reducer = (state, action) => {
           text: "A combination with the stylesheets of HTML and CSS do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
           textLink: "CSS",
           link: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+          dateTime: {
+            display: "flex",
+            padding: "30px",
+            textAlign: "right",
+            position: "absolute"
+          }
         },
       };
 

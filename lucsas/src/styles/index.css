@@ -936,10 +936,21 @@ header div#bgcolor input:checked ~ span i#thumb {
   display: inline-block;
   margin: 10px 15px;
 }
-.laptop h1 {
-  background: transparent;
-  box-shadow: none;
-  font-family: serif;
+.laptop .dateTime {
+  width: 50%;
+  padding: 30px;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 64%;
+  left: 50%;
+}
+.laptop .dateTime .time {
+  font-size: 4em;
+}
+.laptop .dateTime .date {
+  font: normal 2em "Plus Jakarta Sans", sans-serif;
 }
 .laptop p {
   margin: 10px 25px;
