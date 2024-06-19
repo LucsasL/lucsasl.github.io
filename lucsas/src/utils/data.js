@@ -2,6 +2,8 @@
 import code from "../img/codeIntro.png";
 import lucsas from "../img/Lucsas.webp";
 import webDev from "../img/webDev.webp";
+
+import landscape from "../img/landscape.webp";
 import spring from "../img/spring.webp";
 import summer from "../img/summer.webp";
 import fall from "../img/fall.webp";
@@ -161,7 +163,7 @@ export const webSkillsSect = {
       "Control over the projects",
     ],
   },
-  laptopBgImg: [spring, summer, fall, winter],
+  laptopBgImg: [spring, summer, fall, winter, landscape],
   laptopNav: ["Spring", "Summer", "Fall", "Winter"],
 };
 

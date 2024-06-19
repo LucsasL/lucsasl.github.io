@@ -934,7 +934,11 @@ header div#bgcolor input:checked ~ span i#thumb {
 }
 .laptop .pageHeader li {
   display: inline-block;
-  margin: 10px 15px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+.laptop .pageHeader li:hover {
+  background: rgba(255, 255, 255, 0.196);
 }
 .laptop .dateTime {
   width: 50%;

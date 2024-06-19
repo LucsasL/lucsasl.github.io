@@ -15,13 +15,11 @@ function Laptop() {
   // Refs
   const laptopImg = useRef();
 
-  // States
-  const [currentImg, setCurrentImg] = useState(
-    "url('../img/landscape.webp') no-repeat center"
-  );
-
   // Data extraction
   const { laptopBgImg, laptopNav } = webSkillsSect;
+  
+  // States
+  const [currentImg, setCurrentImg] = useState(laptopNav[-1]);
 
   const timeDate = new Date();
 
@@ -76,7 +74,13 @@ function Laptop() {
         className="laptop"
         style={changeVisibility("100%", infoIntersect, 1.5)}
       >
-        <div className="image" ref={laptopImg} style={{ background: currentImg }}></div>
+        <div
+          className="image"
+          ref={laptopImg}
+          style={{
+            background: currentImg,
+          }}
+        ></div>
         <picture>
           <figure>
             <img src={notebook} alt="Website" />
