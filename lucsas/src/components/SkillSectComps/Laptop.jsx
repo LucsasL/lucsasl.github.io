@@ -144,7 +144,12 @@ function Laptop() {
             </a>
           </div>
 
-          <div className="dateTime" style={{}}>
+          <div className="dateTime" style={{
+            display: activeTech.content.dateTime.display,
+            width: activeTech.content.dateTime.width,
+            padding: activeTech.content.dateTime.padding,
+            textAlign: activeTech.content.dateTime.textAlign,
+          }}>
             <h3>
               <span className="time">
                 {timeDate.getHours().toLocaleString("en-US", {

@@ -30,6 +30,12 @@ export const techObj = {
     text: "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
     textLink: "HTML",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    dateTime: {
+      display: "none",
+      width: "50%",
+      padding: "30px",
+      textAlign: "right",
+    },
   },
 };
 
@@ -70,7 +76,10 @@ export const reducer = (state, action) => {
           textLink: "HTML",
           link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
           dateTime: {
-            display: "block",
+            display: "none",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
           },
         },
       };
@@ -112,11 +121,11 @@ export const reducer = (state, action) => {
           textLink: "CSS",
           link: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
           dateTime: {
-            display: "flex",
+            display: "none",
+            width: "50%",
             padding: "30px",
             textAlign: "right",
-            position: "absolute"
-          }
+          },
         },
       };
 
@@ -156,6 +165,12 @@ export const reducer = (state, action) => {
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
           textLink: "JavaScript",
           link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -195,6 +210,12 @@ export const reducer = (state, action) => {
           text: "Work In Progress",
           textLink: "TypeScript",
           link: "https://www.typescriptlang.org/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -234,6 +255,12 @@ export const reducer = (state, action) => {
           text: "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance i as well, bringing state management, routers, and even more abstraction to your app.",
           textLink: "React JS",
           link: "https://react.dev/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -273,6 +300,12 @@ export const reducer = (state, action) => {
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
           textLink: "SASS",
           link: "https://sass-lang.com/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -312,6 +345,12 @@ export const reducer = (state, action) => {
           text: "Animation to your website ",
           textLink: "GSAP",
           link: "https://gsap.com/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -351,6 +390,12 @@ export const reducer = (state, action) => {
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
           textLink: "Jest",
           link: "https://jestjs.io/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -390,6 +435,12 @@ export const reducer = (state, action) => {
           text: "State Management that makes the structure more put together",
           textLink: "Redux",
           link: "https://redux.js.org/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -429,6 +480,12 @@ export const reducer = (state, action) => {
           text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
           textLink: "Python",
           link: "https://www.python.org/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
@@ -468,6 +525,12 @@ export const reducer = (state, action) => {
           text: "An essential tool for project management and version control,",
           textLink: "Git",
           link: "https://git-scm.com/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
         },
       };
 
