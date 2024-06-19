@@ -1290,7 +1290,7 @@ div#msgMe a {
   }
   section#intro .introPresent {
     width: 50%;
-    display: block;
+    display: flex;
   }
   /* Services Section */
   section#services #cards {

@@ -14,34 +14,43 @@ const Header = () => {
   const [headerBg, setHeaderBg] = useState("#00000000");
   const [headerBlur, setHeaderBlur] = useState("");
   const headerCont = useRef();
+  const headerColor = darkTheme
+    ? "rgba(0, 0, 0, .5)"
+    : "rgba(255, 255, 255, .5)";
 
   useEffect(() => {
-    const scrollPos = window.scrollY;
-
-    if (scrollPos > 0) {
-      setHeaderBg(darkTheme ? "rgba(0, 0, 0, .5)" : "rgba(255, 255, 255, .5)");
+    if (window.scrollY > 0) {
+      setHeaderBg(headerColor);
+    } else {
+      setHeaderBg("#0000");
     }
 
     window.addEventListener("scroll", () => {
+      const scrollPos = window.scrollY;
       if (scrollPos > 0) {
-        setHeaderBg(darkTheme ? "rgba(0, 0, 0, .5)" : "rgba(255, 255, 255, .5)");
+        setHeaderBg(headerColor);
         setHeaderBlur("blur(6px)");
-        } else {
-          setHeaderBg("rgba(0, 0, 0, 0)");
-          setHeaderBlur("blur(0px)");
+      } else {
+        setHeaderBg("rgba(0, 0, 0, 0)");
+        setHeaderBlur("blur(0px)");
       }
-    })
-  }, [darkTheme, headerBg, headerCont]);
+    });
+  }, [darkTheme, headerBg, headerCont, headerColor]);
 
   return (
     <>
       <header>
-        <div style={{ background: headerBg, backdropFilter: headerBlur }} ref={headerCont}>
+        <div
+          style={{ background: headerBg, backdropFilter: headerBlur }}
+          ref={headerCont}
+        >
           <HeaderLogo />
 
           <div id="mainHeader">
             <menu>
-              <BgTheme.Provider value={{ headerBg, setHeaderBg, darkTheme, setDarkTheme }}>
+              <BgTheme.Provider
+                value={{ headerBg, setHeaderBg, darkTheme, setDarkTheme }}
+              >
                 <NavLinks />
                 <MusicButton />
                 <ThemeToggle />
@@ -52,6 +61,6 @@ const Header = () => {
       </header>
     </>
   );
-}
+};
 
 export default Header;
