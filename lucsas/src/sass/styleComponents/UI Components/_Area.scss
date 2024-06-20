@@ -1,0 +1,41 @@
+@media all {
+  // Area Section
+  section#area {
+    margin-top: 50px;
+
+    > div {
+      @include verticalFlex();
+
+      .platform {
+        margin: 20px 0px;
+      }
+
+      .img-div {
+        position: relative;
+        width: 100%;
+
+        figure {
+          @include center;
+          margin-top: -50px;
+        }
+      }
+    }
+
+    figure {
+      display: block;
+      margin-top: 20px;
+    }
+
+    #webdev-design {
+      width: 350px;
+      position: relative;
+      animation: rotImg 7s infinite linear;
+    }
+
+    @keyframes rotImg {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

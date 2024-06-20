@@ -1,0 +1,87 @@
+@media all {
+  // Portfolio Section
+  section#portfolio {
+    background: $bg4;
+    padding: 50px 0px;
+    margin: 50px 0px 100px 0px;
+
+    > div {
+      @include verticalFlex;
+    }
+
+    .projCont {
+      .proj {
+        background: $shadow;
+        box-shadow: 5px 5px 15px 5px $shadow,
+          -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px $shadow;
+
+        padding: 30px;
+        margin: 30px 0px;
+        border-radius: 20px;
+
+        @include spaceBetween(row wrap);
+
+        > div {
+          width: 100%;
+        }
+
+        .projInfo {
+          @include verticalFlex(space-between, flex-start);
+          gap: 20px;
+        }
+
+        .techStackCont {
+          @include spaceAround(row wrap);
+          justify-content: flex-start;
+
+          picture,
+          img {
+            width: 50px;
+            margin: 0px 10px 10px 10px;
+          }
+        }
+
+        .projImg {
+          @include center;
+          width: 100%;
+
+          picture,
+          img {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 20px;
+          }
+        }
+      }
+
+      button {
+        @include buttonGen(false, true);
+        padding: 0;
+      }
+
+      .detailBtn {
+        background: transparent;
+      }
+    }
+
+    h1,
+    h4 {
+      @include blockHeader;
+      margin: auto;
+    }
+
+    h2 {
+      font-weight: 900;
+      @include fancyText;
+    }
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 100%;
+    }
+  }
+}
