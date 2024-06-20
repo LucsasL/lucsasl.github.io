@@ -17,7 +17,7 @@ function Laptop() {
 
   // Data extraction
   const { laptopBgImg, laptopNav } = webSkillsSect;
-  
+
   // States
   const [currentImg, setCurrentImg] = useState(laptopNav[-1]);
 
@@ -68,6 +68,13 @@ function Laptop() {
     return months[month];
   };
 
+  const menuDisplay = () => {
+    return activeTech.content.textLink === "HTML" ||
+      activeTech.content.textLink === "CSS"
+      ? "none"
+      : "flex";
+  };
+
   return (
     <>
       <div
@@ -77,9 +84,7 @@ function Laptop() {
         <div
           className="image"
           ref={laptopImg}
-          style={{
-            background: currentImg,
-          }}
+          style={{ background: currentImg }}
         ></div>
         <picture>
           <figure>
@@ -95,7 +100,7 @@ function Laptop() {
             font: activeTech.basicSettings.font,
           }}
         >
-          <div className="pageHeader">
+          <div className="pageHeader" style={{ display: menuDisplay() }}>
             <ul>
               {laptopNav.map((li) => {
                 return (
