@@ -3,7 +3,6 @@ import { useRef, useEffect, useContext } from "react";
 
 // Context Import
 import { Data } from "../../sections/Skills";
-import { cursorInteraction } from "../../App";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
@@ -19,7 +18,6 @@ function Skills() {
     changeVisibility,
     setFeatureOpacity,
   } = useContext(Data);
-  let { buttonsArray } = useContext(cursorInteraction);
 
   // Refs
   const buttons = useRef([]);

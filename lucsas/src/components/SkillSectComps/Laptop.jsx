@@ -5,16 +5,12 @@ import { useContext, useRef, useState } from "react";
 import notebook from "../../img/google-ads-design.svg";
 import { webSkillsSect } from "../../utils/data";
 
-// Context
-import { cursorInteraction } from "../../App";
-
 // Data Import
 import { Data } from "../../sections/Skills";
 
 function Laptop() {
   // Context
   const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
-  let { buttonsArray } = useContext(cursorInteraction);
 
   // Refs
   const laptopImg = useRef();
