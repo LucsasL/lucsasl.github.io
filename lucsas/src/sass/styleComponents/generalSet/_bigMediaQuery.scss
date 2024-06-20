@@ -2,11 +2,13 @@
   /* Header Settings */
   header {
     > div {
+      width: 100%;
+      padding: 30px;
       margin: 0px 150px;
     }
 
-    .headerName {
-      display: inline;
+    .logoDiv {
+      width: 16%;
     }
 
     #mainHeader {
@@ -151,6 +153,11 @@
 
     div {
       width: 80%;
+    }
+
+    .range {
+      position: absolute;
+      top: 83%;
     }
   }
 

@@ -12,15 +12,19 @@ header {
   @include center;
 
   > div {
-    width: 110%;
+    width: 90%;
     height: 100%;
-    padding: 30px;
+    padding: 10px 20px;
     margin: 0px 15px;
     border-radius: 50px;
 
     @include spaceBetween;
 
     .logoDiv {
+      width: 45%;
+
+      @include flexStart;
+
       a:hover {
         color: $color;
       }
@@ -54,7 +58,7 @@ header {
     }
 
     h1 {
-      width: 200px;
+      width: auto;
     }
   }
 

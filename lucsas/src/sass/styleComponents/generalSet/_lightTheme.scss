@@ -79,6 +79,13 @@
       background: var(--bg2);
     }
 
+    section#about {
+      .range {
+        background: rgb(240, 240, 240);
+      }
+    }
+
+
     section#skills {
       .techStack {
         background: var(--shadow);

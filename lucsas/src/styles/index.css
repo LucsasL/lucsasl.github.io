@@ -26,12 +26,10 @@ body {
   overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-  cursor: none;
 }
 
 body * {
   transition: background 0.5s;
-  cursor: none;
 }
 
 .mouseCursor {
@@ -66,6 +64,10 @@ fieldset {
   margin: 20px;
 }
 
+canvas {
+  cursor: pointer;
+}
+
 input,
 textarea {
   background: rgba(0, 0, 0, 0.558);
@@ -75,7 +77,6 @@ textarea {
   margin: 10px 0px;
   border-radius: 10px;
   resize: none;
-  cursor: none;
 }
 
 button {
@@ -86,7 +87,10 @@ button {
   border-radius: 5px;
   outline: none;
   padding: 10px 20px;
-  cursor: none;
+}
+
+header label {
+  cursor: pointer;
 }
 
 p {
@@ -109,7 +113,6 @@ li {
 a {
   text-decoration: none;
   color: white;
-  cursor: none;
 }
 
 picture,
@@ -178,9 +181,9 @@ header {
   align-items: center;
 }
 header > div {
-  width: 110%;
+  width: 90%;
   height: 100%;
-  padding: 30px;
+  padding: 10px 20px;
   margin: 0px 15px;
   border-radius: 50px;
   display: flex;
@@ -188,6 +191,13 @@ header > div {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+}
+header > div .logoDiv {
+  width: 45%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 header > div .logoDiv a:hover {
   color: white;
@@ -225,7 +235,7 @@ header figure img {
   height: 75px;
 }
 header figure h1 {
-  width: 200px;
+  width: auto;
 }
 header a {
   color: white;
@@ -604,7 +614,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 200%;
     height: 60px;
     position: absolute;
-    top: 83%;
+    top: 93%;
     transform: rotate(-4.5deg);
   }
   section#area {
@@ -1224,10 +1234,12 @@ div#msgMe a {
 @media screen and (min-width: 1200px) {
   /* Header Settings */
   header > div {
+    width: 100%;
+    padding: 30px;
     margin: 0px 150px;
   }
-  header .headerName {
-    display: inline;
+  header .logoDiv {
+    width: 16%;
   }
   header #mainHeader {
     display: flex;
@@ -1355,6 +1367,10 @@ div#msgMe a {
   }
   section#about div {
     width: 80%;
+  }
+  section#about .range {
+    position: absolute;
+    top: 83%;
   }
   /* Area Section */
   section#area > div {
@@ -1543,6 +1559,9 @@ div#msgMe a {
 }
 .light main #about-style {
   background: var(--bg2);
+}
+.light main section#about .range {
+  background: rgb(240, 240, 240);
 }
 .light main section#skills .techStack {
   background: var(--shadow);
