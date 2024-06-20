@@ -1,7 +1,11 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 function CustomCursor() {
   const mouse = useRef();
+  
+  useEffect(() => {
+    console.log("The cursor hovered a button.");
+  }, [mouse]);
 
   window.addEventListener("mouseout", () => {
     mouse.current.style.opacity = 0;

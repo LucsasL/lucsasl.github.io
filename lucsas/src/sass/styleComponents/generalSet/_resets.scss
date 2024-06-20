@@ -59,6 +59,16 @@ body * {
   pointer-events: none;
 }
 
+button:hover ~ .mouseCursor {
+  width: 25px;
+  height: 25px;
+}
+
+a:hover ~ .mouseCursor {
+  width: 25px;
+  height: 25px;
+}
+
 // UI
 #root {
   width: 100%;
