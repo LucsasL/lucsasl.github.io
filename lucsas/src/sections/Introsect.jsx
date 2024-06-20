@@ -1,3 +1,4 @@
+import resume from "./resume.pdf";
 import { webIntroSect } from "../utils/data";
 const { socialMedias } = webIntroSect;
 
@@ -31,8 +32,8 @@ function Introsect() {
 
               <button id="skillsResume">
                 <a
-                  href="https://lucsas.vercel.app/"
-                  download="../../public/Resume.pdf"
+                  href={resume}
+                  download={resume}
                 >
                   Download Resume
                 </a>
