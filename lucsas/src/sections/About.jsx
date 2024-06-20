@@ -70,6 +70,10 @@ function About() {
             </picture>
           </div>
         </div>
+
+        <div className="range">
+          
+        </div>
       </section>
     </>
   );

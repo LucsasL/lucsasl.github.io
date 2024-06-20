@@ -315,6 +315,16 @@
     picture {
       height: 70%;
     }
+
+    .range {
+      background: rgb(12, 12, 12);
+      width: 200%;
+      height: 60px;
+
+      position: absolute;
+      top: 83%;
+      transform: rotate(-4.5deg);
+    }
   }
 
   // Area Section

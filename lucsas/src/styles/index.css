@@ -599,6 +599,14 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#about picture {
     height: 70%;
   }
+  section#about .range {
+    background: rgb(12, 12, 12);
+    width: 200%;
+    height: 60px;
+    position: absolute;
+    top: 83%;
+    transform: rotate(-4.5deg);
+  }
   section#area {
     margin-top: 50px;
   }
