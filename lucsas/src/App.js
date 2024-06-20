@@ -11,24 +11,20 @@ import SubmitPopup from "./components/submitPopup";
 import "./styles/index.css";
 
 export const SubmitData = createContext(false);
-export const cursorInteraction = createContext();
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [buttons] = useState([]);
 
   return (
     <>
-      <cursorInteraction.Provider value={buttons}>
-        <Header />
-        <SubmitData.Provider value={{ open, setOpen }}>
-          <Main />
-          <SubmitPopup />
-        </SubmitData.Provider>
-        <Footer />
-        <MsgMe />
-        <CustomCursor />
-      </cursorInteraction.Provider>
+      <Header />
+      <SubmitData.Provider value={{ open, setOpen }}>
+        <Main />
+        <SubmitPopup />
+      </SubmitData.Provider>
+      <Footer />
+      <MsgMe />
+      <CustomCursor />
     </>
   );
 }
