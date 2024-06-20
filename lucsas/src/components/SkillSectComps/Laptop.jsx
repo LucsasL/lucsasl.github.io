@@ -2,7 +2,8 @@
 import { useContext, useRef, useState } from "react";
 
 // Images Import
-import notebook from "../../img/google-ads-design.svg";
+import notebook from "../../img/laptop.svg";
+import mobile from "../../img/mobile.webp";
 import { webSkillsSect } from "../../utils/data";
 
 // Data Import
@@ -87,6 +88,7 @@ function Laptop() {
           style={{ background: currentImg }}
         ></div>
         <picture>
+          {/* <source media="(min-width: 1200px)" srcSet={notebook} type="image/svg" /> */}
           <figure>
             <img src={notebook} alt="Website" />
             <figcaption>Website</figcaption>
