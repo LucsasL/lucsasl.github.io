@@ -1,7 +1,18 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
+import { cursorInteraction } from "../App";
 
 function CustomCursor() {
+  let { buttons } = useContext(cursorInteraction);
+  const bruh = useRef([]);
+
   const mouse = useRef();
+
+  buttons.forEach(btn => {
+    btn.addEventListener("mouseover", () => {
+      mouse.current.style.width = "25px";
+      mouse.current.style.height = "25px";
+    })
+  });  
 
   window.addEventListener("mouseout", () => {
     mouse.current.style.opacity = 0;

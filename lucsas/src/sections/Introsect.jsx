@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { cursorInteraction } from "../App";
+
 import { webIntroSect } from "../utils/data";
 const { info, socialMedias } = webIntroSect;
 
 function Introsect() {
+  const { buttons } = useContext(cursorInteraction);
+
   return (
     <>
       <section id="intro">
@@ -28,7 +33,7 @@ function Introsect() {
                 problems.
               </p>
 
-              <button id="skillsResume">
+              <button id="skillsResume" ref={(el) => (buttons.current[0] = el)}>
                 <a
                   href="https://lucsas.vercel.app/"
                   download="../../public/Resume.pdf"
@@ -41,9 +46,9 @@ function Introsect() {
               {
                 socialMedias.map(({ link, name, img }, index) => {
                   return (
-                    <div key={index}>
+                    <div key={index} ref={(el) => (buttons.current[index + 1] = el)}>
                       <figure>
-                        <figcaption></figcaption>
+                        <figcaption>{name}</figcaption>
                         <a href={link} target="_blank" rel="noopener noreferrer">
                           <img src={img} alt={name} className="icons" />
                         </a>
