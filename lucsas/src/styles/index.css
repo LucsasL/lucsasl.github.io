@@ -120,6 +120,7 @@ figure {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -150,6 +151,7 @@ figcaption {
 
 .blockquote {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -177,6 +179,7 @@ header {
   top: 3%;
   z-index: 5;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -277,7 +280,6 @@ header canvas:hover {
   background: linear-gradient(to right, #00f, rgb(128, 0, 255));
 }
 header div#bgcolor {
-  width: 50%;
   display: flex;
   align-items: center;
   position: relative;
@@ -355,6 +357,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 100%;
     padding: 50px auto;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -464,6 +467,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: 15px 10px;
     border-radius: 50%;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -480,6 +484,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#intro .introPresent {
     width: 100%;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     display: none;
@@ -581,6 +586,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: 20px;
     animation: blob 10s ease-in-out infinite;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -663,6 +669,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#area > div .img-div figure {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     margin-top: -50px;
@@ -771,6 +778,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     border-radius: 20px;
     transition: all 0.5s ease;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -791,6 +799,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#skills figure {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -846,6 +855,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#portfolio .projCont .proj .projImg {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -1015,6 +1025,7 @@ div#msgMe figure {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -1144,15 +1155,20 @@ div#msgMe a {
   .headerName {
     display: inline;
   }
-  section#intro .intro-content {
+  main {
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#intro .intro {
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
   }
-  section#intro .intro-content div {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  section#intro .intro-content #introImg {
+  section#intro .intro #introImg {
     width: 40%;
     display: block;
   }
@@ -1164,24 +1180,29 @@ div#msgMe a {
     flex-direction: column;
   }
   /* Services Sections */
+  section#services > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
   section#services div#cards {
     width: 100vw;
-    transform: translateX(-10%);
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
   }
-  section#services .skill-block {
-    width: 400px;
+  section#services .servBlock {
+    width: 40%;
+    min-height: 600px;
     margin: 20px;
   }
-  /* Area Section */
-  .promises {
-    width: 45%;
+  #about-style {
+    height: 1800px;
   }
-  .results > div#prom-container {
-    display: flex;
-    flex-wrap: wrap;
+  section#about {
+    height: 1800px;
   }
   /* Footer Section */
   #footerNav {
@@ -1190,6 +1211,9 @@ div#msgMe a {
     justify-content: space-around;
     align-items: center;
   }
+  #footerNav > div {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   /* Header Settings */
@@ -1197,46 +1221,36 @@ div#msgMe a {
     display: none;
   }
   header li {
-    display: inline-block;
+    display: inline;
   }
   header #mainHeader {
-    width: 70%;
+    width: 80%;
   }
   /* Intro Section */
   section#intro > div {
     width: 100%;
   }
-  section#intro > div div {
-    width: 100%;
+  section#intro > div > div {
+    width: 50%;
   }
   section#intro .intro3D {
     display: block;
   }
-  section#intro .intro-content {
+  section#intro .intro {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row-reverse nowrap;
     justify-content: space-around;
     align-items: center;
-  }
-  section#intro .intro-content div {
-    width: 50%;
-    text-align: left;
-    display: flex;
-    flex-direction: row-reverse;
-  }
-  section#intro .intro-content #introImg {
-    display: block;
   }
   section#intro .introducing {
     text-align: left;
   }
   section#intro #socials {
     display: flex;
-    justify-content: start;
-    flex-direction: column;
-  }
-  section#intro div.intro-content div#introImg {
-    display: block;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
   }
   div#scroll-anim {
     width: 100vw;
@@ -1245,17 +1259,21 @@ div#msgMe a {
   section#services #cards {
     width: 100vw;
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    flex-wrap: wrap;
-    transform: translateX(-10%);
+    align-items: center;
   }
-  section#services #cards .skill-block {
+  section#services #cards .servBlock {
     width: 44%;
+    min-height: 600px;
     margin: 20px;
   }
   /* About Section */
-  .about-style {
-    height: 700px;
+  div#about-style {
+    height: 990px;
+  }
+  section#about {
+    height: 1000px;
   }
   section#about > div {
     display: flex;
@@ -1267,15 +1285,14 @@ div#msgMe a {
     width: 50%;
   }
   /* Area Section */
-  #prom-container {
-    width: 100%;
-  }
-  .promises {
-    width: 45%;
-  }
-  .results > #prom-container {
+  section#portfolio .projCont .proj {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#portfolio .projCont .proj > div {
+    width: 50%;
   }
   /* CTA Section */
   section#contact > div {
@@ -1290,6 +1307,9 @@ div#msgMe a {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+  }
+  #footerNav > div {
+    width: 50%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1357,6 +1377,7 @@ div#msgMe a {
     width: 50%;
     text-align: left;
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     flex-flow: row-reverse nowrap;
@@ -1391,6 +1412,7 @@ div#msgMe a {
   }
   section#intro #socials div {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -1698,6 +1720,7 @@ div#msgMe a {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -1713,6 +1736,7 @@ div#msgMe a {
   padding: 20px;
   border-radius: 20px;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1730,6 +1754,7 @@ div#msgMe a {
   border: 5px solid rgb(104, 228, 33);
   border-radius: 50%;
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 }

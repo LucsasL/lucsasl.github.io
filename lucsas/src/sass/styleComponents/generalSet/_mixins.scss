@@ -1,8 +1,9 @@
 // Layout Mixins
 
 // Display Flex
-@mixin center {
+@mixin center($wrap: row nowrap) {
   display: flex;
+  flex-flow: $wrap;
   justify-content: center;
   align-items: center;
 }

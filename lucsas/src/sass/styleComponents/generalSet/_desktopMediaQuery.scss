@@ -6,21 +6,23 @@
 
   header {
     li {
-      display: inline-block;
+      display: inline;
     }
 
     #mainHeader {
-      width: 70%;
+      width: 80%;
     }
+
   }
 
   /* Intro Section */
   section#intro {
     > div {
       width: 100%;
+      // @include spaceAround;
 
-      div{
-        width: 100%;
+      > div {
+        width: 50%;
       }
     }
 
@@ -28,36 +30,18 @@
       display: block;
     }
 
-    .intro-content {
-      @include spaceAround;
-
-      div {
-        width: 50%;
-
-        text-align: left;
-
-        display: flex;
-        flex-direction: row-reverse;
-      }
-
-      #introImg {
-        display: block;
-      }
+    .intro {
+      @include spaceAround(row-reverse nowrap);
     }
-
+      
     .introducing {
       text-align: left;
     }
 
     #socials {
-      display: flex;
-      justify-content: start;
-      flex-direction: column;
+      @include flexStart;
+      flex-flow: column nowrap;
     }
-  }
-
-  section#intro div.intro-content div#introImg {
-    display: block;
   }
 
   div#scroll-anim {
@@ -68,24 +52,25 @@
   section#services {
     #cards {
       width: 100vw;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      transform: translateX(-10%);
+      
+      @include center(row wrap);
 
-      .skill-block {
+      .servBlock {
         width: 44%;
+        min-height: 600px;
         margin: 20px;
       }
     }
   }
 
   /* About Section */
-  .about-style {
-    height: 700px;
+  div#about-style {
+    height: 990px;
   }
 
   section#about {
+    height: 1000px;
+
     > div {
       @include spaceAround;
 
@@ -96,17 +81,18 @@
   }
 
   /* Area Section */
-  #prom-container {
-    width: 100%;
-  }
 
-  .promises {
-    width: 45%;
-  }
-
-  .results > #prom-container {
-    display: flex;
-    flex-wrap: wrap;
+  // Portfolio Area
+  section#portfolio {
+    .projCont {
+      .proj {
+        @include spaceAround(row nowrap);
+    
+        > div {
+          width: 50%;
+        }
+      }
+    }
   }
 
   /* CTA Section */
@@ -119,5 +105,9 @@
   /* Footer Section */
   #footerNav {
     @include spaceAround;
+
+    > div {
+      width: 50%;
+    }
   }
 }

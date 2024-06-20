@@ -3,16 +3,15 @@
   .headerName {
     display: inline;
   }
+
+  main {
+    @include verticalFlex;
+  }
   
   section#intro {
-    .intro-content {
-      display: flex;
-      justify-content: space-around;
-
-      div {
-        display: flex;
-        flex-direction: row-reverse;
-      }
+    .intro {
+      @include spaceAround;
+      flex-flow: row-reverse nowrap;
 
       #introImg {
         width: 40%;
@@ -33,31 +32,40 @@
 
   /* Services Sections */
   section#services {
-    div#cards {
-      width: 100vw;
-      transform: translateX(-10%);
-
-      @include center;
+    > div {
+      @include verticalFlex(space-between, center);
     }
 
-    .skill-block {
-      width: 400px;
+    div#cards {
+      width: 100vw;
+
+      @include center(row wrap);
+    }
+
+    .servBlock {
+      width: 40%;
+      min-height: 600px;
       margin: 20px;
     }
   }
 
-  /* Area Section */
-  .promises {
-    width: 45%;
+  // About Section
+  #about-style {
+    height: 1800px;
   }
 
-  .results > div#prom-container {
-    display: flex;
-    flex-wrap: wrap;
+  section#about {
+    height: 1800px;
   }
+
+  // Area Section
 
   /* Footer Section */
   #footerNav {
     @include spaceAround;
+
+    > div {
+      width: 50%;
+    }
   }
 }
