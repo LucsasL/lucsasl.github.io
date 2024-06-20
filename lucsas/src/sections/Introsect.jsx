@@ -1,5 +1,5 @@
 import { webIntroSect } from "../utils/data";
-const { info, socialMedias } = webIntroSect;
+const { socialMedias } = webIntroSect;
 
 function Introsect() {
 
