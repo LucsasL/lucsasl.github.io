@@ -1,0 +1,43 @@
+@media all {
+  .laptop {
+    .image {
+      width: 77.1%;
+      height: 80.5%;
+    }
+
+    .laptopContent {
+      width: 77.1%;
+      height: 80.62%;
+    }
+
+    .pageHeader {
+      width: 100%;
+      height: 70px;
+    }
+
+    .dateTime {
+      width: 50%;
+
+      .time {
+        font-size: 4em;
+      }
+
+      .date {
+        font: normal 2em $mainFont;
+      }
+    }
+
+    p {
+      margin: 10px 25px;
+      font-size: 1em;
+      line-height: 1em;
+    }
+
+    a {
+      display: block;
+      color: blue;
+      text-decoration: underline;
+      margin: 16px;
+    }
+  }
+}

@@ -798,78 +798,6 @@ header div#bgcolor input:checked ~ span i#thumb {
     width: 100%;
   }
 }
-.laptop {
-  position: relative;
-}
-.laptop .image {
-  background: url("../img/landscape.webp") no-repeat center;
-  background-size: cover;
-  width: 77.1%;
-  height: 80.5%;
-  border-radius: 2px;
-  position: absolute;
-  top: 4.9%;
-  left: 11.68%;
-  z-index: 1;
-}
-.laptop .laptopContent {
-  background: white;
-  color: black;
-  width: 77.1%;
-  height: 80.62%;
-  border-radius: 2px;
-  position: absolute;
-  top: 4.9%;
-  left: 11.68%;
-  z-index: 2;
-}
-.laptop .pageHeader {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.laptop .pageHeader ul {
-  margin-right: 20px;
-}
-.laptop .pageHeader li {
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.laptop .pageHeader li:hover {
-  background: rgba(255, 255, 255, 0.196);
-}
-.laptop .dateTime {
-  width: 50%;
-  padding: 30px;
-  text-align: right;
-  display: flex;
-  justify-content: end;
-  position: absolute;
-  top: 64%;
-  left: 50%;
-}
-.laptop .dateTime .time {
-  font-size: 4em;
-}
-.laptop .dateTime .date {
-  font: normal 2em "Plus Jakarta Sans", sans-serif;
-}
-.laptop p {
-  margin: 10px 25px;
-  font-size: 1em;
-  line-height: 1em;
-}
-.laptop a {
-  display: block;
-  color: blue;
-  text-decoration: underline;
-  margin: 16px;
-}
-
 @media all {
   section#portfolio {
     background: rgb(15, 15, 15);
@@ -1106,6 +1034,111 @@ div#msgMe a {
   }
 }
 
+.laptop {
+  position: relative;
+}
+.laptop .image {
+  background: url("../img/landscape.webp") no-repeat center;
+  background-size: cover;
+  width: 77.1%;
+  height: 80.5%;
+  border-radius: 2px;
+  position: absolute;
+  top: 4.9%;
+  left: 11.68%;
+  z-index: 1;
+}
+.laptop .laptopContent {
+  background: white;
+  color: black;
+  width: 77.1%;
+  height: 80.62%;
+  border-radius: 2px;
+  position: absolute;
+  top: 4.9%;
+  left: 11.68%;
+  z-index: 2;
+}
+.laptop .pageHeader {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.laptop .pageHeader ul {
+  margin-right: 20px;
+}
+.laptop .pageHeader li {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.laptop .pageHeader li:hover {
+  background: rgba(255, 255, 255, 0.196);
+}
+.laptop .dateTime {
+  width: 50%;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 64%;
+  left: 50%;
+}
+.laptop .dateTime .time {
+  font-size: 4em;
+}
+.laptop .dateTime .date {
+  font: normal 2em "Plus Jakarta Sans", sans-serif;
+}
+.laptop p {
+  margin: 10px 25px;
+  font-size: 1em;
+  line-height: 1em;
+}
+.laptop a {
+  display: block;
+  color: blue;
+  text-decoration: underline;
+  margin: 16px;
+}
+
+@media all {
+  .laptop .image {
+    width: 77.1%;
+    height: 80.5%;
+  }
+  .laptop .laptopContent {
+    width: 77.1%;
+    height: 80.62%;
+  }
+  .laptop .pageHeader {
+    width: 100%;
+    height: 70px;
+  }
+  .laptop .dateTime {
+    width: 50%;
+  }
+  .laptop .dateTime .time {
+    font-size: 4em;
+  }
+  .laptop .dateTime .date {
+    font: normal 2em "Plus Jakarta Sans", sans-serif;
+  }
+  .laptop p {
+    margin: 10px 25px;
+    font-size: 1em;
+    line-height: 1em;
+  }
+  .laptop a {
+    display: block;
+    color: blue;
+    text-decoration: underline;
+    margin: 16px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
   /* Intro Section */
   .headerName {

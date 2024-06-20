@@ -15,12 +15,15 @@
 @import "./styleComponents/UI Components/About";
 @import "./styleComponents/UI Components/Area";
 @import "./styleComponents/UI Components/Skill";
-@import "./styleComponents/UI Components/laptopContent";
 @import "./styleComponents/UI Components/Portfolio";
 @import "./styleComponents/UI Components/Contact";
 
 @import "./styleComponents/UI Components/footer";
 @import "./styleComponents/UI Components/msgme";
+
+// Skill Content
+@import "./styleComponents/UI Components/laptopContent";
+@import "./styleComponents/UI Components/laptopContentBig";
 
 // Media Queries
 @import "./styleComponents/generalSet/tabletMediaQuery";
