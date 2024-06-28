@@ -1,5 +1,5 @@
 // Hooks
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 // Icons
 import { CgMenuRightAlt } from "react-icons/cg";
@@ -14,19 +14,26 @@ function MsgMe() {
   const [menuShown, setMenuShown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  window.addEventListener("scroll", (e) => {
-    const posY = window.scrollY;
+  // Refs
+  const topButt = useRef();
 
-    if (posY > 0) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  });
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1200) {
+        topButt.current.style.left = "83%";
+      }
+    })
 
-  const pageToTop = () => {
-    window.scrollTo(0, 0);
-  }
+    window.addEventListener("scroll", () => {
+      const posY = window.scrollY;
+  
+      if (posY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  }, [topButt])
 
   // Context
   const { setLang } = useContext(PageLang);
@@ -80,12 +87,21 @@ function MsgMe() {
 
       <button
         className="backUp"
-        style={{
-          opacity: scrolled ? "1" : "0",
-          pointerEvents: scrolled ? "" : "none",
-          left: menuShown ? "5%" : "62%",
-        }}
-        onClick={() => pageToTop()}
+        ref={topButt}
+        style={
+          window.innerWidth >= 1200
+            ? {
+                opacity: scrolled ? "1" : "0",
+                pointerEvents: scrolled ? "" : "none",
+                left: menuShown ? "66%" : "83%",
+              }
+            : {
+                opacity: scrolled ? "1" : "0",
+                pointerEvents: scrolled ? "" : "none",
+                left: menuShown ? "5%" : "62%",
+              }
+        }
+        onClick={() => window.scrollTo(0, 0)}
       >
         <FaArrowUp />
       </button>
