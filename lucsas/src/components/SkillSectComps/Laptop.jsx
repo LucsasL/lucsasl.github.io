@@ -4,14 +4,18 @@ import { useContext, useRef, useState } from "react";
 // Images Import
 import notebook from "../../img/laptop.svg";
 // import mobile from "../../img/mobile.webp";
-import { webSkillsSect } from "../../utils/data";
+
+// Context
+import { PageLang } from "../../App";
+import { Data } from "../../sections/Skills";
 
 // Data Import
-import { Data } from "../../sections/Skills";
+import { webSkillsSect } from "../../utils/data";
 
 function Laptop() {
   // Context
   const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
+  const { lang } = useContext(PageLang);
 
   // Refs
   const laptopImg = useRef();
@@ -127,7 +131,13 @@ function Laptop() {
                 boxShadow: activeTech.header.headerBoxShadow,
               }}
             >
-              {`This is ${activeTech.content.title}`}
+              {
+                lang === "English" ? (
+                  `This is ${activeTech.content.title}`
+                ) : (
+                  `This is ${activeTech.content.title}`
+                )
+              }
             </h2>
             <p
               style={{

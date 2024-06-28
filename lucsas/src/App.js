@@ -10,19 +10,24 @@ import SubmitPopup from "./components/submitPopup";
 import "./styles/index.css";
 
 export const SubmitData = createContext(false);
+export const PageLang = createContext();
 
 function App() {
   const [open, setOpen] = useState(false);
+  const [lang, setLang] = useState("English");
 
   return (
     <>
-      <Header />
-      <SubmitData.Provider value={{ open, setOpen }}>
-        <Main />
-        <SubmitPopup />
-      </SubmitData.Provider>
-      <Footer />
-      <MsgMe />
+      <PageLang.Provider value={{ lang, setLang }}>
+        <Header />
+        <SubmitData.Provider value={{ open, setOpen }}>
+          <Main />
+          <SubmitPopup />
+        </SubmitData.Provider>
+
+        <Footer />
+        <MsgMe />
+      </PageLang.Provider>
     </>
   );
 }

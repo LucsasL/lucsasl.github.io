@@ -1,8 +1,18 @@
+// Hooks
+import { useContext } from "react";
+
+// Files
 import resume from "./resume.pdf";
+
+// Context
+import { PageLang } from "../App";
+
+// Data
 import { webIntroSect } from "../utils/data";
 const { socialMedias } = webIntroSect;
 
 function Introsect() {
+  const { lang } = useContext(PageLang);
 
   return (
     <>

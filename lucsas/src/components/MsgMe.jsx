@@ -1,9 +1,16 @@
-import { useState } from "react";
+// Hooks
+import { useContext, useState } from "react";
 
+// Icons
 import { CgMenuRightAlt } from "react-icons/cg";
+
+// Context
+import { PageLang } from "../App";
 
 function MsgMe() {
   const [menuShown, setMenuShown] = useState(false);
+
+  const { setLang } = useContext(PageLang);
 
   return (
     <>
@@ -22,8 +29,12 @@ function MsgMe() {
       >
         <abbr title={"Translate to Portugues"}>
           <select name="Translate" id="changeLang">
-            <option value="English">English</option>
-            <option value="Portuguese">Portuguese</option>
+            <option value="English" onSelect={() => setLang("English")}>
+              English
+            </option>
+            <option value="Portuguese" onSelect={() => setLang("Portuguese")}>
+              Portuguese
+            </option>
           </select>
         </abbr>
       </div>
