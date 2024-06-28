@@ -3,7 +3,7 @@ import { useContext, useRef, useState } from "react";
 
 // Images Import
 import notebook from "../../img/laptop.svg";
-import mobile from "../../img/mobile.webp";
+// import mobile from "../../img/mobile.webp";
 import { webSkillsSect } from "../../utils/data";
 
 // Data Import

@@ -207,7 +207,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "HTML + CSS + TS",
-          text: "Work In Progress",
+          text: "Programming a web app with TypeScript is like using JavaScript with superpowers. It makes your code more succinct and organized by adding types to variables and giving you complete control over the algorithm. This way, the architecture of your application becomes more manageable.",
           textLink: "TypeScript",
           link: "https://www.typescriptlang.org/",
           dateTime: {
@@ -297,7 +297,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "SASS",
-          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+          text: "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and strucutures.",
           textLink: "SASS",
           link: "https://sass-lang.com/",
           dateTime: {
@@ -342,7 +342,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "GSAP",
-          text: "Animation to your website ",
+          text: "A JavaScript library that makes the animations of your website more manageable, bringing countless of methods to animate and control colors, positions and triggers of the elements of your site, adding more tools to create a better experience.",
           textLink: "GSAP",
           link: "https://gsap.com/",
           dateTime: {
@@ -387,7 +387,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Jest",
-          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+          text: "Easy tests for your applications is with Jest, a simple tool that shows the outputs of your functions and methods and predict precisely what will happen with your algorithms and displays.",
           textLink: "Jest",
           link: "https://jestjs.io/",
           dateTime: {
@@ -432,7 +432,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Redux",
-          text: "State Management that makes the structure more put together",
+          text: "State management at its finest: Redux is a tool that makes your structure more cohesive. It creates stores that connect with all the components of your React app and saves all the slices of your application.",
           textLink: "Redux",
           link: "https://redux.js.org/",
           dateTime: {
@@ -477,7 +477,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Python",
-          text: "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
+          text: "Back-end development with a high-level programming language that is widely used and efficient for data processing and adding to the building of a full applications.",
           textLink: "Python",
           link: "https://www.python.org/",
           dateTime: {
@@ -522,7 +522,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Git",
-          text: "An essential tool for project management and version control,",
+          text: "An essential tool for project management and version control that made web development safer. As an application grow, so do the packages and features of such, there is where Git fits in, it's a useful tool for controlling the versions of your software.",
           textLink: "Git",
           link: "https://git-scm.com/",
           dateTime: {
