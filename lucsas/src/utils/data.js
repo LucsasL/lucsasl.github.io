@@ -127,7 +127,7 @@ export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
   sectImg: webDev,
   areaDesc:
-    "I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git.",
+    "Looking to work and contribute in the Web Development area I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git. I'm a former programmer focusing in the Front-end.",
   techStack: {
     tech: [
       "HTML",

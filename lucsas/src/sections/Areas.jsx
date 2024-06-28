@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
-const { sectImg } = webSkillsSect;
+const { areaDesc, sectImg } = webSkillsSect;
 
 function Areas() {
   const [infoIntersect, setInfoIntersect] = useState(false);
@@ -45,13 +45,7 @@ function Areas() {
               </div>
 
               <p>
-                Meticulously target your audience through the lens of{" "}
-                <strong className="fancy">Google Ads,</strong> ensuring that
-                every click counts. Your business spotted by the right customer
-                by the right advert. Using{" "}
-                <strong>Audience Segmentation</strong> we can track all the
-                different types of interests and ideas, and use these statistics
-                to bring more potential clients to you.
+                {areaDesc}
               </p>
             </div>
 
