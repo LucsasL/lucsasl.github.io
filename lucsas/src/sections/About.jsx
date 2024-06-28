@@ -1,12 +1,22 @@
 // Hooks Import
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 
+// Context
+import { PageLang } from "../App";
+
+// Data Import
 import { webAboutSect } from "../utils/data";
-const  { aboutText, aboutImg } = webAboutSect;
+import { webAboutSectPort } from "../utils/dataPortuguese";
+
+// Data Desestructuring
+const { aboutTitle, aboutText, aboutImg } = webAboutSect;
+const { aboutTitlePort, aboutTextPort } = webAboutSectPort;
 
 function About() {
   const [aboutIntersect, setAboutIntersect] = useState(false);
   const aboutInfo = useRef(null);
+
+  const { lang } = useContext(PageLang);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -40,16 +50,24 @@ function About() {
         <div>
           <div ref={aboutInfo} style={changeVisibility("-100%")}>
             <h1 className="big">
-              Hi, My name is <span className="fancy">Lucas Lira</span>
+              {lang === "English" ? (
+                <>
+                  {aboutTitle} <span className="fancy">Lucas Lira</span>
+                </>
+              ) : (
+                <>
+                  {aboutTitlePort} <span className="fancy">Lucas Lira</span>
+                </>
+              )}
             </h1>
 
-            {aboutText.map(p => {
-              return (
-                <p>
-                  {p}
-                </p>
-              );
-            })}
+            {lang === "English"
+              ? aboutText.map((p) => {
+                  return <p>{p}</p>;
+                })
+              : aboutTextPort.map((p) => {
+                  return <p>{p}</p>;
+                })}
           </div>
 
           <div className="img-div" style={changeVisibility("100%")}>
@@ -63,17 +81,13 @@ function About() {
                   id="mascot"
                 ></iframe> */}
                 <img src={aboutImg} alt="Lucsas Chilling" />
-                <figcaption>
-                  Lucsas Chilling
-                </figcaption>
+                <figcaption>Lucsas Chilling</figcaption>
               </figure>
             </picture>
           </div>
         </div>
 
-        <div className="range">
-          
-        </div>
+        <div className="range"></div>
       </section>
     </>
   );

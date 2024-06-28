@@ -52,11 +52,10 @@ export const webNavOptionsLink = [
   "contact",
 ];
 
-export const webIntroSect = {
-  info: {
+export const webIntroSectPort = {
+  infoPort: {
     h1Span1: "Salve, eu sou",
-    h1Span2: "Lucsas",
-    h1Span3: "Lucas Lira",
+    h2: "Desenvolvedor Web",
     text: "Eu crio e otimizo websites with React e JavaScript, entregando o melhor para fazer software bons que resolvem problemas reais.",
     downloadButt: "Baixar Currículo",
   },
@@ -85,9 +84,9 @@ export const webIntroSect = {
   ],
 };
 
-export const webServiceSect = {
-  sectTitle: "Em que posso ajudar?",
-  servBoxes: [
+export const webServiceSectPort = {
+  sectTitlePort: "Em que posso ajudar?",
+  servBoxesPort: [
     {
       title: "Semântica e SEO",
       text: "Estruturar um website semanticamente, respeitando os conceitos básicos de SEO e dando significado aos componentes e objetos de um site.",
@@ -106,9 +105,9 @@ export const webServiceSect = {
   ],
 };
 
-export const webAboutSect = {
-  sectTitle: "Eae, Meu nome é Lucas Lira",
-  aboutText: [
+export const webAboutSectPort = {
+  sectTitlePort: "Eae, Meu nome é Lucas Lira",
+  aboutTextPort: [
     "Eu trabalho como um <strong>Desenvolvedor Web Front-End;</strong> trabalhando com interfaces e consumindo APIs para websites. Minha expertise se baseia em criar aplicações web dinâmicos, versáteis e visualmente agradáveis. Tendo ganhado experiência substancial com minhas habilidades, estou buscando trabalhar como um Desenvolvedor.",
     "Desde que comecei, Estive estudando tópicos e tecnologias da computação por um tempo e registrando esse meu avanço, sempre buscando melhorar e entregar o que é necessário para desenvolver uma aplicação aprimorada. Meu GitHub mostra o caminho que trilhei para entender as tecnologias que rondam esse mercado.",
     "Meu trabalho e compromisso vai para dar resultados, independente da forma, sendo isso escrevendo código, projetando ou dando ideias.",
@@ -117,10 +116,10 @@ export const webAboutSect = {
   aboutImg: lucsas,
 };
 
-export const webSkillsSect = {
-  sectTitle: "Conjunto de Tecnologias que eu já usei:",
+export const webSkillsSectPort = {
+  sectTitlePort: "Conjunto de Tecnologias que eu já usei:",
   sectImg: webDev,
-  areaDesc:
+  areaDescPort:
     "Eu estive pondo dedicação em desenvolver minhas habilidades em HTML, CSS, JavaScript, React JS, GSAP, Redux, e Git.",
   techStack: {
     tech: [
@@ -137,7 +136,7 @@ export const webSkillsSect = {
       "Git",
     ],
     imgs: [html, css, js, ts, react, sass, gsap, jest, redux, python, git],
-    techDesc: [
+    techDescPort: [
       "A tecnologia que dá significado aos websites através de suas tags, construindo o documento que você vê no navegador.",
       "A combinação entre as tags do HTML e as folhas de estilo CSS fazem o trabalho para sites estáticos, tornando possível a adição de layouts, posições, responsividade e animações.",
       "A tecnologia que faz as coisas mais interessantes e adiciona atributos relevantes para uma experiência dinâmica. Com toda suas bibliotecas, frameworks e manipulação de DOM dando valor à aplicação, tornando o JavaScript indispensável no desenvolvimento Web.",
@@ -150,9 +149,9 @@ export const webSkillsSect = {
   },
 };
 
-export const webProjectsSect = {
-  sectTitle: "Em que projetos você já trabalhou?",
-  projects: [
+export const webProjectsSectPort = {
+  sectTitlePort: "Em que projetos você já trabalhou?",
+  projectsPort: [
     {
       projLink: "https://marknow-lemon.vercel.app/",
       projTitle: "MARKNOW",
@@ -220,6 +219,6 @@ export const webProjectsSect = {
   ],
 };
 
-export const webContactSect = {
+export const webContactSectPort = {
   sectTitle: "Quer tornar o software da sua empresa real? Vamos crescer juntos!",
 };

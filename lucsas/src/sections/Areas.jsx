@@ -1,13 +1,26 @@
 // Hooks Import
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+
+// Context
+import { PageLang } from "../App";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
+import { webSkillsSectPort } from "../utils/dataPortuguese";
+
+// Data Desestructuring
 const { areaDesc, sectImg } = webSkillsSect;
+const { areaDescPort } = webSkillsSectPort;
 
 function Areas() {
+  // States
   const [infoIntersect, setInfoIntersect] = useState(false);
+
+  // Refs
   const infoBox = useRef();
+
+  // Context
+  const { lang } = useContext(PageLang);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -41,12 +54,14 @@ function Areas() {
           <div className="platform">
             <div ref={infoBox} style={changeVisibility(0)}>
               <div className="blockquote">
-                <h1 className="big">Front-End Web Developer</h1>
+                <h1 className="big">
+                  {lang === "English"
+                    ? "Front-end Web Developer"
+                    : "Desenvolvedor Web Front-end"}
+                </h1>
               </div>
 
-              <p>
-                {areaDesc}
-              </p>
+              <p>{lang === "English" ? areaDesc : areaDescPort}</p>
             </div>
 
             <div className="img-div">
@@ -56,9 +71,7 @@ function Areas() {
                   alt="Web Development Service"
                   id="webdev-design"
                 />
-                <figcaption>
-                  Web Development Service
-                </figcaption>
+                <figcaption>Web Development Service</figcaption>
               </figure>
             </div>
           </div>

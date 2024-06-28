@@ -61,8 +61,7 @@ export const webNavOptionsLink = [
 export const webIntroSect = {
   info: {
     h1Span1: "Sup, I'm",
-    h1Span2: "Lucsas",
-    h1Span3: "Lucas Lira",
+    h2: "Web Developer",
     text: "I create and optimize websites with React and JavaScript,delivering the best to make good software that solves real problems.",
     downloadButt: "Download Resume",
   },

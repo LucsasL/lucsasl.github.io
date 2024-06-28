@@ -1,9 +1,22 @@
-import { useState, useEffect, useRef } from "react";
+// Hooks Import
+import { useState, useEffect, useRef, useContext } from "react";
+
+// Context
+import { PageLang } from "../App.js";
+
+// Data Import
 import { webProjectsSect } from "../utils/data";
+import { webProjectsSectPort } from "../utils/dataPortuguese.js";
 
 function Portfolio() {
+  // States
   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
+
+  // Refs
   const project = useRef();
+
+  // Context
+  const { lang } = useContext(PageLang);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -38,90 +51,175 @@ function Portfolio() {
           </div>
 
           <div className="projCont">
-            {webProjectsSect.projects.map(
-              (
-                {
-                  projLink,
-                  projTitle,
-                  projSubtitle,
-                  projDesc,
-                  projImgDesc,
-                  techStack,
-                  techStackImg,
-                  projImg,
-                },
-                index
-              ) => {
-                return (
-                  <>
-                    <div
-                      className="proj"
-                      key={index}
-                      style={changeVisibility()}
-                    >
-                      <div className="projInfo">
-                        <h2 className="big">
-                          {projTitle}
-                          <span
-                            style={{ fontSize: ".5em", marginLeft: "15px" }}
-                          >
-                            (Work In Progress)
-                          </span>
-                        </h2>
+            {lang === "English"
+              ? webProjectsSect.projects.map(
+                  (
+                    {
+                      projLink,
+                      projTitle,
+                      projSubtitle,
+                      projDesc,
+                      projImgDesc,
+                      techStack,
+                      techStackImg,
+                      projImg,
+                    },
+                    index
+                  ) => {
+                    return (
+                      <>
+                        <div
+                          className="proj"
+                          key={index}
+                          style={changeVisibility()}
+                        >
+                          <div className="projInfo">
+                            <h2 className="big">
+                              {projTitle}
+                              <span
+                                style={{ fontSize: ".5em", marginLeft: "15px" }}
+                              >
+                                (Work In Progress)
+                              </span>
+                            </h2>
 
-                        <h3>{projSubtitle}</h3>
+                            <h3>{projSubtitle}</h3>
 
-                        <p>{projDesc}</p>
+                            <p>{projDesc}</p>
 
-                        <div className="techStackCont">
-                          {techStack.map((t, index) => {
-                            return (
-                              <abbr title={t} key={index}>
-                                <picture>
-                                  <img src={techStackImg[index]} alt={t} />
-                                </picture>
-                              </abbr>
-                            );
-                          })}
+                            <div className="techStackCont">
+                              {techStack.map((t, index) => {
+                                return (
+                                  <abbr title={t} key={index}>
+                                    <picture>
+                                      <img src={techStackImg[index]} alt={t} />
+                                    </picture>
+                                  </abbr>
+                                );
+                              })}
+                            </div>
+
+                            <div>
+                              <button>
+                                <a
+                                  href={projLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Visit Project
+                                </a>
+                              </button>
+                              <button className="detailBtn">
+                                <a
+                                  href="https://github.com/lucsasl"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={() =>
+                                    alert(
+                                      "Work in Progress, I'm finishing creating these sections"
+                                    )
+                                  }
+                                >
+                                  See details
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div className="projImg">
+                            <picture key={index}>
+                              <img src={projImg} alt={projImgDesc} />
+                            </picture>
+                          </div>
                         </div>
+                      </>
+                    );
+                  }
+                )
+              : webProjectsSectPort.projects.map(
+                  (
+                    {
+                      projLink,
+                      projTitle,
+                      projSubtitle,
+                      projDesc,
+                      projImgDesc,
+                      techStack,
+                      techStackImg,
+                      projImg,
+                    },
+                    index
+                  ) => {
+                    return (
+                      <>
+                        <div
+                          className="proj"
+                          key={index}
+                          style={changeVisibility()}
+                        >
+                          <div className="projInfo">
+                            <h2 className="big">
+                              {projTitle}
+                              <span
+                                style={{ fontSize: ".5em", marginLeft: "15px" }}
+                              >
+                                (Work In Progress)
+                              </span>
+                            </h2>
 
-                        <div>
-                          <button>
-                            <a
-                              href={projLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              Visit Project
-                            </a>
-                          </button>
-                          <button className="detailBtn">
-                            <a
-                              href="https://github.com/lucsasl"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              onClick={() =>
-                                alert(
-                                  "Work in Progress, I'm finishing creating these sections"
-                                )
-                              }
-                            >
-                              See details
-                            </a>
-                          </button>
+                            <h3>{projSubtitle}</h3>
+
+                            <p>{projDesc}</p>
+
+                            <div className="techStackCont">
+                              {techStack.map((t, index) => {
+                                return (
+                                  <abbr title={t} key={index}>
+                                    <picture>
+                                      <img src={techStackImg[index]} alt={t} />
+                                    </picture>
+                                  </abbr>
+                                );
+                              })}
+                            </div>
+
+                            <div>
+                              <button>
+                                <a
+                                  href={projLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Visit Project
+                                </a>
+                              </button>
+                              <button className="detailBtn">
+                                <a
+                                  href="https://github.com/lucsasl"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={() =>
+                                    alert(
+                                      "Work in Progress, I'm finishing creating these sections"
+                                    )
+                                  }
+                                >
+                                  See details
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div className="projImg">
+                            <picture key={index}>
+                              <img src={projImg} alt={projImgDesc} />
+                            </picture>
+                          </div>
                         </div>
-                      </div>
-
-                      <div className="projImg">
-                        <picture key={index}>
-                          <img src={projImg} alt={projImgDesc} />
-                        </picture>
-                      </div>
-                    </div>
-                  </>
-                );
-              }
-            )}
+                      </>
+                    );
+                  }
+                )}
           </div>
 
           <div className="blockquote">

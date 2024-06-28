@@ -10,6 +10,8 @@ import Features from "../components/SkillSectComps/features.jsx";
 import { webSkillsSect } from "../utils/data";
 import { reducer } from "../utils/pageDemo.js";
 import { techObj } from "../utils/pageDemo.js";
+
+// Data Desestructuring
 const { sectTitle, techStack } = webSkillsSect;
 const { techFeature } = techStack;
 
