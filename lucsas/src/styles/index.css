@@ -1056,8 +1056,9 @@ div#msgMe .menuIcon {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  width: 200px;
+  width: 270px;
   height: 75px;
+  padding: 10px;
   border-radius: 30px;
   display: flex;
   flex-flow: row nowrap;
@@ -1065,7 +1066,7 @@ div#msgMe .menuIcon {
   align-items: center;
   position: fixed;
   top: 85%;
-  left: 37%;
+  left: 25%;
   z-index: 7;
   transition: all 0.5s ease;
 }
@@ -1079,6 +1080,36 @@ div#msgMe .menuIcon {
 }
 .settingsMenu select option {
   cursor: pointer;
+}
+.settingsMenu button {
+  padding: 0;
+}
+.settingsMenu button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+
+.backUp {
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 85%;
+  left: 62%;
+  z-index: 7;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.backUp > * {
+  width: 30px;
+  height: 30px;
 }
 
 .laptop {
@@ -1627,7 +1658,10 @@ div#msgMe .menuIcon {
     padding: 20px;
   }
   .settingsMenu {
-    left: 75%;
+    left: 72%;
+  }
+  .backUp {
+    left: 83%;
   }
 }
 :root {
