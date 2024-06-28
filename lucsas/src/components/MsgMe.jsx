@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 
 // Icons
 import { CgMenuRightAlt } from "react-icons/cg";
+import { IoMdClose } from "react-icons/io";
 
 // Context
 import { PageLang } from "../App";
@@ -16,7 +17,11 @@ function MsgMe() {
     <>
       <div id="msgMe">
         <button onClick={() => setMenuShown(!menuShown)}>
-          <CgMenuRightAlt className="menuIcon" />
+          {menuShown ? (
+            <IoMdClose className="menuIcon" />
+          ) : (
+            <CgMenuRightAlt className="menuIcon" />
+          )}
         </button>
       </div>
 
