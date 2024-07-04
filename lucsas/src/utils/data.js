@@ -112,7 +112,7 @@ export const webServiceSect = {
 };
 
 export const webAboutSect = {
-  sectTitle: "Hi, My name is Lucas Lira",
+  sectTitle: "Hi, My name is ",
   aboutText: [
     "I work as a Front-End Web Developer, my expertise lies in crafting dynamic, visually appealing, and user-friendly web applications.",
     "Since I began, I've been studying topics in the field of programming for a while now, always looking to improve and deliver what is necessary to enhance my applications. My GitHub shows how much effort I put into really understanding the technologies.",

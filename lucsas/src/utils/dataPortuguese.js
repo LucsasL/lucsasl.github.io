@@ -106,7 +106,7 @@ export const webServiceSectPort = {
 };
 
 export const webAboutSectPort = {
-  sectTitlePort: "Eae, Meu nome é Lucas Lira",
+  sectTitlePort: "Eae, Meu nome é ",
   aboutTextPort: [
     "Eu trabalho como um <strong>Desenvolvedor Web Front-End;</strong> trabalhando com interfaces e consumindo APIs para websites. Minha expertise se baseia em criar aplicações web dinâmicos, versáteis e visualmente agradáveis. Tendo ganhado experiência substancial com minhas habilidades, estou buscando trabalhar como um Desenvolvedor.",
     "Desde que comecei, Estive estudando tópicos e tecnologias da computação por um tempo e registrando esse meu avanço, sempre buscando melhorar e entregar o que é necessário para desenvolver uma aplicação aprimorada. Meu GitHub mostra o caminho que trilhei para entender as tecnologias que rondam esse mercado.",

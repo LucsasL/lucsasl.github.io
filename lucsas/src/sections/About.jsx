@@ -9,8 +9,8 @@ import { webAboutSect } from "../utils/data";
 import { webAboutSectPort } from "../utils/dataPortuguese";
 
 // Data Desestructuring
-const { aboutTitle, aboutText, aboutImg } = webAboutSect;
-const { aboutTitlePort, aboutTextPort } = webAboutSectPort;
+const { sectTitle, aboutText, aboutImg } = webAboutSect;
+const { sectTitlePort, aboutTextPort } = webAboutSectPort;
 
 function About() {
   const [aboutIntersect, setAboutIntersect] = useState(false);
@@ -52,11 +52,11 @@ function About() {
             <h1 className="big">
               {lang === "English" ? (
                 <>
-                  {aboutTitle} <span className="fancy">Lucas Lira</span>
+                  {sectTitle} <span className="fancy">Lucas Lira</span>
                 </>
               ) : (
                 <>
-                  {aboutTitlePort} <span className="fancy">Lucas Lira</span>
+                  {sectTitlePort} <span className="fancy">Lucas Lira</span>
                 </>
               )}
             </h1>
