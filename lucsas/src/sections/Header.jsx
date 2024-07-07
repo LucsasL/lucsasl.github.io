@@ -12,6 +12,7 @@ export const BgTheme = createContext();
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(true);
   const [headerBg, setHeaderBg] = useState("#00000000");
+  const [headerBorder, setHeaderBorder] = useState("none");
   const [headerBlur, setHeaderBlur] = useState("");
   const headerCont = useRef();
   const headerColor = darkTheme
@@ -29,19 +30,27 @@ const Header = () => {
       const scrollPos = window.scrollY;
       if (scrollPos > 0) {
         setHeaderBg(headerColor);
+        setHeaderBorder(
+          darkTheme ? "3px solid rgba(0, 0, 0, 0.35)" : "3px solid rgba(255, 255, 255, .15)"
+        );
         setHeaderBlur("blur(6px)");
       } else {
         setHeaderBg("rgba(0, 0, 0, 0)");
+        setHeaderBorder("rgba(0, 0, 0, 0)");
         setHeaderBlur("blur(0px)");
       }
     });
-  }, [darkTheme, headerBg, headerCont, headerColor]);
+  }, [darkTheme, headerBg, headerCont, headerColor, headerBorder]);
 
   return (
     <>
       <header>
         <div
-          style={{ background: headerBg, backdropFilter: headerBlur }}
+          style={{
+            background: headerBg,
+            backdropFilter: headerBlur,
+            border: headerBorder,
+          }}
           ref={headerCont}
         >
           <HeaderLogo />
