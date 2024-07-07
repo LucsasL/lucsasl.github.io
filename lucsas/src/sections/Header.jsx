@@ -36,7 +36,7 @@ const Header = () => {
         setHeaderBlur("blur(6px)");
       } else {
         setHeaderBg("rgba(0, 0, 0, 0)");
-        setHeaderBorder("rgba(0, 0, 0, 0)");
+        setHeaderBorder("3px solid rgba(0, 0, 0, 0)");
         setHeaderBlur("blur(0px)");
       }
     });
