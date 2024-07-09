@@ -2,7 +2,7 @@
 import { useContext } from "react";
 
 // Files
-import resume from "./resume.pdf";
+import resume from "./resumeEng.pdf";
 
 // Context
 import { PageLang } from "../App";
