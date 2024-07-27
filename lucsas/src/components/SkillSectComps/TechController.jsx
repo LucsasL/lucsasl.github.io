@@ -9,7 +9,7 @@ import { webSkillsSect } from "../../utils/data";
 const { techStack } = webSkillsSect;
 
 function Skills() {
-  // Context
+  // Takes the Context Value
   const {
     dispatch,
     menuDiv,
@@ -23,8 +23,9 @@ function Skills() {
   const buttons = useRef([]);
   const buttonsBlock = useRef([]);
 
-  // Render Effects
+  // It records the elemenets that will re-render as the user interact
   useEffect(() => {
+    // This creates an instance of the intesection observer object, used to check if the screen of the user is intersecting with some element. In this case, it checks if it's intersecting with the menuDiv, and if it does it updates the menuAppear state, making it appear, otherwise, not.
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -35,58 +36,45 @@ function Skills() {
       });
     });
 
+    // Observeing element to play animation
     observer.observe(menuDiv.current);
 
     buttons.current = buttons.current.slice(0, techStack.tech.length);
   }, [menuDiv, setMenuAppear, buttons]);
 
+  // A function that detects the click of a button in the tech menu
   const changeTech = (tech, e, index) => {
+    // Takes the reference of the exact button, and removes the "active" CSS class, that makes the button look pressed
     buttonsBlock.current.forEach((el) => el.classList.remove("active"));
 
     console.log(e.target);
+    // Adds the CSS class "active" in the pressed button
     e.target.classList.add("active");
+  
+    // It checks the button that the user pressed, and change the opacity of the features, depending on the button the user clicks
+    const featureArray = [
+      [1, 0, 0, 0, 0, 0, 0],
+      [1, 1, 0, 0, 0, 0, 0],
+      [1, 1, 1, 0, 0, 0, 0],
+      [1, 1, 1, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0, 0, 0],
+      [1, 1, 1, 1, 1, 0, 0],
+      [1, 1, 1, 1, 1, 1, 0],
+      [1, 1, 1, 1, 1, 1, 1]
+    ];
 
-    switch (index) {
-      case 3:
-        setFeatureOpacity([1, 0, 0, 0, 0, 0, 0]);
-        break;
+    if (index < 3) {
+      setFeatureOpacity([0, 0, 0, 0, 0, 0, 0]);
 
-      case 4:
-        setFeatureOpacity([1, 1, 0, 0, 0, 0, 0]);
-        break;
-
-      case 5:
-        setFeatureOpacity([1, 1, 1, 0, 0, 0, 0]);
-        break;
-
-      case 6:
-        setFeatureOpacity([1, 1, 1, 0, 0, 0, 0]);
-        break;
-
-      case 7:
-        setFeatureOpacity([1, 1, 1, 1, 0, 0, 0]);
-        break;
-
-      case 8:
-        setFeatureOpacity([1, 1, 1, 1, 1, 0, 0]);
-        break;
-
-      case 9:
-        setFeatureOpacity([1, 1, 1, 1, 1, 1, 0]);
-        break;
-
-      case 10:
-        setFeatureOpacity([1, 1, 1, 1, 1, 1, 1]);
-        break;
-
-      default:
-        setFeatureOpacity([0, 0, 0, 0, 0, 0, 0]);
-        break;
+    } else {
+      setFeatureOpacity(featureArray[index - 3]);
     }
-
+  
+    // Tells when a tech button was pressed and dispatch an object with type of the tech in target
     dispatch({ type: `change_tech_${tech}` });
   };
 
+  // Returns the tech menu
   return (
     <>
       <div className="techStack" style={changeVisibility("-150%", menuAppear)}>
