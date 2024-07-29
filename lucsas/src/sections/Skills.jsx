@@ -48,7 +48,7 @@ function Skills() {
     observer.observe(menuDiv.current);
   }, []);
 
-  // It changes the visibility of the menu
+  // It changes the visibility of the tech controller
   const changeVisibility = (side, state, time = 0.5) => {
     return state
       ? {
@@ -62,6 +62,7 @@ function Skills() {
         };
   };
 
+  // Returns the full skill section, including the tech controller and the laptop that shows the tech stack
   return (
     <>
       <section id="skills">

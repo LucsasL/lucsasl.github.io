@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Tags -->
+    <!-- Meta Tags, It's used to set the basic configurations of a website, like the viewport and the display of the elements -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO Basics -->
+    <!-- SEO Basics, It tells the search engines the basic information and content of your website, very useful to create snippets in the Results page of a search engine (Google, Bing, Duck duck Go, Brave, etc...) -->
     <title>Lucsas | Web Developer</title>
     <meta name="author" content="Lucas Lira" />
     <meta 
       name="Description" 
-      content="This is just a test, there is nothing to see here ;D"
+      content="This is just a test, there is nothing to see here, WORK IN PROGRESS ;D"
     />
     <meta 
       name="keywords" 
       content="PPC Manager, Google Ads, Meta Ads, Sells, Digital Marketing, leads, ROI, sell, engagement"
     />
-    <meta rel="canonical" content="https://lucsasl.github.io" />
+
+    <!-- Tell the search engines the home page of your web application, and if you want to index your site -->
+    <meta rel="canonical" content="https://lucsas.vercel.app" />
     <meta name="robots" content="noindex, nofollow" />
 
+    <!-- Color the browser will paint the interface  -->
     <meta name="theme-color" content="#060606" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/lucsas-favicon.ico" type="image/x-icon">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- Favicon, icon that appear at the title tab -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
 
-    <!-- Print -->
-    <link rel="stylesheet" href="../src/sections/resume.pdf" media="print">
+    <!-- Print, It controls the CSS that makes the layout of the page in case a user press Ctrl + P in the browser to print your page -->
+    <link rel="stylesheet" href="../src/sections/resume.pdf" media="print" />
 
-    <!-- Imports -->
+    <!-- Imports, Imports of external JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   </head>
   <body>
+    <!-- Returns the message if the user has an old browser that does not run JavaScript -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- Body of the page; where the components is rendered -->
     <div id="root"></div>
   </body>
 </html>

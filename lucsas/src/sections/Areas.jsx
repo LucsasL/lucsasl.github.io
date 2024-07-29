@@ -8,7 +8,7 @@ import { PageLang } from "../App";
 import { webSkillsSect } from "../utils/data";
 import { webSkillsSectPort } from "../utils/dataPortuguese";
 
-// Data Desestructuring
+// Data Destructuring
 const { areaDesc, sectImg } = webSkillsSect;
 const { areaDescPort } = webSkillsSectPort;
 
@@ -23,6 +23,7 @@ function Areas() {
   const { lang } = useContext(PageLang);
 
   useEffect(() => {
+    // This creates an instance of the intesection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "infoIntersect" to true, rendering the animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -34,6 +35,7 @@ function Areas() {
     observer.observe(infoBox.current);
   }, []);
 
+  // Change visibility of the elements
   const changeVisibility = (side) => {
     return infoIntersect
       ? {
@@ -52,6 +54,7 @@ function Areas() {
       <section id="area">
         <div>
           <div className="platform">
+            {/* Areas Info */}
             <div ref={infoBox} style={changeVisibility(0)}>
               <div className="blockquote">
                 <h1 className="big">
@@ -64,6 +67,7 @@ function Areas() {
               <p>{lang === "English" ? areaDesc : areaDescPort}</p>
             </div>
 
+            {/* Skills Image */}
             <div className="img-div">
               <figure>
                 <img

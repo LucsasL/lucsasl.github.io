@@ -14,11 +14,14 @@ import oggAudio from "../../audio/Eric Godlow - Lo-fi Type Beat - No Love.ogg";
 gsap.registerPlugin(useGSAP);
 
 function MusicButton() {
+  // States
   const [musicPlaying, setMusicPlaying] = useState(false);
 
+  // Refs
   const musicButton = useRef();
   const audioPlayer = useRef();
 
+  // GSAP Animations function
   useGSAP(() => {
     window.addEventListener("load", () => {
       /* Rendering button animation */
@@ -35,11 +38,13 @@ function MusicButton() {
         power: false,
       };
 
+      // Applying the properties of opt variable to the button
       musicButton.current.width = opt.width * 2;
       musicButton.current.height = opt.height * 2;
       musicButton.current.style.width = opt.width;
       musicButton.current.style.height = opt.height;
 
+      // Telling the element has 2 dimensions with getContext
       const ctx = musicButton.current.getContext("2d");
       ctx.scale(2, 2);
 
@@ -50,6 +55,7 @@ function MusicButton() {
 
       let time = 0;
 
+      // Function that renders the animation
       const render = () => {
         window.requestAnimationFrame(render);
         ctx.clearRect(0, 0, opt.width, opt.height);
@@ -64,7 +70,10 @@ function MusicButton() {
             increment += -0.1;
           }
 
+          // Setting animation position at the x axis
           const x = (opt.width / opt.points) * i;
+
+          // Setting animation position at the y axis
           const y =
             opt.midY +
             Math.sin((time * opt.speed * i) / opt.stretch) *
@@ -90,7 +99,7 @@ function MusicButton() {
             sinHeight: 10,
             stretch: 5,
             ease: Power2.easeInOut,
-            });
+          });
         } else {
           setMusicPlaying(false);
           audioPlayer.current.pause();
@@ -107,8 +116,11 @@ function MusicButton() {
   return (
     <>
       <div id="musicDiv">
+        {/* Assigning the state of the element */}
         <abbr title={musicPlaying ? "Mute Music" : "Play Music"}>
+          {/* Animation Container */}
           <canvas id="musicButton" ref={musicButton}></canvas>
+          
           {/* Music by Eric Godlow
           Music source: https://youtu.be/IUYaCe95dxw?si=KGSnNIIKn5uaWJY4 */}
           <audio preload="auto" loop id="player" ref={audioPlayer}>

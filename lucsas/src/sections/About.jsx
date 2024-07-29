@@ -13,12 +13,17 @@ const { sectTitle, aboutText, aboutImg } = webAboutSect;
 const { sectTitlePort, aboutTextPort } = webAboutSectPort;
 
 function About() {
+  // States
   const [aboutIntersect, setAboutIntersect] = useState(false);
+
+  // Refs
   const aboutInfo = useRef(null);
 
+  // Destructuring
   const { lang } = useContext(PageLang);
 
   useEffect(() => {
+    // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "aboutIntersect" to true, rendering the animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -30,6 +35,7 @@ function About() {
     observer.observe(aboutInfo.current);
   }, []);
 
+  // Change visibility of elements
   const changeVisibility = (side) => {
     return aboutIntersect
       ? {
@@ -48,6 +54,7 @@ function About() {
       <div id="about-style"></div>
       <section id="about" className="hidden">
         <div>
+          {/* Information Division */}
           <div ref={aboutInfo} style={changeVisibility("-100%")}>
             <h1 className="big">
               {lang === "English" ? (
@@ -70,6 +77,7 @@ function About() {
                 })}
           </div>
 
+          {/* About Image */}
           <div className="img-div" style={changeVisibility("100%")}>
             <picture>
               <figure>

@@ -1,5 +1,7 @@
+// Hooks Import
 import { useState, useContext } from "react";
 
+// Images Import
 import email from "../img/email.webp";
 import instaLogo from "../img/instagram-icon.webp";
 
@@ -7,12 +9,15 @@ import instaLogo from "../img/instagram-icon.webp";
 import { SubmitData } from "../App";
 
 function Contact() {
+  // States Declaration
   const [nameInput ,setNameInput] = useState("");
   const [emailInput ,setEmailInput] = useState("");
   const [msgInput ,setMsgInput] = useState("");
 
+  // Context Destructuring
   const { setOpen } = useContext(SubmitData);
 
+  // These functions controls the input the user types in the <input /> element
   function changeName(inp) {
     setNameInput(inp.target.value);
   }
@@ -29,6 +34,7 @@ function Contact() {
     <>
       <section id="contact">
         <div>
+          {/* Contact Information */}
           <div id="ways-contact">
             <div style={{ textAlign: "center" }}>
               <p>Want to bring more attention to your business?</p>
@@ -73,6 +79,7 @@ function Contact() {
             </div>
           </div>
 
+          {/* Form Division */}
           <div className="formDiv">
             <div style={{ display: "flex", justifyContent: "center" }}>
               <h1

@@ -8,6 +8,7 @@ function ThemeToggle() {
   const { darkTheme, setDarkTheme } = useContext(BgTheme);
   const themeInp = useRef();
 
+  // Set the background theme
   const toggleTheme = (e) => {
     setDarkTheme(!darkTheme);
     const body = document.querySelector("body");

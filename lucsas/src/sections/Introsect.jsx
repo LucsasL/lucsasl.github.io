@@ -7,7 +7,7 @@ import resume from "./resumeEng.pdf";
 // Context
 import { PageLang } from "../App";
 
-// Data
+// Data Import
 import { webIntroSect } from "../utils/data";
 import { webIntroSectPort } from "../utils/dataPortuguese";
 
@@ -16,17 +16,20 @@ const { info, socialMedias } = webIntroSect;
 const { infoPort } = webIntroSectPort;
 
 function Introsect() {
+  // Taking the context
   const { lang } = useContext(PageLang);
 
+  // Returns the intro content
   return (
     <>
       <section id="intro">
-        {/* <div className="intro3D">
+        {/* <div className="intro3D"> // 3D Render of a room
           <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe>
         </div> */}
 
         <div>
           <div className="intro">
+            {/* Intro main content */}
             <div id="introducing">
               <h1>
                 <span style={{ fontSize: ".9em", lineHeight: "1em" }}>
@@ -48,6 +51,8 @@ function Introsect() {
                 </a>
               </button>
             </div>
+
+            {/* Social Media Links */}
             <div id="socials">
               {socialMedias.map(({ link, name, img }, index) => {
                 return (
@@ -64,6 +69,7 @@ function Introsect() {
             </div>
           </div>
 
+          {/* Intro Image */}
           <div className="introPresent">
             <div className="picCont">
               <picture>
@@ -78,6 +84,7 @@ function Introsect() {
           </div>
         </div>
 
+        {/* Scroll animation icon */}
         <div className="scroll-anim">
           <div></div>
         </div>

@@ -5,6 +5,7 @@ function NavLinks() {
   return (
     <>
       <nav>
+        {/* List of options in the nav */}
         <ul>
           {webNavOptions.map((i, index) => {
             return (

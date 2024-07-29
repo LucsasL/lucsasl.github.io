@@ -1,9 +1,11 @@
 // Data Import
 import { webNavOptions, webNavOptionsLink, webIntroSect } from "../utils/data";
 
+// Logo Image Import
 import logo from "../img/lucsas-logo.webp";
 
 function Footer() {
+  // Data destructuring
   const { socialMedias } = webIntroSect;
 
   return (
@@ -19,6 +21,7 @@ function Footer() {
               I work with Web Development and Ads Softwares, such as Google Ads & Meta Ads. Since I'm just beginning, I don't have much experience, but I'll make my best to deliver the best results possible.
             </p>
 
+            {/* List of social medias */}
             <ul>
               {
                 socialMedias.map(({ link, name, img }, index) => {

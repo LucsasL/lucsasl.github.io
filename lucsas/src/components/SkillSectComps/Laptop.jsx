@@ -28,6 +28,7 @@ function Laptop() {
 
   const timeDate = new Date();
 
+  // It receives a  representing
   const changeSeason = (e) => {
     const prop = e.target.innerText;
     const stations = {
@@ -40,6 +41,7 @@ function Laptop() {
     setCurrentImg(stations[prop]);
   };
 
+  // It receives a number representing a day in the week and returns a string corresponding to the day
   const weekDay = (day) => {
     const days = [
       "Monday",
@@ -54,6 +56,7 @@ function Laptop() {
     return days[day - 1];
   };
 
+  // It receives a number representing a month in the year and returns a string corresponding to the month
   const monthName = (month) => {
     const months = [
       "January",
@@ -73,6 +76,7 @@ function Laptop() {
     return months[month];
   };
 
+  // Determines the layout of the page representation in the laptop
   const menuDisplay = () => {
     return activeTech.content.textLink === "HTML" ||
       activeTech.content.textLink === "CSS"
@@ -80,17 +84,21 @@ function Laptop() {
       : "flex";
   };
 
+  // Returns the laptop interface
   return (
     <>
+      {/* Container Div */}
       <div
         className="laptop"
         style={changeVisibility("100%", infoIntersect, 1.5)}
       >
+        {/* Laptop SVG */}
         <div
           className="image"
           ref={laptopImg}
           style={{ background: currentImg }}
         ></div>
+
         <picture>
           {/* <source media="(min-width: 1200px)" srcSet={notebook} type="image/svg" /> */}
           <figure>
@@ -98,6 +106,8 @@ function Laptop() {
             <figcaption>Website</figcaption>
           </figure>
         </picture>
+
+        {/* Laptop Page Interface */}
         <div
           className="laptopContent"
           style={{
@@ -106,6 +116,7 @@ function Laptop() {
             font: activeTech.basicSettings.font,
           }}
         >
+          {/* Page Header, it appears from JS tech */}
           <div className="pageHeader" style={{ display: menuDisplay() }}>
             <ul>
               {laptopNav.map((li) => {
@@ -117,6 +128,7 @@ function Laptop() {
               })}
             </ul>
           </div>
+          {/* Main Content of the page */}
           <div
             className="mainPageCont"
             style={{
@@ -131,13 +143,9 @@ function Laptop() {
                 boxShadow: activeTech.header.headerBoxShadow,
               }}
             >
-              {
-                lang === "English" ? (
-                  `This is ${activeTech.content.title}`
-                ) : (
-                  `This is ${activeTech.content.title}`
-                )
-              }
+              {lang === "English"
+                ? `This is ${activeTech.content.title}`
+                : `This is ${activeTech.content.title}`}
             </h2>
             <p
               style={{
@@ -167,7 +175,8 @@ function Laptop() {
               Learn more about {activeTech.content.textLink}
             </a>
           </div>
-
+            
+          {/* Time and date content */}
           <div
             className="dateTime"
             style={{
