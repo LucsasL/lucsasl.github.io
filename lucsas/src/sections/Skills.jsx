@@ -18,8 +18,11 @@ const { techFeature } = techStack;
 export const Data = createContext(techObj);
 
 function Skills() {
+  // States declaration
   const [infoIntersect, setInfoIntersect] = useState(false);
   const [menuAppear, setMenuAppear] = useState(false);
+
+  // Refs
   const skillSectBox = useRef();
   const menuDiv = useRef();
 
@@ -29,7 +32,9 @@ function Skills() {
   // Features States
   const [featureOpacity, setFeatureOpacity] = useState([0, 0, 0, 0, 0, 0, 0]);
 
+  // It records the elemenets that will re-render as the user interact
   useEffect(() => {
+    // This creates an instance of the intesection observer object, used to check if the screen of the user is intersecting with some element. In this case, it checks if it's intersecting with the menuDiv, and if it does it updates the menuAppear state, making it appear, otherwise, not.
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -38,10 +43,12 @@ function Skills() {
       });
     });
 
+    // Observeing element to play animation
     observer.observe(skillSectBox.current);
     observer.observe(menuDiv.current);
   }, []);
 
+  // It changes the visibility of the menu
   const changeVisibility = (side, state, time = 0.5) => {
     return state
       ? {
@@ -79,7 +86,7 @@ function Skills() {
                 setMenuAppear,
                 techFeature,
                 featureOpacity,
-                setFeatureOpacity
+                setFeatureOpacity,
               }}
             >
               <TechController />
