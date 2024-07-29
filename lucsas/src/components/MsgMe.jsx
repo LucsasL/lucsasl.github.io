@@ -1,4 +1,4 @@
-// Hooks
+// Hooks Import
 import { useContext, useEffect, useRef, useState } from "react";
 
 // Icons
@@ -18,12 +18,14 @@ function MsgMe() {
   const topButt = useRef();
 
   useEffect(() => {
+    // Checks the size of the screen and reajust the menu element to the proper location
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 1200) {
         topButt.current.style.left = "83%";
       }
     })
 
+    // It checks the position the user is in the site, if it's higher than 0, the "scrolled" state turns true, and the "Scroll up" button appears
     window.addEventListener("scroll", () => {
       const posY = window.scrollY;
   
@@ -35,11 +37,12 @@ function MsgMe() {
     });
   }, [topButt])
 
-  // Context
+  // Context Destructuring
   const { setLang } = useContext(PageLang);
 
   return (
     <>
+      {/* Menu Button */}
       <div id="msgMe">
         <button onClick={() => setMenuShown(!menuShown)}>
           {menuShown ? (
@@ -50,6 +53,7 @@ function MsgMe() {
         </button>
       </div>
 
+      {/* Menu Container */}
       <div
         className="settingsMenu"
         style={{
@@ -57,6 +61,7 @@ function MsgMe() {
           pointerEvents: menuShown ? "" : "none",
         }}
       >
+        {/* Language selection */}
         <div>
           <abbr title={"Translate to Portugues"}>
             <select name="Translate" id="changeLang">
@@ -70,6 +75,7 @@ function MsgMe() {
           </abbr>
         </div>
 
+        {/* Redirect Button */}
         <div className="socials">
           <abbr title="MSG ME">
             <button>
@@ -85,6 +91,7 @@ function MsgMe() {
         </div>
       </div>
 
+      {/* Scroll top button */}
       <button
         className="backUp"
         ref={topButt}

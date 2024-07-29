@@ -1,3 +1,4 @@
+// Hooks Import
 import { useRef, useContext } from "react";
 
 // Icons Import
@@ -8,7 +9,10 @@ import { IoMdClose } from "react-icons/io";
 import { SubmitData } from "../App";
 
 function SubmitPopup() {
+  // State
   const { open, setOpen } = useContext(SubmitData);
+
+  // Refs
   const popup = useRef();
 
   return (

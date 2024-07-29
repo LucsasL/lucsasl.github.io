@@ -15,6 +15,7 @@ import { Data } from "../../sections/Skills";
 import { webSkillsSect } from "../../utils/data";
 
 function Features() {
+  // States
   const { featureOpacity } = useContext(Data);
   const { techStack } = webSkillsSect;
   const { techFeature } = techStack;
@@ -33,6 +34,7 @@ function Features() {
   return (
     <>
       <div className="archFeatures">
+        {/* Returns the list of features */}
         {techFeature.map((desc, index) => {
           return (
             <abbr title={desc} key={index}>
