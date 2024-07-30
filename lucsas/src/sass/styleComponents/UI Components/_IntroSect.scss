@@ -141,7 +141,7 @@
         width: 500px;
         height: 500px;
 
-        animation: blob 10s ease-in-out infinite;
+        animation: blob2 10s ease-in-out infinite;
 
         &:nth-child(even) {
           background: linear-gradient(135deg, $color1, $color0);
@@ -153,7 +153,7 @@
           z-index: -1;
           filter: blur(30px);
 
-          animation: blob 10s ease-in-out infinite;
+          animation: blob2 10s ease-in-out infinite;
         }
       }
 
