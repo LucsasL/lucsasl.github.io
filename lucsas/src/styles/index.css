@@ -375,10 +375,10 @@ header div#bgcolor input:checked ~ span i#thumb {
 }
 @keyframes blob2 {
   0%, 100% {
-    border-radius: 89% 72% 80% 93%/50% 70% 73% 40%;
+    border-radius: 89% 92% 80% 93%/50% 70% 73% 40%;
   }
   50% {
-    border-radius: 35% 60% 91% 50%/50% 87% 54% 66%;
+    border-radius: 45% 77% 91% 50%/50% 87% 54% 66%;
   }
 }
 @keyframes blob3 {
