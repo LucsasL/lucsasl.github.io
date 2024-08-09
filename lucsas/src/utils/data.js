@@ -22,6 +22,7 @@ import css from "../img/css3.webp";
 import ts from "../img/typescript.webp";
 import js from "../img/JS.webp";
 import react from "../img/react.webp";
+import nextjs from "../img/nextjs.webp";
 import sass from "../img/sass.webp";
 import python from "../img/python.webp";
 import jest from "../img/jest.webp";
@@ -134,6 +135,7 @@ export const webSkillsSect = {
       "JavaScript",
       "TypeScript",
       "React",
+      "Next",
       "SASS",
       "GSAP",
       "Jest",
@@ -141,7 +143,7 @@ export const webSkillsSect = {
       "Python",
       "Git",
     ],
-    imgs: [html, css, js, ts, react, sass, gsap, jest, redux, python, git],
+    imgs: [html, css, js, ts, react, nextjs, sass, gsap, jest, redux, python, git],
     techDesc: [
       "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
       "The combination between the HTML tags and stylesheets of CSS do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
@@ -149,6 +151,7 @@ export const webSkillsSect = {
       "Programming a web app with TypeScript is like using JavaScript with superpowers. It makes your code more succinct and organized by adding types to variables and giving you complete control over the algorithm. This way, the architecture of your application becomes more manageable.",
       "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance it as well, bringing state management, routers, and even more abstraction to your app.",
       "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and strucutures.",
+      "A framework that works with React to optimize SEO and enhance your web application.",
       "A JavaScript library that makes the animations of your website more manageable, bringing countless of methods to animate and control colors, positions and triggers of the elements of your site, adding more tools to create a better experience.",
       "Easy tests for your applications is with Jest, a simple tool that shows the outputs of your functions and methods and predict precisely what will happen with your algorithms and displays.",
       "State management at its finest: Redux is a tool that makes your structure more cohesive. It creates stores that connect with all the components of your React app and saves all the slices of your application.",

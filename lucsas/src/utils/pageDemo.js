@@ -264,6 +264,51 @@ export const reducer = (state, action) => {
         },
       };
 
+    case "change_tech_Next":
+      return {
+        basicSettings: {
+          bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
+          color: "white",
+          font: "none",
+        },
+
+        header: {
+          headerSize: "3.5em",
+          headerPadding: "20px",
+          headerMargin: "1px 5px",
+        },
+
+        text: {
+          textSize: "1.3em",
+          textLine: "1.8em",
+          textWidth: "60%",
+          textMargin: "10px 25px",
+        },
+
+        links: {
+          aDecoration: "none",
+          aDisplay: "block",
+          aBg: "linear-gradient(to right, blue, #8000ff)",
+          aColor: "white",
+          aWidth: "50%",
+          aPadding: "12px 20px",
+          aBorderRadius: "10px",
+        },
+
+        content: {
+          title: "Next.js",
+          text: "A framework that works with React to optimize SEO and enhance your web application.",
+          textLink: "Next.js",
+          link: "https://nextjs.org/",
+          dateTime: {
+            display: "flex",
+            width: "50%",
+            padding: "30px",
+            textAlign: "right",
+          },
+        },
+      };
+
     case "change_tech_SASS":
       return {
         basicSettings: {
