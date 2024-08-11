@@ -20,6 +20,7 @@ function Services() {
   const [boxIntersect, setBoxIntersect] = useState(false);
 
   // Refs
+  const servSect = useRef();
   const infoBox = useRef([]);
   const servHeader = useRef();
 
@@ -37,7 +38,7 @@ function Services() {
     });
 
     observer.observe(infoBox.current);
-  }, [boxIntersect]);
+  }, [boxIntersect, servSect]);
 
   const changeVisibility = () => {
     return [
@@ -88,7 +89,7 @@ function Services() {
 
   return (
     <>
-      <section id="services">
+      <section id="services" ref={servSect}>
         <div>
           <div>
             <h1

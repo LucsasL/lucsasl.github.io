@@ -14,6 +14,7 @@ function Portfolio() {
 
   // Refs
   const project = useRef();
+  const portfolioSect = useRef();
 
   // Context
   const { lang } = useContext(PageLang);
@@ -29,7 +30,7 @@ function Portfolio() {
     });
 
     observer.observe(project.current);
-  }, [projectBoxIntersect]);
+  }, [projectBoxIntersect, portfolioSect]);
 
   // It changes the element visibility of the project's element
   const changeVisibility = () => {
@@ -46,7 +47,7 @@ function Portfolio() {
 
   return (
     <>
-      <section id="portfolio">
+      <section id="portfolio" ref={portfolioSect}>
         <div>
           <div className="blockquote" ref={project} style={changeVisibility()}>
             <h1 className="big">In what projects have you used your skills?</h1>

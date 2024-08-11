@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useContext } from "react";
+import { useState, useContext, useRef, useEffect } from "react";
 
 // Images Import
 import email from "../img/email.webp";
@@ -10,12 +10,19 @@ import { SubmitData } from "../App";
 
 function Contact() {
   // States Declaration
-  const [nameInput ,setNameInput] = useState("");
-  const [emailInput ,setEmailInput] = useState("");
-  const [msgInput ,setMsgInput] = useState("");
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [msgInput, setMsgInput] = useState("");
 
   // Context Destructuring
   const { setOpen } = useContext(SubmitData);
+
+  // Refs
+  const contactSect = useRef();
+
+  useEffect(() => {
+    console.log("Language Changed");
+  }, [contactSect]);
 
   // These functions controls the input the user types in the <input /> element
   function changeName(inp) {
@@ -32,7 +39,7 @@ function Contact() {
 
   return (
     <>
-      <section id="contact">
+      <section id="contact" ref={contactSect}>
         <div>
           {/* Contact Information */}
           <div id="ways-contact">

@@ -64,14 +64,10 @@ function MsgMe() {
         {/* Language selection */}
         <div>
           <abbr title={"Translate to Portugues"}>
-            <select name="Translate" id="changeLang">
-              <option value="English" onSelect={() => setLang("English")}>
-                English
-              </option>
-              <option value="Portuguese" onSelect={() => setLang("Portuguese")}>
-                Portuguese
-              </option>
-            </select>
+            <div className="langSelect">
+              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">English</div>
+              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">Portuguese</div>
+            </div>
           </abbr>
         </div>
 

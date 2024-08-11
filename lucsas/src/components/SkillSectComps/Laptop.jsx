@@ -1,5 +1,5 @@
 // Hooks Import
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
 
 // Images Import
 import notebook from "../../img/laptop.svg";
@@ -19,6 +19,7 @@ function Laptop() {
 
   // Refs
   const laptopImg = useRef();
+  const laptopDiv = useRef();
 
   // Data extraction
   const { laptopBgImg, laptopNav } = webSkillsSect;
@@ -27,6 +28,10 @@ function Laptop() {
   const [currentImg, setCurrentImg] = useState(laptopNav[-1]);
 
   const timeDate = new Date();
+
+  useEffect(() => {
+    console.log("Language Changed");
+  }, [laptopDiv]);
 
   // It receives a  representing
   const changeSeason = (e) => {
@@ -91,6 +96,7 @@ function Laptop() {
       <div
         className="laptop"
         style={changeVisibility("100%", infoIntersect, 1.5)}
+        ref={laptopDiv}
       >
         {/* Laptop SVG */}
         <div

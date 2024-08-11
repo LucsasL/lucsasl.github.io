@@ -1,5 +1,5 @@
 // Hooks
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 
 // Files
 import resume from "./resumeEng.pdf";
@@ -18,6 +18,13 @@ const { infoPort } = webIntroSectPort;
 function Introsect() {
   // Taking the context
   const { lang } = useContext(PageLang);
+
+  // Refs
+  const introComp = useRef();
+
+  useEffect(() => {
+    console.log("Language Changed");
+  }, [introComp]);
 
   // Returns the intro content
   return (

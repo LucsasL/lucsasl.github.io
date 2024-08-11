@@ -17,7 +17,8 @@ function About() {
   const [aboutIntersect, setAboutIntersect] = useState(false);
 
   // Refs
-  const aboutInfo = useRef(null);
+  const aboutInfo = useRef();
+  const aboutSect = useRef();
 
   // Destructuring
   const { lang } = useContext(PageLang);
@@ -33,7 +34,7 @@ function About() {
     });
 
     observer.observe(aboutInfo.current);
-  }, []);
+  }, [aboutSect]);
 
   // Change visibility of elements
   const changeVisibility = (side) => {
@@ -52,7 +53,7 @@ function About() {
   return (
     <>
       <div id="about-style"></div>
-      <section id="about" className="hidden">
+      <section id="about" className="hidden" ref={aboutSect}>
         <div>
           {/* Information Division */}
           <div ref={aboutInfo} style={changeVisibility("-100%")}>

@@ -1087,7 +1087,7 @@ div#msgMe .menuIcon {
   z-index: 7;
   transition: all 0.5s ease;
 }
-.settingsMenu select {
+.settingsMenu .langSelect {
   background: #000;
   color: white;
   padding: 12px 20px;
@@ -1095,7 +1095,12 @@ div#msgMe .menuIcon {
   border-radius: 10px;
   cursor: pointer;
 }
-.settingsMenu select option {
+.settingsMenu .langButt {
+  background: #000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 .settingsMenu button {

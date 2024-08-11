@@ -18,6 +18,7 @@ function Areas() {
 
   // Refs
   const infoBox = useRef();
+  const areaSect = useRef();
 
   // Context
   const { lang } = useContext(PageLang);
@@ -33,7 +34,7 @@ function Areas() {
     });
 
     observer.observe(infoBox.current);
-  }, []);
+  }, [areaSect]);
 
   // Change visibility of the elements
   const changeVisibility = (side) => {
@@ -51,7 +52,7 @@ function Areas() {
 
   return (
     <>
-      <section id="area">
+      <section id="area" ref={areaSect}>
         <div>
           <div className="platform">
             {/* Areas Info */}
