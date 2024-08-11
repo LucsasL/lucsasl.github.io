@@ -6,6 +6,7 @@ import { GrTest } from "react-icons/gr";
 import { MdOutlineRealEstateAgent } from "react-icons/md";
 import { GiProcessor } from "react-icons/gi";
 import { IoIosGitBranch } from "react-icons/io";
+import { SiFramework } from "react-icons/si";
 
 // Hooks Import
 import { useContext } from "react";
@@ -24,6 +25,7 @@ function Features() {
   const featIcons = [
     <MdOutlineTypeSpecimen className="featSvg" />,
     <PiTreeStructure className="featSvg" />,
+    <SiFramework className="featSvg"/>,
     <CgStyle className="featSvg" />,
     <GrTest className="featSvg" />,
     <MdOutlineRealEstateAgent className="featSvg" />,

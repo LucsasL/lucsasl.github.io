@@ -6,8 +6,14 @@ import Areas from "./Areas";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import { useEffect } from "react";
 
 function Main() {
+  useEffect(() => {
+    window.addEventListener("beforeunload", window.scrollTo(0, 0, "auto"));
+    window.addEventListener("onload", window.scrollTo(0, 0, "auto"));
+  })
+
   return (
     <>
       <main>

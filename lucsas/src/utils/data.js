@@ -161,6 +161,7 @@ export const webSkillsSect = {
     techFeature: [
       "Strong Type Variables",
       "Great Architecture",
+      "Controlled Application",
       "StyleSheets",
       "Testing our algorithms",
       "Managing the State of our application",

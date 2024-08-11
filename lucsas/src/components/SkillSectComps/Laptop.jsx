@@ -175,7 +175,7 @@ function Laptop() {
               Learn more about {activeTech.content.textLink}
             </a>
           </div>
-            
+
           {/* Time and date content */}
           <div
             className="dateTime"
@@ -186,7 +186,10 @@ function Laptop() {
               textAlign: activeTech.content.dateTime.textAlign,
             }}
           >
-            <h3>
+            <h3
+              style={{
+              }}
+            >
               <span className="time">
                 {timeDate.getHours().toLocaleString("en-US", {
                   minimumIntegerDigits: 2,
