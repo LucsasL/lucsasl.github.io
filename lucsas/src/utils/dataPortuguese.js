@@ -43,14 +43,7 @@ import twitterLogo from "../img/twitter-social.webp";
 // Components Data
 export const contentWebDevPortfolio = {};
 
-export const webNavOptions = ["Home", "Sobre", "Habilidades", "Projetos", "Contato"];
-export const webNavOptionsLink = [
-  "intro",
-  "services",
-  "skills",
-  "portfolio",
-  "contact",
-];
+export const webNavOptionsPort = ["Home", "Sobre", "Habilidades", "Projetos", "Contato"];
 
 export const webIntroSectPort = {
   infoPort: {
@@ -94,22 +87,22 @@ export const webServiceSectPort = {
     },
     {
       title: "Design Responsivo",
-      text: "Dando formas e layouts que funcionam de qualquer maneira e aplicando mídias que funcionam respeitando performance, de modo em que seu site se adapte aos tamanhos e dispositivos automaticamente, mostrando sua presença em qualquer lugar de forma clara.",
+      text: "Dando formas e layouts que funcionam de qualquer maneira e aplicando mídias que funcionam respeitando performance, de modo em que seu site se adapte aos dispositivos automaticamente.",
       img: design,
     },
     {
       title: "Aplicações Dinâmicas",
-      text: "Desenvolvendo websites com uma imensa variedade de tecnologias, variando de tecnologias que apenas constroem componentes simples até outras que fazem estruturas complexas e arquiteturas robustas.",
+      text: "Desenvolvendo com uma imensa variedade de tecnologias, usando desde de tecnologias que constroem componentes simples até outras que fazem estruturas complexas.",
       img: webStructure,
     },
   ],
 };
 
 export const webAboutSectPort = {
-  sectTitlePort: "Eae, Meu nome é ",
+  sectTitlePort: "Eae, me chamo ",
   aboutTextPort: [
-    "Eu trabalho como um <strong>Desenvolvedor Web Front-End;</strong> trabalhando com interfaces e consumindo APIs para websites. Minha expertise se baseia em criar aplicações web dinâmicos, versáteis e visualmente agradáveis. Tendo ganhado experiência substancial com minhas habilidades, estou buscando trabalhar como um Desenvolvedor.",
-    "Desde que comecei, Estive estudando tópicos e tecnologias da computação por um tempo e registrando esse meu avanço, sempre buscando melhorar e entregar o que é necessário para desenvolver uma aplicação aprimorada. Meu GitHub mostra o caminho que trilhei para entender as tecnologias que rondam esse mercado.",
+    "Eu trabalho como um Desenvolvedor Web Front-End; trabalhando com interfaces e consumindo APIs para websites. Minha expertise se baseia em criar aplicações web dinâmicos, versáteis e visualmente agradáveis.",
+    "Desde que comecei, Estive estudando tópicos e tecnologias da computação, sempre buscando melhorar e entregar o que é necessário para desenvolver uma aplicação aprimorada.",
     "Meu trabalho e compromisso vai para dar resultados, independente da forma, sendo isso escrevendo código, projetando ou dando ideias.",
     "O que você acha? Podemos crescer juntos?",
   ],
@@ -120,8 +113,8 @@ export const webSkillsSectPort = {
   sectTitlePort: "Conjunto de Tecnologias que eu já usei:",
   sectImg: webDev,
   areaDescPort:
-    "Eu estive pondo dedicação em desenvolver minhas habilidades em HTML, CSS, JavaScript, React JS, GSAP, Redux, e Git.",
-  techStack: {
+    "Eu estive pondo dedicação em desenvolver minhas habilidades em HTML, CSS, JavaScript, React JS, GSAP, Redux, e Git. No momento, sou um desenvolvedor focado em Frontend.",
+  techStackPort: {
     tech: [
       "HTML",
       "CSS",
@@ -147,6 +140,7 @@ export const webSkillsSectPort = {
       "Uma ferramenta essencial para gerenciamento de projetos e controle de versão,",
     ],
   },
+  laptopNavPort: ["Primavera", "Verão", "Outono", "Inverno"],
 };
 
 export const webProjectsSectPort = {
@@ -217,8 +211,4 @@ export const webProjectsSectPort = {
       projImg: everyshop,
     },
   ],
-};
-
-export const webContactSectPort = {
-  sectTitle: "Quer tornar o software da sua empresa real? Vamos crescer juntos!",
 };

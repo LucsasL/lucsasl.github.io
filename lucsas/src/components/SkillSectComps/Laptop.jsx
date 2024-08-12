@@ -11,10 +11,17 @@ import { Data } from "../../sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
+import { webSkillsSectPort } from "../../utils/dataPortuguese";
+import { techObjPort } from "../../utils/pageDemoPortuguese";
 
 function Laptop() {
   // Context
-  const { activeTech, infoIntersect, changeVisibility } = useContext(Data);
+  const {
+    activeTech,
+    techStackPort,
+    infoIntersect,
+    changeVisibility,
+  } = useContext(Data);
   const { lang } = useContext(PageLang);
 
   // Refs
@@ -23,6 +30,7 @@ function Laptop() {
 
   // Data extraction
   const { laptopBgImg, laptopNav } = webSkillsSect;
+  const { laptopNavPort } = webSkillsSectPort;
 
   // States
   const [currentImg, setCurrentImg] = useState(laptopNav[-1]);
@@ -41,6 +49,10 @@ function Laptop() {
       Summer: `url(${laptopBgImg[1]}) no-repeat center`,
       Fall: `url(${laptopBgImg[2]}) no-repeat center`,
       Winter: `url(${laptopBgImg[3]}) no-repeat center`,
+      Primavera: `url(${laptopBgImg[0]}) no-repeat center`,
+      Verão: `url(${laptopBgImg[1]}) no-repeat center`,
+      Outono: `url(${laptopBgImg[2]}) no-repeat center`,
+      Inverno: `url(${laptopBgImg[3]}) no-repeat center`,
     };
 
     setCurrentImg(stations[prop]);
@@ -57,6 +69,20 @@ function Laptop() {
       "Saturday",
       "Sunday",
     ];
+
+    const dias = [
+      "Segunda",
+      "Terça",
+      "Quarta",
+      "Quinta",
+      "Sexta",
+      "Sábado",
+      "Domingo",
+    ];
+
+    if (lang !== "English") {
+      return dias[day - 1];
+    }
 
     return days[day - 1];
   };
@@ -77,6 +103,25 @@ function Laptop() {
       "November",
       "December",
     ];
+
+    const meses = [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro",
+    ];
+
+    if (lang !== "English") {
+      return meses[month];
+    }
 
     return months[month];
   };
@@ -125,13 +170,21 @@ function Laptop() {
           {/* Page Header, it appears from JS tech */}
           <div className="pageHeader" style={{ display: menuDisplay() }}>
             <ul>
-              {laptopNav.map((li) => {
-                return (
-                  <abbr title={li}>
-                    <li onClick={(e) => changeSeason(e)}>{li}</li>
-                  </abbr>
-                );
-              })}
+              {lang === "English"
+                ? laptopNav.map((li, i) => {
+                    return (
+                      <abbr title={li} key={i}>
+                        <li onClick={(e) => changeSeason(e)}>{li}</li>
+                      </abbr>
+                    );
+                  })
+                : laptopNavPort.map((li, i) => {
+                    return (
+                      <abbr title={li} key={i}>
+                        <li onClick={(e) => changeSeason(e)}>{li}</li>
+                      </abbr>
+                    );
+                  })}
             </ul>
           </div>
           {/* Main Content of the page */}
@@ -151,7 +204,7 @@ function Laptop() {
             >
               {lang === "English"
                 ? `This is ${activeTech.content.title}`
-                : `This is ${activeTech.content.title}`}
+                : `Isso é ${techStackPort.content.text}`}
             </h2>
             <p
               style={{
@@ -161,7 +214,9 @@ function Laptop() {
                 margin: activeTech.text.textMargin,
               }}
             >
-              {activeTech.content.text}
+              {lang === "English"
+                ? activeTech.content.text
+                : techObjPort.content.text}
             </p>
             <a
               href={activeTech.content.link}
@@ -178,7 +233,9 @@ function Laptop() {
                 textAlign: "center",
               }}
             >
-              Learn more about {activeTech.content.textLink}
+              {lang === "English"
+                ? `Learn more about ${activeTech.content.textLink}`
+                : `Veja mais sobre ${activeTech.content.textLink}`}
             </a>
           </div>
 
@@ -192,10 +249,7 @@ function Laptop() {
               textAlign: activeTech.content.dateTime.textAlign,
             }}
           >
-            <h3
-              style={{
-              }}
-            >
+            <h3 style={{}}>
               <span className="time">
                 {timeDate.getHours().toLocaleString("en-US", {
                   minimumIntegerDigits: 2,

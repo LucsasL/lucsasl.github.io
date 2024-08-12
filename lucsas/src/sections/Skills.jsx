@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useReducer, useEffect, useRef, createContext } from "react";
+import { useState, useReducer, useEffect, useRef, createContext, useContext } from "react";
 
 // Components Import
 import TechController from "../components/SkillSectComps/TechController.jsx";
@@ -7,12 +7,15 @@ import Laptop from "../components/SkillSectComps/Laptop.jsx";
 import Features from "../components/SkillSectComps/features.jsx";
 
 // Data Import
+import { PageLang } from "../App.js";
 import { webSkillsSect } from "../utils/data";
+import { webSkillsSectPort } from "../utils/dataPortuguese";
 import { reducer } from "../utils/pageDemo.js";
 import { techObj } from "../utils/pageDemo.js";
 
 // Data Desestructuring
 const { sectTitle, techStack } = webSkillsSect;
+const { sectTitlePort, techStackPort } = webSkillsSectPort;
 const { techFeature } = techStack;
 
 export const Data = createContext(techObj);
@@ -31,6 +34,9 @@ function Skills() {
 
   // Features States
   const [featureOpacity, setFeatureOpacity] = useState([0, 0, 0, 0, 0, 0, 0]);
+
+  // Use Context
+  const { lang } = useContext(PageLang);
 
   // It records the elemenets that will re-render as the user interact
   useEffect(() => {
@@ -71,13 +77,14 @@ function Skills() {
             className="blockquote"
             style={changeVisibility(0, infoIntersect)}
           >
-            <h1 className="big block-text">{sectTitle}</h1>
+            <h1 className="big block-text">{lang === "English" ? sectTitle : sectTitlePort}</h1>
           </div>
 
           <div className="langsCont" ref={skillSectBox}>
             <Data.Provider
               value={{
                 activeTech,
+                techStackPort,
                 dispatch,
                 infoIntersect,
                 skillSectBox,

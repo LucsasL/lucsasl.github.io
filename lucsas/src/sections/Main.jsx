@@ -9,11 +9,6 @@ import Contact from "./Contact";
 import { useEffect } from "react";
 
 function Main() {
-  useEffect(() => {
-    window.addEventListener("beforeunload", window.scrollTo(0, 0, "auto"));
-    window.addEventListener("onload", window.scrollTo(0, 0, "auto"));
-  })
-
   return (
     <>
       <main>
@@ -23,7 +18,7 @@ function Main() {
           <About />
           <Areas />
           <Skills />
-          <Portfolio />
+          {/* <Portfolio /> */}
           <Contact />
         </div>
       </main>

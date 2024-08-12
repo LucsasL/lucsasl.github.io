@@ -242,7 +242,3 @@ export const webProjectsSect = {
     },
   ],
 };
-
-export const webContactSect = {
-  sectTitle: "Want to make your business software real? Let's grow together!",
-};

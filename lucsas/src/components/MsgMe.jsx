@@ -38,7 +38,7 @@ function MsgMe() {
   }, [topButt])
 
   // Context Destructuring
-  const { setLang } = useContext(PageLang);
+  const { lang, setLang } = useContext(PageLang);
 
   return (
     <>
@@ -66,7 +66,7 @@ function MsgMe() {
           <abbr title={"Translate to Portugues"}>
             <div className="langSelect">
               <div onClick={(e) => setLang(e.target.innerText)} className="langButt">English</div>
-              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">Portuguese</div>
+              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">Português</div>
             </div>
           </abbr>
         </div>
@@ -80,7 +80,7 @@ function MsgMe() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                MSG ME
+                {lang === "English" ? "Msg me" : "Chama aí"}
               </a>
             </button>
           </abbr>

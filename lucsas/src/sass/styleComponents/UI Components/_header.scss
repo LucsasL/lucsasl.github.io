@@ -21,7 +21,7 @@ header {
     @include spaceBetween;
 
     .logoDiv {
-      width: 45%;
+      width: 40%;
 
       @include flexStart;
 
@@ -79,7 +79,7 @@ header {
   #mainHeader {
     @include spaceEvenly;
 
-    width: 35%;
+    width: 50%;
 
     menu {
       @include spaceAround;

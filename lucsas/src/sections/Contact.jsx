@@ -5,6 +5,9 @@ import { useState, useContext, useRef, useEffect } from "react";
 import email from "../img/email.webp";
 import instaLogo from "../img/instagram-icon.webp";
 
+// Data
+import { PageLang } from "../App";
+
 // Context
 import { SubmitData } from "../App";
 
@@ -16,6 +19,7 @@ function Contact() {
 
   // Context Destructuring
   const { setOpen } = useContext(SubmitData);
+  const { lang } = useContext(PageLang);
 
   // Refs
   const contactSect = useRef();
@@ -44,9 +48,17 @@ function Contact() {
           {/* Contact Information */}
           <div id="ways-contact">
             <div style={{ textAlign: "center" }}>
-              <p>Want to bring more attention to your business?</p>
+              <p>
+                {lang === "English"
+                  ? "Want to bring more attention to your business?"
+                  : "Quer tornar o software da sua empresa real?"}
+              </p>
 
-              <h1 className="big fancy">Let's grow together!</h1>
+              <h1 className="big fancy">
+                {lang === "English"
+                  ? "Let's grow together!"
+                  : "Vamos crescer juntos!"}
+              </h1>
             </div>
 
             <div>
@@ -62,7 +74,12 @@ function Contact() {
                 </div>
 
                 <p>
-                  <span>Send me an e-mail at:</span> <br />
+                  <span>
+                    {lang === "English"
+                      ? "Send me an e-mail at:"
+                      : "Me mande um email em:"}
+                  </span>{" "}
+                  <br />
                   <strong>lucsas.lira@gmail.com</strong>
                 </p>
               </div>
@@ -72,14 +89,23 @@ function Contact() {
                   <figure>
                     <img
                       src={instaLogo}
-                      alt="Contact through Instagram"
+                      alt={
+                        lang === "English"
+                          ? "Contact through Instagram"
+                          : "Contato através do Instagram"
+                      }
                       className="icons"
                     />
                   </figure>
                 </div>
 
                 <p>
-                  <span>Call me in Direct Message:</span> <br />
+                  <span>
+                    {lang === "English"
+                      ? "Call me in Direct Message:"
+                      : "Me chame por mensagem direta:"}
+                  </span>{" "}
+                  <br />
                   <strong>@lucsas.l</strong>
                 </p>
               </div>
@@ -93,7 +119,7 @@ function Contact() {
                 className="block-text"
                 style={{ margin: "10px 0px 40px 0px" }}
               >
-                Contact
+                {lang === "English" ? "Contact" : "Contato"}
               </h1>
             </div>
 
@@ -104,11 +130,14 @@ function Contact() {
             >
               <div>
                 <div>
-                  <label htmlFor="fullName">Name:</label> <br />
+                  <label htmlFor="fullName">
+                    {lang === "English" ? "Name:" : "Nome:"}
+                  </label>{" "}
+                  <br />
                   <input
                     type="text"
                     name="name"
-                    placeholder="Your name"
+                    placeholder={lang === "English" ? "Your name" : "Seu nome"}
                     value={nameInput}
                     onChange={(e) => changeName(e)}
                     required
@@ -116,11 +145,13 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="emailAddress">E-mail: </label> <br />
+                  <label htmlFor="emailAddress">E-mail:</label> <br />
                   <input
                     type="email"
                     name="email"
-                    placeholder="Your e-mail"
+                    placeholder={
+                      lang === "English" ? "Your e-mail" : "Seu e-mail"
+                    }
                     value={emailInput}
                     onChange={(e) => changeEmail(e)}
                     required
@@ -128,12 +159,19 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="userMsg">Message: </label> <br />
+                  <label htmlFor="userMsg">
+                    {lang === "English" ? "Message:" : "Mensagem:"}
+                  </label>{" "}
+                  <br />
                   <textarea
                     name="message"
                     cols="30"
                     rows="10"
-                    placeholder="Write a message..."
+                    placeholder={
+                      lang === "English"
+                        ? "Write a message..."
+                        : "Escreva uma mensagem..."
+                    }
                     value={msgInput}
                     onChange={(e) => changeMsg(e)}
                     required
@@ -143,7 +181,7 @@ function Contact() {
                 <div>
                   <input
                     type="submit"
-                    value="Send"
+                    value={lang === "English" ? "Send" : "Enviar"}
                     className="submit-button"
                     onSubmit={() => setOpen(true)}
                   />
