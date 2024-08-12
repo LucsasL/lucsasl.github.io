@@ -5,6 +5,7 @@ import { useRef, useEffect, useContext } from "react";
 import { Data } from "../../sections/Skills";
 
 // Data Import
+import { PageLang } from "../../App";
 import { webSkillsSect } from "../../utils/data";
 const { techStack } = webSkillsSect;
 
@@ -12,6 +13,7 @@ function Skills() {
   // Takes the Context Value
   const {
     dispatch,
+    dispatchPort,
     menuDiv,
     menuAppear,
     setMenuAppear,
@@ -22,6 +24,9 @@ function Skills() {
   // Refs
   const buttons = useRef([]);
   const buttonsBlock = useRef([]);
+
+  // Use Contexts
+  const { lang } = useContext(PageLang);
 
   // It records the elemenets that will re-render as the user interact
   useEffect(() => {
@@ -72,6 +77,10 @@ function Skills() {
     }
   
     // Tells when a tech button was pressed and dispatch an object with type of the tech in target
+    if (lang !== "English") {
+      dispatchPort({ type: `change_tech_${tech}` });
+    }
+
     dispatch({ type: `change_tech_${tech}` });
   };
 

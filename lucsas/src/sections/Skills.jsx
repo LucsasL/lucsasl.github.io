@@ -11,7 +11,9 @@ import { PageLang } from "../App.js";
 import { webSkillsSect } from "../utils/data";
 import { webSkillsSectPort } from "../utils/dataPortuguese";
 import { reducer } from "../utils/pageDemo.js";
+import { reducerPort } from "../utils/pageDemoPortuguese.js";
 import { techObj } from "../utils/pageDemo.js";
+import { techObjPort } from "../utils/pageDemoPortuguese.js";
 
 // Data Desestructuring
 const { sectTitle, techStack } = webSkillsSect;
@@ -31,6 +33,7 @@ function Skills() {
 
   // TechController States and Ref
   const [activeTech, dispatch] = useReducer(reducer, techObj);
+  const [activeTechPort, dispatchPort] = useReducer(reducerPort, techObjPort);
 
   // Features States
   const [featureOpacity, setFeatureOpacity] = useState([0, 0, 0, 0, 0, 0, 0]);
@@ -84,8 +87,10 @@ function Skills() {
             <Data.Provider
               value={{
                 activeTech,
+                activeTechPort,
                 techStackPort,
                 dispatch,
+                dispatchPort,
                 infoIntersect,
                 skillSectBox,
                 changeVisibility,

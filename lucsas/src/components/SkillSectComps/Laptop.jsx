@@ -12,13 +12,12 @@ import { Data } from "../../sections/Skills";
 // Data Import
 import { webSkillsSect } from "../../utils/data";
 import { webSkillsSectPort } from "../../utils/dataPortuguese";
-import { techObjPort } from "../../utils/pageDemoPortuguese";
 
 function Laptop() {
   // Context
   const {
     activeTech,
-    techStackPort,
+    activeTechPort,
     infoIntersect,
     changeVisibility,
   } = useContext(Data);
@@ -204,7 +203,7 @@ function Laptop() {
             >
               {lang === "English"
                 ? `This is ${activeTech.content.title}`
-                : `Isso é ${techStackPort.content.text}`}
+                : `Isso é ${activeTechPort.content.title}`}
             </h2>
             <p
               style={{
@@ -216,7 +215,7 @@ function Laptop() {
             >
               {lang === "English"
                 ? activeTech.content.text
-                : techObjPort.content.text}
+                : activeTechPort.content.text}
             </p>
             <a
               href={activeTech.content.link}
@@ -249,7 +248,7 @@ function Laptop() {
               textAlign: activeTech.content.dateTime.textAlign,
             }}
           >
-            <h3 style={{}}>
+            <h3>
               <span className="time">
                 {timeDate.getHours().toLocaleString("en-US", {
                   minimumIntegerDigits: 2,
@@ -261,11 +260,23 @@ function Laptop() {
                   useGrouping: false,
                 })}
               </span>{" "}
-              <br />
-              <span className="date">
-                {weekDay(timeDate.getDay())}, {monthName(timeDate.getMonth())}{" "}
-                {timeDate.getDate()}
-              </span>
+              {lang === "English" ? (
+                <>
+                  <br />
+                  <span className="date">
+                    {weekDay(timeDate.getDay())},{" "}
+                    {monthName(timeDate.getMonth())} {timeDate.getDate()}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <br />
+                  <span className="date">
+                    {weekDay(timeDate.getDay())}, {timeDate.getDate()}{"  "}
+                    {monthName(timeDate.getMonth())}
+                  </span>
+                </>
+              )}
             </h3>
           </div>
         </div>

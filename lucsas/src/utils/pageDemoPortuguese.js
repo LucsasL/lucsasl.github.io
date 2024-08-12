@@ -6,7 +6,7 @@ export const techObjPort = {
   },
 };
 
-export const reducer = (state, action) => {
+export const reducerPort = (state, action) => {
   switch (action.type) {
     case "change_tech_HTML":
       return {
@@ -173,7 +173,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "HTML + CSS + TS",
-          text: "Programming a web app with TypeScript is like using JavaScript with superpowers. It makes your code more succinct and organized by adding types to variables and giving you complete control over the algorithm. This way, the architecture of your application becomes more manageable.",
+          text: "Programar uma aplicação web com TypeScript é como usar JavaScript com super poderes. Fazendo seu código mais sucinto e organizado, já que adiciona tipos para variáveis e dando completo controle sob seu algoritmo. Dessa forma, a arquitetura da aplicação se torna mais organizada.",
           textLink: "TypeScript",
           link: "https://www.typescriptlang.org/",
           dateTime: {
@@ -263,7 +263,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Next.js",
-          text: "A framework that works with React to optimize SEO and enhance your web application.",
+          text: "Um framework que funciona com React para otimização de SEO e aprimorar a aplicação web.",
           textLink: "Next.js",
           link: "https://nextjs.org/",
           dateTime: {
@@ -308,7 +308,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "SASS",
-          text: "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and strucutures.",
+          text: "Preprocessador de CSS que traz características de programação para as folhas de estilo CSS, com formas diferentes e úteis de escrever estilos, incluindo, mixins, partials e até características de programação como variáveis e estruturas.",
           textLink: "SASS",
           link: "https://sass-lang.com/",
           dateTime: {
@@ -353,7 +353,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "GSAP",
-          text: "A JavaScript library that makes the animations of your website more manageable, bringing countless of methods to animate and control colors, positions and triggers of the elements of your site, adding more tools to create a better experience.",
+          text: "Uma biblioteca JavaScript que faz as animações de seus websites mais gerenciaveis, trazendo incontáveis métodos para animar e controlar cores, posições e gatilhos dos elementos de seu site, adicionando mais ferramentas para criar experiências melhores.",
           textLink: "GSAP",
           link: "https://gsap.com/",
           dateTime: {
@@ -398,7 +398,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Jest",
-          text: "Easy tests for your applications is with Jest, a simple tool that shows the outputs of your functions and methods and predict precisely what will happen with your algorithms and displays.",
+          text: "Testes fáceis para sua aplicação é com Jest, uma ferramenta simples que mostra a saída de suas funções e métodos e prever precisamente o que vai acontecer com algoritmos e disposições.",
           textLink: "Jest",
           link: "https://jestjs.io/",
           dateTime: {
@@ -443,7 +443,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Redux",
-          text: "State management at its finest: Redux is a tool that makes your structure more cohesive. It creates stores that connect with all the components of your React app and saves all the slices of your application.",
+          text: "Gerenciamento de estados em seu melhor: Redux é uma ferramenta que faz de sua estrutura mas coesiva. Criando stores que se conectam com todos os componentes da aplicação React e salvando todos os slices da sua aplicação.",
           textLink: "Redux",
           link: "https://redux.js.org/",
           dateTime: {
@@ -488,7 +488,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Python",
-          text: "Back-end development with a high-level programming language that is widely used and efficient for data processing and adding to the building of a full applications.",
+          text: "Desenvolvimento Back-end com uma linguagem de programação de alto nível que é utilizada amplamente e eficientemente para processamento de dados e adicionando para a contrução de uma aplicação completa.",
           textLink: "Python",
           link: "https://www.python.org/",
           dateTime: {
@@ -533,7 +533,7 @@ export const reducer = (state, action) => {
 
         content: {
           title: "Git",
-          text: "An essential tool for project management and version control that made web development safer. As an application grow, so do the packages and features of such, there is where Git fits in, it's a useful tool for controlling the versions of your software.",
+          text: "Uma ferramenta essencial para controle de versão, que faz o desenvolvimento de aplicações mais seguras. De acordo que uma aplicação cresce, seus pacotes passam a ser maior em quantidade, é aí que o Git entra no desenvolvimento, garantindo o código-fonte já estabelecido no projeto.",
           textLink: "Git",
           link: "https://git-scm.com/",
           dateTime: {
