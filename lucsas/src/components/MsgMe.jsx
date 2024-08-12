@@ -16,6 +16,7 @@ function MsgMe() {
 
   // Refs
   const topButt = useRef();
+  const langButt = useRef();
 
   useEffect(() => {
     // Checks the size of the screen and reajust the menu element to the proper location
@@ -23,19 +24,19 @@ function MsgMe() {
       if (window.innerWidth >= 1200) {
         topButt.current.style.left = "83%";
       }
-    })
+    });
 
     // It checks the position the user is in the site, if it's higher than 0, the "scrolled" state turns true, and the "Scroll up" button appears
     window.addEventListener("scroll", () => {
       const posY = window.scrollY;
-  
+
       if (posY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
     });
-  }, [topButt])
+  }, [topButt]);
 
   // Context Destructuring
   const { lang, setLang } = useContext(PageLang);
@@ -63,10 +64,15 @@ function MsgMe() {
       >
         {/* Language selection */}
         <div>
-          <abbr title={"Translate to Portugues"}>
-            <div className="langSelect">
-              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">English</div>
-              <div onClick={(e) => setLang(e.target.innerText)} className="langButt">Português</div>
+          <abbr title={lang === "English" ? "Português" : "English"}>
+            <div className="langSelect" onClick={() => console.log()}>
+              <div
+                onClick={() => setLang(lang === "English" ? "Português" : "English")}
+                className="langButt"
+                ref={langButt}
+              >
+                {lang === "English" ? "Português" : "English"}
+              </div>
             </div>
           </abbr>
         </div>
