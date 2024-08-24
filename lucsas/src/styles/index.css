@@ -178,6 +178,7 @@ header {
   /* top: -15%;  Add Javascript to animate header*/
   top: 3%;
   z-index: 5;
+  pointer-events: none;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -189,6 +190,7 @@ header > div {
   padding: 10px 20px;
   margin: 0px 15px;
   border-radius: 50px;
+  pointer-events: all;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -859,12 +861,19 @@ header div#bgcolor input:checked ~ span i#thumb {
     height: 100%;
     padding: 50px;
     border-radius: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
     opacity: 0;
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+  }
+  section#portfolio .projCont .proj .projDetails > div {
+    width: 50%;
   }
   section#portfolio .projCont .proj .projInfo {
     display: flex;
@@ -919,8 +928,11 @@ header div#bgcolor input:checked ~ span i#thumb {
     cursor: pointer;
   }
   section#portfolio .projCont .closeBtn {
-    cursor: pointer;
     padding: 12px 20px;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    cursor: pointer;
   }
   section#portfolio h1,
   section#portfolio h4 {

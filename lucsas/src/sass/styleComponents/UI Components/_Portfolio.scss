@@ -37,6 +37,8 @@
           padding: 50px;
           border-radius: 20px;
 
+          @include spaceAround;
+
           opacity: 0;
           pointer-events: none;
           
@@ -44,6 +46,10 @@
           top: 50%;
           left: 50%;
           translate: -50% -50%;
+
+          > div {
+            width: 50%;
+          }
         }
 
         .projInfo {
@@ -87,8 +93,12 @@
       }
 
       .closeBtn {
-        cursor: pointer;
         padding: 12px 20px;
+
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        cursor: pointer;
       }
     }
 

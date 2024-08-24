@@ -4,18 +4,19 @@ import { useState, useEffect, useRef, useContext } from "react";
 // Context
 import { PageLang } from "../App.js";
 
-// Data Import
-import { webProjectsSect } from "../utils/data";
-import { webProjectsSectPort } from "../utils/dataPortuguese.js";
-
 // Other Libraries
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+// Data Import
+import { webProjectsSect } from "../utils/data";
+import { webProjectsSectPort } from "../utils/dataPortuguese.js";
+const { sectTitle } = webProjectsSect;
+const { sectTitlePort } = webProjectsSectPort;
+
 function Portfolio() {
   // States
   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
-  const [scrollYProj, setScrollYProj] = useState("scroll");
 
   // Refs
   const project = useRef();
@@ -47,10 +48,6 @@ function Portfolio() {
         window.scrollTo(0, 4110);
 
         // Scaling the project container to grow
-        gsap.to("body", {
-          overflowY: "clip",
-        });
-
         gsap.to(".projCont", {
           scale: 1.22,
           duration: .2
@@ -68,7 +65,6 @@ function Portfolio() {
 
     closeDetailsButt.current.forEach(clButt => {
       clButt.addEventListener("click", () => {
-        setScrollYProj("scroll");
         window.scrollTo(0, 4110);
 
         // Creating a timeline for animation
@@ -80,9 +76,6 @@ function Portfolio() {
         });
 
         timeline
-        .to("body", {
-          overflowY: "scroll",
-        })
         .to(".projCont", {
           scale: 1,
         })
@@ -112,7 +105,7 @@ function Portfolio() {
       <section id="portfolio" ref={portfolioSect}>
         <div>
           <div className="blockquote" ref={project} style={changeVisibility()}>
-            <h1 className="big">In what projects have you used your skills?</h1>
+            <h1 className="big">{ lang === "English" ? sectTitle : sectTitlePort}</h1>
           </div>
 
           <div className="projCont">
@@ -142,14 +135,27 @@ function Portfolio() {
                           <div
                             className="projDetails"
                             ref={projDetailsCont}
-                            style={{
-                              display: "flex",
-                              justifyContent: "center",
-                              alignItems: "center",
-                            }}
                           >
+                            <div className="projDetailsInfo">
+                              <h2>
+                                Project name (Working in Progress)
+                              </h2>
+                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati repellendus earum quisquam culpa quas nemo rerum  quia id? Similique.</p>
+
+                              <p>Quos, pariatur eos tenetur officia molestiae repellendus aliquid ex explicabo dignissimos nulla sequi similique, rem impedit, cum, laborum ipsum cupiditate laboriosam ullam eos. Harum.</p>
+
+                              <p>Reiciendis, laborum. Aliquam, veniam! Quidem modi dicta voluptati in similique voluptatem, asperiores rerum nesciunt, facilis eos eveniet libero soluta itaque veritatis tempora ut laborum iste.</p>
+                            </div>
+
+                            <div className="projImage">
+                              <picture>
+                                {/* <source media="(min-width: )" srcset="" /> */}
+                                <img src="" alt="Project Image" />
+                              </picture>
+                            </div>
+
                             <button className="closeBtn" ref={(el) => closeDetailsButt.current[index] = el}>
-                              Close this shit
+                              Close
                             </button>
                           </div>
 
@@ -208,17 +214,17 @@ function Portfolio() {
                     );
                   }
                 )
-              : webProjectsSectPort.projects.map(
+              : webProjectsSectPort.projectsPort.map(
                   (
                     {
-                      projLink,
-                      projTitle,
-                      projSubtitle,
-                      projDesc,
-                      projImgDesc,
-                      techStack,
-                      techStackImg,
-                      projImg,
+                      projLinkPort,
+                      projTitlePort,
+                      projSubtitlePort,
+                      projDescPort,
+                      projImgDescPort,
+                      techStackPort,
+                      techStackImgPort,
+                      projImgPort,
                     },
                     index
                   ) => {
@@ -231,7 +237,7 @@ function Portfolio() {
                         >
                           <div className="projInfo">
                             <h2 className="big">
-                              {projTitle}
+                              {projTitlePort}
                               <span
                                 style={{ fontSize: ".5em", marginLeft: "15px" }}
                               >
@@ -239,16 +245,16 @@ function Portfolio() {
                               </span>
                             </h2>
 
-                            <h3>{projSubtitle}</h3>
+                            <h3>{projSubtitlePort}</h3>
 
-                            <p>{projDesc}</p>
+                            <p>{projDescPort}</p>
 
                             <div className="techStackCont">
-                              {techStack.map((t, index) => {
+                              {techStackPort.map((t, index) => {
                                 return (
                                   <abbr title={t} key={index}>
                                     <picture>
-                                      <img src={techStackImg[index]} alt={t} />
+                                      <img src={techStackImgPort[index]} alt={t} />
                                     </picture>
                                   </abbr>
                                 );
@@ -258,7 +264,7 @@ function Portfolio() {
                             <div>
                               <button>
                                 <a
-                                  href={projLink}
+                                  href={projLinkPort}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
@@ -284,7 +290,7 @@ function Portfolio() {
 
                           <div className="projImg">
                             <picture key={index}>
-                              <img src={projImg} alt={projImgDesc} />
+                              <img src={projImgPort} alt={projImgDescPort} />
                             </picture>
                           </div>
                         </div>

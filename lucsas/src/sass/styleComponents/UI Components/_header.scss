@@ -9,6 +9,8 @@ header {
   top: 3%;
   z-index: 5;
 
+  pointer-events: none;
+
   @include center;
 
   > div {
@@ -17,6 +19,7 @@ header {
     padding: 10px 20px;
     margin: 0px 15px;
     border-radius: 50px;
+    pointer-events: all;
 
     @include spaceBetween;
 

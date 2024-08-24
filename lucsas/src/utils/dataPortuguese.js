@@ -147,13 +147,13 @@ export const webProjectsSectPort = {
   sectTitlePort: "Em que projetos você já trabalhou?",
   projectsPort: [
     {
-      projLink: "https://marknow-lemon.vercel.app/",
-      projTitle: "MARKNOW",
-      projSubtitle: "Uma Agência de Marketing que traz sucesso",
-      projDesc:
+      projLinkPort: "https://marknow-lemon.vercel.app/",
+      projTitlePort: "MARKNOW",
+      projSubtitlePort: "Uma Agência de Marketing que traz sucesso",
+      projDescPort:
         "MARKNOW é um projeto web apresentando uma empresa de marketing digital que tem grandes feitos e parceiros. Cosntruído com base em React JS e suas tecnologias. Tendo inúmeras características, como Hooks, Estados e Roteadores. | TRABALHO EM PROGRESSO",
-      projImgDesc: "Imagem do projeto MARKNOW",
-      techStack: [
+      projImgDescPort: "Imagem do projeto MARKNOW",
+      techStackPort: [
         "HTML",
         "CSS",
         "JavaScript",
@@ -164,7 +164,7 @@ export const webProjectsSectPort = {
         "Jest",
         "Git",
       ],
-      techStackImg: [
+      techStackImgPort: [
         htmlBig,
         cssBig,
         jsBig,
@@ -175,16 +175,16 @@ export const webProjectsSectPort = {
         jestBig,
         gitBig,
       ],
-      projImg: marknow,
+      projImgPort: marknow,
     },
     {
-      projLink: "https://every-shop.vercel.app/",
-      projTitle: "Everyshop",
-      projSubtitle: "Uma loja que vende de tudo",
-      projDesc:
+      projLinkPort: "https://every-shop.vercel.app/",
+      projTitlePort: "Everyshop",
+      projSubtitlePort: "Uma loja que vende de tudo",
+      projDescPort:
         "EVERYSHOP é um projeto web de uma loja que vende de tudo. Desenvolvido em React JS incluindo SASS e design responsivo. | TRABALHO EM PROGRESSO",
-      projImgDesc: "Imagem do projeto EVERYSHOP",
-      techStack: [
+      projImgDescPort: "Imagem do projeto EVERYSHOP",
+      techStackPort: [
         "HTML",
         "CSS",
         "JavaScript",
@@ -196,7 +196,7 @@ export const webProjectsSectPort = {
         "Jest",
         "Git",
       ],
-      techStackImg: [
+      techStackImgPort: [
         htmlBig,
         cssBig,
         jsBig,
@@ -208,7 +208,7 @@ export const webProjectsSectPort = {
         jestBig,
         gitBig,
       ],
-      projImg: everyshop,
+      projImgPort: everyshop,
     },
   ],
 };
