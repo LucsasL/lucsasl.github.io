@@ -20,6 +20,7 @@ function App() {
     <>
       <PageLang.Provider value={{ lang, setLang }}>
         <Header />
+        
         <SubmitData.Provider value={{ open, setOpen }}>
           <Main />
           <SubmitPopup />

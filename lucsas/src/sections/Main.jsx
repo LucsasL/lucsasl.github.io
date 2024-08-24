@@ -6,7 +6,6 @@ import Areas from "./Areas";
 import Skills from "./Skills";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
-import { useEffect } from "react";
 
 function Main() {
   return (
@@ -18,7 +17,7 @@ function Main() {
           <About />
           <Areas />
           <Skills />
-          {/* <Portfolio /> */}
+          <Portfolio />
           <Contact />
         </div>
       </main>

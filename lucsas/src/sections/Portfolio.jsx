@@ -8,13 +8,22 @@ import { PageLang } from "../App.js";
 import { webProjectsSect } from "../utils/data";
 import { webProjectsSectPort } from "../utils/dataPortuguese.js";
 
+// Other Libraries
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 function Portfolio() {
   // States
   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
+  const [scrollYProj, setScrollYProj] = useState("scroll");
 
   // Refs
   const project = useRef();
   const portfolioSect = useRef();
+  const projContainer = useRef();
+  const detailsButt = useRef([]);
+  const projDetailsCont = useRef();
+  const closeDetailsButt = useRef([]);
 
   // Context
   const { lang } = useContext(PageLang);
@@ -31,6 +40,59 @@ function Portfolio() {
 
     observer.observe(project.current);
   }, [projectBoxIntersect, portfolioSect]);
+
+  useGSAP(() => {
+    detailsButt.current.forEach((butt) => {
+      butt.addEventListener("click", () => {
+        window.scrollTo(0, 4110);
+
+        // Scaling the project container to grow
+        gsap.to("body", {
+          overflowY: "clip",
+        });
+
+        gsap.to(".projCont", {
+          scale: 1.22,
+          duration: .2
+        });
+
+        gsap.to(
+          ".projDetails", {
+            opacity: 1,
+            duration: .2,
+            zIndex: 20,
+            pointerEvents: "all",
+          });
+      });
+    });
+
+    closeDetailsButt.current.forEach(clButt => {
+      clButt.addEventListener("click", () => {
+        setScrollYProj("scroll");
+        window.scrollTo(0, 4110);
+
+        // Creating a timeline for animation
+        const timeline = gsap.timeline({
+          default: {
+            duration: .2,
+            repeat: 1,
+          }
+        });
+
+        timeline
+        .to("body", {
+          overflowY: "scroll",
+        })
+        .to(".projCont", {
+          scale: 1,
+        })
+        .to(".projDetails", {
+          opacity: 0,
+          pointerEvents: "none",
+        });
+      });
+    })
+  });
 
   // It changes the element visibility of the project's element
   const changeVisibility = () => {
@@ -74,8 +136,23 @@ function Portfolio() {
                         <div
                           className="proj"
                           key={index}
+                          ref={projContainer}
                           style={changeVisibility()}
                         >
+                          <div
+                            className="projDetails"
+                            ref={projDetailsCont}
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                          >
+                            <button className="closeBtn" ref={(el) => closeDetailsButt.current[index] = el}>
+                              Close this shit
+                            </button>
+                          </div>
+
                           <div className="projInfo">
                             <h2 className="big">
                               {projTitle}
@@ -112,19 +189,11 @@ function Portfolio() {
                                   Visit Project
                                 </a>
                               </button>
-                              <button className="detailBtn">
-                                <a
-                                  href="https://github.com/lucsasl"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  onClick={() =>
-                                    alert(
-                                      "Work in Progress, I'm finishing creating these sections"
-                                    )
-                                  }
-                                >
-                                  See details
-                                </a>
+                              <button
+                                className="detailBtn"
+                                ref={(el) => (detailsButt.current[index] = el)}
+                              >
+                                See details
                               </button>
                             </div>
                           </div>
