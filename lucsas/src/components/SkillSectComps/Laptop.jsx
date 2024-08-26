@@ -14,6 +14,9 @@ import { webSkillsSect } from "../../utils/data";
 import { webSkillsSectPort } from "../../utils/dataPortuguese";
 
 function Laptop() {
+  // Vars
+  const screenSize = window.innerWidth;
+
   // Context
   const {
     activeTech,
@@ -38,11 +41,7 @@ function Laptop() {
 
   useEffect(() => {
     console.log("Language Changed");
-
-    window.addEventListener("resize", () => {
-
-    });
-  }, [laptopDiv, laptopImg]);
+  }, [laptopDiv]);
 
   // It receives a  representing
   const changeSeason = (e) => {
@@ -156,7 +155,7 @@ function Laptop() {
         <picture>
           {/* <source media="(min-width: 1200px)" srcSet={notebook} type="image/svg" /> */}
           <figure>
-            <img src={notebook} alt="Website" />
+            <img src={screenSize > 768 ? notebook : mobile} alt="Website" />
             <figcaption>Website</figcaption>
           </figure>
         </picture>
