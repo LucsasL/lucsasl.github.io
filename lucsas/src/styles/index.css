@@ -590,7 +590,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     -webkit-backdrop-filter: blur(6px);
     width: 100%;
     min-height: 600px;
-    max-height: 600px;
+    max-height: 650px;
     padding: 20px;
     margin: 20px 0px;
     box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, 0.488), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px rgba(0, 0, 0, 0.488);
@@ -1072,7 +1072,7 @@ div#msgMe {
   width: 75px;
   height: 75px;
   position: fixed;
-  top: 85%;
+  top: 80%;
   left: 80%;
   z-index: 7;
   animation: blob 10s ease-in-out infinite;
@@ -1123,7 +1123,7 @@ div#msgMe .menuIcon {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 85%;
+  top: 80%;
   left: 23%;
   z-index: 7;
   transition: all 0.5s ease;
@@ -1155,6 +1155,11 @@ div#msgMe .menuIcon {
   height: 100%;
   padding: 12px 20px;
 }
+@media screen and (min-width: 1200px) {
+  .settingsMenu {
+    top: 85%;
+  }
+}
 
 .backUp {
   width: 75px;
@@ -1166,7 +1171,7 @@ div#msgMe .menuIcon {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 85%;
+  top: 80%;
   left: 61%;
   z-index: 7;
   transition: all 0.5s ease;
@@ -1175,6 +1180,11 @@ div#msgMe .menuIcon {
 .backUp > * {
   width: 30px;
   height: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .backUp {
+    top: 85%;
+  }
 }
 
 .laptop {
