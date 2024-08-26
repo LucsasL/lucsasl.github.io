@@ -31,9 +31,9 @@ function MsgMe() {
       }
 
       if (menuShown && window.innerWidth < 1200) {
-        topButt.current.style.left = "3%";
+        topButt.current.style.left = "1%";
       } else {
-        topButt.current.style.left = "64%";
+        topButt.current.style.left = "54%";
       }
     });
 
@@ -118,7 +118,7 @@ function MsgMe() {
             : {
                 opacity: scrolled ? "1" : "0",
                 pointerEvents: scrolled ? "" : "none",
-                left: menuShown ? "3%" : "60%",
+                left: menuShown ? "1%" : "54%",
               }
         }
         onClick={() => window.scrollTo(0, 0)}
