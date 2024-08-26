@@ -44,15 +44,15 @@
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
 
-        width: 17%;
+        width: 90%;
         border-radius: 20px;
 
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
 
         position: fixed;
-        top: 9%;
-        left: 2%;
+        top: 35%;
+        left: 5%;
         z-index: 3;
 
         .tech {
@@ -85,6 +85,8 @@
         border-radius: 20px;
 
         @include verticalFlex(space-around, center, row wrap);
+        opacity: 0;
+        pointer-events: none;
   
         position: absolute;
         top: 0;

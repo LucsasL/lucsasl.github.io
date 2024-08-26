@@ -197,11 +197,16 @@ function Laptop() {
             }}
           >
             <h2
-              style={{
+              style={screenSize > 992 ? {
                 fontSize: activeTech.header.headerSize,
                 padding: activeTech.header.headerPadding,
                 margin: activeTech.header.headerMargin,
                 boxShadow: activeTech.header.headerBoxShadow,
+              } : {
+                fontSize: activeTech.header.headerSizeMob,
+                padding: activeTech.header.headerPadding,
+                margin: activeTech.header.headerMargin,
+                boxShadow: activeTech.header.headerBoxShadow
               }}
             >
               {lang === "English"
@@ -209,10 +214,15 @@ function Laptop() {
                 : `Isso é ${activeTechPort.content.title}`}
             </h2>
             <p
-              style={{
+              style={screenSize > 992 ? {
                 fontSize: activeTech.text.textSize,
                 lineHeight: activeTech.text.textLine,
                 width: activeTech.text.textWidth,
+                margin: activeTech.text.textMargin,
+              } : {
+                fontSize: activeTech.text.textSize,
+                lineHeight: activeTech.text.textLine,
+                width: activeTech.text.textWidthMob,
                 margin: activeTech.text.textMargin,
               }}
             >
@@ -224,12 +234,21 @@ function Laptop() {
               href={activeTech.content.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={{
+              style={screenSize > 992 ? {
                 display: activeTech.links.aDisplay,
                 textDecoration: activeTech.links.aDecoration,
                 background: activeTech.links.aBg,
                 color: activeTech.links.aColor,
                 width: activeTech.links.aWidth,
+                padding: activeTech.links.aPadding,
+                borderRadius: activeTech.links.aBorderRadius,
+                textAlign: "center",
+              } : {
+                display: activeTech.links.aDisplay,
+                textDecoration: activeTech.links.aDecoration,
+                background: activeTech.links.aBg,
+                color: activeTech.links.aColor,
+                width: activeTech.links.aWidthMob,
                 padding: activeTech.links.aPadding,
                 borderRadius: activeTech.links.aBorderRadius,
                 textAlign: "center",
@@ -244,11 +263,13 @@ function Laptop() {
           {/* Time and date content */}
           <div
             className="dateTime"
-            style={{
+            style={screenSize > 992 ? {
               display: activeTech.content.dateTime.display,
               width: activeTech.content.dateTime.width,
               padding: activeTech.content.dateTime.padding,
               textAlign: activeTech.content.dateTime.textAlign,
+            } : {
+              display: "none"
             }}
           >
             <h3>

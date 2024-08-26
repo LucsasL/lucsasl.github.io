@@ -94,6 +94,7 @@ export const reducer = (state, action) => {
 
         header: {
           headerSize: "3.5em",
+          headerSizeMob: "2.2em",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -102,6 +103,7 @@ export const reducer = (state, action) => {
           textSize: "1.3em",
           textLine: "1.8em",
           textWidth: "60%",
+          textWidthMob: "90%",
           textMargin: "10px 25px",
         },
 
@@ -111,6 +113,7 @@ export const reducer = (state, action) => {
           aBg: "linear-gradient(to right, blue, #8000ff)",
           aColor: "white",
           aWidth: "50%",
+          aWidthMob: "90%",
           aPadding: "12px 20px",
           aBorderRadius: "10px",
         },

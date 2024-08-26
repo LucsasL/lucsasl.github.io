@@ -199,6 +199,19 @@
   section#skills {
     padding: 50px;
 
+    .langsCont {
+      .techStack {
+        width: 17%;
+        top: 9%;
+        left: 2%;
+      }
+
+      .archFeatures {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
     .platform {
       width: 100%;
   

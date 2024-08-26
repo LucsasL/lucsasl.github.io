@@ -750,13 +750,13 @@ header div#bgcolor input:checked ~ span i#thumb {
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -2px -2px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.488);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    width: 17%;
+    width: 90%;
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     position: fixed;
-    top: 9%;
-    left: 2%;
+    top: 35%;
+    left: 5%;
     z-index: 3;
   }
   section#skills .langsCont .techStack .tech {
@@ -783,6 +783,8 @@ header div#bgcolor input:checked ~ span i#thumb {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 92%;
@@ -1177,7 +1179,7 @@ div#msgMe .menuIcon {
   background: url("../img/landscape.webp") no-repeat center;
   background-size: cover;
   width: 90.1%;
-  height: 90.5%;
+  height: 95.7%;
   border-radius: 46px;
   position: absolute;
   top: 2.2%;
@@ -1619,6 +1621,15 @@ div#msgMe .menuIcon {
   /* Meta Section */
   section#skills {
     padding: 50px;
+  }
+  section#skills .langsCont .techStack {
+    width: 17%;
+    top: 9%;
+    left: 2%;
+  }
+  section#skills .langsCont .archFeatures {
+    opacity: 1;
+    pointer-events: all;
   }
   section#skills .platform {
     width: 100%;
