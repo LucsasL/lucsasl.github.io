@@ -13,6 +13,7 @@ export const SubmitData = createContext(false);
 export const PageLang = createContext();
 
 function App() {
+  // Control States
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState("English");
 
@@ -20,12 +21,11 @@ function App() {
     <>
       <PageLang.Provider value={{ lang, setLang }}>
         <Header />
-        
+
         <SubmitData.Provider value={{ open, setOpen }}>
           <Main />
           <SubmitPopup />
         </SubmitData.Provider>
-
         <Footer />
         <MsgMe />
       </PageLang.Provider>

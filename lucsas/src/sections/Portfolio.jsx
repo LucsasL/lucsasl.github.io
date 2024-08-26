@@ -43,48 +43,47 @@ function Portfolio() {
   }, [projectBoxIntersect, portfolioSect]);
 
   useGSAP(() => {
-    detailsButt.current.forEach((butt) => {
-      butt.addEventListener("click", () => {
+    detailsButt.current.forEach((clButt) => {
+      clButt.addEventListener("click", () => {
         window.scrollTo(0, 4110);
 
         // Scaling the project container to grow
         gsap.to(".projCont", {
           scale: 1.22,
-          duration: .2
+          duration: 0.2,
         });
 
-        gsap.to(
-          ".projDetails", {
-            opacity: 1,
-            duration: .2,
-            zIndex: 20,
-            pointerEvents: "all",
-          });
+        gsap.to(".projDetails", {
+          opacity: 1,
+          duration: 0.2,
+          zIndex: 20,
+          pointerEvents: "all",
+        });
       });
     });
 
-    closeDetailsButt.current.forEach(clButt => {
+    closeDetailsButt.current.forEach((clButt) => {
       clButt.addEventListener("click", () => {
         window.scrollTo(0, 4110);
 
         // Creating a timeline for animation
         const timeline = gsap.timeline({
           default: {
-            duration: .2,
+            duration: 0.2,
             repeat: 1,
-          }
+          },
         });
 
         timeline
-        .to(".projCont", {
-          scale: 1,
-        })
-        .to(".projDetails", {
-          opacity: 0,
-          pointerEvents: "none",
-        });
+          .to(".projCont", {
+            scale: 1,
+          })
+          .to(".projDetails", {
+            opacity: 0,
+            pointerEvents: "none",
+          });
       });
-    })
+    });
   });
 
   // It changes the element visibility of the project's element
@@ -105,7 +104,9 @@ function Portfolio() {
       <section id="portfolio" ref={portfolioSect}>
         <div>
           <div className="blockquote" ref={project} style={changeVisibility()}>
-            <h1 className="big">{ lang === "English" ? sectTitle : sectTitlePort}</h1>
+            <h1 className="big">
+              {lang === "English" ? sectTitle : sectTitlePort}
+            </h1>
           </div>
 
           <div className="projCont">
@@ -132,29 +133,45 @@ function Portfolio() {
                           ref={projContainer}
                           style={changeVisibility()}
                         >
-                          <div
-                            className="projDetails"
-                            ref={projDetailsCont}
-                          >
+                          <div className="projDetails" ref={projDetailsCont}>
                             <div className="projDetailsInfo">
-                              <h2>
-                                Project name (Working in Progress)
-                              </h2>
-                              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure obcaecati repellendus earum quisquam culpa quas nemo rerum  quia id? Similique.</p>
+                              <h2>Project name (Working in Progress)</h2>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Iure obcaecati repellendus
+                                earum quisquam culpa quas nemo rerum quia id?
+                                Similique.
+                              </p>
 
-                              <p>Quos, pariatur eos tenetur officia molestiae repellendus aliquid ex explicabo dignissimos nulla sequi similique, rem impedit, cum, laborum ipsum cupiditate laboriosam ullam eos. Harum.</p>
+                              <p>
+                                Quos, pariatur eos tenetur officia molestiae
+                                repellendus aliquid ex explicabo dignissimos
+                                nulla sequi similique, rem impedit, cum, laborum
+                                ipsum cupiditate laboriosam ullam eos. Harum.
+                              </p>
 
-                              <p>Reiciendis, laborum. Aliquam, veniam! Quidem modi dicta voluptati in similique voluptatem, asperiores rerum nesciunt, facilis eos eveniet libero soluta itaque veritatis tempora ut laborum iste.</p>
+                              <p>
+                                Reiciendis, laborum. Aliquam, veniam! Quidem
+                                modi dicta voluptati in similique voluptatem,
+                                asperiores rerum nesciunt, facilis eos eveniet
+                                libero soluta itaque veritatis tempora ut
+                                laborum iste.
+                              </p>
                             </div>
 
                             <div className="projImage">
                               <picture>
                                 {/* <source media="(min-width: )" srcset="" /> */}
-                                <img src="" alt="Project Image" />
+                                <img src="" alt="Tree" />
                               </picture>
                             </div>
 
-                            <button className="closeBtn" ref={(el) => closeDetailsButt.current[index] = el}>
+                            <button
+                              className="closeBtn"
+                              ref={(el) =>
+                                (closeDetailsButt.current[index] = el)
+                              }
+                            >
                               Close
                             </button>
                           </div>
@@ -254,7 +271,10 @@ function Portfolio() {
                                 return (
                                   <abbr title={t} key={index}>
                                     <picture>
-                                      <img src={techStackImgPort[index]} alt={t} />
+                                      <img
+                                        src={techStackImgPort[index]}
+                                        alt={t}
+                                      />
                                     </picture>
                                   </abbr>
                                 );

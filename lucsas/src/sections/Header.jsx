@@ -24,7 +24,7 @@ const Header = () => {
   const headerCont = useRef();
 
   useEffect(() => {
-    // It checks if the user has scrolled, if the user is at position 0, the header will have a transparent background, otherwise, the header will change to a glass effect background, with blur and black with low opacity 
+    // It checks if the user has scrolled, if the user is at position 0, the header will have a transparent background, otherwise, the header will change to a glass effect background, with blur and black with low opacity
     if (window.scrollY > 0) {
       setHeaderBg(headerColor);
     } else {
@@ -39,17 +39,28 @@ const Header = () => {
       if (scrollPos > 0) {
         setHeaderBg(headerColor);
         setHeaderBorder(
-          darkTheme ? "3px solid rgba(0, 0, 0, 0.35)" : "3px solid rgba(255, 255, 255, .15)"
+          darkTheme
+            ? "3px solid rgba(0, 0, 0, 0.35)"
+            : "3px solid rgba(255, 255, 255, .15)"
         );
         setHeaderBlur("blur(6px)");
-
       } else {
         setHeaderBg("transparent");
         setHeaderBorder("3px solid transparent");
         setHeaderBlur("blur(0px)");
       }
     });
-  }, [darkTheme, headerBg, headerCont, headerColor, headerBorder]);
+  }, [
+    darkTheme,
+    headerBg,
+    setHeaderBg,
+    headerCont,
+    headerColor,
+    headerBorder,
+    setHeaderBorder,
+    headerBlur,
+    setHeaderBlur,
+  ]);
 
   return (
     <>
