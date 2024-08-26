@@ -204,6 +204,10 @@ header > div .logoDiv {
   justify-content: flex-start;
   align-items: center;
 }
+header > div .logoDiv h1 {
+  opacity: 0;
+  pointer-events: none;
+}
 header > div .logoDiv a:hover {
   color: white;
 }
@@ -1110,6 +1114,7 @@ div#msgMe .menuIcon {
   -webkit-backdrop-filter: blur(6px);
   width: 270px;
   height: 75px;
+  margin: 0px 10px;
   padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 30px;
@@ -1119,7 +1124,7 @@ div#msgMe .menuIcon {
   align-items: center;
   position: fixed;
   top: 85%;
-  left: 25%;
+  left: 23%;
   z-index: 7;
   transition: all 0.5s ease;
 }
@@ -1154,7 +1159,7 @@ div#msgMe .menuIcon {
 .backUp {
   width: 75px;
   height: 75px;
-  margin: 0;
+  margin: 0px 10px;
   border-radius: 50%;
   display: flex;
   flex-flow: row nowrap;
@@ -1162,7 +1167,7 @@ div#msgMe .menuIcon {
   align-items: center;
   position: fixed;
   top: 85%;
-  left: 62%;
+  left: 61%;
   z-index: 7;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -1288,6 +1293,10 @@ div#msgMe .menuIcon {
   .headerName {
     display: inline;
   }
+  .logoDiv h1 {
+    opacity: 1;
+    pointer-events: all;
+  }
   main {
     display: flex;
     flex-flow: column nowrap;
@@ -1358,6 +1367,10 @@ div#msgMe .menuIcon {
   }
   header #mainHeader {
     width: 80%;
+  }
+  header .logoDiv h1 {
+    opacity: 1;
+    pointer-events: all;
   }
   /* Intro Section */
   section#intro > div {
@@ -1452,8 +1465,12 @@ div#msgMe .menuIcon {
     padding: 30px;
     margin: 0px 150px;
   }
-  header .logoDiv {
+  header > div .logoDiv {
     width: 16%;
+  }
+  header > div .logoDiv h1 {
+    opacity: 1;
+    pointer-events: all;
   }
   header #mainHeader {
     display: flex;
@@ -1733,10 +1750,10 @@ div#msgMe .menuIcon {
     padding: 20px;
   }
   .settingsMenu {
-    left: 72%;
+    left: 70%;
   }
   .backUp {
-    left: 83%;
+    left: 80%;
   }
 }
 :root {

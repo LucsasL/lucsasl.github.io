@@ -21,8 +21,19 @@ function MsgMe() {
   useEffect(() => {
     // Checks the size of the screen and reajust the menu element to the proper location
     window.addEventListener("resize", () => {
+      // For some reason, the only way to position the menu elements properly after a resize event is to set the "menuShown" state to the same value it has in a resize event listener (BRUH)
+      setMenuShown(menuShown);
+
       if (window.innerWidth >= 1200) {
         topButt.current.style.left = "83%";
+      } else {
+        topButt.current.style.left = "60%";
+      }
+
+      if (menuShown && window.innerWidth < 1200) {
+        topButt.current.style.left = "3%";
+      } else {
+        topButt.current.style.left = "64%";
       }
     });
 
@@ -36,7 +47,7 @@ function MsgMe() {
         setScrolled(false);
       }
     });
-  }, [topButt]);
+  }, [topButt, menuShown]);
 
   // Context Destructuring
   const { lang, setLang } = useContext(PageLang);
@@ -102,12 +113,12 @@ function MsgMe() {
             ? {
                 opacity: scrolled ? "1" : "0",
                 pointerEvents: scrolled ? "" : "none",
-                left: menuShown ? "66%" : "83%",
+                left: menuShown ? "64%" : "83%",
               }
             : {
                 opacity: scrolled ? "1" : "0",
                 pointerEvents: scrolled ? "" : "none",
-                left: menuShown ? "5%" : "62%",
+                left: menuShown ? "3%" : "60%",
               }
         }
         onClick={() => window.scrollTo(0, 0)}

@@ -28,6 +28,11 @@ header {
 
       @include flexStart;
 
+      h1 {
+        opacity: 0;
+        pointer-events: none;
+      }
+
       a:hover {
         color: $color;
       }

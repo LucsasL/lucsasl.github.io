@@ -4,6 +4,13 @@
     display: inline;
   }
 
+  .logoDiv {
+    h1 {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
   main {
     @include verticalFlex;
   }

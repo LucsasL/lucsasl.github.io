@@ -5,11 +5,17 @@
       width: 100%;
       padding: 30px;
       margin: 0px 150px;
+
+      .logoDiv {
+        width: 16%;
+
+        h1 {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
     }
 
-    .logoDiv {
-      width: 16%;
-    }
 
     #mainHeader {
       @include spaceAround;
@@ -342,10 +348,10 @@
 
   // Msg Me
   .settingsMenu {
-    left: 72%;
+    left: 70%;
   }
 
   .backUp {
-    left: 83%;
+    left: 80%;
   }
 }
