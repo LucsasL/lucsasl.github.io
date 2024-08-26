@@ -3,7 +3,7 @@ import { useContext, useRef, useState, useEffect } from "react";
 
 // Images Import
 import notebook from "../../img/laptop.svg";
-// import mobile from "../../img/mobile.webp";
+import mobile from "../../img/mobile.webp";
 
 // Context
 import { PageLang } from "../../App";
@@ -38,7 +38,11 @@ function Laptop() {
 
   useEffect(() => {
     console.log("Language Changed");
-  }, [laptopDiv]);
+
+    window.addEventListener("resize", () => {
+
+    });
+  }, [laptopDiv, laptopImg]);
 
   // It receives a  representing
   const changeSeason = (e) => {
