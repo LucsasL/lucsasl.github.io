@@ -15,6 +15,7 @@ function Contact() {
   // States Declaration
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
+  const [topicInput, setTopicInput] = useState("");
   const [msgInput, setMsgInput] = useState("");
 
   // Context Destructuring
@@ -154,6 +155,21 @@ function Contact() {
                     }
                     value={emailInput}
                     onChange={(e) => changeEmail(e)}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="">
+                    {lang === "English" ? "Topic:" : "Tópico:"}
+                  </label>{" "}
+                  <br />
+                  <input
+                    type="text"
+                    name="Topic"
+                    placeholder={lang === "English" ? "Topic" : "Tópico"}
+                    value={topicInput}
+                    onChange={(e) => setTopicInput(e)}
                     required
                   />
                 </div>
