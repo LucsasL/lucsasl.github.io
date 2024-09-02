@@ -170,6 +170,26 @@ abbr {
   src: url("../fonts/Kalam/Kalam-Regular.ttf");
   font-display: swap;
 }
+@media screen and (min-width: 992px) {
+  .scrollbar {
+    background: rgba(0, 0, 0, 0.9607843137);
+    height: 60%;
+    width: 5px;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  .scrollbar .thumb {
+    background: linear-gradient(45deg, #00f, rgb(128, 0, 255));
+    height: 70px;
+    border-radius: 30px;
+    position: relative;
+    top: 0;
+  }
+}
 header {
   color: white;
   width: 100vw;

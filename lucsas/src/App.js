@@ -6,6 +6,7 @@ import Header from "./sections/Header";
 import Main from "./sections/Main";
 import Footer from "./sections/Footer";
 import MsgMe from "./components/MsgMe";
+import Scrollbar from "./components/scrollbar";
 import SubmitPopup from "./components/submitPopup";
 import "./styles/index.css";
 
@@ -28,6 +29,7 @@ function App() {
         </SubmitData.Provider>
         <Footer />
         <MsgMe />
+        <Scrollbar />
       </PageLang.Provider>
     </>
   );

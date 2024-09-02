@@ -1,0 +1,29 @@
+@media screen and (min-width: 992px) {
+  .scrollbar {
+    background: #000000f5;
+  
+    height: 60%;
+    width: 5px;
+    border-radius: 30px;
+  
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    transform: translateY(-50%);
+    z-index: 20;
+  
+    .thumb {
+      background: linear-gradient(
+        45deg,
+        $color0,
+        $color1,
+      );
+  
+      height: 70px;
+      border-radius: 30px;
+  
+      position: relative;
+      top: 0;
+    }
+  }
+}
