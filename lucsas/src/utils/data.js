@@ -42,10 +42,11 @@ import gsapBig from "../img/gsap-big.webp";
 import gitBig from "../img/git-big.webp";
 
 // Social Media Image Import
-import instaLogo from "../img/instagram-social.webp";
 import githubLogo from "../img/github-social.webp";
+import gitlabLogo from "../img/gitlab-social.webp";
+import stackoverflowLogo from "../img/stackoverflow-social.webp";
 import linkedinLogo from "../img/linkedin-social.webp";
-import twitterLogo from "../img/twitter-social.webp";
+import instaLogo from "../img/instagram-social.webp";
 
 // Components Data
 export const contentWebDevPortfolio = {};
@@ -69,14 +70,19 @@ export const webIntroSect = {
   introImg: code,
   socialMedias: [
     {
-      link: "https://www.instagram.com/lucsas.l/",
-      name: "Lucsas Instagram",
-      img: instaLogo,
-    },
-    {
       link: "http://github.com/lucsasl",
       name: "Lucsas Github",
       img: githubLogo,
+    },
+    {
+      link: "https://gitlab.com/lucsasl",
+      name: "Lucsas Gitlab",
+      img: gitlabLogo,
+    },
+    {
+      link: "https://stackoverflow.com/users/23686993/lucas-lira",
+      name: "Lucsas Stack Overflow",
+      img: stackoverflowLogo,
     },
     {
       link: "https://www.linkedin.com/in/lucsas/?locale=en_US",
@@ -84,9 +90,9 @@ export const webIntroSect = {
       img: linkedinLogo,
     },
     {
-      link: "https://twitter.com/LucsasL",
-      name: "Lucsas Twitter",
-      img: twitterLogo,
+      link: "https://www.instagram.com/lucsas.l/",
+      name: "Lucsas Instagram",
+      img: instaLogo,
     },
   ],
 };

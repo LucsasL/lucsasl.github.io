@@ -38,7 +38,7 @@ import gitBig from "../img/git-big.webp";
 import instaLogo from "../img/instagram-social.webp";
 import githubLogo from "../img/github-social.webp";
 import linkedinLogo from "../img/linkedin-social.webp";
-import twitterLogo from "../img/twitter-social.webp";
+import gitlabLogo from "../img/gitlab-social.webp";
 
 // Components Data
 export const contentWebDevPortfolio = {};
@@ -68,11 +68,6 @@ export const webIntroSectPort = {
       link: "https://www.linkedin.com/in/lucsas/?locale=en_US",
       name: "Lucsas Linkedin",
       img: linkedinLogo,
-    },
-    {
-      link: "https://twitter.com/LucsasL",
-      name: "Lucsas Twitter",
-      img: twitterLogo,
     },
   ],
 };
