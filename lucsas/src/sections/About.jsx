@@ -89,7 +89,7 @@ function About() {
                   height="100%"
                   id="mascot"
                 ></iframe> */}
-                <img src={aboutImg} alt="Lucsas Chilling" />
+                <img src={aboutImg} alt="Lucsas Chilling" draggable="false" />
                 <figcaption>Lucsas Chilling</figcaption>
               </figure>
             </picture>

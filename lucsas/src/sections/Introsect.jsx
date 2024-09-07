@@ -54,7 +54,9 @@ function Introsect() {
 
               <button id="skillsResume">
                 <a href={resume} download={resume}>
-                  {lang === "English" ? info.downloadButt : infoPort.downloadButt}
+                  {lang === "English"
+                    ? info.downloadButt
+                    : infoPort.downloadButt}
                 </a>
               </button>
             </div>
@@ -67,7 +69,12 @@ function Introsect() {
                     <figure>
                       <figcaption>{name}</figcaption>
                       <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img src={img} alt={name} className="icons" />
+                        <img
+                          src={img}
+                          alt={name}
+                          className="icons"
+                          draggable="false"
+                        />
                       </a>
                     </figure>
                   </div>
@@ -81,7 +88,11 @@ function Introsect() {
             <div className="picCont">
               <picture>
                 <figure>
-                  <img src={webIntroSect.introImg} alt="I'm Lucsas, The GUY!" />
+                  <img
+                    src={webIntroSect.introImg}
+                    alt="I'm Lucsas, The GUY!"
+                    draggable="false"
+                  />
                   <figcaption>I'm Lucsas, The GUY!</figcaption>
                 </figure>
               </picture>

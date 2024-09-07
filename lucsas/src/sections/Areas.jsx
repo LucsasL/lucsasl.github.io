@@ -75,6 +75,7 @@ function Areas() {
                   src={sectImg}
                   alt="Web Development Service"
                   id="webdev-design"
+                  draggable="false"
                 />
                 <figcaption>Web Development Service</figcaption>
               </figure>

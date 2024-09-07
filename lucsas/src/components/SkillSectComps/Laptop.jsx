@@ -155,7 +155,11 @@ function Laptop() {
         <picture>
           {/* <source media="(min-width: 1200px)" srcSet={notebook} type="image/svg" /> */}
           <figure>
-            <img src={screenSize > 768 ? notebook : mobile} alt="Website" />
+            <img
+              src={screenSize > 768 ? notebook : mobile}
+              alt="Website"
+              draggable="false"
+            />
             <figcaption>Website</figcaption>
           </figure>
         </picture>
@@ -197,34 +201,42 @@ function Laptop() {
             }}
           >
             <h2
-              style={screenSize > 992 ? {
-                fontSize: activeTech.header.headerSize,
-                padding: activeTech.header.headerPadding,
-                margin: activeTech.header.headerMargin,
-                boxShadow: activeTech.header.headerBoxShadow,
-              } : {
-                fontSize: activeTech.header.headerSizeMob,
-                padding: activeTech.header.headerPadding,
-                margin: activeTech.header.headerMargin,
-                boxShadow: activeTech.header.headerBoxShadow
-              }}
+              style={
+                screenSize > 992
+                  ? {
+                      fontSize: activeTech.header.headerSize,
+                      padding: activeTech.header.headerPadding,
+                      margin: activeTech.header.headerMargin,
+                      boxShadow: activeTech.header.headerBoxShadow,
+                    }
+                  : {
+                      fontSize: activeTech.header.headerSizeMob,
+                      padding: activeTech.header.headerPadding,
+                      margin: activeTech.header.headerMargin,
+                      boxShadow: activeTech.header.headerBoxShadow,
+                    }
+              }
             >
               {lang === "English"
                 ? `This is ${activeTech.content.title}`
                 : `Isso é ${activeTechPort.content.title}`}
             </h2>
             <p
-              style={screenSize > 992 ? {
-                fontSize: activeTech.text.textSize,
-                lineHeight: activeTech.text.textLine,
-                width: activeTech.text.textWidth,
-                margin: activeTech.text.textMargin,
-              } : {
-                fontSize: activeTech.text.textSize,
-                lineHeight: activeTech.text.textLine,
-                width: activeTech.text.textWidthMob,
-                margin: activeTech.text.textMargin,
-              }}
+              style={
+                screenSize > 992
+                  ? {
+                      fontSize: activeTech.text.textSize,
+                      lineHeight: activeTech.text.textLine,
+                      width: activeTech.text.textWidth,
+                      margin: activeTech.text.textMargin,
+                    }
+                  : {
+                      fontSize: activeTech.text.textSize,
+                      lineHeight: activeTech.text.textLine,
+                      width: activeTech.text.textWidthMob,
+                      margin: activeTech.text.textMargin,
+                    }
+              }
             >
               {lang === "English"
                 ? activeTech.content.text
@@ -234,25 +246,29 @@ function Laptop() {
               href={activeTech.content.link}
               target="_blank"
               rel="noopener noreferrer"
-              style={screenSize > 992 ? {
-                display: activeTech.links.aDisplay,
-                textDecoration: activeTech.links.aDecoration,
-                background: activeTech.links.aBg,
-                color: activeTech.links.aColor,
-                width: activeTech.links.aWidth,
-                padding: activeTech.links.aPadding,
-                borderRadius: activeTech.links.aBorderRadius,
-                textAlign: "center",
-              } : {
-                display: activeTech.links.aDisplay,
-                textDecoration: activeTech.links.aDecoration,
-                background: activeTech.links.aBg,
-                color: activeTech.links.aColor,
-                width: activeTech.links.aWidthMob,
-                padding: activeTech.links.aPadding,
-                borderRadius: activeTech.links.aBorderRadius,
-                textAlign: "center",
-              }}
+              style={
+                screenSize > 992
+                  ? {
+                      display: activeTech.links.aDisplay,
+                      textDecoration: activeTech.links.aDecoration,
+                      background: activeTech.links.aBg,
+                      color: activeTech.links.aColor,
+                      width: activeTech.links.aWidth,
+                      padding: activeTech.links.aPadding,
+                      borderRadius: activeTech.links.aBorderRadius,
+                      textAlign: "center",
+                    }
+                  : {
+                      display: activeTech.links.aDisplay,
+                      textDecoration: activeTech.links.aDecoration,
+                      background: activeTech.links.aBg,
+                      color: activeTech.links.aColor,
+                      width: activeTech.links.aWidthMob,
+                      padding: activeTech.links.aPadding,
+                      borderRadius: activeTech.links.aBorderRadius,
+                      textAlign: "center",
+                    }
+              }
             >
               {lang === "English"
                 ? `Learn more about ${activeTech.content.textLink}`
@@ -263,14 +279,18 @@ function Laptop() {
           {/* Time and date content */}
           <div
             className="dateTime"
-            style={screenSize > 992 ? {
-              display: activeTech.content.dateTime.display,
-              width: activeTech.content.dateTime.width,
-              padding: activeTech.content.dateTime.padding,
-              textAlign: activeTech.content.dateTime.textAlign,
-            } : {
-              display: "none"
-            }}
+            style={
+              screenSize > 992
+                ? {
+                    display: activeTech.content.dateTime.display,
+                    width: activeTech.content.dateTime.width,
+                    padding: activeTech.content.dateTime.padding,
+                    textAlign: activeTech.content.dateTime.textAlign,
+                  }
+                : {
+                    display: "none",
+                  }
+            }
           >
             <h3>
               <span className="time">
@@ -296,7 +316,8 @@ function Laptop() {
                 <>
                   <br />
                   <span className="date">
-                    {weekDay(timeDate.getDay())}, {timeDate.getDate()}{"  "}
+                    {weekDay(timeDate.getDay())}, {timeDate.getDate()}
+                    {"  "}
                     {monthName(timeDate.getMonth())}
                   </span>
                 </>

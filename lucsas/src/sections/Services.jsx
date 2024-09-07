@@ -118,6 +118,7 @@ function Services() {
                               src={img}
                               alt="Connection with your target audience"
                               className="functions"
+                              draggable="false"
                             />
                           </figure>
                         </div>
@@ -146,6 +147,7 @@ function Services() {
                               src={img}
                               alt="Connection with your target audience"
                               className="functions"
+                              draggable="false"
                             />
                           </figure>
                         </div>

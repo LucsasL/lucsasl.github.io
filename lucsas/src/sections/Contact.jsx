@@ -70,6 +70,7 @@ function Contact() {
                       src={email}
                       alt="Contact through E-mail"
                       className="icons"
+                      draggable="false"
                     />
                   </figure>
                 </div>
@@ -96,6 +97,7 @@ function Contact() {
                           : "Contato através do Instagram"
                       }
                       className="icons"
+                      draggable="false"
                     />
                   </figure>
                 </div>

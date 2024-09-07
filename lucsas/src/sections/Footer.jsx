@@ -36,7 +36,12 @@ function Footer() {
                   <li key={index}>
                     <figure>
                       <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img src={img} alt={name} className="icons" />
+                        <img
+                          src={img}
+                          alt={name}
+                          className="icons"
+                          draggable="false"
+                        />
                       </a>
                     </figure>
                   </li>
@@ -69,6 +74,7 @@ function Footer() {
                 src={logo}
                 alt="Lucsas Logo"
                 style={{ width: "75px", height: "75px" }}
+                draggable="false"
               />
             </figure>
           </div>

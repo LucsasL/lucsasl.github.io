@@ -195,7 +195,11 @@ function Portfolio() {
                                 return (
                                   <abbr title={t} key={index}>
                                     <picture>
-                                      <img src={techStackImg[index]} alt={t} />
+                                      <img
+                                        src={techStackImg[index]}
+                                        alt={t}
+                                        draggable="false"
+                                      />
                                     </picture>
                                   </abbr>
                                 );
@@ -223,7 +227,11 @@ function Portfolio() {
 
                           <div className="projImg">
                             <picture key={index}>
-                              <img src={projImg} alt={projImgDesc} />
+                              <img
+                                src={projImg}
+                                alt={projImgDesc}
+                                draggable="false"
+                              />
                             </picture>
                           </div>
                         </div>
@@ -274,6 +282,7 @@ function Portfolio() {
                                       <img
                                         src={techStackImgPort[index]}
                                         alt={t}
+                                        draggable="false"
                                       />
                                     </picture>
                                   </abbr>
@@ -310,7 +319,11 @@ function Portfolio() {
 
                           <div className="projImg">
                             <picture key={index}>
-                              <img src={projImgPort} alt={projImgDescPort} />
+                              <img
+                                src={projImgPort}
+                                alt={projImgDescPort}
+                                draggable="false"
+                              />
                             </picture>
                           </div>
                         </div>

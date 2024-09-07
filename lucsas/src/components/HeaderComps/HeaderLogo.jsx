@@ -10,7 +10,7 @@ function HeaderLogo() {
         <abbr title={lucsasDesc}>
           <a href="https://lucsas.vercel.app" target="_self">
             <figure>
-              <img src={logo} alt={lucsasDesc} />
+              <img src={logo} alt={lucsasDesc} draggable="false" />
               <h1>Lucsas</h1>
               <figcaption>{lucsasDesc}</figcaption>
             </figure>

@@ -30,6 +30,7 @@ body {
 
 body * {
   transition: background 0.5s;
+  user-select: none;
 }
 
 .mouseCursor {
