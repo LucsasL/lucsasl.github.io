@@ -1265,7 +1265,7 @@ div#msgMe .menuIcon {
   font-size: 4em;
 }
 .laptop .dateTime .date {
-  font: normal 2em "Plus Jakarta Sans", sans-serif;
+  font: normal 1.88em "Plus Jakarta Sans", sans-serif;
 }
 .laptop p {
   margin: 10px 25px;
@@ -1321,7 +1321,7 @@ div#msgMe .menuIcon {
     font-size: 4em;
   }
   .laptop .dateTime .date {
-    font: normal 2em "Plus Jakarta Sans", sans-serif;
+    font: normal 1.8em "Plus Jakarta Sans", sans-serif;
   }
   .laptop p {
     margin: 10px 25px;

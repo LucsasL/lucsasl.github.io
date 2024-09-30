@@ -162,16 +162,16 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="">
+                  <label htmlFor="Topic">
                     {lang === "English" ? "Topic:" : "Tópico:"}
                   </label>{" "}
                   <br />
                   <input
                     type="text"
-                    name="Topic"
+                    name="Topic"  
                     placeholder={lang === "English" ? "Topic" : "Tópico"}
                     value={topicInput}
-                    onChange={(e) => setTopicInput(e)}
+                    onChange={(e) => setTopicInput(e.currentTarget.value)}
                     required
                   />
                 </div>
