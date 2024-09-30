@@ -11,6 +11,7 @@ import winter from "../img/winter.webp";
 
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
+import bNumerical from "../img/B-numerical.webp";
 
 import seo from "../img/setting.png";
 import design from "../img/web-developer.png";
@@ -36,6 +37,7 @@ import jsBig from "../img/JS-big.webp";
 import tsBig from "../img/typescript-big.webp";
 import reactBig from "../img/react-big.webp";
 import sassBig from "../img/sass-big.webp";
+import pythonBig from "../img/python-big.webp";
 import jestBig from "../img/jest-big.webp";
 import reduxBig from "../img/redux-big.webp";
 import gsapBig from "../img/gsap-big.webp";
@@ -248,17 +250,13 @@ export const webProjectsSect = {
     },
     {
       projLink: "#",
-      projTitle: "Numerical Base Conversor",
+      projTitle: "B-Numerical",
       projSubtitle: "Conversor of numerical bases",
       projDesc: "Numerical Base Conversor | WORK IN PROGRESS",
       projImgDesc: "Numerical Base Conversor image",
-      techStack: [
-        "Python",
-      ],
-      techStackImg: [
-        htmlBig,
-      ],
-      projImg: everyshop,
+      techStack: ["Python"],
+      techStackImg: [pythonBig],
+      projImg: bNumerical,
     },
     {
       projLink: "#",
