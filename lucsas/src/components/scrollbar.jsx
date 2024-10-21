@@ -6,7 +6,7 @@ function Scrollbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setThumbPosition(window.scrollY / 74 + "%");
+      setThumbPosition(window.scrollY / 88 + "%");
     });
   });
 
