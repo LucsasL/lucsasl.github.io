@@ -726,7 +726,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: none;
   }
   section#area > div .platform {
-    margin: 20px 0px;
+    margin: 50px 0px;
   }
   section#area > div .img-div {
     position: relative;
@@ -738,6 +738,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     justify-content: center;
     align-items: center;
     margin-top: -50px;
+  }
+  section#area > div h1 {
+    font: bold 2.6em "Plus Jakarta Sans", sans-serif;
   }
   section#area figure {
     display: block;
@@ -1676,26 +1679,22 @@ div#msgMe .menuIcon {
   /* Area Section */
   section#area > div {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
   }
-  section#area > div > div {
-    margin: 100px 0px;
-  }
-  section#area .platform {
-    width: 100%;
-    margin: 20px 0px;
+  section#area > div .platform {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     align-items: flex-start;
   }
-  section#area .platform div {
+  section#area > div .platform div {
     width: 100%;
   }
-  section#area .platform p {
+  section#area > div .platform p {
     width: 90%;
   }
   section#area #google-design {

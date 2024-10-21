@@ -170,28 +170,25 @@
   /* Area Section */
   section#area {
     > div {
-      @include spaceAround;
-
-      > div {
-        margin: 100px 0px;
-      }
-    }
-
-    .platform {
-      width: 100%;
-      margin: 20px 0px;
-
-      @include spaceAround;
-      align-items: flex-start;
-
-      div {
+      @include verticalFlex;
+      
+      .platform {
+        @include spaceAround;
+  
         width: 100%;
-      }
-
-      p {
-        width: 90%;
+  
+        align-items: flex-start;
+  
+        div {
+          width: 100%;
+        }
+  
+        p {
+          width: 90%;
+        }
       }
     }
+
 
     #google-design {
       width: 700px;

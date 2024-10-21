@@ -57,13 +57,11 @@ function Areas() {
           <div className="platform">
             {/* Areas Info */}
             <div ref={infoBox} style={changeVisibility(0)}>
-              <div className="blockquote">
-                <h1 className="big">
-                  {lang === "English"
-                    ? "Front-end Web Developer"
-                    : "Desenvolvedor Web Front-end"}
-                </h1>
-              </div>
+              <h1 className="big">
+                {lang === "English"
+                  ? "Front-end Web Development"
+                  : "Desenvolvimento Web Front-end"}
+              </h1>
 
               <p>{lang === "English" ? areaDesc : areaDescPort}</p>
             </div>
@@ -77,6 +75,32 @@ function Areas() {
                   id="webdev-design"
                   draggable="false"
                 />
+                <figcaption>Web Development Service</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div className="platform">
+            {/* Areas Info */}
+            <div ref={infoBox} style={changeVisibility(0)}>
+              <h1 className="big">
+                {lang === "English"
+                  ? "Back-end Web Development"
+                  : "Desenvolvimento Web Back-end"}
+              </h1>
+
+              <p>{lang === "English" ? areaDesc : areaDescPort}</p>
+            </div>
+
+            {/* Skills Image */}
+            <div className="img-div">
+              <figure>
+                {/* <img
+                  src={sectImg}
+                  alt="Web Development Service"
+                  id="webdev-design"
+                  draggable="false"
+                /> */}
                 <figcaption>Web Development Service</figcaption>
               </figure>
             </div>
