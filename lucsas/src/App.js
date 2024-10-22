@@ -5,7 +5,7 @@ import { useState, createContext } from "react";
 import Header from "./sections/Header";
 import Main from "./sections/Main";
 import Footer from "./sections/Footer";
-import MsgMe from "./components/MsgMe";
+import UpButton from "./components/upButton";
 import Scrollbar from "./components/scrollbar";
 import SubmitPopup from "./components/submitPopup";
 import "./styles/index.css";
@@ -28,7 +28,7 @@ function App() {
           <SubmitPopup />
         </SubmitData.Provider>
         <Footer />
-        <MsgMe />
+        <UpButton />
         <Scrollbar />
       </PageLang.Provider>
     </>

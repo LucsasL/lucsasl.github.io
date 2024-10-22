@@ -24,7 +24,7 @@ function NavLinks() {
         <ul>
           {webNavOptions.map((i, index) => {
             return (
-              <li key={index}>
+              <li key={index}>k
                 <abbr title={i}>
                   <button>
                     <a href={`./#${webNavOptionsLink[index]}`}>

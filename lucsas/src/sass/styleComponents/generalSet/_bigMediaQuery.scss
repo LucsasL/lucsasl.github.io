@@ -4,10 +4,9 @@
     > div {
       width: 100%;
       padding: 30px;
-      margin: 0px 150px;
+      margin: 0px 50px;
 
       .logoDiv {
-        width: 16%;
 
         h1 {
           opacity: 1;
@@ -16,18 +15,11 @@
       }
     }
 
-
     #mainHeader {
-      @include spaceAround;
-
-      width: 60%;
+      width: 20%;
 
       menu {
-        @include spaceBetween;
-        width: 100%;
-  
         nav {
-          display: block;
           width: 70%;
         }
       }

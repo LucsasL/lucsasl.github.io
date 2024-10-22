@@ -9,22 +9,18 @@ header {
   top: 3%;
   z-index: 5;
 
-  pointer-events: none;
-
   @include center;
 
   > div {
-    width: 90%;
+    width: 95%;
     height: 100%;
     padding: 10px 20px;
-    margin: 0px 15px;
-    border-radius: 50px;
-    pointer-events: all;
 
     @include spaceBetween;
 
     .logoDiv {
-      width: 40%;
+      padding: 5px 10px;
+      border-radius: 30px;
 
       @include flexStart;
 
@@ -40,7 +36,6 @@ header {
   }
 
   li {
-    display: none;
     margin: 10px;
   }
 
@@ -90,7 +85,7 @@ header {
     width: 50%;
 
     menu {
-      @include spaceAround;
+      @include flexEnd;
       width: 100%;
     }
   }

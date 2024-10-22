@@ -3,9 +3,7 @@ import { useState, useEffect, createContext, useRef } from "react";
 
 // Components Import
 import HeaderLogo from "../components/HeaderComps/HeaderLogo";
-import NavLinks from "../components/HeaderComps/NavLinks";
-import MusicButton from "../components/HeaderComps/MusicButton";
-import ThemeToggle from "../components/HeaderComps/ThemeToggle";
+import HeaderMenu from "../components/HeaderComps/headerMenu";
 
 // BG Theme Import
 export const BgTheme = createContext();
@@ -54,9 +52,9 @@ const Header = () => {
     darkTheme,
     headerBg,
     setHeaderBg,
-    headerCont,
     headerColor,
     headerBorder,
+    headerCont,
     setHeaderBorder,
     headerBlur,
     setHeaderBlur,
@@ -65,27 +63,27 @@ const Header = () => {
   return (
     <>
       <header>
-        <div
-          style={{
-            background: headerBg,
-            backdropFilter: headerBlur,
-            border: headerBorder,
-          }}
-          ref={headerCont}
-        >
-          <HeaderLogo />
+        <div>
+          <BgTheme.Provider
+            value={{
+              headerBg,
+              setHeaderBg,
+              darkTheme,
+              setDarkTheme,
+              headerCont,
+              headerColor,
+              headerBorder,
+              headerBlur,
+            }}
+          >
+            <HeaderLogo />
 
-          <div id="mainHeader">
-            <menu>
-              <BgTheme.Provider
-                value={{ headerBg, setHeaderBg, darkTheme, setDarkTheme }}
-              >
-                <NavLinks />
-                <MusicButton />
-                <ThemeToggle />
-              </BgTheme.Provider>
-            </menu>
-          </div>
+            <div id="mainHeader">
+              <menu>
+                <HeaderMenu />
+              </menu>
+            </div>
+          </BgTheme.Provider>
         </div>
       </header>
     </>

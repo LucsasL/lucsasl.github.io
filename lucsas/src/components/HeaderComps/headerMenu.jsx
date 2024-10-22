@@ -1,21 +1,23 @@
-// Hooks Import
-import { useContext, useEffect, useRef, useState } from "react";
+// React Imports
+import React, { useContext, useEffect, useRef, useState } from 'react';
+
+// Components Imports
+import NavLinks from "./NavLinks";
+import MusicButton from "./MusicButton";
+import ThemeToggle from "./ThemeToggle";
 
 // Icons
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
-import { FaArrowUp } from "react-icons/fa";
 
 // Context
-import { PageLang } from "../App";
+import { PageLang } from "../../App";
 
-function MsgMe() {
+function HeaderMenu() {
   // States
   const [menuShown, setMenuShown] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   // Refs
-  const topButt = useRef();
   const langButt = useRef();
 
   useEffect(() => {
@@ -24,30 +26,8 @@ function MsgMe() {
       // For some reason, the only way to position the menu elements properly after a resize event is to set the "menuShown" state to the same value it has in a resize event listener (BRUH)
       setMenuShown(menuShown);
 
-      if (window.innerWidth >= 1200) {
-        topButt.current.style.left = "83%";
-      } else {
-        topButt.current.style.left = "60%";
-      }
-
-      if (menuShown && window.innerWidth < 1200) {
-        topButt.current.style.left = "1%";
-      } else {
-        topButt.current.style.left = "54%";
-      }
     });
-
-    // It checks the position the user is in the site, if it's higher than 0, the "scrolled" state turns true, and the "Scroll up" button appears
-    window.addEventListener("scroll", () => {
-      const posY = window.scrollY;
-
-      if (posY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    });
-  }, [topButt, menuShown]);
+  }, [menuShown]);
 
   // Context Destructuring
   const { lang, setLang } = useContext(PageLang);
@@ -55,7 +35,7 @@ function MsgMe() {
   return (
     <>
       {/* Menu Button */}
-      <div id="msgMe">
+      <div id="headerMenu">
         <button onClick={() => setMenuShown(!menuShown)}>
           {menuShown ? (
             <IoMdClose className="menuIcon" />
@@ -70,15 +50,19 @@ function MsgMe() {
         className="settingsMenu"
         style={{
           opacity: menuShown ? "1" : "0",
-          pointerEvents: menuShown ? "" : "none",
+          pointerEvents: menuShown ? "all" : "none",
         }}
       >
+        <NavLinks />
+
         {/* Language selection */}
         <div>
           <abbr title={lang === "English" ? "Português" : "English"}>
             <div className="langSelect" onClick={() => console.log()}>
               <div
-                onClick={() => setLang(lang === "English" ? "Português" : "English")}
+                onClick={() =>
+                  setLang(lang === "English" ? "Português" : "English")
+                }
                 className="langButt"
                 ref={langButt}
               >
@@ -102,31 +86,14 @@ function MsgMe() {
             </button>
           </abbr>
         </div>
-      </div>
 
-      {/* Scroll top button */}
-      <button
-        className="backUp"
-        ref={topButt}
-        style={
-          window.innerWidth >= 1200
-            ? {
-                opacity: scrolled ? "1" : "0",
-                pointerEvents: scrolled ? "" : "none",
-                left: menuShown ? "64%" : "83%",
-              }
-            : {
-                opacity: scrolled ? "1" : "0",
-                pointerEvents: scrolled ? "" : "none",
-                left: menuShown ? "1%" : "54%",
-              }
-        }
-        onClick={() => window.scrollTo(0, 0)}
-      >
-        <FaArrowUp />
-      </button>
+        <div style={{ display: "flex" }}>
+          <MusicButton />
+          <ThemeToggle />
+        </div>
+      </div>
     </>
   );
 }
 
-export default MsgMe;
+export default HeaderMenu;

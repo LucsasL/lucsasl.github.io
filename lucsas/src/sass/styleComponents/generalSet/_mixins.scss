@@ -37,6 +37,13 @@
   align-items: center;
 }
 
+@mixin flexEnd {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+}
+
 @mixin verticalFlex($flexVert: none, $flexHor: none, $wrap: column nowrap) {
   display: flex;
   flex-flow: $wrap;
