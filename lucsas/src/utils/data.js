@@ -53,7 +53,7 @@ import instaLogo from "../img/instagram-social.webp";
 // Components Data
 export const contentWebDevPortfolio = {};
 
-export const webNavOptions = ["Home", "About", "Skills", "Projects", "Contact"];
+export const webNavOptions = ["HOME", "ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
 export const webNavOptionsLink = [
   "intro",
   "services",

@@ -40,12 +40,12 @@ import gitBig from "../img/git-big.webp";
 import instaLogo from "../img/instagram-social.webp";
 import githubLogo from "../img/github-social.webp";
 import linkedinLogo from "../img/linkedin-social.webp";
-import gitlabLogo from "../img/gitlab-social.webp";
+// import gitlabLogo from "../img/gitlab-social.webp";
 
 // Components Data
 export const contentWebDevPortfolio = {};
 
-export const webNavOptionsPort = ["Home", "Sobre", "Habilidades", "Projetos", "Contato"];
+export const webNavOptionsPort = ["HOME", "SOBRE", "HABILIDADES", "PROJETOS", "CONTATO"];
 
 export const webIntroSectPort = {
   infoPort: {

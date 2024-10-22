@@ -181,6 +181,12 @@
         p {
           width: 90%;
         }
+
+        &:nth-child(even) {
+          .img-div {
+            order: 1;
+          }
+        }
       }
     }
 

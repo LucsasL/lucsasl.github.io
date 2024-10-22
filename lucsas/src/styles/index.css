@@ -231,11 +231,8 @@ header > div .logoDiv a:hover {
   color: white;
 }
 header li {
-  display: block;
-  margin: 10px;
-  font: bold 2em "Plus Jakarta Sans", sans-serif;
   text-align: center;
-  text-transform: uppercase;
+  display: block;
 }
 header button {
   background: linear-gradient(to right, #00f, rgb(128, 0, 255));
@@ -256,6 +253,8 @@ header button a {
   display: block;
 }
 header button a {
+  font: bold 2em "Plus Jakarta Sans", sans-serif;
+  text-transform: uppercase;
   padding: 10px;
 }
 header figure {
@@ -709,6 +708,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#about .range {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+    background-size: 30%;
     color: black;
     box-shadow: 0px 0px 20px black;
     width: 1300%;
@@ -1167,13 +1167,10 @@ div#headerMenu .menuIcon {
 }
 
 .settingsMenu {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: #010101;
   width: 350px;
   margin: 0px 10px;
   padding: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   display: flex;
   flex-flow: column nowrap;
@@ -1681,6 +1678,9 @@ div#headerMenu .menuIcon {
   }
   section#area > div .platform p {
     width: 90%;
+  }
+  section#area > div .platform:nth-child(even) .img-div {
+    order: 1;
   }
   section#area #google-design {
     width: 700px;

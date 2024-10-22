@@ -70,11 +70,11 @@ function About() {
             </h1>
 
             {lang === "English"
-              ? aboutText.map((p) => {
-                  return <p>{p}</p>;
+              ? aboutText.map((p, index) => {
+                  return <p key={index}>{p}</p>;
                 })
-              : aboutTextPort.map((p) => {
-                  return <p>{p}</p>;
+              : aboutTextPort.map((p, index) => {
+                  return <p key={index}>{p}</p>;
                 })}
           </div>
 

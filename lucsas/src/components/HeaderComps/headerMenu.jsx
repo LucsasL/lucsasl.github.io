@@ -1,5 +1,5 @@
 // React Imports
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Components Imports
 import NavLinks from "./NavLinks";
@@ -10,8 +10,10 @@ import ThemeToggle from "./ThemeToggle";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 
-// Context
-import { PageLang } from "../../App";
+// Social Media Image Import
+import githubLogo from "../../img/github-social.webp";
+import stackoverflowLogo from "../../img/stackoverflow-social.webp";
+import linkedinLogo from "../../img/linkedin-social.webp";
 
 function HeaderMenu() {
   // States
@@ -25,9 +27,6 @@ function HeaderMenu() {
 
     });
   }, [menuShown]);
-
-  // Context Destructuring
-  const { lang } = useContext(PageLang);
 
   return (
     <>
@@ -57,11 +56,29 @@ function HeaderMenu() {
           <abbr title="MSG ME">
             <button>
               <a
+                href="https://github.com/lucsasl"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={githubLogo} alt="Lucas Lira Github" />
+              </a>
+            </button>
+            <button>
+              <a
                 href="https://www.linkedin.com/in/lucsas"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {lang === "English" ? "Msg me" : "Chama aí"}
+                <img src={stackoverflowLogo} alt="Lucas Lira StackOverflow" />
+              </a>
+            </button>
+            <button>
+              <a
+                href="https://www.linkedin.com/in/lucsas"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={linkedinLogo} alt="Lucas Lira Linkedin" />
               </a>
             </button>
           </abbr>

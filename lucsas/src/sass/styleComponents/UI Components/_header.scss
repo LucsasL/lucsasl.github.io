@@ -37,23 +37,21 @@ header {
   }
 
   li {
-    display: block;
-    margin: 10px;
-
-    font: bold 2em $mainFont;
     text-align: center;
-    text-transform: uppercase;
+    display: block;
   }
-
+  
   button {
     @include buttonGen(false, true);
-
+    
     background: transparent;
     width: auto;
     padding: 0;
     margin: 0;
-
+    
     a {
+      font: bold 2em $mainFont;
+      text-transform: uppercase;
       padding: 10px;
     }
   }
