@@ -27,13 +27,44 @@
     }
 
     .range {
-      background: rgb(12, 12, 12);
-      width: 200%;
+      background: linear-gradient(
+        to right,
+        $color0,
+        $color1
+      );
+      color: black;
+      box-shadow: 0px 0px 20px black;
+
+      width: 600%;
       height: 60px;
 
       position: absolute;
       top: 93%;
       transform: rotate(-4.5deg);
+
+      font: bold 2.5em $mainFont;
+    }
+    
+    .range2 {
+      position: absolute;
+      top: 80%;
+      transform: rotate(7deg);
+    }
+
+    .range > div {
+      width: 100%;
+      position: relative;
+      animation: movingRange 75s infinite linear;
+    }
+
+    @keyframes movingRange {
+      0% {
+        left: 30%;
+      }
+
+      100% {
+        left: -10%;
+      }
     }
   }
 }

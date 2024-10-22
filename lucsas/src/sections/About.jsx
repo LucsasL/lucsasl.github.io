@@ -96,7 +96,12 @@ function About() {
           </div>
         </div>
 
-        <div className="range"></div>
+        <div className="range">
+          <div>Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development| Web Development| Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development| Web Development| Web Development</div>
+        </div>
+        <div className="range range2">
+          <div>Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development| Web Development| Web Development | Web Development | Web Development | Web Development | Web Development | Web Development | Web Development| Web Development| Web Development</div>
+        </div>
       </section>
     </>
   );
