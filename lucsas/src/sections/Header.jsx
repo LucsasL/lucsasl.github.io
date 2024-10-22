@@ -4,6 +4,7 @@ import { useState, useEffect, createContext, useRef } from "react";
 // Components Import
 import HeaderLogo from "../components/HeaderComps/HeaderLogo";
 import HeaderMenu from "../components/HeaderComps/headerMenu";
+import LangButton from "../components/HeaderComps/langButton";
 
 // BG Theme Import
 export const BgTheme = createContext();
@@ -80,6 +81,7 @@ const Header = () => {
 
             <div id="mainHeader">
               <menu>
+                <LangButton />
                 <HeaderMenu />
               </menu>
             </div>

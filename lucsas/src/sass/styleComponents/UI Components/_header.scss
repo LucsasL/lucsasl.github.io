@@ -25,6 +25,7 @@ header {
       @include flexStart;
 
       h1 {
+        display: none;
         opacity: 0;
         pointer-events: none;
       }
@@ -36,7 +37,12 @@ header {
   }
 
   li {
+    display: block;
     margin: 10px;
+
+    font: bold 2em $mainFont;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   button {
@@ -79,6 +85,22 @@ header {
     }
   }
 
+  .langButt {
+    background: #000;
+    color: white;
+
+    padding: 12px 20px;
+    margin: 10px 20px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    
+    &:hover {
+      background: #060606;
+    }
+  }
+
   #mainHeader {
     @include spaceEvenly;
 
@@ -88,6 +110,11 @@ header {
       @include flexEnd;
       width: 100%;
     }
+
+    nav {
+      @include center;
+      width: 100%;
+    }    
   }
 
   #musicDiv {
@@ -101,6 +128,7 @@ header {
     width: 50px;
     height: 50px;
     padding: 10px;
+    margin: 10px;
 
     border-radius: 50%;
     transition: all 0.5s ease;
@@ -125,6 +153,7 @@ header {
 
       width: 80px;
       height: 40px;
+      margin: 10px;
       border-radius: 80px;
 
       display: block;

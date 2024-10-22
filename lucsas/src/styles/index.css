@@ -223,6 +223,7 @@ header > div .logoDiv {
   align-items: center;
 }
 header > div .logoDiv h1 {
+  display: none;
   opacity: 0;
   pointer-events: none;
 }
@@ -230,7 +231,11 @@ header > div .logoDiv a:hover {
   color: white;
 }
 header li {
+  display: block;
   margin: 10px;
+  font: bold 2em "Plus Jakarta Sans", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
 }
 header button {
   background: linear-gradient(to right, #00f, rgb(128, 0, 255));
@@ -273,6 +278,18 @@ header a:hover {
   -webkit-background-clip: text;
   color: transparent;
 }
+header .langButt {
+  background: #000;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header .langButt:hover {
+  background: #060606;
+}
 header #mainHeader {
   display: flex;
   flex-flow: row nowrap;
@@ -287,6 +304,13 @@ header #mainHeader menu {
   align-items: center;
   width: 100%;
 }
+header #mainHeader nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 header #musicDiv {
   display: inline-flex;
   align-items: center;
@@ -296,6 +320,7 @@ header canvas {
   width: 50px;
   height: 50px;
   padding: 10px;
+  margin: 10px;
   border-radius: 50%;
   transition: all 0.5s ease;
 }
@@ -311,6 +336,7 @@ header div#bgcolor label {
   background: linear-gradient(to right, rgb(106, 106, 255), rgb(200, 0, 255));
   width: 80px;
   height: 40px;
+  margin: 10px;
   border-radius: 80px;
   display: block;
   position: relative;
@@ -1154,28 +1180,13 @@ div#headerMenu .menuIcon {
   justify-content: none;
   align-items: none;
   position: absolute;
-  top: 90%;
-  left: 23%;
+  top: 100%;
+  left: 25%;
   z-index: 7;
   transition: all 0.5s ease;
 }
-.settingsMenu .langSelect {
-  background: #000;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.settingsMenu .langButt {
-  background: #000;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.settingsMenu .langButt:hover {
-  background: #060606;
+.settingsMenu .socials {
+  margin: 10px 20px;
 }
 .settingsMenu button {
   padding: 0;
@@ -1523,6 +1534,7 @@ div#headerMenu .menuIcon {
     margin: 0px 50px;
   }
   header > div .logoDiv h1 {
+    display: block;
     opacity: 1;
     pointer-events: all;
   }
@@ -1530,16 +1542,10 @@ div#headerMenu .menuIcon {
     width: 20%;
   }
   header #mainHeader menu nav {
-    width: 70%;
-  }
-  header li {
-    display: inline;
+    width: 100%;
   }
   header div#bgcolor {
     width: 15%;
-  }
-  header.scrolled > div {
-    padding: 30px;
   }
   /* Main Settings */
   section {
@@ -1796,7 +1802,8 @@ div#headerMenu .menuIcon {
     padding: 20px;
   }
   .settingsMenu {
-    left: 70%;
+    top: 105%;
+    left: 72%;
   }
   .backUp {
     left: 80%;

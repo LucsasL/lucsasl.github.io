@@ -1,5 +1,5 @@
 // React Imports
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 // Components Imports
 import NavLinks from "./NavLinks";
@@ -17,9 +17,6 @@ function HeaderMenu() {
   // States
   const [menuShown, setMenuShown] = useState(false);
 
-  // Refs
-  const langButt = useRef();
-
   useEffect(() => {
     // Checks the size of the screen and reajust the menu element to the proper location
     window.addEventListener("resize", () => {
@@ -30,7 +27,7 @@ function HeaderMenu() {
   }, [menuShown]);
 
   // Context Destructuring
-  const { lang, setLang } = useContext(PageLang);
+  const { lang } = useContext(PageLang);
 
   return (
     <>
@@ -54,23 +51,6 @@ function HeaderMenu() {
         }}
       >
         <NavLinks />
-
-        {/* Language selection */}
-        <div>
-          <abbr title={lang === "English" ? "Português" : "English"}>
-            <div className="langSelect" onClick={() => console.log()}>
-              <div
-                onClick={() =>
-                  setLang(lang === "English" ? "Português" : "English")
-                }
-                className="langButt"
-                ref={langButt}
-              >
-                {lang === "English" ? "Português" : "English"}
-              </div>
-            </div>
-          </abbr>
-        </div>
 
         {/* Redirect Button */}
         <div className="socials">

@@ -7,8 +7,8 @@
       margin: 0px 50px;
 
       .logoDiv {
-
         h1 {
+          display: block;
           opacity: 1;
           pointer-events: all;
         }
@@ -20,22 +20,14 @@
 
       menu {
         nav {
-          width: 70%;
+          width: 100%;
         }
       }
-    }
-    
-    li {
-      display: inline;
     }
 
     div#bgcolor {
       width: 15%;
     }
-  }
-
-  header.scrolled > div {
-    padding: 30px;
   }
 
   /* Main Settings */
@@ -348,7 +340,8 @@
 
   // Msg Me
   .settingsMenu {
-    left: 70%;
+    top: 105%;
+    left: 72%;
   }
 
   .backUp {
