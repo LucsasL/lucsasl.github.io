@@ -5,6 +5,7 @@ import webDev from "../img/webDev.webp";
 
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
+import bNumerical from "../img/B-numerical.webp";
 
 import seo from "../img/setting.png";
 import design from "../img/web-developer.png";
@@ -29,6 +30,7 @@ import jsBig from "../img/JS-big.webp";
 import tsBig from "../img/typescript-big.webp";
 import reactBig from "../img/react-big.webp";
 import sassBig from "../img/sass-big.webp";
+import pythonBig from "../img/python-big.webp";
 import jestBig from "../img/jest-big.webp";
 import reduxBig from "../img/redux-big.webp";
 import gsapBig from "../img/gsap-big.webp";
@@ -200,6 +202,52 @@ export const webProjectsSectPort = {
         sassBig,
         gsapBig,
         reduxBig,
+        jestBig,
+        gitBig,
+      ],
+      projImgPort: everyshop,
+    },
+    {
+      projLinkPort: "https://every-shop.vercel.app/",
+      projTitlePort: "B-Numerical",
+      projSubtitlePort: "Um conversor de bases numéricas",
+      projDescPort:
+        " | TRABALHO EM PROGRESSO",
+      projImgDescPort: "Imagem do projeto B-Numerical",
+      techStackPort: [
+        "Pyhton",
+      ],
+      techStackImgPort: [
+        pythonBig,
+      ],
+      projImgPort: bNumerical,
+    },
+    {
+      projLinkPort: "#",
+      projTitlePort: "Nosso Sistema Solar",
+      projSubtitlePort: "Um ambiente 3D que mostra nosso sistema solar",
+      projDescPort:
+        " | TRABALHO EM PROGRESSO",
+      projImgDescPort: "Imagem do projeto EVERYSHOP",
+      techStackPort: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TypeScript",
+        "React JS",
+        "SASS",
+        "GSAP",
+        "Jest",
+        "Git",
+      ],
+      techStackImgPort: [
+        htmlBig,
+        cssBig,
+        jsBig,
+        tsBig,
+        reactBig,
+        sassBig,
+        gsapBig,
         jestBig,
         gitBig,
       ],

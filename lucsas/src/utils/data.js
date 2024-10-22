@@ -260,8 +260,8 @@ export const webProjectsSect = {
     },
     {
       projLink: "#",
-      projTitle: "",
-      projSubtitle: "A shop that sells everything",
+      projTitle: "Our Solar System",
+      projSubtitle: "A 3D environment showing our solar system",
       projDesc:
         "EVERYSHOP is a web project of a shop that sells everything. Developed in React JS including SASS and responsive design. | WORK IN PROGRESS",
       projImgDesc: "Everyshop project image",
@@ -273,7 +273,6 @@ export const webProjectsSect = {
         "React JS",
         "SASS",
         "GSAP",
-        "Redux",
         "Jest",
         "Git",
       ],
@@ -285,7 +284,6 @@ export const webProjectsSect = {
         reactBig,
         sassBig,
         gsapBig,
-        reduxBig,
         jestBig,
         gitBig,
       ],
