@@ -162,8 +162,19 @@
     }
 
     .range {
+      width: 600%;
       position: absolute;
       top: 83%;
+    }
+
+    .range2 {
+      position: absolute;
+      top: 80%;
+      transform: rotate(7deg)
+    }
+
+    .range > div {
+      width: 100%;
     }
   }
 
