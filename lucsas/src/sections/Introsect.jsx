@@ -1,111 +1,55 @@
 // Hooks
-import { useContext, useEffect, useRef } from "react";
+// import { useContext, useEffect, useRef } from "react";
 
-// Files
-import resume from "./resumeEng.pdf";
+// // Files
+// import resume from "./resumeEng.pdf";
 
-// Context
-import { PageLang } from "../App";
+// // Context
+// import { PageLang } from "../App";
 
-// Data Import
-import { webIntroSect } from "../utils/data";
-import { webIntroSectPort } from "../utils/dataPortuguese";
+// // Data Import
+// import { webIntroSect } from "../utils/data";
+// import { webIntroSectPort } from "../utils/dataPortuguese";
 
-// Data Destructuring
-const { info, socialMedias } = webIntroSect;
-const { infoPort } = webIntroSectPort;
+// // Data Destructuring
+// const { info, socialMedias } = webIntroSect;
+// const { infoPort } = webIntroSectPort;
+
+// Threejs Imports
+import { Canvas } from "@react-three/fiber";
 
 function Introsect() {
-  // Taking the context
-  const { lang } = useContext(PageLang);
+  //   // Taking the context
+  //   const { lang } = useContext(PageLang);
 
-  // Refs
-  const introComp = useRef();
+  //   // Refs
+  //   const introComp = useRef();
 
-  useEffect(() => {
-    console.log("Language Changed");
-  }, [introComp]);
+  //   useEffect(() => {
+  //     console.log("Language Changed");
+  //   }, [introComp]);
 
   // Returns the intro content
   return (
     <>
       <section id="intro">
-        {/* <div className="intro3D"> // 3D Render of a room
-          <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe>
-        </div> */}
+        <Canvas color={"lightblue"} camera={[35, 100, .5, 2000]}>
+          <ambientLight />
+          <mesh position={[1, 1, -2]}>
+            <planeGeometry args={[20, 10]} />
+            <meshStandardMaterial color={"green"} />
+          </mesh>
 
-        <div>
-          <div className="intro">
-            {/* Intro main content */}
-            <div id="introducing">
-              <h1>
-                <span style={{ fontSize: ".9em", lineHeight: "1em" }}>
-                  {lang === "English" ? info.h1Span1 : infoPort.h1Span1}
-                </span>{" "}
-                <br />
-                <span className="nickname">Lucsas</span>
-                <span className="cursiveWords">Lucas Lira</span>
-              </h1>
-              <h2 className="fancy intro-h2">
-                {lang === "English" ? info.h2 : infoPort.h2}
-              </h2>
+          <mesh rotateX={"10deg"}>
+            <planeGeometry args={[2, 1]} />
+            <meshStandardMaterial color={"white"} />
+          </mesh>
 
-              <p>{lang === "English" ? info.text : infoPort.text}</p>
-
-              <button id="skillsResume">
-                <a href={resume} download={resume}>
-                  {lang === "English"
-                    ? info.downloadButt
-                    : infoPort.downloadButt}
-                </a>
-              </button>
-            </div>
-
-            {/* Social Media Links */}
-            <div id="socials">
-              {socialMedias.map(({ link, name, img }, index) => {
-                return (
-                  <div key={index}>
-                    <figure>
-                      <figcaption>{name}</figcaption>
-                      <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img
-                          src={img}
-                          alt={name}
-                          className="icons"
-                          draggable="false"
-                        />
-                      </a>
-                    </figure>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Intro Image */}
-          <div className="introPresent">
-            <div className="picCont">
-              <picture>
-                <figure>
-                  <img
-                    src={webIntroSect.introImg}
-                    alt="I'm Lucsas, The GUY!"
-                    draggable="false"
-                  />
-                  <figcaption>I'm Lucsas, The GUY!</figcaption>
-                </figure>
-              </picture>
-            </div>
-
-            <div className="picCont"></div>
-          </div>
-        </div>
-
-        {/* Scroll animation icon */}
-        <div className="scroll-anim">
-          <div></div>
-        </div>
+          <mesh position={[-1, -1, -1]}>
+            <planeGeometry args={[1, 1]} />
+            <meshStandardMaterial color={"white"} />
+          </mesh>
+        </Canvas>
       </section>
     </>
   );
