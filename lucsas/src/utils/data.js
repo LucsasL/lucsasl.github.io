@@ -12,6 +12,7 @@ import winter from "../img/winter.webp";
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
 import bNumerical from "../img/B-numerical.webp";
+import ourSolarSystem from "../img/our-solar-system.webp";
 
 import seo from "../img/setting.png";
 import design from "../img/web-developer.png";
@@ -42,6 +43,8 @@ import jestBig from "../img/jest-big.webp";
 import reduxBig from "../img/redux-big.webp";
 import gsapBig from "../img/gsap-big.webp";
 import gitBig from "../img/git-big.webp";
+import threeBig from "../img/threejs.webp";
+
 
 // Social Media Image Import
 import githubLogo from "../img/github-social.webp";
@@ -259,35 +262,25 @@ export const webProjectsSect = {
       projImg: bNumerical,
     },
     {
-      projLink: "#",
+      projLink: "https://our-solar-system-psi.vercel.app/",
       projTitle: "Our Solar System",
       projSubtitle: "A 3D environment showing our solar system",
       projDesc:
-        "EVERYSHOP is a web project of a shop that sells everything. Developed in React JS including SASS and responsive design. | WORK IN PROGRESS",
+        "A 3D environment of our solar system build with JavaScript and three.js | WORK IN PROGRESS",
       projImgDesc: "Everyshop project image",
       techStack: [
         "HTML",
         "CSS",
         "JavaScript",
-        "TypeScript",
-        "React JS",
-        "SASS",
-        "GSAP",
-        "Jest",
-        "Git",
+        "Three.js"
       ],
       techStackImg: [
         htmlBig,
         cssBig,
         jsBig,
-        tsBig,
-        reactBig,
-        sassBig,
-        gsapBig,
-        jestBig,
-        gitBig,
+        threeBig
       ],
-      projImg: everyshop,
+      projImg: ourSolarSystem,
     },
   ],
 };

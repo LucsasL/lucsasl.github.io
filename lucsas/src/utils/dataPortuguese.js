@@ -6,6 +6,7 @@ import webDev from "../img/webDev.webp";
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
 import bNumerical from "../img/B-numerical.webp";
+import ourSolarSystem from "../img/our-solar-system.webp";
 
 import seo from "../img/setting.png";
 import design from "../img/web-developer.png";
@@ -35,6 +36,7 @@ import jestBig from "../img/jest-big.webp";
 import reduxBig from "../img/redux-big.webp";
 import gsapBig from "../img/gsap-big.webp";
 import gitBig from "../img/git-big.webp";
+import threeBig from "../img/threejs.webp";
 
 // Social Media Image Import
 import instaLogo from "../img/instagram-social.webp";
@@ -211,47 +213,22 @@ export const webProjectsSectPort = {
       projLinkPort: "https://every-shop.vercel.app/",
       projTitlePort: "B-Numerical",
       projSubtitlePort: "Um conversor de bases numéricas",
-      projDescPort:
-        " | TRABALHO EM PROGRESSO",
+      projDescPort: " | TRABALHO EM PROGRESSO",
       projImgDescPort: "Imagem do projeto B-Numerical",
-      techStackPort: [
-        "Pyhton",
-      ],
-      techStackImgPort: [
-        pythonBig,
-      ],
+      techStackPort: ["Pyhton"],
+      techStackImgPort: [pythonBig],
       projImgPort: bNumerical,
     },
     {
-      projLinkPort: "#",
+      projLinkPort: "https://our-solar-system-psi.vercel.app/",
       projTitlePort: "Nosso Sistema Solar",
       projSubtitlePort: "Um ambiente 3D que mostra nosso sistema solar",
       projDescPort:
-        " | TRABALHO EM PROGRESSO",
+        "Um ambiente 3D que mostra nosso sistema solar feito com JavaScript e three.js | TRABALHO EM PROGRESSO",
       projImgDescPort: "Imagem do projeto EVERYSHOP",
-      techStackPort: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React JS",
-        "SASS",
-        "GSAP",
-        "Jest",
-        "Git",
-      ],
-      techStackImgPort: [
-        htmlBig,
-        cssBig,
-        jsBig,
-        tsBig,
-        reactBig,
-        sassBig,
-        gsapBig,
-        jestBig,
-        gitBig,
-      ],
-      projImgPort: everyshop,
+      techStackPort: ["HTML", "CSS", "JavaScript", "Three.js"],
+      techStackImgPort: [htmlBig, cssBig, jsBig, threeBig],
+      projImgPort: ourSolarSystem,
     },
   ],
 };

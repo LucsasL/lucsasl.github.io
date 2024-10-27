@@ -93,7 +93,7 @@ function Areas() {
             </div>
 
             {/* Skills Image */}
-            <div className="img-div">
+            <div className="img-div img-div2" style={{ order: -1 }}>
               <figure>
                 {/* <img
                   src={sectImg}
