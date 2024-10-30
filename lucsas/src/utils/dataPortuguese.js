@@ -2,6 +2,7 @@
 import code from "../img/codeIntro.png";
 import lucsas from "../img/Lucsas.webp";
 import webDev from "../img/webDev.webp";
+import webDevBack from "../img/backEndWebDev.webp";
 
 import marknow from "../img/marknow-proj.png";
 import everyshop from "../img/everyshop-proj.png";
@@ -110,7 +111,7 @@ export const webAboutSectPort = {
 
 export const webSkillsSectPort = {
   sectTitlePort: "Conjunto de Tecnologias que eu já usei:",
-  sectImg: webDev,
+  sectImg: [webDev, webDevBack],
   areaDescPort:
     "Eu estive pondo dedicação em desenvolver minhas habilidades em HTML, CSS, JavaScript, React JS, GSAP, Redux, e Git. No momento, sou um desenvolvedor focado em Frontend.",
   techStackPort: {

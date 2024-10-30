@@ -2,6 +2,7 @@
 import code from "../img/codeIntro.png";
 import lucsas from "../img/Lucsas.webp";
 import webDev from "../img/webDev.webp";
+import webDevBack from "../img/backEndWebDev.webp";
 
 import landscape from "../img/landscape.webp";
 import spring from "../img/spring.webp";
@@ -136,7 +137,7 @@ export const webAboutSect = {
 
 export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
-  sectImg: webDev,
+  sectImg: [webDev, webDevBack],
   areaDesc:
     "Looking to work and contribute in the Web Development area I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git. I'm a former programmer focusing in the Front-end.",
   techStack: {

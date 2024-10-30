@@ -70,9 +70,9 @@ function Areas() {
             <div className="img-div">
               <figure>
                 <img
-                  src={sectImg}
+                  src={sectImg[0]}
                   alt="Web Development Service"
-                  id="webdev-design"
+                  className="webdev-design"
                   draggable="false"
                 />
                 <figcaption>Web Development Service</figcaption>
@@ -95,12 +95,12 @@ function Areas() {
             {/* Skills Image */}
             <div className="img-div img-div2" style={{ order: -1 }}>
               <figure>
-                {/* <img
-                  src={sectImg}
+                <img
+                  src={sectImg[1]}
                   alt="Web Development Service"
-                  id="webdev-design"
+                  className="webdev-design webdev-design2"
                   draggable="false"
-                /> */}
+                />
                 <figcaption>Web Development Service</figcaption>
               </figure>
             </div>

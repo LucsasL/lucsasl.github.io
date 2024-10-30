@@ -30,10 +30,14 @@
       margin-top: 20px;
     }
 
-    #webdev-design {
+    .webdev-design {
       width: 350px;
       position: relative;
       animation: rotImg 7s infinite linear;
+    }
+
+    .webdev-design2 {
+      animation: none;
     }
 
     @keyframes rotImg {

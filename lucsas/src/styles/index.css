@@ -768,10 +768,13 @@ header div#bgcolor input:checked ~ span i#thumb {
     display: block;
     margin-top: 20px;
   }
-  section#area #webdev-design {
+  section#area .webdev-design {
     width: 350px;
     position: relative;
     animation: rotImg 7s infinite linear;
+  }
+  section#area .webdev-design2 {
+    animation: none;
   }
   @keyframes rotImg {
     100% {
@@ -1678,9 +1681,6 @@ div#headerMenu .menuIcon {
   }
   section#area > div .platform p {
     width: 90%;
-  }
-  section#area > div .platform:nth-child(even) .img-div {
-    order: 1;
   }
   section#area #google-design {
     width: 700px;
