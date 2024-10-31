@@ -22,6 +22,7 @@ function Portfolio() {
   const project = useRef();
   const portfolioSect = useRef();
   const projContainer = useRef();
+  const visitButton = useRef([]);
   const detailsButt = useRef([]);
   const projDetailsCont = useRef();
   const closeDetailsButt = useRef([]);
@@ -30,7 +31,12 @@ function Portfolio() {
   const { lang } = useContext(PageLang);
 
   useEffect(() => {
-    // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "projectBoxIntersect" to true, rendering the animation
+    // This creates an instance of the intersection observer
+    // object, used to check if the screen of the user is
+    // intersecting with some element. In this case, It checks
+    // if the element is intersecting with the user's screen and
+    // changes the "projectBoxIntersect" to true, rendering
+    // the fade-in animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -39,10 +45,21 @@ function Portfolio() {
       });
     });
 
+    // visitButton.current.forEach(el => {
+    //   // el.classList
+    //   el.alert(
+    //     "This project doesn't have a link yet; it's in early development."
+    //   );
+    // })
+
     observer.observe(project.current);
   }, [projectBoxIntersect, portfolioSect]);
 
   useGSAP(() => {
+    // When the user clicks the details button
+    // the screen will scroll to (0, 4110) where
+    // a div will appear showcasing the projects
+    //  details
     detailsButt.current.forEach((clButt) => {
       clButt.addEventListener("click", () => {
         window.scrollTo(0, 4110);
@@ -53,6 +70,7 @@ function Portfolio() {
           duration: 0.2,
         });
 
+        // Making it appear and interactive
         gsap.to(".projDetails", {
           opacity: 1,
           duration: 0.2,
@@ -62,6 +80,7 @@ function Portfolio() {
       });
     });
 
+    // It shrinks and hide the details div
     closeDetailsButt.current.forEach((clButt) => {
       clButt.addEventListener("click", () => {
         window.scrollTo(0, 4110);
@@ -212,6 +231,10 @@ function Portfolio() {
                                   href={projLink}
                                   target="_blank"
                                   rel="noopener noreferrer"
+                                  ref={(el) =>
+                                    (visitButton.current[index] = el)
+                                  }
+                                  className={`projLink${index}`}
                                 >
                                   Visit Project
                                 </a>

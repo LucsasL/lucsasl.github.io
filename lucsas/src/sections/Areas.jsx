@@ -63,7 +63,7 @@ function Areas() {
                   : "Desenvolvimento Web Front-end"}
               </h1>
 
-              <p>{lang === "English" ? areaDesc : areaDescPort}</p>
+              <p>{lang === "English" ? areaDesc[0] : areaDescPort[1]}</p>
             </div>
 
             {/* Skills Image */}
@@ -89,7 +89,7 @@ function Areas() {
                   : "Desenvolvimento Web Back-end"}
               </h1>
 
-              <p>{lang === "English" ? areaDesc : areaDescPort}</p>
+              <p>{lang === "English" ? areaDesc[1] : areaDescPort[1]}</p>
             </div>
 
             {/* Skills Image */}

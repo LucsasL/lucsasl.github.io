@@ -112,8 +112,11 @@ export const webAboutSectPort = {
 export const webSkillsSectPort = {
   sectTitlePort: "Conjunto de Tecnologias que eu já usei:",
   sectImg: [webDev, webDevBack],
-  areaDescPort:
+  areaDescPort: [
     "Eu estive pondo dedicação em desenvolver minhas habilidades em HTML, CSS, JavaScript, React JS, GSAP, Redux, e Git. No momento, sou um desenvolvedor focado em Frontend.",
+    "Estou estudando e melhorando minhas habilidades com back-end, tanto utilizando Node.js e Express, quanto com Python e alguns banco de dados. Por agora, não tenho muitos projetos feitos nessa área, mas estou disposto a melhorar."
+  ],
+
   techStackPort: {
     tech: [
       "HTML",

@@ -138,8 +138,11 @@ export const webAboutSect = {
 export const webSkillsSect = {
   sectTitle: "Tech stacks that I've worked with:",
   sectImg: [webDev, webDevBack],
-  areaDesc:
+  areaDesc: [
     "Looking to work and contribute in the Web Development area I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git. I'm a former programmer focusing in the Front-end.",
+    "I am studying and improving my back-end skills, both using Node.js and Express, as well as Python and some databases. For now I don't have much done in this area, but I'm looking forward to get good at it.",
+  ],
+
   techStack: {
     tech: [
       "HTML",
@@ -155,7 +158,20 @@ export const webSkillsSect = {
       "Python",
       "Git",
     ],
-    imgs: [html, css, js, ts, react, nextjs, sass, gsap, jest, redux, python, git],
+    imgs: [
+      html,
+      css,
+      js,
+      ts,
+      react,
+      nextjs,
+      sass,
+      gsap,
+      jest,
+      redux,
+      python,
+      git,
+    ],
     techDesc: [
       "The technology that gives meaning to websites through tags, building the document that you see in the browser.",
       "The combination between the HTML tags and stylesheets of CSS do the work for static websites, making possible to add layouts, positions, responsiveness and animations.",
