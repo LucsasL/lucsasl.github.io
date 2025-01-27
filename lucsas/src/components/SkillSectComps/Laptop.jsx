@@ -18,12 +18,8 @@ function Laptop() {
   const screenSize = window.innerWidth;
 
   // Context
-  const {
-    activeTech,
-    activeTechPort,
-    infoIntersect,
-    changeVisibility,
-  } = useContext(Data);
+  const { activeTech, activeTechPort, infoIntersect, changeVisibility } =
+    useContext(Data);
   const { lang } = useContext(PageLang);
 
   // Refs
@@ -63,30 +59,30 @@ function Laptop() {
   // It receives a number representing a day in the week and returns a string corresponding to the day
   const weekDay = (day) => {
     const days = [
+      "Sunday",
       "Monday",
       "Tuesday",
       "Wednesday",
       "Thursday",
       "Friday",
       "Saturday",
-      "Sunday",
     ];
 
     const dias = [
+      "Domingo",
       "Segunda",
       "Terça",
       "Quarta",
       "Quinta",
       "Sexta",
       "Sábado",
-      "Domingo",
     ];
 
     if (lang !== "English") {
-      return dias[day - 1];
+      return dias[day];
     }
 
-    return days[day - 1];
+    return days[day];
   };
 
   // It receives a number representing a month in the year and returns a string corresponding to the month
