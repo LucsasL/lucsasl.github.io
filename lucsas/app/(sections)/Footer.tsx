@@ -1,3 +1,6 @@
+// Basic Imports
+import Image from "next/image";
+
 // Data Import
 import {
   webNavOptions,
@@ -20,7 +23,7 @@ function Footer() {
             <h1>Lucas Lira</h1>
 
             <p>
-              I work with Web Development and PPC Management, using Google Ads & Meta Ads. I'll do my best to deliver the best results possible.
+              I work with Web Development and PPC Management, using Google Ads & Meta Ads. I&apos;ll do my best to deliver the best results possible.
             </p>
 
             {/* List of social medias */}
@@ -30,7 +33,7 @@ function Footer() {
                   <li key={index}>
                     <figure>
                       <a href={link} target="_blank" rel="noopener noreferrer">
-                        <img
+                        <Image
                           src={img}
                           alt={name}
                           className="icons"
@@ -66,7 +69,7 @@ function Footer() {
         <div id="credits">
           <div>
             <figure>
-              <img
+              <Image
                 src={logo}
                 alt="Lucsas Logo"
                 style={{ width: "75px", height: "75px" }}

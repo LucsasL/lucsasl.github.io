@@ -1,15 +1,18 @@
+// Basic Imports
+import Image from "next/image";
+
 // Image Import
-import { useContext } from "react";
+import React, { useContext } from "react";
 import logo from "../../img/lucsas-logo.webp";
 
 // Context
-import { BgTheme } from "@/app/(sections)/Header";
+import { BgTheme, type StateShape } from "@/app/(sections)/Header";
 
 function HeaderLogo() {
-  const lucsasDesc = "Lucsas Web Developer";
+  const lucsasDesc: string = "Lucsas Web Developer";
 
   const { headerBg, headerBorder, headerBlur, headerCont } =
-    useContext(BgTheme);
+    useContext<StateShape>(BgTheme);
 
   return (
     <>
@@ -25,7 +28,7 @@ function HeaderLogo() {
         <abbr title={lucsasDesc}>
           <a href="https://lucsas.vercel.app" target="_self">
             <figure>
-              <img src={logo} alt={lucsasDesc} draggable="false" />
+              <Image src={logo} alt={lucsasDesc} draggable="false" />
               <h1>Lucsas</h1>
               <figcaption>{lucsasDesc}</figcaption>
             </figure>

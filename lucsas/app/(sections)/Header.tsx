@@ -15,12 +15,12 @@ import HeaderLogo from "@/app/(components)/(HeaderComps)/HeaderLogo";
 import HeaderMenu from "@/app/(components)/(HeaderComps)/headerMenu";
 
 // Type Declaration
-interface StateShape {
+export interface StateShape {
   headerBg: string;
   setHeaderBg: Dispatch<SetStateAction<string>>;
   darkTheme: boolean;
   setDarkTheme: Dispatch<SetStateAction<boolean>>;
-  headerCont: RefObject<ReactNode>;
+  headerCont: RefObject<ReactNode | HTMLDivElement>;
   headerColor: string;
   headerBorder: string;
   headerBlur: string;
