@@ -4,7 +4,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-family: "Plus Jakarta Sans", sans-serif; */
 }
 
 ::-webkit-scrollbar {
@@ -160,7 +160,7 @@ figcaption {
 abbr {
   text-decoration: none;
 }
-
+/* 
 @font-face {
   font-family: "Plus Jakarta Sans";
   src: url("../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
@@ -170,7 +170,7 @@ abbr {
   font-family: "Kalam";
   src: url("../fonts/Kalam/Kalam-Regular.ttf");
   font-display: swap;
-}
+} */
 @media screen and (min-width: 992px) {
   .scrollbar {
     background: rgba(0, 0, 0, 0.9607843137);
@@ -1233,7 +1233,7 @@ div#headerMenu .menuIcon {
   position: relative;
 }
 .laptop .image {
-  background: url("../img/landscape.webp") no-repeat center;
+  background: url("../../public/img/laptop.svg") no-repeat center;
   background-size: cover;
   width: 90.1%;
   height: 95.7%;
