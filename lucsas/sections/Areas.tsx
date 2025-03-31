@@ -1,21 +1,22 @@
 "use client";
 
 // Hooks Import
-import { useState, useEffect, useRef, RefObject } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
 
 // Data Destructuring
-const { areaDesc, sectImg } = webSkillsSect;
+const { sectImg } = webSkillsSect;
 
 function Areas() {
   // States
-  const [infoIntersect, setInfoIntersect] = useState(false);
+  const [infoIntersect, setInfoIntersect] = useState<boolean>(false);
 
   // Refs
-  const infoBox: RefObject<string> = useRef("");
-  const areaSect: RefObject<string> = useRef("");
+  const infoBox = useRef<HTMLDivElement>(null);
+  const areaSect = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "infoIntersect" to true, rendering the animation
@@ -31,7 +32,7 @@ function Areas() {
   }, [areaSect]);
 
   // Change visibility of the elements
-  const changeVisibility = (side: string) => {
+  const changeVisibility = (side: number) => {
     return infoIntersect
       ? {
           opacity: 1,
@@ -51,15 +52,20 @@ function Areas() {
           <div className="platform">
             {/* Areas Info */}
             <div ref={infoBox} style={changeVisibility(0)}>
-              <h1 className="big">"Front-end Web Development"</h1>
+              <h1 className="big">Front-end Web Development</h1>
 
-              <p>areaDesc</p>
+              <p>
+                Looking to work and contribute in the Web Development area I
+                have honed my skills in HTML, CSS, JavaScript, React JS, GSAP,
+                Redux, and Git. I&apos;m a former programmer focusing in the
+                Front-end.
+              </p>
             </div>
 
             {/* Skills Image */}
             <div className="img-div">
               <figure>
-                <img
+                <Image
                   src={sectImg[0]}
                   alt="Web Development Service"
                   className="webdev-design"
@@ -75,13 +81,18 @@ function Areas() {
             <div ref={infoBox} style={changeVisibility(0)}>
               <h1 className="big">Back-end Web Development</h1>
 
-              <p>areaDesc</p>
+              <p>
+                I am studying and improving my back-end skills, both using
+                Node.js and Express, as well as Python and some databases. For
+                now I don&apos;t have much done in this area, but I&apos;m
+                looking forward to get good at it.
+              </p>
             </div>
 
             {/* Skills Image */}
             <div className="img-div img-div2" style={{ order: -1 }}>
               <figure>
-                <img
+                <Image
                   src={sectImg[1]}
                   alt="Web Development Service"
                   className="webdev-design webdev-design2"

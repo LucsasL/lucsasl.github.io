@@ -148,11 +148,10 @@ export const webAboutSect: AboutSectShape = {
 };
 
 export const webSkillsSect = {
-  sectTitle: "",
   sectImg: [webDev, webDevBack],
   areaDesc: [
-    "Looking to work and contribute in the Web Development area I have honed my skills in HTML, CSS, JavaScript, React JS, GSAP, Redux, and Git. I'm a former programmer focusing in the Front-end.",
-    "I am studying and improving my back-end skills, both using Node.js and Express, as well as Python and some databases. For now I don't have much done in this area, but I'm looking forward to get good at it.",
+    "",
+    "",
   ],
 
   techStack: {
