@@ -1,13 +1,14 @@
 "use client";
 
 // Hooks Import
-import { useState, useRef, useEffect, createContext, type ReactNode } from "react";
+import React, { useState, useRef, useEffect, createContext } from "react";
+import Image from "next/image";
 
 // Data Import
 import { webServiceSect } from "../utils/data";
 
 // Data Destructuring
-const { sectTitle, servBoxes } = webServiceSect;
+const { servBoxes } = webServiceSect;
 
 // Contexts
 export const BlocksData = createContext(servBoxes);
@@ -18,9 +19,9 @@ interface RefShape {
   getSingularElement: (refs: Element[]) => Element;
 }
 
-function Services() {
+const Services = () => {
   // States
-  const [boxIntersect, setBoxIntersect] = useState(false);
+  const [boxIntersect, setBoxIntersect] = useState<boolean>(false);
 
   // Refs
   const servSect = useRef<Element>(null);
@@ -37,7 +38,9 @@ function Services() {
       });
     });
 
-    observer.observe(infoBox.current.);
+    const currentInfoBox: RefShape[] = infoBox.current;
+
+    observer.observe(currentInfoBox);
   }, [boxIntersect, servSect]);
 
   const changeVisibility = () => {
@@ -89,7 +92,7 @@ function Services() {
 
   return (
     <>
-      <section id="services" ref={servSect}>
+      <section id="services" ref={servSect.current}>
         <div>
           <div>
             <h1
@@ -97,7 +100,7 @@ function Services() {
               style={changeVisibilityHeader()}
               ref={servHeader}
             >
-              {sectTitle}
+              In what can I help you?
             </h1>
           </div>
 
@@ -113,7 +116,7 @@ function Services() {
                   >
                     <div className="imgSv">
                       <figure>
-                        <img
+                        <Image
                           src={img}
                           alt="Connection with your target audience"
                           className="functions"
@@ -138,6 +141,6 @@ function Services() {
       </section>
     </>
   );
-}
+};
 
 export default Services;

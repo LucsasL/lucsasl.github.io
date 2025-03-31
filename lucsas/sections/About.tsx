@@ -5,27 +5,22 @@ import React, {
   useState,
   useRef,
   useEffect,
-  RefObject,
-  type ReactNode,
 } from "react";
+import Image from "next/image";
 
 // Data Import
 import { webAboutSect } from "../utils/data";
 
 // Data Destructuring
-const { aboutText, aboutImg } = webAboutSect;
+const { aboutImg } = webAboutSect;
 
 function About() {
   // States
-  const [aboutIntersect, setAboutIntersect] = useState(false);
+  const [aboutIntersect, setAboutIntersect] = useState<boolean>(false);
 
   // Refs
-  const aboutInfo: RefObject<ReactNode | Element> = useRef<Element>(
-    null
-  ) as RefObject<ReactNode>;
-  const aboutSect: RefObject<ReactNode> = useRef<Element>(
-    null
-  ) as RefObject<ReactNode>;
+  const aboutInfo = useRef<HTMLDivElement>(null);
+  const aboutSect = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "aboutIntersect" to true, rendering the animation
@@ -67,23 +62,32 @@ function About() {
               </>
             </h1>
 
-            {aboutText.map((p: string, index: number) => {
-              return <p key={index}>{p}</p>;
-            })}
+            <p>
+              I work as a Front-End Web Developer, my expertise lies in crafting
+              dynamic, visually appealing, and user-friendly web applications.
+            </p>
+
+            <p>
+              Since I began, I&apos;ve been studying topics in the field of
+              programming for a while now, always looking to improve and deliver
+              what is necessary to enhance my applications. My GitHub shows how
+              much effort I put into really understanding the technologies.
+            </p>
+
+            <p>
+              Having gained substantial experience in my abilities, I am now
+              looking to work as a Developer. My job and commitment goes to give
+              results, whether this being coding, projecting, or giving ideas.
+            </p>
+
+            <p>What do you thing? Can we grow together?</p>
           </div>
 
           {/* About Image */}
           <div className="img-div" style={changeVisibility("100%")}>
             <picture>
               <figure>
-                {/* <iframe
-                  src="https://my.spline.design/untitled-1cb26d4fcf3ebd2bc106efd6a761ebbc/"
-                  title="Lucsas Chilling"
-                  width="100%"
-                  height="100%"
-                  id="mascot"
-                ></iframe> */}
-                <img src={aboutImg} alt="Lucsas Chilling" draggable="false" />
+                <Image src={aboutImg} alt="Lucsas Chilling" draggable="false" />
                 <figcaption>Lucsas Chilling</figcaption>
               </figure>
             </picture>

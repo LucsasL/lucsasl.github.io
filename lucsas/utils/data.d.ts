@@ -119,7 +119,6 @@ export const webIntroSect = {
 };
 
 export const webServiceSect = {
-  sectTitle: "In what can I help you?",
   servBoxes: [
     {
       title: "Semantics and SEO",
@@ -145,12 +144,6 @@ type AboutSectShape = {
 }
 
 export const webAboutSect: AboutSectShape = {
-  aboutText: [
-    "I work as a Front-End Web Developer, my expertise lies in crafting dynamic, visually appealing, and user-friendly web applications.",
-    "Since I began, I've been studying topics in the field of programming for a while now, always looking to improve and deliver what is necessary to enhance my applications. My GitHub shows how much effort I put into really understanding the technologies.",
-    "Having gained substantial experience in my abilities, I am now looking to work as a Developer. My job and commitment goes to give results, whether this being coding, projecting, or giving ideas.",
-    "What do you thing? Can we grow together?",
-  ],
   aboutImg: lucsas,
 };
 
