@@ -43,7 +43,7 @@ function Skills() {
   }, [menuDiv, setMenuAppear, buttons]);
 
   // A function that detects the click of a button in the tech menu
-  const changeTech = (tech: string, e: any, index: number) => {
+  const changeTech = (tech: string, e: MouseEvent, index: number) => {
     // Takes the reference of the exact button, and removes the "active" CSS class, that makes the button look pressed
     buttonsBlock.current.forEach((el: HTMLElement) =>
       el.classList.remove("active")
@@ -51,7 +51,7 @@ function Skills() {
 
     console.log(e.target);
     // Adds the CSS class "active" in the pressed button
-    e.target.classList.add("active");
+    e.target!.classList.add("active");
 
     // It checks the button that the user pressed, and change the opacity of the features, depending on the button the user clicks
     const featureArray = [

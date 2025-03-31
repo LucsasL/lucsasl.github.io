@@ -18,13 +18,13 @@ const Home: FC = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
 
       {/* <SubmitData.Provider value={{ open, setOpen }}> */}
       <Main />
       {/* <SubmitPopup /> */}
       {/* </SubmitData.Provider> */}
-      {/* <Footer /> */}
+      <Footer />
       <UpButton />
       <Scrollbar />
     </>

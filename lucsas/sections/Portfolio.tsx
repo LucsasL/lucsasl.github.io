@@ -1,263 +1,262 @@
-// "use client";
+"use client";
 
-// // Hooks Import
-// import { useState, useEffect, useRef } from "react";
+// Hooks Import
+import React, { useState, useEffect, useRef, Ref } from "react";
+import Image from "next/image";
 
-// // Other Libraries
-// import { useGSAP } from "@gsap/react";
-// import gsap from "gsap";
+// Other Libraries
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
-// // Data Import
-// import { webProjectsSect } from "@/utils/data.js";
-// import { webProjectsSectPort } from "@/utils/dataPortuguese";
-// const { sectTitle } = webProjectsSect;
-// const { sectTitlePort } = webProjectsSectPort;
+// Data Import
+import { webProjectsSect } from "../utils/data";
+const { sectTitle } = webProjectsSect;
 
-// function Portfolio() {
-//   // States
-//   const [projectBoxIntersect, setProjectBoxIntersect] = useState(false);
+function Portfolio() {
+  // States
+  const [projectBoxIntersect, setProjectBoxIntersect] = useState<boolean>(false);
 
-//   // Refs
-//   const project = useRef("");
-//   const portfolioSect = useRef("");
-//   const projContainer = useRef("");
-//   const visitButton = useRef([]);
-//   const detailsButt = useRef([]);
-//   const projDetailsCont = useRef("");
-//   const closeDetailsButt = useRef([]);
+  // Refs
+  const project = useRef<HTMLElement>(null);
+  const portfolioSect = useRef<HTMLDivElement>(null);
+  const projContainer = useRef<HTMLElement>(null);
+  const visitButton = useRef<HTMLButtonElement[]>([]);
+  const detailsButt = useRef<HTMLButtonElement[]>([]);
+  const projDetailsCont = useRef<HTMLElement>(null);
+  const closeDetailsButt = useRef([]);
 
-//   useEffect(() => {
-//     // This creates an instance of the intersection observer
-//     // object, used to check if the screen of the user is
-//     // intersecting with some element. In this case, It checks
-//     // if the element is intersecting with the user's screen and
-//     // changes the "projectBoxIntersect" to true, rendering
-//     // the fade-in animation
-//     const observer = new IntersectionObserver((entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           setProjectBoxIntersect(entry.isIntersecting);
-//         }
-//       });
-//     });
+  useEffect(() => {
+    // This creates an instance of the intersection observer
+    // object, used to check if the screen of the user is
+    // intersecting with some element. In this case, It checks
+    // if the element is intersecting with the user's screen and
+    // changes the "projectBoxIntersect" to true, rendering
+    // the fade-in animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setProjectBoxIntersect(entry.isIntersecting);
+        }
+      });
+    });
 
-//     // visitButton.current.forEach(el => {
-//     //   // el.classList
-//     //   el.alert(
-//     //     "This project doesn't have a link yet; it's in early development."
-//     //   );
-//     // })
+    // visitButton.current.forEach(el => {
+    //   // el.classList
+    //   el.alert(
+    //     "This project doesn't have a link yet; it's in early development."
+    //   );
+    // })
 
-//     observer.observe(project.current);
-//   }, [projectBoxIntersect, portfolioSect]);
+    observer.observe(project.current);
+  }, [projectBoxIntersect, portfolioSect]);
 
-//   useGSAP(() => {
-//     // When the user clicks the details button
-//     // the screen will scroll to (0, 4110) where
-//     // a div will appear showcasing the projects
-//     //  details
-//     detailsButt.current.forEach((clButt: HTMLElement) => {
-//       clButt.addEventListener("click", () => {
-//         window.scrollTo(0, 4110);
+  useGSAP(() => {
+    // When the user clicks the details button
+    // the screen will scroll to (0, 4110) where
+    // a div will appear showcasing the projects
+    //  details
+    detailsButt.current.forEach((clButt: HTMLElement) => {
+      clButt.addEventListener("click", () => {
+        window.scrollTo(0, 4110);
 
-//         // Scaling the project container to grow
-//         gsap.to(".projCont", {
-//           scale: 1.22,
-//           duration: 0.2,
-//         });
+        // Scaling the project container to grow
+        gsap.to(".projCont", {
+          scale: 1.22,
+          duration: 0.2,
+        });
 
-//         // Making it appear and interactive
-//         gsap.to(".projDetails", {
-//           opacity: 1,
-//           duration: 0.2,
-//           zIndex: 20,
-//           pointerEvents: "all",
-//         });
-//       });
-//     });
+        // Making it appear and interactive
+        gsap.to(".projDetails", {
+          opacity: 1,
+          duration: 0.2,
+          zIndex: 20,
+          pointerEvents: "all",
+        });
+      });
+    });
 
-//     // It shrinks and hide the details div
-//     closeDetailsButt.current.forEach((clButt: HTMLElement) => {
-//       clButt.addEventListener("click", () => {
-//         window.scrollTo(0, 4110);
+    // It shrinks and hide the details div
+    closeDetailsButt.current.forEach((clButt: HTMLElement) => {
+      clButt.addEventListener("click", () => {
+        window.scrollTo(0, 4110);
 
-//         // Creating a timeline for animation
-//         const timeline = gsap.timeline({
-//           default: {
-//             duration: 0.2,
-//             repeat: 1,
-//           },
-//         });
+        // Creating a timeline for animation
+        const timeline = gsap.timeline({
+          default: {
+            duration: 0.2,
+            repeat: 1,
+          },
+        });
 
-//         timeline
-//           .to(".projCont", {
-//             scale: 1,
-//           })
-//           .to(".projDetails", {
-//             opacity: 0,
-//             pointerEvents: "none",
-//           });
-//       });
-//     });
-//   });
+        timeline
+          .to(".projCont", {
+            scale: 1,
+          })
+          .to(".projDetails", {
+            opacity: 0,
+            pointerEvents: "none",
+          });
+      });
+    });
+  });
 
-//   // It changes the element visibility of the project's element
-//   const changeVisibility = () => {
-//     return projectBoxIntersect
-//       ? {
-//           opacity: 1,
-//           transition: "all 1s ease",
-//         }
-//       : {
-//           opacity: 0,
-//           transition: "all 1s ease",
-//         };
-//   };
+  // It changes the element visibility of the project's element
+  const changeVisibility = () => {
+    return projectBoxIntersect
+      ? {
+          opacity: 1,
+          transition: "all 1s ease",
+        }
+      : {
+          opacity: 0,
+          transition: "all 1s ease",
+        };
+  };
 
-//   return (
-//     <>
-//       <section id="portfolio" ref={portfolioSect}>
-//         <div>
-//           <div className="blockquote" ref={project} style={changeVisibility()}>
-//             <h1 className="big">{sectTitle}</h1>
-//           </div>
+  return (
+    <>
+      <section id="portfolio" ref={portfolioSect}>
+        <div>
+          <div className="blockquote" ref={project} style={changeVisibility()}>
+            <h1 className="big">{sectTitle}</h1>
+          </div>
 
-//           <div className="projCont">
-//             {webProjectsSect.projects.map(
-//               (
-//                 {
-//                   projLink,
-//                   projTitle,
-//                   projSubtitle,
-//                   projDesc,
-//                   projImgDesc,
-//                   techStack,
-//                   techStackImg,
-//                   projImg,
-//                 },
-//                 index
-//               ) => {
-//                 return (
-//                   <>
-//                     <div
-//                       className="proj"
-//                       key={index}
-//                       ref={projContainer}
-//                       style={changeVisibility()}
-//                     >
-//                       <div className="projDetails" ref={projDetailsCont}>
-//                         <div className="projDetailsInfo">
-//                           <h2>Project name (Working in Progress)</h2>
-//                           <p>
-//                             Lorem ipsum dolor sit amet consectetur adipisicing
-//                             elit. Iure obcaecati repellendus earum quisquam
-//                             culpa quas nemo rerum quia id? Similique.
-//                           </p>
+          <div className="projCont">
+            {webProjectsSect.projects.map(
+              (
+                {
+                  projLink,
+                  projTitle,
+                  projSubtitle,
+                  projDesc,
+                  projImgDesc,
+                  techStack,
+                  techStackImg,
+                  projImg,
+                },
+                index
+              ) => {
+                return (
+                  <>
+                    <div
+                      className="proj"
+                      key={index}
+                      ref={projContainer}
+                      style={changeVisibility()}
+                    >
+                      <div className="projDetails" ref={projDetailsCont}>
+                        <div className="projDetailsInfo">
+                          <h2>Project name (Working in Progress)</h2>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Iure obcaecati repellendus earum quisquam
+                            culpa quas nemo rerum quia id? Similique.
+                          </p>
 
-//                           <p>
-//                             Quos, pariatur eos tenetur officia molestiae
-//                             repellendus aliquid ex explicabo dignissimos nulla
-//                             sequi similique, rem impedit, cum, laborum ipsum
-//                             cupiditate laboriosam ullam eos. Harum.
-//                           </p>
+                          <p>
+                            Quos, pariatur eos tenetur officia molestiae
+                            repellendus aliquid ex explicabo dignissimos nulla
+                            sequi similique, rem impedit, cum, laborum ipsum
+                            cupiditate laboriosam ullam eos. Harum.
+                          </p>
 
-//                           <p>
-//                             Reiciendis, laborum. Aliquam, veniam! Quidem modi
-//                             dicta voluptati in similique voluptatem, asperiores
-//                             rerum nesciunt, facilis eos eveniet libero soluta
-//                             itaque veritatis tempora ut laborum iste.
-//                           </p>
-//                         </div>
+                          <p>
+                            Reiciendis, laborum. Aliquam, veniam! Quidem modi
+                            dicta voluptati in similique voluptatem, asperiores
+                            rerum nesciunt, facilis eos eveniet libero soluta
+                            itaque veritatis tempora ut laborum iste.
+                          </p>
+                        </div>
 
-//                         <div className="projImage">
-//                           <picture>
-//                             {/* <source media="(min-width: )" srcset="" /> */}
-//                             <img src="" alt="Tree" />
-//                           </picture>
-//                         </div>
+                        <div className="projImage">
+                          <picture>
+                            {/* <source media="(min-width: )" srcset="" /> */}
+                            <img src="" alt="Tree" />
+                          </picture>
+                        </div>
 
-//                         <button
-//                           className="closeBtn"
-//                           ref={(el) => (closeDetailsButt.current[index] = el)}
-//                         >
-//                           Close
-//                         </button>
-//                       </div>
+                        <button
+                          className="closeBtn"
+                          ref={(el) => (closeDetailsButt.current[index] = el)}
+                        >
+                          Close
+                        </button>
+                      </div>
 
-//                       <div className="projInfo">
-//                         <h2 className="big">
-//                           {projTitle}
-//                           <span
-//                             style={{ fontSize: ".5em", marginLeft: "15px" }}
-//                           >
-//                             (Work In Progress)
-//                           </span>
-//                         </h2>
+                      <div className="projInfo">
+                        <h2 className="big">
+                          {projTitle}
+                          <span
+                            style={{ fontSize: ".5em", marginLeft: "15px" }}
+                          >
+                            (Work In Progress)
+                          </span>
+                        </h2>
 
-//                         <h3>{projSubtitle}</h3>
+                        <h3>{projSubtitle}</h3>
 
-//                         <p>{projDesc}</p>
+                        <p>{projDesc}</p>
 
-//                         <div className="techStackCont">
-//                           {techStack.map((t, index) => {
-//                             return (
-//                               <abbr title={t} key={index}>
-//                                 <picture>
-//                                   <img
-//                                     src={techStackImg[index]}
-//                                     alt={t}
-//                                     draggable="false"
-//                                   />
-//                                 </picture>
-//                               </abbr>
-//                             );
-//                           })}
-//                         </div>
+                        <div className="techStackCont">
+                          {techStack.map((t: string, index: number) => {
+                            return (
+                              <abbr title={t} key={index}>
+                                <picture>
+                                  <Image
+                                    src={techStackImg[index]}
+                                    alt={t}
+                                    draggable="false"
+                                  />
+                                </picture>
+                              </abbr>
+                            );
+                          })}
+                        </div>
 
-//                         <div>
-//                           <button>
-//                             <a
-//                               href={projLink}
-//                               target="_blank"
-//                               rel="noopener noreferrer"
-//                               ref={(el) => (visitButton.current[index] = el)}
-//                               className={`projLink${index}`}
-//                             >
-//                               Visit Project
-//                             </a>
-//                           </button>
-//                           <button
-//                             className="detailBtn"
-//                             ref={(el) => (detailsButt.current[index] = el)}
-//                           >
-//                             See details
-//                           </button>
-//                         </div>
-//                       </div>
+                        <div>
+                          <button>
+                            <a
+                              href={projLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              ref={(el) => (visitButton.current[index] = el)}
+                              className={`projLink${index}`}
+                            >
+                              Visit Project
+                            </a>
+                          </button>
+                          <button
+                            className="detailBtn"
+                            ref={(el): Ref<HTMLButtonElement> => (detailsButt.current[index] = el)}
+                          >
+                            See details
+                          </button>
+                        </div>
+                      </div>
 
-//                       <div className="projImg">
-//                         <picture key={index}>
-//                           <img
-//                             src={projImg}
-//                             alt={projImgDesc}
-//                             draggable="false"
-//                           />
-//                         </picture>
-//                       </div>
-//                     </div>
-//                   </>
-//                 );
-//               }
-//             )}
-//           </div>
+                      <div className="projImg">
+                        <picture key={index}>
+                          <img
+                            src={projImg}
+                            alt={projImgDesc}
+                            draggable="false"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                  </>
+                );
+              }
+            )}
+          </div>
 
-//           <div className="blockquote">
-//             <h4 className="big">More projects coming soon...</h4>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
+          <div className="blockquote">
+            <h4 className="big">More projects coming soon...</h4>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
 
-// export default Portfolio;
+export default Portfolio;

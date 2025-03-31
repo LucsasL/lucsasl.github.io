@@ -1,5 +1,6 @@
 // Hooks Import
-import { useContext, useRef, useState, useEffect, RefObject } from "react";
+import { useContext, useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 // Images Import
 import notebook from "@/public/img/laptop.svg";
@@ -10,23 +11,21 @@ import { Data } from "@/sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
-import { webSkillsSectPort } from "../../utils/dataPortuguese";
 
 function Laptop() {
   // Vars
   const screenSize = window.innerWidth;
 
   // Context
-  const { activeTech, activeTechPort, infoIntersect, changeVisibility } =
+  const { activeTech, infoIntersect, changeVisibility } =
     useContext(Data);
 
   // Refs
-  const laptopImg: RefObject<string> = useRef("");
-  const laptopDiv: RefObject<string> = useRef("");
+  const laptopImg = useRef<HTMLDivElement>(null);
+  const laptopDiv = useRef<HTMLDivElement>(null);
 
   // Data extraction
   const { laptopBgImg, laptopNav } = webSkillsSect;
-  const { laptopNavPort } = webSkillsSectPort;
 
   // States
   const [currentImg, setCurrentImg] = useState(laptopNav[-1]);
@@ -39,16 +38,12 @@ function Laptop() {
 
   // It receives a  representing
   const changeSeason = (e: MouseEvent) => {
-    const prop: string = e.target.innerText;
-    const stations: Object = {
+    const prop: string = e.target!.innerText;
+    const stations = {
       Spring: `url(${laptopBgImg[0]}) no-repeat center`,
       Summer: `url(${laptopBgImg[1]}) no-repeat center`,
       Fall: `url(${laptopBgImg[2]}) no-repeat center`,
       Winter: `url(${laptopBgImg[3]}) no-repeat center`,
-      Primavera: `url(${laptopBgImg[0]}) no-repeat center`,
-      Verão: `url(${laptopBgImg[1]}) no-repeat center`,
-      Outono: `url(${laptopBgImg[2]}) no-repeat center`,
-      Inverno: `url(${laptopBgImg[3]}) no-repeat center`,
     };
 
     setCurrentImg(stations[prop]);
@@ -116,7 +111,7 @@ function Laptop() {
         <picture>
           {/* <source media="(min-width: 1200px)" srcSet={notebook} type="image/svg" /> */}
           <figure>
-            <img
+            <Image
               src={screenSize > 768 ? notebook : mobile}
               alt="Website"
               draggable="false"

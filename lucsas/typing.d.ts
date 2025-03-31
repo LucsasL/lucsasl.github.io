@@ -21,3 +21,23 @@ export interface StateShape {
   headerBorder: string;
   headerBlur: string;
 }
+
+
+// Skills Types
+export interface TechShape {
+  type: string;
+  activeTech: boolean;
+  activeTechPort: ;
+  techStackPort;
+  dispatch;
+  dispatchPort;
+  infoIntersect;
+  skillSectBox;
+  changeVisibility;
+  menuDiv;
+  menuAppear;
+  setMenuAppear;
+  techFeature;
+  featureOpacity;
+  setFeatureOpacity: SetStateAction<string>;
+}

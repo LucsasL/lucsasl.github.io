@@ -1,7 +1,8 @@
 "use client";
 
 // Hooks Import
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, type ReactNode } from "react";
+import Image from "next/image";
 
 // Images Import
 import email from "@/public/img/email.webp";
@@ -12,32 +13,32 @@ import instaLogo from "@/public/img/instagram-icon.webp";
 
 function Contact() {
   // States Declaration
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
-  const [topicInput, setTopicInput] = useState("");
-  const [msgInput, setMsgInput] = useState("");
+  const [nameInput, setNameInput] = useState<string>("");
+  const [emailInput, setEmailInput] = useState<string>("");
+  const [topicInput, setTopicInput] = useState<string>("");
+  const [msgInput, setMsgInput] = useState<string>("");
 
   // Context Destructuring
   // const { setOpen } = useContext(SubmitData);
 
   // Refs
-  const contactSect = useRef("");
+  const contactSect = useRef<HTMLElement>(null);
 
   useEffect(() => {
     console.log("Language Changed");
   }, [contactSect]);
 
   // These functions controls the input the user types in the <input /> element
-  function changeName(inp: HTMLInputElement) {
-    setNameInput(inp.target.value);
+  function changeName<Info>(inp: ReactNode | HTMLInputElement) {
+    setNameInput(inp!.target.value);
   }
 
   function changeEmail(inp: HTMLInputElement) {
-    setEmailInput(inp.target.value);
+    setEmailInput(inp.target!.value);
   }
 
   function changeMsg(inp: HTMLInputElement) {
-    setMsgInput(inp.target.value);
+    setMsgInput(inp.target!.value);
   }
 
   return (
@@ -49,14 +50,14 @@ function Contact() {
             <div style={{ textAlign: "center" }}>
               <p>Want to bring more attention to your business?</p>
 
-              <h1 className="big fancy">Let's grow together!</h1>
+              <h1 className="big fancy">Let&apos;s grow together!</h1>
             </div>
 
             <div>
               <div>
                 <div className="contact">
                   <figure>
-                    <img
+                    <Image
                       src={email}
                       alt="Contact through E-mail"
                       className="icons"
@@ -74,7 +75,7 @@ function Contact() {
               <div>
                 <div className="contact">
                   <figure>
-                    <img
+                    <Image
                       src={instaLogo}
                       alt={"Contact through Instagram"}
                       className="icons"
@@ -133,7 +134,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="Topic">"Topic:"</label> <br />
+                  <label htmlFor="Topic">Topic:</label> <br />
                   <input
                     type="text"
                     name="Topic"
@@ -145,7 +146,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="userMsg">"Message:"</label> <br />
+                  <label htmlFor="userMsg">Message:</label> <br />
                   <textarea
                     name="message"
                     cols={30}

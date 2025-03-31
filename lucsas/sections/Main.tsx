@@ -13,12 +13,12 @@ function Main() {
       <main>
         <div>
           <Introsect />
-          {/* <Services /> */}
-          {/* <About /> */}
-          {/* <Areas /> */}
-          {/* <Skills /> */}
-          {/* <Portfolio /> */}
-          {/* <Contact /> */}
+          <Services />
+          <About />
+          <Areas />
+          <Skills />
+          <Portfolio />
+          <Contact />
         </div>
       </main>
     </>

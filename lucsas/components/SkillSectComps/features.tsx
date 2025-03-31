@@ -9,7 +9,7 @@ import { IoIosGitBranch } from "react-icons/io";
 import { SiFramework } from "react-icons/si";
 
 // Hooks Import
-import { useContext } from "react";
+import React, { type ReactNode, useContext } from "react";
 
 // Data Import
 import { Data } from "@/sections/Skills";
@@ -23,21 +23,21 @@ function Features() {
 
   // Icons Array
   const featIcons = [
-    <MdOutlineTypeSpecimen className="featSvg" />,
-    <PiTreeStructure className="featSvg" />,
-    <SiFramework className="featSvg" />,
-    <CgStyle className="featSvg" />,
-    <GrTest className="featSvg" />,
-    <MdOutlineRealEstateAgent className="featSvg" />,
-    <GiProcessor className="featSvg" />,
-    <IoIosGitBranch className="featSvg" />,
+    <MdOutlineTypeSpecimen className="featSvg" key={1} />,
+    <PiTreeStructure className="featSvg" key={2} />,
+    <SiFramework className="featSvg" key={3} />,
+    <CgStyle className="featSvg" key={4} />,
+    <GrTest className="featSvg" key={5} />,
+    <MdOutlineRealEstateAgent className="featSvg" key={6} />,
+    <GiProcessor className="featSvg" key={7} />,
+    <IoIosGitBranch className="featSvg" key={8} />,
   ];
 
   return (
     <>
       <div className="archFeatures">
         {/* Returns the list of features */}
-        {techFeature.map((desc, index) => {
+        {techFeature.map((desc: string, index: number): ReactNode => {
           return (
             <abbr title={desc} key={index}>
               <div

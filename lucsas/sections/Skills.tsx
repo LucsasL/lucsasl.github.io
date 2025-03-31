@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import { useState, useReducer, useEffect, useRef, createContext } from "react";
+import React, { useState, useReducer, useEffect, useRef, createContext, SetStateAction } from "react";
 
 // Components Import
 import TechController from "@/components/SkillSectComps/TechController";
@@ -10,34 +10,30 @@ import Features from "@/components/SkillSectComps/features";
 
 // Data Import
 import { webSkillsSect } from "../utils/data";
-import { webSkillsSectPort } from "../utils/dataPortuguese";
 import { reducer } from "../utils/pageDemo";
-import { reducerPort } from "../utils/pageDemoPortuguese";
 import { techObj } from "../utils/pageDemo";
-import { techObjPort } from "../utils/pageDemoPortuguese";
+import { type TechShape } from "@/typing";
 
 // Data Destructuring
-const { sectTitle, techStack } = webSkillsSect;
-const { sectTitlePort, techStackPort } = webSkillsSectPort;
+const { techStack } = webSkillsSect;
 const { techFeature } = techStack;
 
-export const Data = createContext(techObj);
+export const Data = createContext<TechShape>(techObj);
 
 function Skills() {
   // States declaration
-  const [infoIntersect, setInfoIntersect] = useState(false);
-  const [menuAppear, setMenuAppear] = useState(false);
+  const [infoIntersect, setInfoIntersect] = useState<boolean>(false);
+  const [menuAppear, setMenuAppear] = useState<boolean>(false);
 
   // Refs
-  const skillSectBox = useRef<Element>(null);
-  const menuDiv = useRef<Element>(null);
+  const skillSectBox = useRef<HTMLDivElement>(null);
+  const menuDiv = useRef<HTMLDivElement>(null);
 
   // TechController States and Ref
-  const [activeTech, dispatch] = useReducer(reducer, techObj);
-  const [activeTechPort, dispatchPort] = useReducer(reducerPort, techObjPort);
+  const [activeTech, dispatch] = useReducer<TechShape>(reducer, techObj);
 
   // Features States
-  const [featureOpacity, setFeatureOpacity] = useState([0, 0, 0, 0, 0, 0, 0]);
+  const [featureOpacity, setFeatureOpacity] = useState<number[]>([0, 0, 0, 0, 0, 0, 0]);
 
   // It records the elements that will re-render as the user interact
   useEffect(() => {

@@ -1,4 +1,5 @@
 // Basic Imports
+import React from "react";
 import Image from "next/image";
 
 // Data Import
@@ -26,7 +27,7 @@ function Footer() {
 
             {/* List of social medias */}
             <ul>
-              {socialMedias.map(({ link, name, img }, index) => {
+              {socialMedias.map(({ link, name, img }, index: number) => {
                 return (
                   <li key={index}>
                     <figure>

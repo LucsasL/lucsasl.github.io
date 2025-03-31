@@ -1,4 +1,7 @@
-export const techObj = {
+import { type StateShape, type TechShape } from "@/typing";
+import { SetStateAction } from "react";
+
+export const techObj: TechShape = {
   basicSettings: {
     bg: "white",
     color: "black",
@@ -39,8 +42,7 @@ export const techObj = {
   },
 };
 
-
-export const reducer = (state, action) => {
+export const reducer = (state: StateShape, action: SetStateAction<StateShape>) => {
   switch (action.type) {
     case "change_tech_HTML":
       return {
