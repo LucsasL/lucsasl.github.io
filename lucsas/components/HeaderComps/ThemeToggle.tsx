@@ -1,19 +1,19 @@
 // Hooks Import
-import { useRef, useContext } from "react";
-
+import { useRef, useContext, type ReactElement, ReactNode } from "react";
+import { StateShape } from "@/typing";
 // Context Import
 import { BgTheme } from "@/sections/Header";
 
 function ThemeToggle() {
-  const { darkTheme, setDarkTheme } = useContext(BgTheme);
-  const themeInp = useRef("");
+  const { darkTheme, setDarkTheme } = useContext<StateShape>(BgTheme);
+  const themeInp = useRef<HTMLElement | ReactElement<boolean> | ReactNode>(null);
 
   // Set the background theme
-  const toggleTheme = (e: MouseEvent) => {
+  const toggleTheme = (e: MouseEvent): void => {
     setDarkTheme(!darkTheme);
     const body = document.querySelector("body");
-    themeInp.current.defaultChecked = !e.target.value;
-    body.classList.toggle("light");
+    themeInp.current!.defaultChecked = !e.target.value;
+    body!.classList.toggle("light");
   };
 
   return (

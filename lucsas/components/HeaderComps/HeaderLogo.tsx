@@ -6,7 +6,10 @@ import React, { useContext } from "react";
 import logo from "@/public/img/lucsas-logo.webp";
 
 // Context
-import { BgTheme, type StateShape } from "@/sections/Header";
+import { BgTheme } from "@/sections/Header";
+
+// Type Imports
+import { StateShape } from "@/typing";
 
 function HeaderLogo() {
   const lucsasDesc: string = "Lucsas Web Developer";

@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import { useState, useRef, useEffect, createContext } from "react";
+import { useState, useRef, useEffect, createContext, type ReactNode } from "react";
 
 // Data Import
 import { webServiceSect } from "../utils/data";
@@ -12,14 +12,20 @@ const { sectTitle, servBoxes } = webServiceSect;
 // Contexts
 export const BlocksData = createContext(servBoxes);
 
+// Type Declarations
+interface RefShape {
+  ref: Element[];
+  getSingularElement: (refs: Element[]) => Element;
+}
+
 function Services() {
   // States
   const [boxIntersect, setBoxIntersect] = useState(false);
 
   // Refs
-  const servSect = useRef("");
-  const infoBox = useRef([]);
-  const servHeader = useRef("");
+  const servSect = useRef<Element>(null);
+  const infoBox = useRef<RefShape[]>([]);
+  const servHeader = useRef<Element>(null);
 
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "BoxIntersect" to true, rendering the animation
@@ -31,7 +37,7 @@ function Services() {
       });
     });
 
-    observer.observe(infoBox.current);
+    observer.observe(infoBox.current.);
   }, [boxIntersect, servSect]);
 
   const changeVisibility = () => {
@@ -97,7 +103,7 @@ function Services() {
 
           <BlocksData.Provider value={servBoxes}>
             <div id="cards">
-              {servBoxes.map(({ title, text, img }, index) => {
+              {servBoxes.map(({ title, text, img }, index: number) => {
                 return (
                   <div
                     className="servBlock"

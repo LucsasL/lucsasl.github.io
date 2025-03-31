@@ -14,13 +14,14 @@ import { IoMdClose } from "react-icons/io";
 import githubLogo from "@/public/img/github-social.webp";
 import stackoverflowLogo from "@/public/img/stackoverflow-social.webp";
 import linkedinLogo from "@/public/img/linkedin-social.webp";
+import Image from 'next/image';
 
 function HeaderMenu() {
   // States
-  const [menuShown, setMenuShown] = useState(false);
+  const [menuShown, setMenuShown] = useState<boolean>(false);
 
   useEffect(() => {
-    // Checks the size of the screen and reajust the menu element to the proper location
+    // Checks the size of the screen and readjust the menu element to the proper location
     window.addEventListener("resize", () => {
       // For some reason, the only way to position the menu elements properly after a resize event is to set the "menuShown" state to the same value it has in a resize event listener (BRUH)
       setMenuShown(menuShown);
@@ -60,7 +61,7 @@ function HeaderMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={githubLogo} alt="Lucas Lira Github" />
+                <Image src={githubLogo} alt="Lucas Lira Github" />
               </a>
             </button>
             <button>
@@ -69,7 +70,7 @@ function HeaderMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={stackoverflowLogo} alt="Lucas Lira StackOverflow" />
+                <Image src={stackoverflowLogo} alt="Lucas Lira StackOverflow" />
               </a>
             </button>
             <button>
@@ -78,7 +79,7 @@ function HeaderMenu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={linkedinLogo} alt="Lucas Lira Linkedin" />
+                <Image src={linkedinLogo} alt="Lucas Lira Linkedin" />
               </a>
             </button>
           </abbr>

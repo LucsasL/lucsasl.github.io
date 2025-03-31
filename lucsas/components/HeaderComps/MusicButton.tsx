@@ -1,5 +1,5 @@
 // Hooks Import
-import { useState, useRef } from "react";
+import { useState, useRef, type ReactNode, type Ref } from "react";
 
 // GSAP Imports
 import { useGSAP } from "@gsap/react";
@@ -13,12 +13,29 @@ import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
 // GSAP Plugins
 gsap.registerPlugin(useGSAP);
 
+// Type Declarations
+interface MusicButtonNode {
+  children:
+    | ReactNode
+    | HTMLElement
+    | Ref<HTMLButtonElement | HTMLCanvasElement>
+    | HTMLButtonElement;
+  offsetWidth: number;
+  offsetHeight: number;
+  style: {
+    width: number;
+    height: number;
+  }
+  addEventListener: (event: string, func: Function) => void;
+  getContext: (dimensions: string) => string;
+}
+
 function MusicButton() {
   // States
   const [musicPlaying, setMusicPlaying] = useState(false);
 
   // Refs
-  const musicButton = useRef<HTMLButtonElement>(null);
+  const musicButton = useRef<MusicButtonNode>(null);
   const audioPlayer = useRef<HTMLAudioElement>(null);
 
   // GSAP Animations function
@@ -119,7 +136,7 @@ function MusicButton() {
         {/* Assigning the state of the element */}
         <abbr title={musicPlaying ? "Mute Music" : "Play Music"}>
           {/* Animation Container */}
-          <canvas id="musicButton" ref={musicButton}></canvas>
+          <canvas id="musicButton" ref={musicButton.current}></canvas>
           
           {/* Music by Eric Godlow
           Music source: https://youtu.be/IUYaCe95dxw?si=KGSnNIIKn5uaWJY4 */}

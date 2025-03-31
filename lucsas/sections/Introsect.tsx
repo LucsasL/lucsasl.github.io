@@ -1,50 +1,47 @@
 // Basic Imports
 import Image from "next/image";
 
-// Files
-// expi
-
 // Data Import
 import { webIntroSect } from "../utils/data";
 
 // Data Destructuring
-const { info, socialMedias } = webIntroSect;
+const { socialMedias } = webIntroSect;
 
 function Introsect() {
   // Returns the intro content
   return (
     <>
       <section id="intro">
-        {/* <div className="intro3D"> // 3D Render of a room
-          <iframe src='https://my.spline.design/building-39f31bffe96091b3362e6606e3cbfd11/' title="3d" id="room3d" ></iframe>
-        </div> */}
-
         <div>
           <div className="intro">
             {/* Intro main content */}
             <div id="introducing">
               <h1>
                 <span style={{ fontSize: ".9em", lineHeight: "1em" }}>
-                  {info.h1Span1}
+                  Sup, I&apos;m
                 </span>{" "}
                 <br />
                 <span className="nickname">Lucsas</span>
                 <span className="cursiveWords">Lucas Lira</span>
               </h1>
-              <h2 className="fancy intro-h2">{info.h2}</h2>
+              <h2 className="fancy intro-h2">Web Developer</h2>
 
-              <p>{info.text}</p>
+              <p>
+                I create and optimize websites with React and JavaScript,
+                delivering the best to make good software that solves real
+                problems.
+              </p>
 
               {/* <button id="skillsResume">
                 <a href={resume} download={resume}>
-                  {info.downloadButt}
+                  Download Resume
                 </a>
               </button> */}
             </div>
 
             {/* Social Media Links */}
             <div id="socials">
-              {socialMedias.map(({ link, name, img }, index) => {
+              {socialMedias.map(({ link, name, img }, index: number) => {
                 return (
                   <div key={index}>
                     <figure>

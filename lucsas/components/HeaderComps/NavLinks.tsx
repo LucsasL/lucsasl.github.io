@@ -1,12 +1,12 @@
 // Hooks Import
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 // Data Import
 import { webNavOptions, webNavOptionsLink } from "../../utils/data";
 
 function NavLinks() {
   // Refs
-  const headerNav = useRef("");
+  const headerNav = useRef<HTMLElement>(null);
 
   return (
     <>

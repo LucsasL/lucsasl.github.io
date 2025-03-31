@@ -1,5 +1,8 @@
 "use client";
 
+// Type Imports
+import { StateShape } from "@/typing";
+
 // Hooks Import
 import React, {
   useState,
@@ -7,26 +10,11 @@ import React, {
   createContext,
   useRef,
   type ReactNode,
-  type Dispatch,
-  type SetStateAction,
-  type RefObject,
 } from "react";
 
 // Components Import
 import HeaderLogo from "@/components/HeaderComps/HeaderLogo";
 import HeaderMenu from "@/components/HeaderComps/headerMenu";
-
-// Type Declaration
-export interface StateShape {
-  headerBg: string;
-  setHeaderBg: Dispatch<SetStateAction<string>>;
-  darkTheme: boolean;
-  setDarkTheme: Dispatch<SetStateAction<boolean>>;
-  headerCont: RefObject<ReactNode | HTMLDivElement>;
-  headerColor: string;
-  headerBorder: string;
-  headerBlur: string;
-}
 
 // BG Theme Import
 export const BgTheme = createContext<string | StateShape>("");

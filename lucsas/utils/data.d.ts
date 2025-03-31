@@ -1,6 +1,3 @@
-// Types Imports
-import { type StaticImageData } from "next/image";
-
 // Image Import
 import code from "@/public/img/codeIntro.png";
 import lucsas from "@/public/img/Lucsas.webp";
@@ -57,22 +54,22 @@ import linkedinLogo from "@/public/img/linkedin-social.webp";
 import instaLogo from "@/public/img/instagram-social.webp";
 
 // Images Declarations
-export declare const code: StaticImageData;
-export declare const lucsas: StaticImageData;
-export declare const webDev: StaticImageData;
-export declare const webDevBack: StaticImageData;
-export declare const landscape: StaticImageData;
-export declare const spring: StaticImageData;
-export declare const summer: StaticImageData;
-export declare const fall: StaticImageData;
-export declare const winter: StaticImageData;
-export declare const marknow: StaticImageData;
-export declare const everyshop: StaticImageData;
-export declare const bNumerical: StaticImageData;
-export declare const ourSolarSystem: StaticImageData;
-export declare const seo: StaticImageData;
-export declare const design: StaticImageData;
-export declare const webStructure: StaticImageData;
+export declare const code: ImportedImage;
+export declare const lucsas: ImportedImage;
+export declare const webDev: ImportedImage;
+export declare const webDevBack: ImportedImage;
+export declare const landscape: ImportedImage;
+export declare const spring: ImportedImage;
+export declare const summer: ImportedImage;
+export declare const fall: ImportedImage;
+export declare const winter: ImportedImage;
+export declare const marknow: ImportedImage;
+export declare const everyshop: ImportedImage;
+export declare const bNumerical: ImportedImage;
+export declare const ourSolarSystem: ImportedImage;
+export declare const seo: ImportedImage;
+export declare const design: ImportedImage;
+export declare const webStructure: ImportedImage;
 
 // PDF Imports
 // import resume from "@/utils/resumeEng.pdf";
@@ -91,12 +88,6 @@ export const webNavOptionsLink: string[] = [
 ];
 
 export const webIntroSect = {
-  info: {
-    h1Span1: "Sup, I'm",
-    h2: "Web Developer",
-    text: "I create and optimize websites with React and JavaScript,delivering the best to make good software that solves real problems.",
-    downloadButt: "Download Resume",
-  },
   introImg: code,
   socialMedias: [
     {

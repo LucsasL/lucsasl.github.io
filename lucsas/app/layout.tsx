@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans,  } from "next/font/google";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--plus-jakarta-sans-font",
+  variable: "--plus-jakarta-sans",
   subsets: ["latin"],
+  // display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakartaSans.variable} ${plusJakartaSans.variable}`}>
+      <body className={`${plusJakartaSans.variable}`}>
         {children}
       </body>
     </html>
