@@ -18,12 +18,12 @@ function Portfolio() {
     useState<boolean>(false);
 
   // Refs
-  const project = useRef<HTMLDivElement>(null);
-  const portfolioSect = useRef<HTMLDivElement>(null);
-  const projContainer = useRef<HTMLDivElement>(null);
+  const project = useRef<HTMLDivElement | null>(null);
+  const portfolioSect = useRef<HTMLDivElement | null>(null);
+  const projContainer = useRef<HTMLDivElement | null>(null);
   const visitButton = useRef<HTMLAnchorElement[]>([]);
   const detailsButt = useRef<HTMLButtonElement[]>([]);
-  const projDetailsCont = useRef<HTMLDivElement>(null);
+  const projDetailsCont = useRef<HTMLDivElement | null>(null);
   const closeDetailsButt = useRef<HTMLButtonElement[]>([]);
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import React, { useState, useRef, useEffect, createContext } from "react";
+import React, { useState, useRef, useEffect, createContext, type RefObject } from "react";
 import Image from "next/image";
 
 // Data Import
@@ -13,23 +13,25 @@ const { servBoxes } = webServiceSect;
 // Contexts
 export const BlocksData = createContext(servBoxes);
 
-// Type Declarations
-interface RefShape {
-  ref: Element[];
-  getSingularElement: (refs: Element[]) => Element;
-}
-
 const Services = () => {
   // States
   const [boxIntersect, setBoxIntersect] = useState<boolean>(false);
 
   // Refs
-  const servSect = useRef<Element>(null);
-  const infoBox = useRef<RefShape[]>([]);
-  const servHeader = useRef<Element>(null);
+  const servSect = useRef<HTMLElement | null>(null);
+  const infoBox = useRef<HTMLDivElement[]>([]);
+  const servHeader = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "BoxIntersect" to true, rendering the animation
+    function getCurrentElement(index: number): Element {
+      const currentInfoBox: Element = infoBox.current[index];
+      return currentInfoBox;
+    }
+
+    const element = getCurrentElement(0);
+    if (!element) return;
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -38,9 +40,7 @@ const Services = () => {
       });
     });
 
-    const currentInfoBox: RefShape[] = infoBox.current;
-
-    observer.observe(currentInfoBox);
+    observer.observe(element);
   }, [boxIntersect, servSect]);
 
   const changeVisibility = () => {
@@ -90,9 +90,15 @@ const Services = () => {
         };
   };
 
+  function setRef<Type>(elArray: RefObject<Type[]>, el: Type | null, index: number) {
+    if (!el) return;
+    
+    elArray.current[index] = el;
+  }
+
   return (
     <>
-      <section id="services" ref={servSect.current}>
+      <section id="services" ref={servSect}>
         <div>
           <div>
             <h1
@@ -111,7 +117,7 @@ const Services = () => {
                   <div
                     className="servBlock"
                     key={index}
-                    ref={infoBox}
+                    ref={(el) => setRef<HTMLDivElement>(infoBox, el, index)}
                     style={changeVisibility()[index]}
                   >
                     <div className="imgSv">
