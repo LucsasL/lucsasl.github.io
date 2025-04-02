@@ -24,6 +24,9 @@ function About() {
 
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, It checks the element is intersecting with the user's screen and changes teh "aboutIntersect" to true, rendering the animation
+    const element = aboutInfo.current as Element | null;
+    if (!element) return;
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -32,7 +35,7 @@ function About() {
       });
     });
 
-    observer.observe(aboutInfo.current);
+    observer.observe(element);
   }, [aboutSect]);
 
   // Change visibility of elements
