@@ -4,6 +4,9 @@ import { type Dispatch, type SetStateAction, type RefObject } from "react";
 // General Types
 interface ImportedImage {
   value: StaticImageData | string;
+  src: string;
+  height: number;
+  width: number;
 }
 
 interface RefNodes {
@@ -27,17 +30,34 @@ export interface StateShape {
 export interface TechShape {
   type: string;
   activeTech: boolean;
-  activeTechPort: ;
-  techStackPort;
-  dispatch;
-  dispatchPort;
-  infoIntersect;
-  skillSectBox;
-  changeVisibility;
-  menuDiv;
-  menuAppear;
-  setMenuAppear;
-  techFeature;
-  featureOpacity;
+  activeTechPort: never;
+  techStackPort: never;
+  dispatch: never;
+  dispatchPort: never;
+  infoIntersect: never;
+  skillSectBox: never;
+  changeVisibility: never;
+  menuDiv: never;
+  menuAppear: never;
+  setMenuAppear: never;
+  techFeature: never;
+  featureOpacity: never;
   setFeatureOpacity: SetStateAction<string>;
+}
+
+interface Link {
+  protocol: string;
+  domain: string;
+  subDomain: string;
+}
+
+export interface ProjShape {
+  projLink: Link;
+  projTitle: string;
+  projSubtitle: string;
+  projDesc: string;
+  projImgDesc: ImportedImage;
+  techStack: string[];
+  techStackImg: ImportedImage[];
+  projImg: ImportedImage;
 }

@@ -1,84 +1,65 @@
+// Types Imports
+import { StaticImageData } from "next/image";
+
 // Image Import
-import code from "@/public/img/codeIntro.png";
-import lucsas from "@/public/img/Lucsas.webp";
-import webDev from "@/public/img/webDev.webp";
-import webDevBack from "@/public/img/backEndWebDev.webp";
-
-import landscape from "@/public/img/landscape.webp";
-import spring from "@/public/img/spring.webp";
-import summer from "@/public/img/summer.webp";
-import fall from "@/public/img/fall.webp";
-import winter from "@/public/img/winter.webp";
-
-import marknow from "@/public/img/marknow-proj.png";
-import everyshop from "@/public/img/everyshop-proj.png";
-import bNumerical from "@/public/img/B-numerical.webp";
-import ourSolarSystem from "@/public/img/our-solar-system.webp";
-
-import seo from "@/public/img/setting.png";
-import design from "@/public/img/web-developer.png";
-import webStructure from "@/public/img/web-structure.png";
-
-// Tech Stack Images Import
-import html from "@/public/img/html5.webp";
-import css from "@/public/img/css3.webp";
-import ts from "@/public/img/typescript.webp";
-import js from "@/public/img/JS.webp";
-import react from "@/public/img/react.webp";
-import nextjs from "@/public/img/nextjs.webp";
-import sass from "@/public/img/sass.webp";
-import python from "@/public/img/python.webp";
-import jest from "@/public/img/jest.webp";
-import gsap from "@/public/img/gsap.webp";
-import redux from "@/public/img/redux.webp";
-import git from "@/public/img/git.webp";
-
-import htmlBig from "@/public/img/html5-big.webp";
-import cssBig from "@/public/img/css-big.webp";
-import jsBig from "@/public/img/JS-big.webp";
-import tsBig from "@/public/img/typescript-big.webp";
-import reactBig from "@/public/img/react-big.webp";
-import sassBig from "@/public/img/sass-big.webp";
-import pythonBig from "@/public/img/python-big.webp";
-import jestBig from "@/public/img/jest-big.webp";
-import reduxBig from "@/public/img/redux-big.webp";
-import gsapBig from "@/public/img/gsap-big.webp";
-import gitBig from "@/public/img/git-big.webp";
-import threeBig from "@/public/img/threejs.webp";
-
-// Social Media Image Import
-import githubLogo from "@/public/img/github-social.webp";
-import gitlabLogo from "@/public/img/gitlab-social.webp";
-import stackoverflowLogo from "@/public/img/stackoverflow-social.webp";
-import linkedinLogo from "@/public/img/linkedin-social.webp";
-import instaLogo from "@/public/img/instagram-social.webp";
-
-// Images Declarations
-export declare const code: ImportedImage;
-export declare const lucsas: ImportedImage;
-export declare const webDev: ImportedImage;
-export declare const webDevBack: ImportedImage;
-export declare const landscape: ImportedImage;
-export declare const spring: ImportedImage;
-export declare const summer: ImportedImage;
-export declare const fall: ImportedImage;
-export declare const winter: ImportedImage;
-export declare const marknow: ImportedImage;
-export declare const everyshop: ImportedImage;
-export declare const bNumerical: ImportedImage;
-export declare const ourSolarSystem: ImportedImage;
-export declare const seo: ImportedImage;
-export declare const design: ImportedImage;
-export declare const webStructure: ImportedImage;
-
-// PDF Imports
-// import resume from "@/utils/resumeEng.pdf";
-// export resume;
+import {
+  code,
+  lucsas,
+  webDev,
+  webDevBack,
+  landscape,
+  spring,
+  summer,
+  fall,
+  winter,
+  marknow,
+  everyshop,
+  bNumerical,
+  ourSolarSystem,
+  seo,
+  design,
+  webStructure,
+  html,
+  css,
+  ts,
+  js,
+  react,
+  nextjs,
+  sass,
+  python,
+  jest,
+  gsap,
+  redux,
+  git,
+  htmlBig,
+  cssBig,
+  jsBig,
+  tsBig,
+  reactBig,
+  sassBig,
+  pythonBig,
+  jestBig,
+  reduxBig,
+  gsapBig,
+  gitBig,
+  threeBig,
+  githubLogo,
+  gitlabLogo,
+  stackoverflowLogo,
+  linkedinLogo,
+  instaLogo,
+} from "@/utils/images";
 
 // Components Data
 export const contentWebDevPortfolio = {};
 
-export const webNavOptions: string[] = ["HOME", "ABOUT", "SKILLS", "PROJECTS", "CONTACT"];
+export const webNavOptions: string[] = [
+  "HOME",
+  "ABOUT",
+  "SKILLS",
+  "PROJECTS",
+  "CONTACT",
+];
 export const webNavOptionsLink: string[] = [
   "intro",
   "services",
@@ -139,9 +120,8 @@ export const webServiceSect = {
 };
 
 type AboutSectShape = {
-  aboutText: string[];
   aboutImg: StaticImageData;
-}
+};
 
 export const webAboutSect: AboutSectShape = {
   aboutImg: lucsas,
@@ -149,10 +129,7 @@ export const webAboutSect: AboutSectShape = {
 
 export const webSkillsSect = {
   sectImg: [webDev, webDevBack],
-  areaDesc: [
-    "",
-    "",
-  ],
+  areaDesc: ["", ""],
 
   techStack: {
     tech: [
@@ -189,7 +166,7 @@ export const webSkillsSect = {
       "The technology that make things more interesting and add relevant features to a dynamic experience. With all of it's libraries, frameworks and DOM Manipulation bringing value, making the tech essential for web development.",
       "Programming a web app with TypeScript is like using JavaScript with superpowers. It makes your code more succinct and organized by adding types to variables and giving you complete control over the algorithm. This way, the architecture of your application becomes more manageable.",
       "Great Architecture and organization is what builds React JS, A technology that not only bring all the features of HTML, CSS and JavaScript combined, but enhance it as well, bringing state management, routers, and even more abstraction to your app.",
-      "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and strucutures.",
+      "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and structures.",
       "A framework that works with React to optimize SEO and enhance your web application.",
       "A JavaScript library that makes the animations of your website more manageable, bringing countless of methods to animate and control colors, positions and triggers of the elements of your site, adding more tools to create a better experience.",
       "Easy tests for your applications is with Jest, a simple tool that shows the outputs of your functions and methods and predict precisely what will happen with your algorithms and displays.",
@@ -282,9 +259,9 @@ export const webProjectsSect = {
     {
       projLink: "#",
       projTitle: "B-Numerical",
-      projSubtitle: "Conversor of numerical bases",
-      projDesc: "Numerical Base Conversor | WORK IN PROGRESS",
-      projImgDesc: "Numerical Base Conversor image",
+      projSubtitle: "Converter of numerical bases",
+      projDesc: "Numerical Base Converter | WORK IN PROGRESS",
+      projImgDesc: "Numerical Base Converter image",
       techStack: ["Python"],
       techStackImg: [pythonBig],
       projImg: bNumerical,
@@ -296,18 +273,8 @@ export const webProjectsSect = {
       projDesc:
         "A 3D environment of our solar system build with JavaScript and three.js | WORK IN PROGRESS",
       projImgDesc: "Everyshop project image",
-      techStack: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Three.js"
-      ],
-      techStackImg: [
-        htmlBig,
-        cssBig,
-        jsBig,
-        threeBig
-      ],
+      techStack: ["HTML", "CSS", "JavaScript", "Three.js"],
+      techStackImg: [htmlBig, cssBig, jsBig, threeBig],
       projImg: ourSolarSystem,
     },
   ],

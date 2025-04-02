@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import React, { useState, useEffect, useRef, Ref } from "react";
+import React, { useState, useEffect, useRef, type RefObject } from "react";
 import Image from "next/image";
 
 // Other Libraries
@@ -14,16 +14,17 @@ const { sectTitle } = webProjectsSect;
 
 function Portfolio() {
   // States
-  const [projectBoxIntersect, setProjectBoxIntersect] = useState<boolean>(false);
+  const [projectBoxIntersect, setProjectBoxIntersect] =
+    useState<boolean>(false);
 
   // Refs
-  const project = useRef<HTMLElement>(null);
+  const project = useRef<HTMLDivElement>(null);
   const portfolioSect = useRef<HTMLDivElement>(null);
-  const projContainer = useRef<HTMLElement>(null);
-  const visitButton = useRef<HTMLButtonElement[]>([]);
+  const projContainer = useRef<HTMLDivElement>(null);
+  const visitButton = useRef<HTMLAnchorElement[]>([]);
   const detailsButt = useRef<HTMLButtonElement[]>([]);
-  const projDetailsCont = useRef<HTMLElement>(null);
-  const closeDetailsButt = useRef([]);
+  const projDetailsCont = useRef<HTMLDivElement>(null);
+  const closeDetailsButt = useRef<HTMLButtonElement[]>([]);
 
   useEffect(() => {
     // This creates an instance of the intersection observer
@@ -32,6 +33,10 @@ function Portfolio() {
     // if the element is intersecting with the user's screen and
     // changes the "projectBoxIntersect" to true, rendering
     // the fade-in animation
+    const element = project.current as Element | null;
+
+    if (!element) return;
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -40,14 +45,8 @@ function Portfolio() {
       });
     });
 
-    // visitButton.current.forEach(el => {
-    //   // el.classList
-    //   el.alert(
-    //     "This project doesn't have a link yet; it's in early development."
-    //   );
-    // })
-
-    observer.observe(project.current);
+    observer.observe(element);
+    return observer.unobserve(element);
   }, [projectBoxIntersect, portfolioSect]);
 
   useGSAP(() => {
@@ -113,6 +112,10 @@ function Portfolio() {
         };
   };
 
+  function setRefArray<Type>(elArray: RefObject<Type[]>, el: Type, index: number) {
+    elArray.current[index] = el;
+  };
+
   return (
     <>
       <section id="portfolio" ref={portfolioSect}>
@@ -134,7 +137,7 @@ function Portfolio() {
                   techStackImg,
                   projImg,
                 },
-                index
+                index: number
               ) => {
                 return (
                   <>
@@ -177,7 +180,8 @@ function Portfolio() {
 
                         <button
                           className="closeBtn"
-                          ref={(el) => (closeDetailsButt.current[index] = el)}
+                          key={index}
+                          ref={(el) => setRefArray<HTMLButtonElement | null>(closeDetailsButt, el, index)}
                         >
                           Close
                         </button>
@@ -219,7 +223,8 @@ function Portfolio() {
                               href={projLink}
                               target="_blank"
                               rel="noopener noreferrer"
-                              ref={(el) => (visitButton.current[index] = el)}
+                              key={index}
+                              ref={(el) => setRefArray<HTMLAnchorElement | null>(visitButton, el, index)}
                               className={`projLink${index}`}
                             >
                               Visit Project
@@ -227,7 +232,8 @@ function Portfolio() {
                           </button>
                           <button
                             className="detailBtn"
-                            ref={(el): Ref<HTMLButtonElement> => (detailsButt.current[index] = el)}
+                            key={index}
+                            ref={(el) => setRefArray<HTMLButtonElement | null>(detailsButt!, el, index)}
                           >
                             See details
                           </button>
@@ -236,7 +242,7 @@ function Portfolio() {
 
                       <div className="projImg">
                         <picture key={index}>
-                          <img
+                          <Image
                             src={projImg}
                             alt={projImgDesc}
                             draggable="false"
