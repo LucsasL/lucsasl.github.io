@@ -11,7 +11,7 @@ function UpButton() {
   const [scrolled, setScrolled] = useState<boolean>(false);
 
   // Refs
-  const topButt = useRef<RefObject<HTMLButtonElement> | null>(null);
+  const topButt = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     // Checks the size of the screen and readjust the menu element to the proper location

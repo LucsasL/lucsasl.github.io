@@ -17,7 +17,7 @@ import HeaderLogo from "@/components/HeaderComps/HeaderLogo";
 import HeaderMenu from "@/components/HeaderComps/headerMenu";
 
 // BG Theme Import
-export const BgTheme = createContext<string | StateShape>("");
+export const BgTheme = createContext<StateShape | undefined>(undefined);
 
 const Header = () => {
   // States

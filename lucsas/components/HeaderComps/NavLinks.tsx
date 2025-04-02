@@ -13,7 +13,7 @@ function NavLinks() {
       <nav ref={headerNav}>
         {/* List of options in the nav */}
         <ul>
-          {webNavOptions.map((i, index: number) => {
+          {webNavOptions.map((i: string, index: number) => {
             return (
               <li key={index}>
                 <abbr title={i}>

@@ -1,5 +1,6 @@
-// React Imports
+// General Imports
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 // Components Imports
 import NavLinks from "./NavLinks";
@@ -14,7 +15,6 @@ import { IoMdClose } from "react-icons/io";
 import githubLogo from "@/public/img/github-social.webp";
 import stackoverflowLogo from "@/public/img/stackoverflow-social.webp";
 import linkedinLogo from "@/public/img/linkedin-social.webp";
-import Image from 'next/image';
 
 function HeaderMenu() {
   // States

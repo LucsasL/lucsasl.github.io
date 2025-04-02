@@ -87,10 +87,7 @@ function Skills() {
             <Data.Provider
               value={{
                 activeTech,
-                activeTechPort,
-                techStackPort,
                 dispatch,
-                dispatchPort,
                 infoIntersect,
                 skillSectBox,
                 changeVisibility,

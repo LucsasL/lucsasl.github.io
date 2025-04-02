@@ -50,7 +50,7 @@ function Footer() {
             <h1>Quick links</h1>
 
             <ul>
-              {webNavOptions.map((li, index: number) => {
+              {webNavOptions.map((li: string, index: number) => {
                 return (
                   <li key={index}>
                     <a href={`#${webNavOptionsLink[index]}`}>{li}</a>
