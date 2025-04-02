@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import React, { useState, useRef, useEffect, type ReactNode } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 // Images Import
@@ -22,23 +22,33 @@ function Contact() {
   // const { setOpen } = useContext(SubmitData);
 
   // Refs
-  const contactSect = useRef<HTMLElement>(null);
+  const contactSect = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     console.log("Language Changed");
   }, [contactSect]);
 
   // These functions controls the input the user types in the <input /> element
-  function changeName<Info>(inp: ReactNode | HTMLInputElement) {
-    setNameInput(inp!.target.value);
-  }
+  function changeInputValue<
+    Type extends HTMLInputElement | HTMLTextAreaElement
+  >(inp: Type | null, state: string) {
+    if (!inp) return;
 
-  function changeEmail(inp: HTMLInputElement) {
-    setEmailInput(inp.target!.value);
-  }
+    if (state === "name") {
+      setNameInput(inp.value);
+    }
 
-  function changeMsg(inp: HTMLInputElement) {
-    setMsgInput(inp.target!.value);
+    if (state === "name") {
+      setEmailInput(inp.value);
+    }
+
+    if (state === "topic") {
+      setTopicInput(inp.value);
+    }
+
+    if (state === "name") {
+      setMsgInput(inp.value);
+    }
   }
 
   return (
@@ -116,7 +126,9 @@ function Contact() {
                     name="name"
                     placeholder={"Your name"}
                     value={nameInput}
-                    onChange={(e) => changeName(e)}
+                    onChange={(e) =>
+                      changeInputValue<HTMLInputElement>(e.target, "name")
+                    }
                     required
                   />
                 </div>
@@ -128,7 +140,9 @@ function Contact() {
                     name="email"
                     placeholder={"Your e-mail"}
                     value={emailInput}
-                    onChange={(e) => changeEmail(e)}
+                    onChange={(e) =>
+                      changeInputValue<HTMLInputElement>(e.target, "email")
+                    }
                     required
                   />
                 </div>
@@ -140,7 +154,12 @@ function Contact() {
                     name="Topic"
                     placeholder={"Topic"}
                     value={topicInput}
-                    onChange={(e) => setTopicInput(e.currentTarget.value)}
+                    onChange={(e) =>
+                      changeInputValue<HTMLInputElement>(
+                        e.currentTarget,
+                        "topic"
+                      )
+                    }
                     required
                   />
                 </div>
@@ -153,7 +172,12 @@ function Contact() {
                     rows={10}
                     placeholder={"Write a message..."}
                     value={msgInput}
-                    onChange={(e) => changeMsg(e)}
+                    onChange={(e) =>
+                      changeInputValue<HTMLTextAreaElement>(
+                        e.currentTarget,
+                        "message"
+                      )
+                    }
                     required
                   ></textarea>
                 </div>
