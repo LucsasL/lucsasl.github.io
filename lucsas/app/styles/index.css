@@ -4,7 +4,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  /* font-family: "Plus Jakarta Sans", sans-serif; */
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -160,17 +160,7 @@ figcaption {
 abbr {
   text-decoration: none;
 }
-/* 
-@font-face {
-  font-family: "Plus Jakarta Sans";
-  src: url("../fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Kalam";
-  src: url("../fonts/Kalam/Kalam-Regular.ttf");
-  font-display: swap;
-} */
+
 @media screen and (min-width: 992px) {
   .scrollbar {
     background: rgba(0, 0, 0, 0.9607843137);
@@ -570,6 +560,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#intro .introPresent img {
     width: 50%;
+    height: 50%;
     filter: brightness(0);
   }
   section#intro .scroll-anim {
@@ -667,6 +658,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#services .servBlock .imgSv img {
     width: 50%;
+    height: 50%;
     filter: brightness(0);
   }
   section#services h1 {
@@ -705,6 +697,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#about picture {
     height: 70%;
+    height: 800px;
   }
   section#about .range {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
@@ -770,6 +763,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#area .webdev-design {
     width: 350px;
+    height: 350px;
     position: relative;
     animation: rotImg 7s infinite linear;
   }
@@ -836,6 +830,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .techStack .tech {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    width: 110px;
     height: 80px;
     margin: 10px;
     border-radius: 20px;
@@ -844,9 +839,12 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#skills .langsCont .techStack .active {
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.1), inset 0px 15px 10px rgba(0, 0, 0, 0.5);
   }
-  section#skills .langsCont .techStack figure,
+  section#skills .langsCont .techStack picture, section#skills .langsCont .techStack figure {
+    height: auto;
+  }
   section#skills .langsCont .techStack img {
     width: 50%;
+    height: 50%;
     pointer-events: none;
   }
   section#skills .langsCont .archFeatures {
@@ -965,9 +963,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     justify-content: flex-start;
   }
-  section#portfolio .projCont .proj .techStackCont picture,
   section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
+    height: 50px;
     margin: 0px 10px 10px 10px;
   }
   section#portfolio .projCont .proj .projImg {
@@ -977,9 +975,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     width: 100%;
   }
-  section#portfolio .projCont .proj .projImg picture,
   section#portfolio .projCont .proj .projImg img {
     width: 100%;
+    height: 100%;
     margin-top: 10px;
     border-radius: 20px;
   }
@@ -1233,7 +1231,7 @@ div#headerMenu .menuIcon {
   position: relative;
 }
 .laptop .image {
-  background: url("../../public/img/laptop.svg") no-repeat center;
+  background: url("../../public/img/landscape.webp") no-repeat center;
   background-size: cover;
   width: 90.1%;
   height: 95.7%;

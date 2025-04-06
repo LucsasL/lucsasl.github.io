@@ -38,6 +38,10 @@ function Skills() {
   // It records the elements that will re-render as the user interact
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, it checks if it's intersecting with the menuDiv, and if it does it updates the menuAppear state, making it appear, otherwise, not.
+    const skillBoxElement = skillSectBox.current as Element | null;
+    const menuDivElement = menuDiv.current as Element | null;
+    if (!skillBoxElement || !menuDivElement) return;
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -47,8 +51,8 @@ function Skills() {
     });
 
     // Observing element to play animation
-    observer.observe(skillSectBox.current);
-    observer.observe(menuDiv.current);
+    observer.observe(skillBoxElement);
+    observer.observe(menuDivElement);
   }, []);
 
   // It changes the visibility of the tech controller

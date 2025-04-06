@@ -1,11 +1,13 @@
 // Hooks Import
-import { useRef, useEffect, useContext } from "react";
+import React, { useRef, useEffect, useContext } from "react";
+import Image from "next/image";
 
 // Context Import
 import { Data } from "@/sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
+import { StaticImageData } from "next/image";
 const { techStack } = webSkillsSect;
 
 function Skills() {
@@ -20,12 +22,16 @@ function Skills() {
   } = useContext(Data);
 
   // Refs
-  const buttons = useRef([]);
-  const buttonsBlock = useRef([]);
+  const buttons = useRef<HTMLButtonElement[]>([]);
+  const buttonsBlock = useRef<HTMLButtonElement[]>([]);
 
   // It records the elements that will re-render as the user interact
   useEffect(() => {
     // This creates an instance of the intersection observer object, used to check if the screen of the user is intersecting with some element. In this case, it checks if it's intersecting with the menuDiv, and if it does it updates the menuAppear state, making it appear, otherwise, not.
+    const element = menuDiv.current as Element | null;
+
+    if (!element) return;
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -37,7 +43,7 @@ function Skills() {
     });
 
     // Observing element to play animation
-    observer.observe(menuDiv.current);
+    observer.observe(element);
 
     buttons.current = buttons.current.slice(0, techStack.tech.length);
   }, [menuDiv, setMenuAppear, buttons]);
@@ -45,7 +51,7 @@ function Skills() {
   // A function that detects the click of a button in the tech menu
   const changeTech = (tech: string, e: MouseEvent, index: number) => {
     // Takes the reference of the exact button, and removes the "active" CSS class, that makes the button look pressed
-    buttonsBlock.current.forEach((el: HTMLElement) =>
+    buttonsBlock.current.forEach((el: HTMLButtonElement) =>
       el.classList.remove("active")
     );
 
@@ -76,24 +82,28 @@ function Skills() {
     dispatch({ type: `change_tech_${tech}` });
   };
 
+  function setRef<Type>(elArray: Type[], el: Type | null, index: number) {
+    elArray.current[index] = el;
+  }
+
   // Returns the tech menu
   return (
     <>
       <div className="techStack" style={changeVisibility("-150%", menuAppear)}>
-        {techStack.imgs.map((t, index) => {
+        {techStack.imgs.map((t: StaticImageData, index: number) => {
           return (
             <abbr
               title={techStack.tech[index]}
               key={index}
-              ref={(el: HTMLElement) => (buttons.current[index] = el)}
+              ref={(el) => setRef<HTMLButtonElement>(buttons, el, index)}
             >
               <button
                 className={`tech ${index === 0 ? "active" : ""}`}
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
-                ref={(el: HTMLElement) => (buttonsBlock.current[index] = el)}
+                ref={(el) => setRef<HTMLButtonElement>(buttonsBlock, el, index)}
               >
                 <picture style={{ boxShadow: "none", pointerEvents: "none" }}>
-                  <img src={t} alt={techStack.tech[index]} />
+                  <Image src={t} alt={techStack.tech[index]} />
                 </picture>
               </button>
             </abbr>
