@@ -151,30 +151,22 @@ function Portfolio() {
                         <div className="projDetailsInfo">
                           <h2>Project name (Working in Progress)</h2>
                           <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Iure obcaecati repellendus earum quisquam
-                            culpa quas nemo rerum quia id? Similique.
+                            Work
                           </p>
 
                           <p>
-                            Quos, pariatur eos tenetur officia molestiae
-                            repellendus aliquid ex explicabo dignissimos nulla
-                            sequi similique, rem impedit, cum, laborum ipsum
-                            cupiditate laboriosam ullam eos. Harum.
+                            In
                           </p>
 
                           <p>
-                            Reiciendis, laborum. Aliquam, veniam! Quidem modi
-                            dicta voluptati in similique voluptatem, asperiores
-                            rerum nesciunt, facilis eos eveniet libero soluta
-                            itaque veritatis tempora ut laborum iste.
+                            Progress
                           </p>
                         </div>
 
                         <div className="projImage">
                           <picture>
                             {/* <source media="(min-width: )" srcset="" /> */}
-                            <img src="" alt="Tree" />
+                            {/* <Image src={} alt="Tree" /> */}
                           </picture>
                         </div>
 

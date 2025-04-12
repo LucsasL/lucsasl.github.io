@@ -61,3 +61,18 @@ export interface ProjShape {
   techStackImg: ImportedImage[];
   projImg: ImportedImage;
 }
+
+// Music Button Type
+interface MusicButtonShape {
+  width: number;
+  height: number;
+  scale: GSAPCallback;
+  strokeStyle: string;
+  lineWidth: number;
+  lineCap: string;
+  lineJoin: string;
+  clearRect: GSAPCallback;
+  beginPath: GSAPCallback;
+  lineTo: GSAPCallback;
+  stroke: GSAPCallback;
+}

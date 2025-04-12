@@ -5,6 +5,7 @@ import { useState, useRef, type ReactNode, type Ref } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
+import { MusicButtonShape } from "@/typing";
 
 // Audio Import
 // import mp3Audio from "@/audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3";
@@ -26,7 +27,7 @@ interface MusicButtonNode {
     width: number;
     height: number;
   }
-  addEventListener: (event: string, func: Function) => void;
+  addEventListener: (event: string, func: CallableFunction) => void;
   getContext: (dimensions: string) => string;
 }
 
@@ -62,7 +63,7 @@ function MusicButton() {
       musicButton.current!.style.height = opt.height;
 
       // Telling the element has 2 dimensions with getContext
-      const ctx = musicButton.current!.getContext("2d");
+      const ctx: MusicButtonShape = musicButton.current!.getContext("2d");
       ctx.scale(2, 2);
 
       ctx.strokeStyle = opt.strokeColor;
