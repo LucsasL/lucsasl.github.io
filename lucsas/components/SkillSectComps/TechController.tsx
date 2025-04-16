@@ -82,14 +82,14 @@ function Skills() {
     dispatch({ type: `change_tech_${tech}` });
   };
 
-  function setRef<Type>(elArray: Type[], el: Type | null, index: number) {
+  function setRef<Type extends Element>(elArray: Type[], el: Type | null, index: number) {
     elArray.current[index] = el;
   }
 
   // Returns the tech menu
   return (
     <>
-      <div className="techStack" style={changeVisibility("-150%", menuAppear)}>
+      <div className="techStack" style={changeVisibility("-150%", menuAppear, .1)}>
         {techStack.imgs.map((t: StaticImageData, index: number) => {
           return (
             <abbr

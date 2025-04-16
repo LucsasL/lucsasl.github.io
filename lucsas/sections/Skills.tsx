@@ -12,7 +12,7 @@ import Features from "@/components/SkillSectComps/features";
 import { webSkillsSect } from "../utils/data";
 import { reducer } from "../utils/pageDemo";
 import { techObj } from "../utils/pageDemo";
-import { type TechShape } from "@/typing";
+import { TechActiveProps, type TechShape } from "@/typing";
 
 // Data Destructuring
 const { techStack } = webSkillsSect;
@@ -30,7 +30,7 @@ function Skills() {
   const menuDiv = useRef<HTMLDivElement>(null);
 
   // TechController States and Ref
-  const [activeTech, dispatch] = useReducer<TechShape>(reducer, techObj);
+  const [activeTech, dispatch] = useReducer<TechActiveProps, SetStateAction<TechActiveProps>>(reducer, techObj);
 
   // Features States
   const [featureOpacity, setFeatureOpacity] = useState<number[]>([0, 0, 0, 0, 0, 0, 0]);

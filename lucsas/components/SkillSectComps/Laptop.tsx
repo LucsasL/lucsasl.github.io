@@ -11,6 +11,7 @@ import { Data } from "@/sections/Skills";
 
 // Data Import
 import { webSkillsSect } from "../../utils/data";
+import { StationsShape } from "@/typing";
 
 function Laptop() {
   // Vars
@@ -37,9 +38,10 @@ function Laptop() {
   }, [laptopDiv]);
 
   // It receives a  representing
-  const changeSeason = (e: MouseEvent) => {
-    const prop: string = e.target!.innerText;
-    const stations = {
+  const changeSeason = (e: React.MouseEvent<HTMLLIElement>) => {
+    type Season = "Spring" | "Summer" | "Fall" | "Winter";
+    const prop = (e.target as HTMLElement).innerText as Season;
+    const stations: StationsShape = {
       Spring: `url(${laptopBgImg[0]}) no-repeat center`,
       Summer: `url(${laptopBgImg[1]}) no-repeat center`,
       Fall: `url(${laptopBgImg[2]}) no-repeat center`,
@@ -91,6 +93,19 @@ function Laptop() {
       ? "none"
       : "flex";
   };
+
+  const styleRet = () => {
+    return screenSize > 992
+      ? {
+          display: activeTech.content.dateTime.display,
+          width: activeTech.content.dateTime.width,
+          padding: activeTech.content.dateTime.padding,
+          alignText: activeTech.content.dateTime.textAlign,
+        }
+      : {
+          display: "none",
+        };
+  }
 
   // Returns the laptop interface
   return (
@@ -184,7 +199,7 @@ function Laptop() {
                     }
               }
             >
-              {5 * activeTech.content.text}
+              {activeTech.content.text}
             </p>
             <a
               href={activeTech.content.link}
@@ -221,18 +236,7 @@ function Laptop() {
           {/* Time and date content */}
           <div
             className="dateTime"
-            style={
-              screenSize > 992
-                ? {
-                    display: activeTech.content.dateTime.display,
-                    width: activeTech.content.dateTime.width,
-                    padding: activeTech.content.dateTime.padding,
-                    textAlign: activeTech.content.dateTime.textAlign,
-                  }
-                : {
-                    display: "none",
-                  }
-            }
+            style={styleRet()}
           >
             <h3>
               <span className="time">

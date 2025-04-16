@@ -26,23 +26,98 @@ export interface StateShape {
 }
 
 
-// Skills Types
-export interface TechShape {
+// Tech Shape
+export interface TechActiveProps {
   type: string;
-  activeTech: boolean;
-  activeTechPort: never;
+  basicSettings: {
+    bg: string;
+    color: string;
+    font: string;
+  };
+  header: {
+    headerSize?: string;
+    headerSizeMob?: string;
+    headerPadding: string;
+    headerMargin: string;
+    headerBoxShadow: string;
+  };
+
+  text: {
+    textWidth?: string;
+    textWidthMob?: string;
+    textMargin?: string;
+    textSize: string;
+    textLine: string;
+  };
+
+  links: {
+    aDecoration: string;
+    aWidth?: string;
+    aWidthMob?: string;
+    aDisplay: string;
+    aBg: string;
+    aColor: string;
+    aPadding: string;
+    aBorderRadius: string;
+  };
+
+  content: {
+    title: string;
+    text: string;
+    textLink: string;
+    link: string;
+    dateTime: {
+      display: string;
+      width: string;
+      padding: string;
+      textAlign: string;
+    };
+  };
+}
+
+// Seasons Change
+interface StationsShape {
+  Spring: string;
+  Summer: string;
+  Fall: string;
+  Winter: string;
+}
+
+export interface TechShape {
+  activeTech: TechActiveProps;
+  dispatch: ActionDispatch<SetStateAction<TechActiveProps>>;
+  infoIntersect: boolean;
+  skillSectBox: RefObject<HTMLElement | null>;
+  changeVisibility: (i: string, j: boolean, k: number) => laptopAnimationShape;
+  menuDiv: Element | ReactNode;
+  menuAppear: boolean;
+  setMenuAppear: (isIntersecting: boolean) => void;
+  techFeature: string[];
+  featureOpacity: number[];
+  setFeatureOpacity: (opacityArray: number[]) => void;
+}
+
+export interface TechShapePort {
+  type: string;
+  activeTechPort: TechActiveProps;
   techStackPort: never;
-  dispatch: never;
-  dispatchPort: never;
-  infoIntersect: never;
-  skillSectBox: never;
-  changeVisibility: never;
-  menuDiv: never;
-  menuAppear: never;
-  setMenuAppear: never;
-  techFeature: never;
-  featureOpacity: never;
-  setFeatureOpacity: SetStateAction<string>;
+  dispatchPort: ActionDispatch<SetStateAction<TechActiveProps>>;
+  infoIntersect: boolean;
+  skillSectBox: RefObject<HTMLElement | null>;
+  changeVisibility: (i: string, j: boolean, k: number) => laptopAnimationShape;
+  menuDiv: Element | ReactNode;
+  menuAppear: boolean;
+  setMenuAppear: (isIntersecting: boolean) => void;
+  techFeature: string[];
+  featureOpacity: number[];
+  setFeatureOpacity: (opacityArray: number[]) => void;
+}
+
+// Laptop Intersection Animation
+export interface laptopAnimationShape {
+  opacity: number;
+  transition: string;
+  transform?: string;
 }
 
 interface Link {

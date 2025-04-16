@@ -1241,6 +1241,10 @@ div#headerMenu .menuIcon {
   left: 5%;
   z-index: 1;
 }
+.laptop img {
+  width: 1148px;
+  height: 690px;
+}
 .laptop .laptopContent {
   background: white;
   color: black;
