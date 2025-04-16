@@ -695,9 +695,11 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin-top: 50px;
     z-index: 1;
   }
-  section#about picture {
-    height: 70%;
-    height: 800px;
+  section#about img {
+    width: 614px;
+    height: 852px;
+    position: relative;
+    top: -15%;
   }
   section#about .range {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));

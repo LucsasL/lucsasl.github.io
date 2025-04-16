@@ -46,7 +46,6 @@ function Portfolio() {
     });
 
     observer.observe(element);
-    return observer.unobserve(element);
   }, [projectBoxIntersect, portfolioSect]);
 
   useGSAP(() => {
