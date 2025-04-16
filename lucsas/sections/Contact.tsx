@@ -38,7 +38,7 @@ function Contact() {
       setNameInput(inp.value);
     }
 
-    if (state === "name") {
+    if (state === "email") {
       setEmailInput(inp.value);
     }
 
@@ -46,7 +46,7 @@ function Contact() {
       setTopicInput(inp.value);
     }
 
-    if (state === "name") {
+    if (state === "message") {
       setMsgInput(inp.value);
     }
   }
