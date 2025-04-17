@@ -32,11 +32,14 @@ function Introsect() {
                 problems.
               </p>
 
-              {/* <button id="skillsResume">
-                <a href={resume} download={resume}>
+              <button id="skillsResume">
+                <a
+                  href={"/docs/resumeEng.pdf"}
+                  download={"/docs/resumeEng.pdf"}
+                >
                   Download Resume
                 </a>
-              </button> */}
+              </button>
             </div>
 
             {/* Social Media Links */}

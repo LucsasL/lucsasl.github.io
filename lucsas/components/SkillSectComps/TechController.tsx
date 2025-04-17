@@ -1,5 +1,5 @@
 // Hooks Import
-import React, { useRef, useEffect, useContext, ReactNode } from "react";
+import React, { useRef, useEffect, useContext, ReactNode, RefObject } from "react";
 import Image from "next/image";
 
 // Context Import
@@ -82,7 +82,7 @@ function Skills() {
     dispatch({ type: `change_tech_${tech}` });
   };
 
-  function setRef<Type extends Element | ReactNode>(elArray: Type[], el: Type | null, index: number) {
+  function setRef<Type extends Element | ReactNode | RefObject<HTMLButtonElement[]>>(elArray: Type[], el: Type | null, index: number) {
     elArray.current[index] = el;
   }
 
