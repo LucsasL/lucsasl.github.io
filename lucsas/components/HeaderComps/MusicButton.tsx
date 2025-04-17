@@ -5,7 +5,7 @@ import { useState, useRef, type ReactNode, type Ref } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { TweenMax, Power2, Power3 } from "gsap/gsap-core";
-import { MusicButtonShape } from "@/typing";
+import { type MusicButtonShape, type MusicButtonPlaceholder } from "@/typing";
 
 // Audio Import
 // import mp3Audio from "@/audio/Eric Godlow - Lo-fi Type Beat - No Love.mp3";
@@ -33,7 +33,7 @@ interface MusicButtonNode {
 
 function MusicButton() {
   // States
-  const [musicPlaying, setMusicPlaying] = useState(false);
+  const [musicPlaying, setMusicPlaying] = useState<boolean>(false);
 
   // Refs
   const musicButton = useRef<MusicButtonNode>(null);
@@ -43,10 +43,12 @@ function MusicButton() {
   useGSAP(() => {
     window.addEventListener("load", () => {
       /* Rendering button animation */
-      const opt = {
-        width: musicButton.current!.offsetWidth,
-        height: musicButton.current!.offsetHeight,
-        midY: musicButton.current!.offsetHeight / 2,
+      if (!musicButton.current) return;
+
+      const opt: MusicButtonPlaceholder = {
+        width: musicButton.current.offsetWidth,
+        height: musicButton.current.offsetHeight,
+        midY: musicButton.current.offsetHeight / 2,
         points: 20,
         stretch: 10,
         sinHeight: 0,
@@ -63,7 +65,8 @@ function MusicButton() {
       musicButton.current!.style.height = opt.height;
 
       // Telling the element has 2 dimensions with getContext
-      const ctx: MusicButtonShape = musicButton.current!.getContext("2d");
+      const mButtContext: string = musicButton.current!.getContext("2d");
+      const ctx: MusicButtonShape = { mButtContext };
       ctx.scale(2, 2);
 
       ctx.strokeStyle = opt.strokeColor;

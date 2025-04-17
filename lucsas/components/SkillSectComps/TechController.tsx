@@ -89,7 +89,7 @@ function Skills() {
   // Returns the tech menu
   return (
     <>
-      <div className="techStack" style={changeVisibility("-150%", menuAppear, .1)}>
+      <div className="techStack" style={changeVisibility("-150%", menuAppear, .5)}>
         {techStack.imgs.map((t: StaticImageData, index: number) => {
           return (
             <abbr

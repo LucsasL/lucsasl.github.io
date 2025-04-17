@@ -127,6 +127,7 @@ function Portfolio() {
             {webProjectsSect.projects.map(
               (
                 {
+                  id,
                   projLink,
                   projTitle,
                   projSubtitle,
@@ -136,112 +137,109 @@ function Portfolio() {
                   techStackImg,
                   projImg,
                 },
-                index: number
               ) => {
                 return (
-                  <>
-                    <div
-                      className="proj"
-                      key={index}
-                      ref={projContainer}
-                      style={changeVisibility()}
-                    >
-                      <div className="projDetails" ref={projDetailsCont}>
-                        <div className="projDetailsInfo">
-                          <h2>Project name (Working in Progress)</h2>
-                          <p>
-                            Work
-                          </p>
+                  <div
+                    className="proj"
+                    key={id}
+                    ref={projContainer}
+                    style={changeVisibility()}
+                  >
+                    <div className="projDetails" ref={projDetailsCont}>
+                      <div className="projDetailsInfo">
+                        <h2>Project name (Working in Progress)</h2>
+                        <p>
+                          Work
+                        </p>
 
-                          <p>
-                            In
-                          </p>
+                        <p>
+                          In
+                        </p>
 
-                          <p>
-                            Progress
-                          </p>
-                        </div>
-
-                        <div className="projImage">
-                          <picture>
-                            {/* <source media="(min-width: )" srcset="" /> */}
-                            {/* <Image src={} alt="Tree" /> */}
-                          </picture>
-                        </div>
-
-                        <button
-                          className="closeBtn"
-                          key={index}
-                          ref={(el) => setRefArray<HTMLButtonElement | null>(closeDetailsButt, el, index)}
-                        >
-                          Close
-                        </button>
+                        <p>
+                          Progress
+                        </p>
                       </div>
 
-                      <div className="projInfo">
-                        <h2 className="big">
-                          {projTitle}
-                          <span
-                            style={{ fontSize: ".5em", marginLeft: "15px" }}
-                          >
-                            (Work In Progress)
-                          </span>
-                        </h2>
-
-                        <h3>{projSubtitle}</h3>
-
-                        <p>{projDesc}</p>
-
-                        <div className="techStackCont">
-                          {techStack.map((t: string, index: number) => {
-                            return (
-                              <abbr title={t} key={index}>
-                                <picture>
-                                  <Image
-                                    src={techStackImg[index]}
-                                    alt={t}
-                                    draggable="false"
-                                  />
-                                </picture>
-                              </abbr>
-                            );
-                          })}
-                        </div>
-
-                        <div>
-                          <button>
-                            <a
-                              href={projLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              key={index}
-                              ref={(el) => setRefArray<HTMLAnchorElement | null>(visitButton, el, index)}
-                              className={`projLink${index}`}
-                            >
-                              Visit Project
-                            </a>
-                          </button>
-                          <button
-                            className="detailBtn"
-                            key={index}
-                            ref={(el) => setRefArray<HTMLButtonElement | null>(detailsButt!, el, index)}
-                          >
-                            See details
-                          </button>
-                        </div>
-                      </div>
-
-                      <div className="projImg">
-                        <picture key={index}>
-                          <Image
-                            src={projImg}
-                            alt={projImgDesc}
-                            draggable="false"
-                          />
+                      <div className="projImage">
+                        <picture>
+                          {/* <source media="(min-width: )" srcset="" /> */}
+                          {/* <Image src={} alt="Tree" /> */}
                         </picture>
                       </div>
+
+                      <button
+                        className="closeBtn"
+                        key={id}
+                        ref={(el) => setRefArray<HTMLButtonElement | null>(closeDetailsButt, el, id)}
+                      >
+                        Close
+                      </button>
                     </div>
-                  </>
+
+                    <div className="projInfo">
+                      <h2 className="big">
+                        {projTitle}
+                        <span
+                          style={{ fontSize: ".5em", marginLeft: "15px" }}
+                        >
+                          (Work In Progress)
+                        </span>
+                      </h2>
+
+                      <h3>{projSubtitle}</h3>
+
+                      <p>{projDesc}</p>
+
+                      <div className="techStackCont">
+                        {techStack.map((t: string, id: number) => {
+                          return (
+                            <abbr title={t} key={id}>
+                              <picture>
+                                <Image
+                                  src={techStackImg[id]}
+                                  alt={t}
+                                  draggable="false"
+                                />
+                              </picture>
+                            </abbr>
+                          );
+                        })}
+                      </div>
+
+                      <div>
+                        <button>
+                          <a
+                            href={projLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            key={id}
+                            ref={(el) => setRefArray<HTMLAnchorElement | null>(visitButton, el, id)}
+                            className={`projLink${id}`}
+                          >
+                            Visit Project
+                          </a>
+                        </button>
+                        <button
+                          className="detailBtn"
+                          key={id}
+                          ref={(el) => setRefArray<HTMLButtonElement | null>(detailsButt!, el, id)}
+                        >
+                          See details
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="projImg">
+                      <picture key={id}>
+                        <Image
+                          src={projImg}
+                          alt={projImgDesc}
+                          draggable="false"
+                        />
+                      </picture>
+                    </div>
+                  </div>
                 );
               }
             )}

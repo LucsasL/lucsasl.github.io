@@ -193,6 +193,7 @@ export const webProjectsSect = {
   sectTitle: "In what projects did you work?",
   projects: [
     {
+      id: 1,
       projLink: "https://marknow-lemon.vercel.app/",
       projTitle: "MARKNOW",
       projSubtitle: "A Digital Marketing Agency that brings the success",
@@ -224,6 +225,7 @@ export const webProjectsSect = {
       projImg: marknow,
     },
     {
+      id: 2,
       projLink: "https://every-shop.vercel.app/",
       projTitle: "Everyshop",
       projSubtitle: "A shop that sells everything",
@@ -257,6 +259,7 @@ export const webProjectsSect = {
       projImg: everyshop,
     },
     {
+      id: 3,
       projLink: "#",
       projTitle: "B-Numerical",
       projSubtitle: "Converter of numerical bases",
@@ -267,6 +270,7 @@ export const webProjectsSect = {
       projImg: bNumerical,
     },
     {
+      id: 4,
       projLink: "https://our-solar-system-psi.vercel.app/",
       projTitle: "Our Solar System",
       projSubtitle: "A 3D environment showing our solar system",

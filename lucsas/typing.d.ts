@@ -138,7 +138,8 @@ export interface ProjShape {
 }
 
 // Music Button Type
-interface MusicButtonShape {
+export interface MusicButtonShape extends HTMLCanvasElement {
+  mButtContext?: string;
   width: number;
   height: number;
   scale: GSAPCallback;
@@ -150,4 +151,17 @@ interface MusicButtonShape {
   beginPath: GSAPCallback;
   lineTo: GSAPCallback;
   stroke: GSAPCallback;
+}
+
+export interface MusicButtonPlaceholder {
+  width: number;
+  height: number;
+  midY: number;
+  points: number;
+  stretch: number;
+  sinHeight: number;
+  speed: number;
+  strokeColor: string;
+  strokeWidth: number;
+  power: boolean;
 }

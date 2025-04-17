@@ -74,7 +74,7 @@ function Footer() {
           </div>
 
           <p>
-            Built by
+            Built by {" "}
             <a
               href="http://github.com/lucsasl"
               target="_blank"
