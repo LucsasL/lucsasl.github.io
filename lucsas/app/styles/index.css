@@ -1,0 +1,2003 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  background: #060606;
+  color: white;
+  width: 100vw;
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: none;
+  position: relative;
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body * {
+  transition: background 0.5s;
+  user-select: none;
+}
+
+.mouseCursor {
+  background: white;
+  box-shadow: 0px 0px 5px 2px rgb(80, 30, 208);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+
+button:hover ~ .mouseCursor {
+  width: 25px;
+  height: 25px;
+}
+
+a:hover ~ .mouseCursor {
+  width: 25px;
+  height: 25px;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+fieldset {
+  margin: 20px;
+}
+
+canvas {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background: rgba(0, 0, 0, 0.558);
+  color: white;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  resize: none;
+}
+
+button {
+  background: transparent;
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px 20px;
+}
+
+header label {
+  cursor: pointer;
+}
+
+p {
+  color: var(--txtColor);
+  margin: 20px 0px;
+  font-size: 1.2em;
+  line-height: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+picture,
+figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  display: none;
+}
+
+.fancy {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.big {
+  font-size: 3em;
+}
+
+.contact .icons {
+  width: 50px;
+  height: 50px;
+}
+
+.blockquote {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 992px) {
+  .scrollbar {
+    background: rgba(0, 0, 0, 0.9607843137);
+    height: 60%;
+    width: 5px;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 97%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  .scrollbar .thumb {
+    background: linear-gradient(45deg, #00f, rgb(128, 0, 255));
+    height: 70px;
+    border-radius: 30px;
+    position: relative;
+    top: 0;
+  }
+}
+header {
+  color: white;
+  width: 100vw;
+  height: 90px;
+  position: fixed;
+  /* top: -15%;  Add Javascript to animate header*/
+  top: 3%;
+  z-index: 5;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+header > div {
+  width: 95%;
+  height: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+header > div .logoDiv {
+  padding: 5px 10px;
+  border-radius: 30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+header > div .logoDiv h1 {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+header > div .logoDiv a:hover {
+  color: white;
+}
+header li {
+  text-align: center;
+  display: block;
+}
+header button {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: transparent;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+header button a {
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  display: block;
+}
+header button a {
+  font: bold 2em "Plus Jakarta Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 10px;
+}
+header figure {
+  width: 100%;
+}
+header figure img {
+  width: 75px;
+  height: 75px;
+}
+header figure h1 {
+  width: auto;
+}
+header a {
+  color: white;
+  transition: all 0.5s ease;
+}
+header a:hover {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+header .langButt {
+  background: #000;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header .langButt:hover {
+  background: #060606;
+}
+header #mainHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+header #mainHeader menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+}
+header #mainHeader nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+header #musicDiv {
+  display: inline-flex;
+  align-items: center;
+}
+header canvas {
+  background: rgb(196, 196, 196);
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+header canvas:hover {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+}
+header div#bgcolor {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header div#bgcolor label {
+  background: linear-gradient(to right, rgb(106, 106, 255), rgb(200, 0, 255));
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 80px;
+  display: block;
+  position: relative;
+  left: 0;
+  box-shadow: 0px 3px 10px 2px rgba(255, 0, 255, 0.218), inset 0px 0px 15px rgba(0, 0, 0, 0.488);
+}
+header div#bgcolor i#symbol {
+  background: white;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+header div#bgcolor i#thumb {
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.488);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+header div#bgcolor input {
+  display: none;
+}
+header div#bgcolor input:not(:checked) ~ span i#symbol {
+  border: 2px solid black;
+  box-shadow: 9px 0px 0px -6px white, -9px 0px 0px -6px white, 0px 9px 0px -6px white, 0px -9px 0px -6px white, 7px -7px 0px -6px white, -7px -7px 0px -6px white, -7px 7px 0px -6px white, 7px 7px 0px -6px white;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+}
+header div#bgcolor input:checked ~ span i#symbol {
+  background: transparent;
+  box-shadow: -4px 4px 0px 2px white;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+header div#bgcolor input:checked ~ label {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  box-shadow: 0px 3px 10px 2px rgba(0, 0, 255, 0.218), inset 0px 0px 15px rgba(0, 0, 0, 0.488);
+}
+header div#bgcolor input:checked ~ span i#thumb {
+  position: absolute;
+  left: calc(100% - 34px);
+}
+
+@media all {
+  main {
+    background: #060606;
+    width: 100%;
+  }
+  main > div {
+    width: 100%;
+  }
+  main section {
+    width: 100%;
+    padding: 50px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main section > div {
+    width: 80%;
+  }
+}
+@keyframes blob {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+}
+@keyframes blob2 {
+  0%, 100% {
+    border-radius: 89% 92% 80% 93%/50% 70% 73% 40%;
+  }
+  50% {
+    border-radius: 45% 77% 91% 50%/50% 87% 54% 66%;
+  }
+}
+@keyframes blob3 {
+  0%, 100% {
+    border-radius: 58% 66% 73% 50%/42% 45% 41% 57%;
+  }
+  50% {
+    border-radius: 42% 72% 70% 54%/32% 92% 63% 80%;
+  }
+}
+@media all {
+  section#intro {
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#intro > div {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  section#intro .intro3d,
+  section#intro iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  section#intro button {
+    width: 100%;
+  }
+  section#intro h1 {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    display: inline-block;
+  }
+  section#intro h1 span.nickname {
+    color: white;
+    font-size: 2.6em;
+    position: absolute;
+    top: 10%;
+  }
+  section#intro h1 span.cursiveWords {
+    background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: center;
+    font: bolder 1.1em "Kalam", cursive;
+    letter-spacing: 0.26em;
+    filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+    display: inline-block;
+    position: relative;
+    top: 20%;
+    z-index: 1;
+  }
+  section#intro h2.intro-h2 {
+    font-size: 2em;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.488);
+  }
+  section#intro #introducing {
+    width: 100%;
+  }
+  section#intro #introducing button {
+    padding: 0;
+    margin: 0px auto;
+    transition: all 0.5s ease;
+  }
+  section#intro #introducing button:hover {
+    scale: 1.05;
+  }
+  section#intro #introducing button:active {
+    scale: 1.04;
+  }
+  section#intro #introducing button a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 12px;
+  }
+  section#intro span {
+    line-height: 1.5em;
+  }
+  section#intro #socials {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  section#intro #socials div {
+    background: linear-gradient(45deg, #00f, rgb(128, 0, 255));
+    box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.488);
+    width: 50px;
+    height: 50px;
+    margin: 15px 10px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#intro #socials div a {
+    padding: 10px;
+  }
+  section#intro #socials img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0);
+    transition: all 0.5s ease;
+  }
+  section#intro .introPresent {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  section#intro .introPresent .picCont {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 500px;
+    height: 500px;
+    animation: blob2 10s ease-in-out infinite;
+  }
+  section#intro .introPresent .picCont:nth-child(even) {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(30px);
+    animation: blob2 10s ease-in-out infinite;
+  }
+  section#intro .introPresent img {
+    width: 50%;
+    height: 50%;
+    filter: brightness(0);
+  }
+  section#intro .scroll-anim {
+    height: auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    top: 88%;
+    z-index: 1;
+  }
+  section#intro .scroll-anim div {
+    width: 30px;
+    height: 50px;
+    border: 3px solid white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  section#intro .scroll-anim > div::after {
+    content: "";
+    background: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    top: 20%;
+    animation: scroll 1.1s ease-in-out infinite;
+  }
+  @keyframes scroll {
+    from {
+      top: 20%;
+    }
+    to {
+      top: 60%;
+      opacity: 0.2;
+    }
+  }
+}
+@media all {
+  section#services {
+    box-shadow: 0px -10px 15px rgba(0, 0, 0, 0.488);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#services > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  section#services .servBlock {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #151515);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 100%;
+    min-height: 600px;
+    max-height: 650px;
+    padding: 20px;
+    margin: 20px 0px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  section#services .servBlock .imgSv {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    animation: blob 10s ease-in-out infinite;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#services .servBlock .imgSv:nth-child(even) {
+    background: linear-gradient(135deg, rgb(128, 0, 255), #00f);
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: absolute;
+    z-index: -1;
+    filter: blur(30px);
+    animation: blob 10s ease-in-out infinite;
+  }
+  section#services .servBlock .imgSv img {
+    width: 50%;
+    height: 50%;
+    filter: brightness(0);
+  }
+  section#services h1 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin: 30px 0px;
+  }
+  section#services img {
+    width: 50%;
+    filter: brightness(0);
+  }
+}
+@media all {
+  div#about-style {
+    background: #010101;
+    width: 100%;
+    height: 1550px;
+    z-index: 0;
+    transform: skewY(-5deg);
+    position: absolute;
+    left: 0;
+  }
+  section#about {
+    height: 1550px;
+    padding-top: 50px;
+    position: relative;
+  }
+  section#about > div {
+    margin-top: 50px;
+    z-index: 1;
+  }
+  section#about img {
+    width: 614px;
+    height: 852px;
+    position: relative;
+    top: -15%;
+  }
+  section#about .range {
+    background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+    background-size: 30%;
+    color: black;
+    box-shadow: 0px 0px 20px black;
+    width: 1300%;
+    height: 60px;
+    position: absolute;
+    top: 93%;
+    transform: rotate(-4.5deg);
+    font: bold 2.5em "Plus Jakarta Sans", sans-serif;
+  }
+  section#about .range2 {
+    position: absolute;
+    top: 95%;
+    transform: rotate(13deg);
+  }
+  section#about .range > div {
+    width: 100%;
+    position: relative;
+    animation: movingRange 75s infinite linear;
+  }
+  @keyframes movingRange {
+    0% {
+      left: 30%;
+    }
+    100% {
+      left: -10%;
+    }
+  }
+}
+@media all {
+  section#area {
+    margin-top: 50px;
+  }
+  section#area > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#area > div .platform {
+    margin: 50px 0px;
+  }
+  section#area > div .img-div {
+    position: relative;
+    width: 100%;
+  }
+  section#area > div .img-div figure {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+  }
+  section#area > div h1 {
+    font: bold 2.6em "Plus Jakarta Sans", sans-serif;
+  }
+  section#area figure {
+    display: block;
+    margin-top: 20px;
+  }
+  section#area .webdev-design {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    animation: rotImg 7s infinite linear;
+  }
+  section#area .webdev-design2 {
+    animation: none;
+  }
+  @keyframes rotImg {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+@media all {
+  section#skills {
+    width: 100%;
+    position: relative;
+  }
+  section#skills > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#skills > div > div {
+    margin: 40px 0px 20px 0px;
+  }
+  section#skills > div .intersectArea {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-110%);
+    left: 0;
+    z-index: 6;
+    pointer-events: none;
+  }
+  section#skills .langsCont {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+  }
+  section#skills .langsCont > div {
+    width: 100%;
+    margin: 60px 0px;
+  }
+  section#skills .langsCont .techStack {
+    background: rgba(6, 6, 6, 0.8666666667);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 90%;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    position: fixed;
+    top: 35%;
+    left: 5%;
+    z-index: 3;
+  }
+  section#skills .langsCont .techStack .tech {
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.488), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.488);
+    width: 110px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  section#skills .langsCont .techStack .active {
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), inset -1px -1px 2px rgba(255, 255, 255, 0.1), inset 0px 15px 10px rgba(0, 0, 0, 0.5);
+  }
+  section#skills .langsCont .techStack picture, section#skills .langsCont .techStack figure {
+    height: auto;
+  }
+  section#skills .langsCont .techStack img {
+    width: 50%;
+    height: 50%;
+    pointer-events: none;
+  }
+  section#skills .langsCont .archFeatures {
+    width: 23%;
+    height: 610px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 92%;
+  }
+  section#skills .langsCont .feature {
+    background: rgba(6, 6, 6, 0.8666666667);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#skills .langsCont .featSvg {
+    color: #5d00ff;
+    width: 50%;
+    height: 50%;
+  }
+  section#skills h1 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    text-align: center;
+  }
+  section#skills figure {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .platform {
+    width: 100%;
+  }
+}
+@media all {
+  section#portfolio {
+    background: rgb(15, 15, 15);
+    padding: 50px 0px;
+    margin: 50px 0px 100px 0px;
+  }
+  section#portfolio > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#portfolio .projCont .proj {
+    background: rgba(0, 0, 0, 0.488);
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin: 30px 0px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  section#portfolio .projCont .proj > div {
+    width: 100%;
+  }
+  section#portfolio .projCont .proj .projDetails {
+    background: #060606;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -2px -2px 0px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  section#portfolio .projCont .proj .projDetails > div {
+    width: 50%;
+  }
+  section#portfolio .projCont .proj .projInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  section#portfolio .projCont .proj .techStackCont {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  section#portfolio .projCont .proj .techStackCont img {
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 10px 10px;
+  }
+  section#portfolio .projCont .proj .projImg {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  section#portfolio .projCont .proj .projImg img {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+  section#portfolio .projCont button {
+    background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+  }
+  section#portfolio .projCont button a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    display: block;
+  }
+  section#portfolio .projCont .detailBtn {
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+  section#portfolio .projCont .closeBtn {
+    padding: 12px 20px;
+    position: absolute;
+    top: 5%;
+    left: 85%;
+    cursor: pointer;
+  }
+  section#portfolio h1,
+  section#portfolio h4 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    margin: auto;
+  }
+  section#portfolio h2 {
+    font-weight: 900;
+    background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  @keyframes gradient-move {
+    0% {
+      background-position-x: 0%;
+    }
+    100% {
+      background-position-x: 100%;
+    }
+  }
+}
+@media all {
+  section#contact > div > div {
+    width: 100%;
+  }
+  section#contact .formDiv h1 {
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  section#contact form {
+    background: rgba(0, 0, 0, 0.488);
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+  }
+  section#contact form > div {
+    width: 100%;
+  }
+  section#contact form .submit-button {
+    background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  }
+  section#contact #ways-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#contact #ways-contact .contact {
+    background: linear-gradient(135deg, #00f, rgb(128, 0, 255));
+    width: 75px;
+    height: 75px;
+    display: inline-block;
+    animation: blob3 10s ease-in-out infinite;
+  }
+  section#contact #ways-contact p {
+    display: inline-block;
+    margin: 20px 10px;
+  }
+  section#contact #ways-contact img {
+    filter: brightness(0);
+  }
+}
+/* Footer Settings */
+footer {
+  background: #151515;
+  color: white;
+  padding: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+footer div#footerNav > div {
+  padding: 20px;
+}
+footer div#meetMe li {
+  display: inline-block;
+  margin: 10px;
+}
+footer div#meetMe a {
+  filter: brightness(0);
+  transition: all 0.5s ease;
+}
+footer div#meetMe a:hover {
+  filter: brightness(1);
+}
+footer div#credits {
+  background: #070707;
+  margin: 20px -30px 0px -30px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul {
+  width: 110%;
+}
+footer ul li {
+  margin: 20px;
+}
+footer a {
+  transition: all 0.5s ease;
+}
+footer a:hover {
+  background: linear-gradient(to right, #00f, rgb(128, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Icons */
+div#headerMenu {
+  background: linear-gradient(135deg, #00f, rgb(128, 0, 255));
+  color: white;
+  width: 75px;
+  height: 75px;
+  z-index: 7;
+  animation: blob 10s ease-in-out infinite;
+}
+div#headerMenu figure {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+div#headerMenu:hover {
+  box-shadow: 0px 0px 30px rgb(95, 95, 255);
+  transition: 0.5s ease;
+}
+div#headerMenu button {
+  background: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+div#headerMenu .menuIcon {
+  width: 70%;
+  height: 70%;
+  transition: all 0.5s ease;
+}
+
+.settingsMenu {
+  background: #010101;
+  width: 350px;
+  margin: 0px 10px;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: none;
+  position: absolute;
+  top: 100%;
+  left: 25%;
+  z-index: 7;
+  transition: all 0.5s ease;
+}
+.settingsMenu .socials {
+  margin: 10px 20px;
+}
+.settingsMenu button {
+  padding: 0;
+}
+.settingsMenu button a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 20px;
+}
+@media screen and (min-width: 1200px) {
+  .settingsMenu {
+    top: 95%;
+  }
+}
+
+.backUp {
+  width: 75px;
+  height: 75px;
+  margin: 0px 10px;
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 87%;
+  left: 80%;
+  z-index: 7;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.backUp > * {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .backUp {
+    top: 85%;
+  }
+}
+
+.laptop {
+  position: relative;
+}
+.laptop .image {
+  background: url("../../public/img/landscape.webp") no-repeat center;
+  background-size: cover;
+  width: 90.1%;
+  height: 95.7%;
+  border-radius: 46px;
+  position: absolute;
+  top: 2.2%;
+  left: 5%;
+  z-index: 1;
+}
+.laptop img {
+  width: 1148px;
+  height: 690px;
+}
+.laptop .laptopContent {
+  background: white;
+  color: black;
+  width: 90.1%;
+  height: 95.7%;
+  border-radius: 46px;
+  position: absolute;
+  top: 2.2%;
+  left: 5%;
+  z-index: 2;
+}
+.laptop .pageHeader {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.laptop .pageHeader ul {
+  margin-right: 20px;
+}
+.laptop .pageHeader li {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.laptop .pageHeader li:hover {
+  background: rgba(255, 255, 255, 0.196);
+}
+.laptop .dateTime {
+  width: 50%;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 64%;
+  left: 50%;
+}
+.laptop .dateTime .time {
+  font-size: 4em;
+}
+.laptop .dateTime .date {
+  font: normal 1.88em "Plus Jakarta Sans", sans-serif;
+}
+.laptop p {
+  margin: 10px 25px;
+  font-size: 1em;
+  line-height: 1em;
+}
+.laptop a {
+  display: block;
+  color: blue;
+  text-decoration: underline;
+  margin: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .laptop .image {
+    width: 77.1%;
+    height: 80.5%;
+    border-radius: 4px;
+    top: 4.9%;
+    left: 11.68%;
+  }
+  .laptop .laptopContent {
+    width: 77.1%;
+    height: 80.62%;
+    border-radius: 4px;
+    top: 4.9%;
+    left: 11.68%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .laptop .image {
+    width: 77.1%;
+    height: 80.5%;
+    border-radius: 4px;
+    top: 4.9%;
+    left: 11.68%;
+  }
+  .laptop .laptopContent {
+    width: 77.1%;
+    height: 80.62%;
+    border-radius: 4px;
+    top: 4.9%;
+    left: 11.68%;
+  }
+  .laptop .pageHeader {
+    width: 100%;
+    height: 70px;
+  }
+  .laptop .dateTime {
+    width: 50%;
+  }
+  .laptop .dateTime .time {
+    font-size: 4em;
+  }
+  .laptop .dateTime .date {
+    font: normal 1.8em "Plus Jakarta Sans", sans-serif;
+  }
+  .laptop p {
+    margin: 10px 25px;
+    font-size: 1em;
+    line-height: 1em;
+  }
+  .laptop a {
+    display: block;
+    color: blue;
+    text-decoration: underline;
+    margin: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* Intro Section */
+  .headerName {
+    display: inline;
+  }
+  .logoDiv h1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#intro .intro {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+  }
+  section#intro .intro #introImg {
+    width: 40%;
+    display: block;
+  }
+  section#intro #introducing {
+    text-align: left;
+  }
+  section#intro #socials {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Services Sections */
+  section#services > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section#services div#cards {
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#services .servBlock {
+    width: 40%;
+    min-height: 600px;
+    margin: 20px;
+  }
+  #about-style {
+    height: 1800px;
+  }
+  section#about {
+    height: 1800px;
+  }
+  /* Footer Section */
+  #footerNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #footerNav > div {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  /* Header Settings */
+  .headerName {
+    display: none;
+  }
+  header li {
+    display: inline;
+  }
+  header #mainHeader {
+    width: 80%;
+  }
+  header .logoDiv h1 {
+    opacity: 1;
+    pointer-events: all;
+  }
+  /* Intro Section */
+  section#intro > div {
+    width: 100%;
+  }
+  section#intro > div > div {
+    width: 50%;
+  }
+  section#intro .intro3D {
+    display: block;
+  }
+  section#intro .intro {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#intro .introducing {
+    text-align: left;
+  }
+  section#intro #socials {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+  div#scroll-anim {
+    width: 100vw;
+  }
+  /* Services Sections */
+  section#services #cards {
+    width: 100vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#services #cards .servBlock {
+    width: 44%;
+    min-height: 600px;
+    margin: 20px;
+  }
+  /* About Section */
+  div#about-style {
+    height: 990px;
+  }
+  section#about {
+    height: 1000px;
+  }
+  section#about > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#about > div div {
+    width: 50%;
+  }
+  /* Area Section */
+  section#portfolio .projCont .proj {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#portfolio .projCont .proj > div {
+    width: 50%;
+  }
+  /* CTA Section */
+  section#contact > div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  /* Footer Section */
+  #footerNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #footerNav > div {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* Header Settings */
+  header > div {
+    width: 100%;
+    padding: 30px;
+    margin: 0px 50px;
+  }
+  header > div .logoDiv h1 {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+  header #mainHeader {
+    width: 20%;
+  }
+  header #mainHeader menu nav {
+    width: 100%;
+  }
+  header div#bgcolor {
+    width: 15%;
+  }
+  /* Main Settings */
+  section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section > div {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+  /* Intro Section */
+  section#intro > div {
+    width: 86%;
+    margin: 10px 0px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+  section#intro > div .intro {
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+  }
+  section#intro .intro3D {
+    position: absolute;
+    display: block;
+    pointer-events: all;
+  }
+  section#intro h1 {
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: inline-block;
+  }
+  section#intro h1 span.nickname {
+    font-size: 4em;
+    position: absolute;
+    top: 0;
+  }
+  section#intro h1 span.cursiveWords {
+    font: bolder 2em "Kalam", cursive;
+    letter-spacing: 0.25em;
+  }
+  section#intro h2.intro-h2 {
+    font-size: 2em;
+    margin-top: 0;
+  }
+  section#intro #socials {
+    display: flex;
+    flex-direction: column;
+  }
+  section#intro #socials div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  section#intro .introPresent {
+    width: 50%;
+    display: flex;
+  }
+  /* Services Section */
+  section#services #cards {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  section#services #cards .servBlock {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  section#services #cards .servBlock:nth-child(1) {
+    transition: all 2.3s ease;
+  }
+  section#services #cards .servBlock:nth-child(2) {
+    transition: all 2s ease;
+  }
+  section#services #cards .servBlock:nth-child(3) {
+    transition: all 1.7s ease;
+  }
+  /* About Section */
+  div#about-style {
+    height: 850px;
+  }
+  section#about {
+    height: 900px;
+  }
+  section#about div {
+    width: 80%;
+  }
+  section#about .range {
+    width: 600%;
+    position: absolute;
+    top: 83%;
+  }
+  section#about .range2 {
+    position: absolute;
+    top: 80%;
+    transform: rotate(7deg);
+  }
+  section#about .range > div {
+    width: 100%;
+  }
+  /* Area Section */
+  section#area > div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: none;
+  }
+  section#area > div .platform {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    align-items: flex-start;
+  }
+  section#area > div .platform div {
+    width: 100%;
+  }
+  section#area > div .platform p {
+    width: 90%;
+  }
+  section#area #google-design {
+    width: 700px;
+    position: absolute;
+    transform: translateY(-25%);
+  }
+  /* Meta Section */
+  section#skills {
+    padding: 50px;
+  }
+  section#skills .langsCont .techStack {
+    width: 17%;
+    top: 9%;
+    left: 2%;
+  }
+  section#skills .langsCont .archFeatures {
+    opacity: 1;
+    pointer-events: all;
+  }
+  section#skills .platform {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+  section#skills .platform div {
+    width: 50%;
+  }
+  section#skills .platform .langsCont {
+    width: 100%;
+    position: relative;
+  }
+  section#skills .platform .langsCont > div {
+    width: 70%;
+  }
+  section#skills .platform .langsCont .techStack {
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  section#skills .platform .langsCont .techStack .tech {
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+  section#skills .platform .langsCont .techStack figure, section#skills .platform .langsCont .techStack img {
+    width: 70%;
+  }
+  section#skills .platform .langsCont .laptop {
+    width: 50%;
+    position: relative;
+  }
+  section#skills .platform .langsCont .laptop .laptopContent {
+    width: 586.9px;
+    height: 369.5px;
+    position: absolute;
+    top: 5%;
+    left: 11.7%;
+    z-index: 1;
+  }
+  section#portfolio > div {
+    width: 85%;
+    padding: 20px;
+    margin: 20px;
+  }
+  section#portfolio .projCont .proj {
+    width: 100%;
+    min-height: 600px;
+  }
+  section#portfolio .projCont .proj > div {
+    width: 50%;
+  }
+  section#portfolio .projCont .proj .projInfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 50%;
+    height: 85%;
+  }
+  section#portfolio .projCont .proj .projImg {
+    width: 40%;
+  }
+  section#portfolio .projCont .proj .projImg picture,
+  section#portfolio .projCont .proj .projImg img {
+    margin: 0;
+  }
+  section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
+    width: 50px;
+    margin: 0px 10px 10px 10px;
+  }
+  /* CTA Section */
+  section#contact #ways-contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: start;
+  }
+  section#contact .formDiv form {
+    width: 650px;
+    padding: 40px 20px;
+  }
+  section#contact .formDiv form div {
+    width: 95%;
+  }
+  /* Footer Section */
+  footer {
+    margin-top: 0px;
+  }
+  footer #footerNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-items: flex-start;
+  }
+  footer #footerNav > div {
+    width: 35%;
+    padding: 20px;
+  }
+  .settingsMenu {
+    top: 105%;
+    left: 72%;
+  }
+  .backUp {
+    left: 80%;
+  }
+}
+:root {
+  --baseBlur: rgba(255, 255, 255, .3);
+  --bg: rgb(225, 225, 225);
+  --bg2: rgb(210, 210, 210);
+  --bg3: rgb(200, 200, 200);
+  --bg3Blur: rgba(255, 255, 255, .3);
+  --bg4: rgb(230, 230, 230);
+  --shadow: rgba(0, 0, 0, .1);
+  --header: rgba(255, 255, 255, .5);
+  --promises: rgb(235, 235, 235, .5);
+  --promisesColor: rgb(139, 139, 250);
+  --input: #e5e5e5d6;
+  --bgCredit: #a8a8a8;
+  --color: rgb(20, 20, 20);
+}
+
+.light {
+  color: var(--color);
+}
+.light header {
+  color: var(--color);
+}
+.light header > div {
+  border: 3px solid rgba(255, 255, 255, 0.15);
+}
+.light header .logoDiv a:hover {
+  color: var(--color);
+}
+.light main {
+  background: var(--bg);
+}
+.light main section#intro span.nickname {
+  color: var(--color);
+}
+.light main section#intro .scroll-anim div {
+  border-color: black;
+}
+.light main section#intro .scroll-anim > div::after {
+  content: "";
+  background: black;
+}
+.light main section#services {
+  box-shadow: 0px -10px 15px var(--shadow);
+}
+.light main section#services .servBlock {
+  background: linear-gradient(to bottom, var(--baseBlur), var(--bg3));
+  box-shadow: 0px 15px 15px 10px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 0px 5px 15px 1px var(--shadow);
+}
+.light main section#services h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main #about-style {
+  background: var(--bg2);
+}
+.light main section#about .range {
+  background: rgb(240, 240, 240);
+}
+.light main section#skills .techStack {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#skills .techStack .tech {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -1px -1px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#skills .techStack .active {
+  box-shadow: 5px 5px 10px 5px var(--shadow), inset -2px -2px 2px rgba(255, 255, 255, 0.3), inset 0px 15px 10px var(--shadow);
+}
+.light main section#skills .feature {
+  background: var(--bg2);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+  backdrop-filter: blur(6px);
+}
+.light main section#skills h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main section#skills .laptop h1 {
+  background: none;
+  box-shadow: none;
+}
+.light main section#portfolio {
+  background: var(--bg4);
+}
+.light main section#portfolio .proj {
+  background: var(--bg3Blur);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#portfolio .proj a {
+  color: var(--color);
+}
+.light main section#portfolio h1,
+.light main section#portfolio h4 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light main section#contact form {
+  background: var(--shadow);
+  box-shadow: 5px 5px 15px 5px var(--shadow), -2px -2px 2px rgba(255, 255, 255, 0.3), 0px 15px 10px var(--shadow);
+}
+.light main section#contact .formDiv h1 {
+  background: var(--bg3Blur);
+  box-shadow: 0px 5px 15px var(--shadow), -3px -3px 2px rgba(255, 255, 255, 0.3), 15px 15px 15px var(--shadow);
+}
+.light .success {
+  background: var(--bg4);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.274);
+  color: var(--color);
+}
+.light footer {
+  background: var(--bg3);
+  color: var(--color);
+}
+.light footer #credits {
+  background: var(--bgCredit);
+}
+.light a {
+  color: var(--color);
+}
+.light input, .light textarea {
+  background: var(--input);
+  color: var(--color);
+}
+
+.popupFilter {
+  background: rgba(0, 0, 0, 0.488);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.popupFilter .success {
+  background: rgb(15, 15, 15);
+  box-shadow: 0px 0px 20px black;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+  transition: all 0.5s ease;
+}
+.popupFilter .success > div {
+  text-align: center;
+}
+.popupFilter .success .iconCont {
+  width: 130px;
+  height: 130px;
+  margin: auto;
+  margin-bottom: 30px;
+  border: 5px solid rgb(104, 228, 33);
+  border-radius: 50%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.popupFilter .success .iconCont .doneIcon {
+  color: rgb(104, 228, 33);
+  width: 80px;
+  height: 80px;
+}
+.popupFilter .success .closeButtCont {
+  width: 93%;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-self: flex-start;
+}
+.popupFilter .success .closeButtCont .closeButt {
+  width: 30px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */

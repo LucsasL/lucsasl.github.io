@@ -1,0 +1,214 @@
+@media all {
+  // Intro Section
+  section#intro {
+    height: 100vh;
+
+    @include verticalFlex;
+
+    > div {
+      width: 80vw;
+      height: 100vh;
+
+      @include spaceBetween(row wrap);
+    }
+
+    .intro3d,
+    iframe {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    h1 {
+      width: 100%;
+      height: 160px;
+
+      position: relative;
+      display: inline-block;
+
+      span.nickname {
+        color: $color;
+
+        font-size: 2.6em;
+
+        position: absolute;
+        top: 10%;
+      }
+
+      span.cursiveWords {
+        background: linear-gradient(to right, $color0, $color1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+        text-align: center;
+        font: bolder 1.1em "Kalam", cursive;
+        letter-spacing: 0.26em;
+        filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+
+        display: inline-block;
+
+        position: relative;
+        top: 20%;
+        z-index: 1;
+      }
+    }
+
+    h2.intro-h2 {
+      font-size: 2em;
+      text-shadow: 0px 0px 5px $shadow;
+    }
+
+    #introducing {
+      width: 100%;
+
+      button {
+        padding: 0;
+        margin: 0px auto;
+
+        transition: all 0.5s ease;
+
+        &:hover {
+          scale: 1.05;
+        }
+
+        &:active {
+          scale: 1.04;
+        }
+        
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 10px 12px;
+        }
+      }
+    }
+
+    span {
+      line-height: 1.5em;
+    }
+
+    #socials {
+      margin: 10px;
+
+      display: flex;
+      justify-content: center;
+
+      div {
+        background: linear-gradient(45deg, $color0, $color1);
+        box-shadow: 5px 2px 10px $shadow;
+
+        width: 50px;
+        height: 50px;
+        margin: 15px 10px;
+        border-radius: 50%;
+        
+        @include center;
+        
+        a {
+          padding: 10px;
+          
+        }
+      }
+    }
+
+    #socials img {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      filter: brightness(0);
+      transition: all 0.5s ease;
+    }
+
+    .introPresent {
+      width: 100%;
+
+      @include center;
+      display: none;
+
+      .picCont {
+        background: linear-gradient(135deg, $color1, $color0);
+
+        width: 500px;
+        height: 500px;
+
+        animation: blob2 10s ease-in-out infinite;
+
+        &:nth-child(even) {
+          background: linear-gradient(135deg, $color1, $color0);
+
+          width: 500px;
+          height: 500px;
+
+          position: absolute;
+          z-index: -1;
+          filter: blur(30px);
+
+          animation: blob2 10s ease-in-out infinite;
+        }
+      }
+
+      img {
+        width: 50%;
+        height: 50%;
+        filter: brightness(0);
+      }
+    }
+
+    .scroll-anim {
+      height: auto;
+      margin-bottom: 30px;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      position: absolute;
+      top: 88%;
+      z-index: 1;
+
+      div {
+        width: 30px;
+        height: 50px;
+        border: 3px solid white;
+        border-radius: 30px;
+
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .scroll-anim > div::after {
+      content: "";
+      background: white;
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50%;
+
+      display: inline-block;
+      position: relative;
+      top: 20%;
+
+      animation: scroll 1.1s ease-in-out infinite;
+    }
+
+    @keyframes scroll {
+      from {
+        top: 20%;
+      }
+      to {
+        top: 60%;
+        opacity: 0.2;
+      }
+    }
+  }
+}
