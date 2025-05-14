@@ -1,5 +1,11 @@
 // Hooks Import
-import React, { useRef, useEffect, useContext, ReactNode, RefObject } from "react";
+import React, {
+  useRef,
+  useEffect,
+  useContext,
+  type RefObject,
+  type MouseEvent,
+} from "react";
 import Image from "next/image";
 
 // Context Import
@@ -31,7 +37,7 @@ function Skills() {
     const element = menuDiv.current as Element | null;
 
     if (!element) return;
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -49,18 +55,23 @@ function Skills() {
   }, [menuDiv, setMenuAppear, buttons]);
 
   // A function that detects the click of a button in the tech menu
-  const changeTech = (tech: string, e: MouseEvent, index: number) => {
+  const changeTech = (
+    tech: string,
+    e: MouseEvent<HTMLButtonElement>,
+    index: number
+  ) => {
     // Takes the reference of the exact button, and removes the "active" CSS class, that makes the button look pressed
     buttonsBlock.current.forEach((el: HTMLButtonElement) =>
       el.classList.remove("active")
     );
 
     if (!e.target) return;
-    
-    console.log(e.target);
+
+    const target = e.target as HTMLButtonElement;
+
+    console.log(target);
     // Adds the CSS class "active" in the pressed button
-    e.target.classList.add("active");
-    
+    target.classList.add("active");
 
     // It checks the button that the user pressed, and change the opacity of the features, depending on the button the user clicks
     const featureArray = [
@@ -85,25 +96,36 @@ function Skills() {
     dispatch({ type: `change_tech_${tech}` });
   };
 
-  function setRef<Type extends Element | ReactNode | RefObject<HTMLButtonElement[]>>(elArray: Type[], el: Type | null, index: number) {
-    elArray.current[index] = el;
+  function setRef(
+    elArray: RefObject<HTMLButtonElement[]>,
+    el: HTMLElement | null,
+    index: number
+  ) {
+    if (el instanceof HTMLButtonElement) {
+      elArray.current[index] = el;
+    }
   }
 
   // Returns the tech menu
   return (
     <>
-      <div className="techStack" style={changeVisibility("-150%", menuAppear, .5)}>
+      <div
+        className="techStack"
+        style={changeVisibility("-150%", menuAppear, 0.5)}
+      >
         {techStack.imgs.map((t: StaticImageData, index: number) => {
           return (
             <abbr
               title={techStack.tech[index]}
               key={index}
-              ref={(el) => setRef<HTMLButtonElement>(buttons, el, index)}
+              ref={(el: HTMLElement | null) => setRef(buttons, el, index)}
             >
               <button
                 className={`tech ${index === 0 ? "active" : ""}`}
                 onClick={(e) => changeTech(techStack.tech[index], e, index)}
-                ref={(el) => setRef<HTMLButtonElement>(buttonsBlock, el, index)}
+                ref={(el: HTMLButtonElement | null) =>
+                  setRef(buttonsBlock, el, index)
+                }
               >
                 <picture style={{ boxShadow: "none", pointerEvents: "none" }}>
                   <Image src={t} alt={techStack.tech[index]} />

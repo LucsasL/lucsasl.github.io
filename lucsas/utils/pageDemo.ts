@@ -1,5 +1,4 @@
-import { type TechActiveProps } from "@/typing";
-import { SetStateAction } from "react";
+import { type TechAction, type TechActiveProps } from "@/typing";
 
 export const techObj: TechActiveProps = {
   type: "default_value",
@@ -43,10 +42,11 @@ export const techObj: TechActiveProps = {
   },
 };
 
-export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiveProps>) => {
+export const reducer = (state: TechActiveProps, action: TechAction): TechActiveProps => {
   switch (action.type) {
     case "change_tech_HTML":
       return {
+        type: "change_tech_HTML",
         basicSettings: {
           bg: "white",
           color: "black",
@@ -89,6 +89,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_CSS":
       return {
+        type: "change_tech_CSS",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -97,6 +98,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerSizeMob: "2.2em",
           headerPadding: "20px",
           headerMargin: "1px 5px",
@@ -137,6 +139,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_JavaScript":
       return {
+        type: "change_tech_JavaScript",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -145,6 +148,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -182,6 +186,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_TypeScript":
       return {
+        type: "change_tech_TypeScript",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -190,6 +195,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -227,6 +233,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_React":
       return {
+        type: "change_tech_React",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -235,6 +242,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -272,6 +280,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_Next":
       return {
+        type: "change_tech_Next",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -280,6 +289,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -317,6 +327,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_SASS":
       return {
+        type: "change_tech_SASS",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -325,6 +336,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -348,7 +360,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         content: {
           title: "SASS",
-          text: "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and strucutures.",
+          text: "Preprocessor of CSS that brings programming to the stylesheets of CSS, with handy and different ways to write styles, including mixins, partials and even programming features such as variables and structures.",
           textLink: "SASS",
           link: "https://sass-lang.com/",
           dateTime: {
@@ -362,6 +374,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_GSAP":
       return {
+        type: "change_tech_GSAP",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -370,6 +383,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -407,6 +421,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_Jest":
       return {
+        type: "change_tech_Jest",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -415,6 +430,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -452,6 +468,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_Redux":
       return {
+        type: "change_tech_Redux",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -460,6 +477,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -497,6 +515,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_Python":
       return {
+        type: "change_tech_Python",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -505,6 +524,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },
@@ -542,6 +562,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
     case "change_tech_Git":
       return {
+        type: "change_tech_Git",
         basicSettings: {
           bg: "linear-gradient(to right, #060606, rgba(0, 0, 0, .4))",
           color: "white",
@@ -550,6 +571,7 @@ export const reducer = (state: TechActiveProps, action: SetStateAction<TechActiv
 
         header: {
           headerSize: "3.5em",
+          headerBoxShadow: "0",
           headerPadding: "20px",
           headerMargin: "1px 5px",
         },

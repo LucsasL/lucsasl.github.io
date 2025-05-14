@@ -1,5 +1,5 @@
 import { type StaticImageData, type Ref } from "next/image";
-import { type Dispatch, type SetStateAction, type RefObject } from "react";
+import { type Dispatch, type SetStateAction, type RefObject, ActionDispatch } from "react";
 
 // General Types
 interface ImportedImage {
@@ -25,10 +25,11 @@ export interface StateShape {
   headerBlur: string;
 }
 
-
 // Tech Shape
 export interface TechActiveProps {
   type: string;
+  activeTech?: activeTech;
+  dispatch: ActionDispatch;
   basicSettings: {
     bg: string;
     color: string;
@@ -74,6 +75,20 @@ export interface TechActiveProps {
     };
   };
 }
+
+type TechAction =
+  | { type: "change_tech_HTML"; payload: TechActiveProps }
+  | { type: "change_tech_CSS"; payload: TechActiveProps }
+  | { type: "change_tech_JavaScript"; payload: TechActiveProps }
+  | { type: "change_tech_TypeScript"; payload: TechActiveProps }
+  | { type: "change_tech_React"; payload: TechActiveProps }
+  | { type: "change_tech_Next"; payload: TechActiveProps }
+  | { type: "change_tech_SASS"; payload: TechActiveProps }
+  | { type: "change_tech_GSAP"; payload: TechActiveProps }
+  | { type: "change_tech_Jest"; payload: TechActiveProps }
+  | { type: "change_tech_Redux"; payload: TechActiveProps }
+  | { type: "change_tech_Python"; payload: TechActiveProps }
+  | { type: "change_tech_Git"; payload: TechActiveProps };
 
 // Seasons Change
 interface StationsShape {

@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import React, { useState, useReducer, useEffect, useRef, createContext, SetStateAction } from "react";
+import React, { useState, useReducer, useEffect, useRef, createContext } from "react";
 
 // Components Import
 import TechController from "@/components/SkillSectComps/TechController";
@@ -12,13 +12,13 @@ import Features from "@/components/SkillSectComps/features";
 import { webSkillsSect } from "../utils/data";
 import { reducer } from "../utils/pageDemo";
 import { techObj } from "../utils/pageDemo";
-import { TechActiveProps, type TechShape } from "@/typing";
+import { type TechActiveProps } from "@/typing";
 
 // Data Destructuring
 const { techStack } = webSkillsSect;
 const { techFeature } = techStack;
 
-export const Data = createContext<TechShape>(techObj);
+export const Data = createContext<TechActiveProps>(techObj);
 
 function Skills() {
   // States declaration
@@ -30,7 +30,7 @@ function Skills() {
   const menuDiv = useRef<HTMLDivElement>(null);
 
   // TechController States and Ref
-  const [activeTech, dispatch] = useReducer<TechActiveProps, SetStateAction<TechActiveProps>>(reducer, techObj);
+  const [activeTech, dispatch] = useReducer(reducer, techObj);
 
   // Features States
   const [featureOpacity, setFeatureOpacity] = useState<number[]>([0, 0, 0, 0, 0, 0, 0]);
