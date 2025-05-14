@@ -1,5 +1,11 @@
 import { type StaticImageData, type Ref } from "next/image";
-import { type Dispatch, type SetStateAction, type RefObject, ActionDispatch } from "react";
+import {
+  type Dispatch,
+  type SetStateAction,
+  type RefObject,
+  ActionDispatch,
+  type ReactNode,
+} from "react";
 
 // General Types
 interface ImportedImage {
@@ -30,6 +36,16 @@ export interface TechActiveProps {
   type: string;
   activeTech?: activeTech;
   dispatch: ActionDispatch;
+  infoIntersect: boolean;
+  menuDiv: RefObject<HTMLDivElement | null>;
+  menuAppear;
+  setMenuAppear: (appear: boolean) => void;
+  changeVisibility: (
+    pos: string | number,
+    state: boolean,
+    time?: number | undefined
+  ) => { opacity: number; transition: string; transform?: string | undefined };
+  setFeatureOpacity: (feature: number[]) => void;
   basicSettings: {
     bg: string;
     color: string;

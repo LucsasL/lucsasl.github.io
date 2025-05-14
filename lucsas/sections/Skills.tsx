@@ -57,7 +57,7 @@ function Skills() {
 
   // It changes the visibility of the tech controller
   const changeVisibility = (
-    side: string | number,
+    pos: string | number,
     state: boolean,
     time: number = 0.5
   ) => {
@@ -69,7 +69,7 @@ function Skills() {
       : {
           opacity: 0,
           transition: `all ${time}s ease`,
-          transform: `translateX(${side})`,
+          transform: `translateX(${pos})`,
         };
   };
 
