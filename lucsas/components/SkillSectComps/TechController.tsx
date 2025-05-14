@@ -55,9 +55,12 @@ function Skills() {
       el.classList.remove("active")
     );
 
+    if (!e.target) return;
+    
     console.log(e.target);
     // Adds the CSS class "active" in the pressed button
-    e.target!.classList.add("active");
+    e.target.classList.add("active");
+    
 
     // It checks the button that the user pressed, and change the opacity of the features, depending on the button the user clicks
     const featureArray = [

@@ -50,12 +50,13 @@ function Portfolio() {
 
   useGSAP(() => {
     // When the user clicks the details button
-    // the screen will scroll to (0, 4110) where
-    // a div will appear showcasing the projects
-    //  details
+    // the screen will scroll to a static position
+    // where a div will appear showcasing the
+    // projects details
     detailsButt.current.forEach((clButt: HTMLElement) => {
       clButt.addEventListener("click", () => {
-        window.scrollTo(0, 4110);
+        document.body.style.position = "fixed";
+        document.body.style.top = "-4420px";
 
         // Scaling the project container to grow
         gsap.to(".projCont", {
@@ -111,9 +112,13 @@ function Portfolio() {
         };
   };
 
-  function setRefArray<Type>(elArray: RefObject<Type[]>, el: Type, index: number) {
+  function setRefArray<Type>(
+    elArray: RefObject<Type[]>,
+    el: Type,
+    index: number
+  ) {
     elArray.current[index] = el;
-  };
+  }
 
   return (
     <>
@@ -125,19 +130,17 @@ function Portfolio() {
 
           <div className="projCont">
             {webProjectsSect.projects.map(
-              (
-                {
-                  id,
-                  projLink,
-                  projTitle,
-                  projSubtitle,
-                  projDesc,
-                  projImgDesc,
-                  techStack,
-                  techStackImg,
-                  projImg,
-                },
-              ) => {
+              ({
+                id,
+                projLink,
+                projTitle,
+                projSubtitle,
+                projDesc,
+                projImgDesc,
+                techStack,
+                techStackImg,
+                projImg,
+              }) => {
                 return (
                   <div
                     className="proj"
@@ -148,17 +151,11 @@ function Portfolio() {
                     <div className="projDetails" ref={projDetailsCont}>
                       <div className="projDetailsInfo">
                         <h2>Project name (Working in Progress)</h2>
-                        <p>
-                          Work
-                        </p>
+                        <p>Work</p>
 
-                        <p>
-                          In
-                        </p>
+                        <p>In</p>
 
-                        <p>
-                          Progress
-                        </p>
+                        <p>Progress</p>
                       </div>
 
                       <div className="projImage">
@@ -171,7 +168,13 @@ function Portfolio() {
                       <button
                         className="closeBtn"
                         key={id}
-                        ref={(el) => setRefArray<HTMLButtonElement | null>(closeDetailsButt, el, id)}
+                        ref={(el) =>
+                          setRefArray<HTMLButtonElement | null>(
+                            closeDetailsButt,
+                            el,
+                            id
+                          )
+                        }
                       >
                         Close
                       </button>
@@ -180,9 +183,7 @@ function Portfolio() {
                     <div className="projInfo">
                       <h2 className="big">
                         {projTitle}
-                        <span
-                          style={{ fontSize: ".5em", marginLeft: "15px" }}
-                        >
+                        <span style={{ fontSize: ".5em", marginLeft: "15px" }}>
                           (Work In Progress)
                         </span>
                       </h2>
@@ -214,7 +215,13 @@ function Portfolio() {
                             target="_blank"
                             rel="noopener noreferrer"
                             key={id}
-                            ref={(el) => setRefArray<HTMLAnchorElement | null>(visitButton, el, id)}
+                            ref={(el) =>
+                              setRefArray<HTMLAnchorElement | null>(
+                                visitButton,
+                                el,
+                                id
+                              )
+                            }
                             className={`projLink${id}`}
                           >
                             Visit Project
@@ -223,7 +230,13 @@ function Portfolio() {
                         <button
                           className="detailBtn"
                           key={id}
-                          ref={(el) => setRefArray<HTMLButtonElement | null>(detailsButt!, el, id)}
+                          ref={(el) =>
+                            setRefArray<HTMLButtonElement | null>(
+                              detailsButt!,
+                              el,
+                              id
+                            )
+                          }
                         >
                           See details
                         </button>

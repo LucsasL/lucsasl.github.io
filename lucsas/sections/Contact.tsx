@@ -29,9 +29,12 @@ function Contact() {
   }, [contactSect]);
 
   // These functions controls the input the user types in the <input /> element
-  function changeInputValue<
+  const changeInputValue = <
     Type extends HTMLInputElement | HTMLTextAreaElement
-  >(inp: Type | null, state: string) {
+  >(
+    inp: Type | null,
+    state: string
+  ) => {
     if (!inp) return;
 
     if (state === "name") {
@@ -49,7 +52,7 @@ function Contact() {
     if (state === "message") {
       setMsgInput(inp.value);
     }
-  }
+  };
 
   return (
     <>

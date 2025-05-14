@@ -463,7 +463,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#intro h1 span.nickname {
     color: white;
-    font-size: 3em;
+    font-size: 2.6em;
     position: absolute;
     top: 10%;
   }
@@ -473,7 +473,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
-    font: bolder 1.5em "Kalam", cursive;
+    font: bolder 1.1em "Kalam", cursive;
     letter-spacing: 0.26em;
     filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
     display: inline-block;
