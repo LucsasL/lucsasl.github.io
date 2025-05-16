@@ -5,6 +5,16 @@
       width: 100%;
     }
 
+    .text-contact {
+      margin-bottom: 50px;
+    }
+
+    .contact-cont {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
     .formDiv h1 {
       @include blockHeader;
     }
@@ -51,7 +61,8 @@
 
       p {
         display: inline-block;
-        margin: 20px 10px;
+        margin: 20px 5px;
+        text-align: center;
       }
 
       img {

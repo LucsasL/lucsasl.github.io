@@ -54,7 +54,11 @@ function Areas() {
         <div>
           <div className="platform">
             {/* Areas Info */}
-            <div ref={infoBox} style={changeVisibility(0)}>
+            <div
+              className="info-area-div"
+              ref={infoBox}
+              style={changeVisibility(0)}
+            >
               <h1 className="big">Front-end Web Development</h1>
 
               <p>
@@ -81,7 +85,11 @@ function Areas() {
 
           <div className="platform">
             {/* Areas Info */}
-            <div ref={infoBox} style={changeVisibility(0)}>
+            <div
+              className="info-area-div"
+              ref={infoBox}
+              style={changeVisibility(0)}
+            >
               <h1 className="big">Back-end Web Development</h1>
 
               <p>

@@ -60,14 +60,14 @@ function Contact() {
         <div>
           {/* Contact Information */}
           <div id="ways-contact">
-            <div style={{ textAlign: "center" }}>
+            <div className="text-contact" style={{ textAlign: "center" }}>
               <p>Want to bring more attention to your business?</p>
 
               <h1 className="big fancy">Let&apos;s grow together!</h1>
             </div>
 
             <div>
-              <div>
+              <div className="contact-cont">
                 <div className="contact">
                   <figure>
                     <Image
@@ -85,7 +85,7 @@ function Contact() {
                 </p>
               </div>
 
-              <div>
+              <div className="contact-cont">
                 <div className="contact">
                   <figure>
                     <Image

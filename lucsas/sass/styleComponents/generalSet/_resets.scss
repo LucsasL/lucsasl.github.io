@@ -162,6 +162,7 @@ figcaption {
 
 .blockquote {
   @include center;
+  text-align: center;
 }
 
 abbr {

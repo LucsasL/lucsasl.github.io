@@ -155,6 +155,7 @@ figcaption {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 abbr {
@@ -429,7 +430,8 @@ header div#bgcolor input:checked ~ span i#thumb {
 }
 @media all {
   section#intro {
-    height: 100vh;
+    width: 100%;
+    height: 120vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: none;
@@ -444,20 +446,15 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     gap: 30px;
   }
-  section#intro .intro3d,
-  section#intro iframe {
+  section#intro > div .intro {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   section#intro button {
     width: 100%;
   }
   section#intro h1 {
     width: 100%;
-    height: 160px;
+    height: 125px;
     position: relative;
     display: inline-block;
   }
@@ -473,7 +470,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
-    font: bolder 1.1em "Kalam", cursive;
+    font: bolder 1.06em "Kalam", cursive;
     letter-spacing: 0.26em;
     filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
     display: inline-block;
@@ -487,6 +484,9 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#intro #introducing {
     width: 100%;
+  }
+  section#intro #introducing p {
+    margin: 10px 0px;
   }
   section#intro #introducing button {
     padding: 0;
@@ -509,16 +509,17 @@ header div#bgcolor input:checked ~ span i#thumb {
     line-height: 1.5em;
   }
   section#intro #socials {
-    margin: 10px;
+    margin: 20px;
     display: flex;
     justify-content: center;
+    flex-flow: row wrap;
   }
   section#intro #socials div {
     background: linear-gradient(45deg, #00f, rgb(128, 0, 255));
     box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.488);
     width: 50px;
     height: 50px;
-    margin: 15px 10px;
+    margin: 2px 10px;
     border-radius: 50%;
     display: flex;
     flex-flow: row nowrap;
@@ -623,7 +624,6 @@ header div#bgcolor input:checked ~ span i#thumb {
     -webkit-backdrop-filter: blur(6px);
     width: 100%;
     min-height: 600px;
-    max-height: 650px;
     padding: 20px;
     margin: 20px 0px;
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
@@ -670,6 +670,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     margin: 30px 0px;
+    text-align: center;
   }
   section#services img {
     width: 50%;
@@ -680,14 +681,13 @@ header div#bgcolor input:checked ~ span i#thumb {
   div#about-style {
     background: #010101;
     width: 100%;
-    height: 1550px;
+    height: 1850px;
     z-index: 0;
     transform: skewY(-5deg);
     position: absolute;
     left: 0;
   }
   section#about {
-    height: 1550px;
     padding-top: 50px;
     position: relative;
   }
@@ -697,7 +697,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#about img {
     width: 614px;
-    height: 852px;
+    height: 500px;
     position: relative;
     top: -15%;
   }
@@ -707,15 +707,15 @@ header div#bgcolor input:checked ~ span i#thumb {
     color: black;
     box-shadow: 0px 0px 20px black;
     width: 1300%;
-    height: 60px;
+    height: 35px;
     position: absolute;
-    top: 93%;
+    top: 96%;
     transform: rotate(-4.5deg);
-    font: bold 2.5em "Plus Jakarta Sans", sans-serif;
+    font: bold 1.5em "Plus Jakarta Sans", sans-serif;
   }
   section#about .range2 {
     position: absolute;
-    top: 95%;
+    top: 96%;
     transform: rotate(13deg);
   }
   section#about .range > div {
@@ -744,6 +744,9 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#area > div .platform {
     margin: 50px 0px;
+  }
+  section#area > div .info-area-div {
+    margin-bottom: 80px;
   }
   section#area > div .img-div {
     position: relative;
@@ -918,7 +921,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
     padding: 30px;
-    margin: 30px 0px;
+    margin: 30px -20px;
     border-radius: 20px;
     position: relative;
     display: flex;
@@ -965,6 +968,10 @@ header div#bgcolor input:checked ~ span i#thumb {
     align-items: center;
     justify-content: flex-start;
   }
+  section#portfolio .projCont .proj .techStackCont abbr {
+    width: 50%;
+    margin: 5px 0px;
+  }
   section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
     height: 50px;
@@ -990,6 +997,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     border-radius: 5px;
     outline: none;
     padding: 0;
+    width: 100%;
   }
   section#portfolio .projCont button a {
     color: white;
@@ -1022,11 +1030,12 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin: auto;
   }
   section#portfolio h2 {
-    font-weight: 900;
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    font-weight: 900;
+    word-wrap: break-word;
   }
   @keyframes gradient-move {
     0% {
@@ -1040,6 +1049,14 @@ header div#bgcolor input:checked ~ span i#thumb {
 @media all {
   section#contact > div > div {
     width: 100%;
+  }
+  section#contact .text-contact {
+    margin-bottom: 50px;
+  }
+  section#contact .contact-cont {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
   section#contact .formDiv h1 {
     background: rgba(0, 0, 0, 0.3);
@@ -1082,7 +1099,8 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#contact #ways-contact p {
     display: inline-block;
-    margin: 20px 10px;
+    margin: 20px 5px;
+    text-align: center;
   }
   section#contact #ways-contact img {
     filter: brightness(0);
@@ -1181,7 +1199,7 @@ div#headerMenu .menuIcon {
   align-items: none;
   position: absolute;
   top: 100%;
-  left: 25%;
+  left: 0%;
   z-index: 7;
   transition: all 0.5s ease;
 }
@@ -1410,6 +1428,7 @@ div#headerMenu .menuIcon {
   section#services .servBlock {
     width: 40%;
     min-height: 600px;
+    max-height: 650px;
     margin: 20px;
   }
   #about-style {
@@ -1484,6 +1503,7 @@ div#headerMenu .menuIcon {
   section#services #cards .servBlock {
     width: 44%;
     min-height: 600px;
+    max-height: 650px;
     margin: 20px;
   }
   /* About Section */
@@ -1583,13 +1603,9 @@ div#headerMenu .menuIcon {
     align-items: center;
     flex-flow: row-reverse nowrap;
   }
-  section#intro .intro3D {
-    position: absolute;
-    display: block;
-    pointer-events: all;
-  }
   section#intro h1 {
     width: 100%;
+    height: 160px;
     position: relative;
     top: 0;
     display: inline-block;
@@ -1607,15 +1623,19 @@ div#headerMenu .menuIcon {
     font-size: 2em;
     margin-top: 0;
   }
+  section#intro p {
+    margin: 20px 0px;
+  }
   section#intro #socials {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
   }
   section#intro #socials div {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    margin: 15px 10px;
   }
   section#intro .introPresent {
     width: 50%;
@@ -1652,10 +1672,18 @@ div#headerMenu .menuIcon {
   section#about div {
     width: 80%;
   }
+  section#about img {
+    width: auto;
+    height: auto;
+    position: relative;
+    top: -15%;
+  }
   section#about .range {
     width: 600%;
+    height: 60px;
     position: absolute;
     top: 83%;
+    font: bold 2.5em "Plus Jakarta Sans", sans-serif;
   }
   section#about .range2 {
     position: absolute;
@@ -1753,6 +1781,7 @@ div#headerMenu .menuIcon {
   section#portfolio .projCont .proj {
     width: 100%;
     min-height: 600px;
+    margin: 30px 0px;
   }
   section#portfolio .projCont .proj > div {
     width: 50%;
@@ -1772,9 +1801,15 @@ div#headerMenu .menuIcon {
   section#portfolio .projCont .proj .projImg img {
     margin: 0;
   }
+  section#portfolio .projCont .proj .techStackCont abbr {
+    width: auto;
+  }
   section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
     margin: 0px 10px 10px 10px;
+  }
+  section#portfolio .projCont button {
+    width: auto;
   }
   /* CTA Section */
   section#contact #ways-contact {
@@ -1782,6 +1817,13 @@ div#headerMenu .menuIcon {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: start;
+  }
+  section#contact #ways-contact .contact-cont {
+    display: block;
+  }
+  section#contact #ways-contact p {
+    text-align: left;
+    margin: 20px 10px;
   }
   section#contact .formDiv form {
     width: 650px;
