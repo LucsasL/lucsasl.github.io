@@ -1,4 +1,8 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  header {
+    top: 3%;
+  }
+  
   /* Intro Section */
   .headerName {
     display: inline;
@@ -34,6 +38,10 @@
     #socials {
       display: flex;
       flex-direction: column;
+    }
+
+    .scroll-anim{
+      display: flex;
     }
   }
 

@@ -1,6 +1,8 @@
 @media screen and (min-width: 1200px) {
   /* Header Settings */
   header {
+    top: 3%;
+
     > div {
       width: 100%;
       padding: 30px;
@@ -103,6 +105,11 @@
 
     .introPresent {
       width: 50%;
+      display: flex;
+
+    }
+    
+    .scroll-anim {
       display: flex;
     }
   }

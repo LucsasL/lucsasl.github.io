@@ -187,8 +187,7 @@ header {
   width: 100vw;
   height: 90px;
   position: fixed;
-  /* top: -15%;  Add Javascript to animate header*/
-  top: 3%;
+  top: -15%;
   z-index: 5;
   display: flex;
   flex-flow: row nowrap;
@@ -431,7 +430,9 @@ header div#bgcolor input:checked ~ span i#thumb {
 @media all {
   section#intro {
     width: 100%;
-    height: 120vh;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: none;
@@ -567,7 +568,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#intro .scroll-anim {
     height: auto;
     margin-bottom: 30px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: flex-end;
     position: absolute;
@@ -1379,6 +1380,9 @@ div#headerMenu .menuIcon {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  header {
+    top: 3%;
+  }
   /* Intro Section */
   .headerName {
     display: inline;
@@ -1410,6 +1414,9 @@ div#headerMenu .menuIcon {
   section#intro #socials {
     display: flex;
     flex-direction: column;
+  }
+  section#intro .scroll-anim {
+    display: flex;
   }
   /* Services Sections */
   section#services > div {
@@ -1453,6 +1460,9 @@ div#headerMenu .menuIcon {
   .headerName {
     display: none;
   }
+  header {
+    top: 3%;
+  }
   header li {
     display: inline;
   }
@@ -1489,8 +1499,9 @@ div#headerMenu .menuIcon {
     align-items: center;
     flex-flow: column nowrap;
   }
-  div#scroll-anim {
+  section#intro .scroll-anim {
     width: 100vw;
+    display: flex;
   }
   /* Services Sections */
   section#services #cards {
@@ -1552,6 +1563,9 @@ div#headerMenu .menuIcon {
 }
 @media screen and (min-width: 1200px) {
   /* Header Settings */
+  header {
+    top: 3%;
+  }
   header > div {
     width: 100%;
     padding: 30px;
@@ -1639,6 +1653,9 @@ div#headerMenu .menuIcon {
   }
   section#intro .introPresent {
     width: 50%;
+    display: flex;
+  }
+  section#intro .scroll-anim {
     display: flex;
   }
   /* Services Section */
