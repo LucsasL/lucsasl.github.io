@@ -1,6 +1,9 @@
 // General Imports
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import Image from 'next/image';
+
+// Context Imports
+import { BgTheme } from '@/sections/Header';
 
 // Components Imports
 import NavLinks from "./NavLinks";
@@ -18,7 +21,7 @@ import linkedinLogo from "@/public/img/linkedin-social.webp";
 
 function HeaderMenu() {
   // States
-  const [menuShown, setMenuShown] = useState<boolean>(false);
+  const { menuShown, setMenuShown } = useContext(BgTheme);
 
   useEffect(() => {
     // Checks the size of the screen and readjust the menu element to the proper location
@@ -27,7 +30,7 @@ function HeaderMenu() {
       setMenuShown(menuShown);
 
     });
-  }, [menuShown]);
+  }, [menuShown, setMenuShown]);
 
   return (
     <>

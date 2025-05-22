@@ -1,7 +1,7 @@
 "use client";
 
 // Hooks Import
-import { RefObject, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Icons
 import { FaArrowUp } from "react-icons/fa";
@@ -22,6 +22,10 @@ function UpButton() {
 
       if (window.innerWidth < 1200) {
         topButt.current!.style.left = "80%";
+      }
+      
+      if (window.innerWidth <= 425) {
+        topButt.current!.style.left = "70%";
       }
 
     });
@@ -54,7 +58,7 @@ function UpButton() {
             : {
                 opacity: scrolled ? "1" : "0",
                 pointerEvents: scrolled ? "" : "none",
-                left: "80%",
+                left: "70%",
               }
         }
         onClick={() => window.scrollTo(0, 0)}

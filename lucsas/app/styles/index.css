@@ -189,6 +189,7 @@ header {
   position: fixed;
   top: -15%;
   z-index: 5;
+  transition: top 0.2s linear;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -461,9 +462,9 @@ header div#bgcolor input:checked ~ span i#thumb {
   }
   section#intro h1 span.nickname {
     color: white;
-    font-size: 2.6em;
+    font-size: 2.35em;
     position: absolute;
-    top: 10%;
+    top: 15%;
   }
   section#intro h1 span.cursiveWords {
     background: linear-gradient(to right, #00f, rgb(128, 0, 255));
@@ -761,7 +762,7 @@ header div#bgcolor input:checked ~ span i#thumb {
     margin-top: -50px;
   }
   section#area > div h1 {
-    font: bold 2.6em "Plus Jakarta Sans", sans-serif;
+    font: bold 2.3em "Plus Jakarta Sans", sans-serif;
   }
   section#area figure {
     display: block;
@@ -921,7 +922,7 @@ header div#bgcolor input:checked ~ span i#thumb {
   section#portfolio .projCont .proj {
     background: rgba(0, 0, 0, 0.488);
     box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.1), 0px 15px 10px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 30px 20px;
     margin: 30px -20px;
     border-radius: 20px;
     position: relative;
@@ -1035,8 +1036,12 @@ header div#bgcolor input:checked ~ span i#thumb {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    font-weight: 900;
+    font: 900 2.6em "Plus Jakarta Sans", sans-serif;
     word-wrap: break-word;
+    width: 100%;
+  }
+  section#portfolio h2 span {
+    margin-left: 10px;
   }
   @keyframes gradient-move {
     0% {
@@ -1694,6 +1699,7 @@ div#headerMenu .menuIcon {
     height: auto;
     position: relative;
     top: -15%;
+    scale: 220%;
   }
   section#about .range {
     width: 600%;
@@ -1730,6 +1736,9 @@ div#headerMenu .menuIcon {
   }
   section#area > div .platform p {
     width: 90%;
+  }
+  section#area > div h1 {
+    font-size: 2.6em;
   }
   section#area #google-design {
     width: 700px;
@@ -1798,6 +1807,7 @@ div#headerMenu .menuIcon {
   section#portfolio .projCont .proj {
     width: 100%;
     min-height: 600px;
+    padding: 30px;
     margin: 30px 0px;
   }
   section#portfolio .projCont .proj > div {
@@ -1824,6 +1834,12 @@ div#headerMenu .menuIcon {
   section#portfolio .projCont .proj .techStackCont picture, section#portfolio .projCont .proj .techStackCont img {
     width: 50px;
     margin: 0px 10px 10px 10px;
+  }
+  section#portfolio .projCont .proj h2 {
+    font-size: 3em;
+  }
+  section#portfolio .projCont .proj h2 span {
+    margin-left: 15px;
   }
   section#portfolio .projCont button {
     width: auto;

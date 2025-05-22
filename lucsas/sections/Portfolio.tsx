@@ -183,7 +183,7 @@ function Portfolio() {
                     <div className="projInfo">
                       <h2 className="big">
                         {projTitle}
-                        <span style={{ fontSize: ".5em", marginLeft: "15px" }}>
+                        <span style={{ fontSize: ".5em" }}>
                           (Work In Progress)
                         </span>
                       </h2>

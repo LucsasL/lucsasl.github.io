@@ -121,10 +121,18 @@ export const webServiceSect = {
 
 type AboutSectShape = {
   aboutImg: StaticImageData;
+  width: number[];
+  height: number[];
 };
 
 export const webAboutSect: AboutSectShape = {
   aboutImg: lucsas,
+  width: [
+       
+  ],
+  height: [
+
+  ],
 };
 
 export const webSkillsSect = {

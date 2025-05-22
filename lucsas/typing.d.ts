@@ -29,6 +29,8 @@ export interface StateShape {
   headerColor: string;
   headerBorder: string;
   headerBlur: string;
+  menuShown: boolean;
+  setMenuShown: Dispatch<SetStateAction<boolean>>;
 }
 
 // Tech Shape
