@@ -230,10 +230,6 @@ header button {
   border: none;
   border-radius: 5px;
   outline: none;
-  background: transparent;
-  width: auto;
-  padding: 0;
-  margin: 0;
 }
 header button a {
   color: white;
@@ -241,6 +237,12 @@ header button a {
   height: 100%;
   padding: 10px 20px;
   display: block;
+}
+header button {
+  background: transparent;
+  width: auto;
+  padding: 0;
+  margin: 0;
 }
 header button a {
   font: bold 2em "Plus Jakarta Sans", sans-serif;
@@ -989,7 +991,6 @@ header div#bgcolor input:checked ~ span i#thumb {
     border: none;
     border-radius: 5px;
     outline: none;
-    padding: 0;
   }
   section#portfolio .projCont button a {
     color: white;
@@ -997,6 +998,9 @@ header div#bgcolor input:checked ~ span i#thumb {
     height: 100%;
     padding: 10px 20px;
     display: block;
+  }
+  section#portfolio .projCont button {
+    padding: 0;
   }
   section#portfolio .projCont .detailBtn {
     background: transparent;
@@ -1170,7 +1174,8 @@ div#headerMenu .menuIcon {
 }
 
 .settingsMenu {
-  background: #010101;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.45), rgba(135, 135, 135, 0.1));
+  backdrop-filter: blur(15px);
   width: 350px;
   margin: 0px 10px;
   padding: 10px;

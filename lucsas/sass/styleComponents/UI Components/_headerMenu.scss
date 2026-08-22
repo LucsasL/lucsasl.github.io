@@ -41,7 +41,12 @@ div#headerMenu {
 }
 
 .settingsMenu {
-  background: $bg2;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(135, 135, 135, 0.1)
+  );
+  backdrop-filter: blur(15px);
 
   width: 350px;
   margin: 0px 10px;
